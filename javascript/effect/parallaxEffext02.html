@@ -516,6 +516,7 @@
 
             document.querySelector(".scrollTop span").innerText = Math.round(scrollTop)
 
+            //for
             // for(let i = 1; i<=9; i++){
             //     if(scrollTop >= document.getElementById("section"+i).offsetTop -2){
             //         document.querySelectorAll("#parallax__dot li").forEach(li=>{
@@ -524,9 +525,10 @@
             //         document.querySelector("#parallax__dot li:nth-child("+i+")").classList.add("active")
             //     }
             // }
+
             // forEach
-            document.querySelectorAll(".content__item").forEach((e, i) => {
-                if (scrollTop >= e.offsetTop - 2) {
+            document.querySelectorAll(".content__item").forEach((el, i) => {
+                if (scrollTop >= el.offsetTop) {
                     document.querySelectorAll("#parallax__dot ul li").forEach(li => {
                         li.classList.remove("active")
                     })
@@ -534,18 +536,6 @@
                         .add("active")
                 }
             })
-
-
-
-            // document.querySelectorAll(".content__item").forEach(el, i => {
-            //     if (scrollTop >= el.offsetTop) {
-            //         document.querySelectorAll("##parallax__dot ul li").forEach(li => {
-            //             li.classList.remove("active")
-            //         })
-            //         document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList
-            //             .add("active")
-            //     }
-            // })
 
         })
 
