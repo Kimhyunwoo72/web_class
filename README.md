@@ -1,7 +1,7 @@
 # webs_class
 
 ## 메인페이지
-https://kimhyunwoo72.github.io/webs_class/
+https://kimhyunwoo72.github.io/GitHub/webs_class/
 
 ## 자바스크립트
 https://kimhyunwoo72.github.io/webs_class/javascript/index.html
