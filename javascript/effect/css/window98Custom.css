@@ -98,7 +98,7 @@ body {
 .source {
     position: absolute;
     right: 20px;
-    bottom: 60px;
+    bottom: 90px;
 }
 
 .source button {
@@ -112,6 +112,20 @@ body {
     cursor: pointer;
     position: relative;
     bottom: -5vh;
+}
+@media (max-width:450px){
+    .source button {
+        border: 1px solid rgb(255, 255, 255);
+        background: #413636cc;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 30px;
+        border-radius: 50px;
+        transition: all 0.2s;
+        cursor: pointer;
+        position: relative;
+        bottom: -30vh;
+    }
 }
 
 .source button:hover {

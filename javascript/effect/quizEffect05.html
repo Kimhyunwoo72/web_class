@@ -120,8 +120,10 @@
                     flex-direction: column;
             }
             .source button{
-                display: block;
-                bottom: -160vh;
+                bottom: -220vh;
+            }
+            .source button.hide{
+                bottom: -260vh;
             }
             }
         .quiz {
@@ -884,6 +886,7 @@
                     const div = document.createElement("div");
                     quizSelectsWrap.appendChild(div).innerHTML = `<p class="quiz__ex">${question.answerEx}</p>`;
                 }
+                document.querySelector(".source button").classList.add("hide")
             });
             
             //해결안됨
@@ -891,7 +894,7 @@
             // screen.addListener(()=>{
             //     document.querySelector(".source button").style.bottom = "-"+ 190 +"vh" // 모바일 버전에서 정답확인을 하면 더 밑으로 내려오게
             // }) 
-                document.querySelector(".source button").style.bottom = "-"+ 190 +"vh" // 모바일 버전에서 정답확인을 하면 더 밑으로 내려오게
+
             
             quizResult.innerHTML = `${quizInfo.length} 문제 중에 ${scoreCurrent} 문제를 맞추었습니다.`;
         }
