@@ -1083,7 +1083,7 @@
         }
         .slider__inner {
             display: flex;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             width: 2220px;
             transform: translateX(0);
         }
@@ -1151,8 +1151,8 @@
             margin: 0 auto;
         }
         .slider__inner {
+            max-width: 100%;
             display: flex;
-            flex-wrap: wrap;
             width: 2220px;
             transform: translateX(0);
         }
@@ -1638,15 +1638,6 @@
 
     <!--script-->
     <script>
-        //#id 부드럽게 이동하기
-        // document.querySelectorAll("a[href^='#']").forEach(el => {
-        //     el.addEventListener("click", (event) => {
-        //         event.preventDefault();
-        //         document.querySelector(el.getAttribute("href")).scrollIntoView({
-        //             behavior: "smooth"
-        //         })
-        //     })
-        // })
         document.querySelectorAll("#header ul li a").forEach(li => {
             li.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -1696,7 +1687,7 @@
 
         function sliderEffect() {
             currentIndex++;
-            sliderInner.style.transition = "all 0.6s";
+            sliderInner.style.transition = "all 0.3s";
             sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
             //마지막 사진에 갔을 때
             if (currentIndex == sliderCount) {
