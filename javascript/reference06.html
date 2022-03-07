@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/javascript.png">
+    <link rel="icon" href="../assets/face/javascript.png" sizes="128x128">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+
+    <div class="top"><a href="#header">Top</a></div>
+
+    <header id="header">
+        <h1><a href="index.html"> Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li class="active"><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>조건문</h2>
+            <p>조건문은 조건식의 값이 참(true)인지, 거짓(false)인지에 따라 자바스크립트 코드를 제어합니다.
+                예를 들어 질의 응답 창을 이용해 방문자가 좋아하는 숫자를 입력받습니다. 이때 입련된 값이 2로 나누어 나머지 값이 0이면
+                "당신이 좋아하는 숫자는 짝수입니다."라고 출력하게 하고, 아닐 경우에는 "당신이 좋아하는 숫자는 홀수입니다."라고 출력하게
+                한다고 합시다. 이렇게 수를 나눈 나머지 값에 따라 다른 결과를 출력하게 하려면 조건문을 사용해야 합니다. 조건문의 종류에는
+                if문, else문 그리고 else if문이 있습니다.
+            </p>
+
+            <h3>if문</h3>
+            <p>if문은 조건식을 만족(true)할 경우에만 코드를 실행합니다. 다음은 if문의 기본형입니다. 조건식은 앞에서 배웠던 boolen() 내장
+                메서드와 마찬가지로 그 어떤 데이터를 입력해도 true 또는 false를 반환합니다. 이 내용은 적용예제를 보며 자세히 살펴보겠습니다.
+            </p>
+
+            <div class="line mb30">
+                기본형 : <br>
+                if(조건식){ <br>
+                자바스크립트 코드; <br>
+                } <br>
+            </div>
+
+            <h4>적용예제1</h4>
+            <div class="code">
+                <pre><code>{
+var num=10;<br>
+if(num<500){    //true를 반환합니다.
+    document.write("hello")
+}
+
+//출력화면
+true
+</code></pre>
+            </div>
+            <p class="mb30">예제에서 num<500의 비교 결과는 10<500이므로 true를 반환합니다. 조건문 내의 코드를 실행하면 "hello" 가 출력됩니다.</p> <h4>조건문에
+                    논리형 데이터가 아닌 다른형이 오는 경우</h4>
+                    <p>조건식에 논리형 데이터(true,false)가 아닌 다른 형의 데이터가 입력되어도 true 또는 false로 인식됩니다.
+                        다음은 조건식에 논리형 데이터가 아닌 다른 형의 데이터가 입력되었을 때 반환되는 결과입니다.
+                    </p>
+                    <p class="mt20">다음 값이 조건식에 입력되면 false를 반환하지만 그 밖의 값은 true로 인식합니다.</p>
+                    <div class="line mb30">
+                        0,null,""(빈문 자), undedined
+                    </div>
+
+                    <h4>출력되는 경우</h4>
+                    <div class="code">
+                        <pre><code>{
+    var num = 3;
+    if(num){    //3은 true입니다.
+        document.wrtie(num)
+    }
+}
+</code></pre>
+                    </div>
+
+                    <h4>출력되지 않는 경우</h4>
+                    <div class="code">
+                        <pre><code>{
+    var num = ( );
+    if(num){    //0은 false입니다.
+    document.wrtie(num)
+    }
+}
+</code></pre>
+                    </div>
+                    <h3>else 문</h3>
+                    <p>else 문은 조건식을 만족할(true) 경우와 만족하지 않을(false) 경우에 따라 실행되는
+                        코드가 달라집니다. 즉, 두 가지 결과가 나올 수 있습니다.
+                        다음은 조건식의 만족여부에 따라 실행되는 코드가 달라지는 else 문의 기본형입니다.
+                    </p>
+                    <div class="line mb30">
+                        if(조건식){<br>
+                        자바스크립트 코드1;<br>
+                        } else{<br>
+                        자바스크립트 코드2;<br>
+                        }<br>
+                    </div>
+                    <h4>확인/취소 창</h4>
+                    <p>확인/취소 창은 confirm()메서드를 사용합니다. 다음은 confirm()메서드로 생성된 [확인]
+                        버튼을 누르면 true를 반환하고, [취소] 취소 버튼을 누르면 false를 반확합니다.
+                    </p>
+                    <div class="line mb30">
+                        기본형 : confirm("message")
+                    </div>
+
+                    <h3>if else문</h3>
+                    <p>else if문은 두 가지 이상의 조건식과 정해 놓은 조건을 만족하지 않았을 때 실행되는 코드로
+                        이루어져 있습니다.
+                    </p>
+                    <p>다음은 else if문의 기본형입니다. 가장 위에 있는 조건식1부터 5까지 차례로 조건 검사를 하면서 만족(true)하는
+                        값이 나오면 그에 해당하는 코드를 실행하고 조건문을 종료합니다. 조건식 중 만족(true)하는 값이 하나도 없으면
+                        else문의 중괄호{...}에 있는 코드를 실행합니다.
+                    </p>
+                    <div class="line">
+                        if(조건식1){<br>
+                        코드1;<br>
+                        }else if(조건식2){<br>
+                        코드2;<br>
+                        }else if(조건식3){<br>
+                        코드3;<br>
+                        }else if(조건식4){<br>
+                        코드4;<br>
+                        }else if(조건식5){<br>
+                        코드5;<br>
+                        }else if(조건식6){<br>
+                        코드6;<br>
+                        }<br>
+                    </div>
+                    <h4 class="mt30">예제코드</h4>
+                    <div class="code">
+                        <pre><code>{
+let mon = prompt("현재는 몇 월입니까?","0")
+
+    if(mon &gt; 9 && mon &lt;= 11){       //9~11
+        document.write("독서의 계절 가을이네요!!");
+    }else if(mon &gt; 6 && mon &lt;= 8){  //6~8
+        document.write("여행하기 좋은 여름이네요!!");
+    }else if(mon &gt; 3 && mon &lt;= 5){  //3~5
+        document.write("햇살 가득한 봄이네요!!");
+    }else{
+        document.write("스키의 계절 겨울이네요!!");
+    }
+}
+
+//출력화면
+9~11 : 독서의 계절이네요!!
+6~8 : 여행하기 좋은 여름이네요!!
+3~5 : 햇살 가득한 봄이네요!!
+12,1,2 : 스키의 계절 겨울이네요!!
+</code></pre>
+                    </div>
+                    <h3>중접 if문</h3>
+                    <p>조건문 안에 조건문이 있으면 중첩if문이라고 합니다. 중첩 if문의 기본형은 다음과 같습니다.</p>
+                    <div class="line">
+                        if(조건식1){<br>
+                        if(조건식2){{<br>
+                              자바스크립트코드;<br>
+                      }<br>
+                    }
+                    </div>
+                    <p>중첩 if문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다.
+                        만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료합니다.
+                    </p>
+
+                    <div class="code">
+                        <pre><code>{
+    if(조건식1) {	// 조건식1이 true일 때 실행
+        실행문1;
+        if(조건식2)  {	// 조건식2가 true일 때 실행
+            실행문2;
+        } else {	// 조건식2가 false일 때 실행
+            실행문3;
+          } else {	// 조건식1이 false일 때 실행
+            실행문4;
+    }
+}</code></pre>
+                    </div>
+                    <h4 class="mt30">예제코드</h4>
+                    <div class="code">
+                        <pre><code>{
+    let useID = "silvery";
+    let usePW = "1234";
+    
+    let id = prompt("아이디가 무엇인가요?");
+    let pw = prompt("비밀번호가 무엇인가요?");
+    
+    if( useID == id ){
+        //아이디가 같을 때
+        if( usePW == pw ){
+            document.write(id + "님 반갑습니다.");
+        } else {
+            document.write("비밀번호가 틀렸습니다.");
+        }
+    } else {
+        //아이디가 다를 때
+        document.write("아이디가 일치하지 않습니다.");
+    }
+
+//출력화면
+ID가 같다면 : silvery님 반갑습니다.
+ID가 다르다면 : 아이디가 일치하지 않습니다.
+PW가 다르다면 : 비밀번호가 틀렸습니다.
+</code></pre>
+                    </div>
+                    <h3>swich 문</h3>
+                    <p>swutch문은 변수에 저장된 값과 swich 문에 있는 경우(case)의 값을 검사하여 변수와 경우의 값에서
+                        일치하는 값이 있을 때 그에 해당하는 코드를 실행합니다. if 문과 용도는 비슷하나 if문은 만족하는
+                        데이터가 여러 개일 경우에 주로 사용하고, switch문은 여러 경우의 값 중 일치하는 데이터를찾아 그에 해당하는
+                        코드를 실행  시킬 때 사용합니다.
+                    </p>
+                    <div class="line mb30">
+                        let 변수 = 초깃값 <br>
+                        switch(변수){ <br>
+                            case 값1 : 코드1; <br>
+                            break; <br>
+                            case 값2 : 코드2; <br>
+                            break; <br>
+                            case 값3 : 코드3; <br>
+                            break; <br>
+                            default: 코드4; <br>
+                        }
+                    </div>
+                    <p>변수에 저장된 값은 swich문을 만나면 case의 값을 하나씩 검사합니다.
+                        일치하는 데이터가 있으면 그에 해당하는 코드를 실행하고 break 문을 만나 swutch문을 종료합니다.
+                        만일 경우(case)의 값 중에 일치하는 데이터가 없으면 마지막 default에 있는 코드를 실행하고 swutch문을 종료합니다.
+                    </p>
+                    <h4 class="mt30">예제코드</h4>
+                    <div class="code">
+                        <pre><code>{
+    let site = prompt("네이버, 다음, 구글 중\
+    즐겨 사용하는 포털 검색 사이트는?, ");
+    let url
+
+    switch(site){
+        case"구글": url = "www.google.com"
+        bleak;
+        case"다음": url = "www.daum.net";
+        break; 
+        case"네이버": url = "www.naver.com";
+        break; 
+        default: alert("보기 중에는 없는 사이트입니다.");
+    }
+    if(url) location.href = "http://" + url;
+
+    결과화면
+    //질의응답 창에 네이버를 입력하고 확인을 누르면
+    네이버
+    //질의응답 창에 구글를 입력하고 확인을 누르면
+    구글
+    //질의응답 창에 다음를 입력하고 확인을 누르면
+    다음
+}</code></pre>
+                    </div>
+        </div>
+    </main>
+</body>
+
+</html>

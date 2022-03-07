@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/javascript.png">
+    <link rel="icon" href="../assets/face/javascript.png" sizes="128x128">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+
+    <div class="top"><a href="#header">Top</a></div>
+
+    <header id="header">
+        <h1><a href="index.html"> Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li class="active"><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>for( )문</h2>
+
+            <p>for문은 조건식을 만족할 때까지 특정 코드를 반복하여 실행합니다. 사용방법은 while문과 같지만
+                while 문보다 사용하기 편해 사용 빈도가 높은 편입니다.
+            </p>
+            <h3>기본형</h3>
+            <div class="code">
+for(초깃값; 조건식; 증감식){<br>
+        자바스크립트 코드; (조건식의 결과가 참인 동안 반복적으로 실행하고자 하는 실행문)<br>
+}
+            </div>
+
+            <p>for문이 실행될 때, 다음과 같이 실행됩니다.:<br>
+                1. 초기화 구문인 초기문이 존재한다면 초기문이 실행됩니다. 이 표현은 보통 1이나 반복문 카운터로 초기 설정이 됩니다. 그러나 복잡한 구문으로 표현 될 때도 있습니다. 또한 변수로 선언 되기도 합니다.<br>
+                2. 조건문은 조건을 검사합니다. 만약 조건문이 참이라면, 그 반복문은 실행됩니다. 만약 조건문이 거짓이라면, 그 for문은 종결됩니다. 만약 그 조건문이 생략된다면, 그 조건문은 참으로 추정됩니다.<br>
+                3. 문장이 실행됩니다. 많은 문장을 실행할 경우엔, { } 를 써서 문장들을 묶어 줍니다.<br>
+                4. 갱신 구문인 증감문이 존재한다면 실행되고 2번째 단계로 돌아갑니다.</p>
+
+            <h2>for / in문</h2>
+            <p>for / in 문은 일반적인 for문과는 전혀 다른 형태의 반복문입니다.
+               for / in 문은 해당 객체의 모든 열거할 수 있는 프로퍼티를 순회할 수 있도록 해줍니다.
+               *열거할 수 있는 프로퍼티란 내부적으로 eunmerable 플러그가 true로 설정된 프로퍼티를 의미합니다.*<br>
+            </p>
+            <div class="code">
+{<br>
+    for (변수 in 객체) {<br>
+    객체의 모든 열거할 수 있는 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문;<br>
+    }<br>
+<br>
+<br>
+    function dump_props(obj, obj_name) {<br>
+        var result = ;<br>
+        for (var i in obj) {<br>
+          result += obj_name + "." + i + " = " + obj[i];<br>
+    }<br>
+        result += ;<br>
+        return result;<br>
+      }<br>
+}<br>
+            </div>
+
+            <h2>for / of 문</h2>
+            <p>for / of 문은 반복할 수 있는 객체(iterable objects)를 순회할 수 있도록 해주는 반복문입니다.
+                자바스크립트에서 반복할 수 있는 객체에는 Array, Map, Set, arguments 객체 등이 있습니다.
+                이 반복문은 루프마다 객체의 열거할 수 있는 프로퍼티의 값을 지정된 변수에 대입합니다.
+            </p>
+            <div class="code">
+ {<br>
+기본형: for (변수 of 객체) {<br>
+    객체의 모든 열거할 수 있는 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문;<br>
+    }<br>
+<br>
+    let arr = [3, 5, 7];<br>
+    arr.foo = "hello";<br>
+    <br>
+    for (let i in arr) {<br>
+       console.log(i); // logs "0", "1", "2", "foo"<br>
+    }<br>
+    <br>
+    for (let i of arr) {<br>
+       console.log(i); // logs "3", "5", "7"<br>
+    }<br>
+}<br>
+            </div>
+
+            <h2>break 문</h2>
+            <p>break문은 반복문, switch문, 레이블 문과 결합한 문장을 빠져나올  때 사용합니다.<br>
+            1. 레이블 없이 break문을 쓸 때: 가장 가까운 while, do-while, for, 또는 switch문을 종료하고 다음 명령어로 넘어갑니다.<br>
+            2. 레이블 문을 쓸 때: 특정 레이블 문에서 끝납니다.<br>
+            </p>
+
+            <div class="code">
+{<br>
+// 1. break;<br>
+// 2. break [레이블];<br>
+for (i = 0; i < a.length; i++) {<br>
+    if (a[i] == theValue) {<br>
+      break;<br>
+   }<br>
+  }<br>
+}<br>
+            </div>
+
+            <h2>continue 문</h2>
+            <p>
+                문은 while, do-while, for, 레이블 문을 다시 시작하기 위해 사용될 수 있습니다.<br>
+                레이블없이 continue를 사용하는 경우, 그것은 가장 안쪽의 while, do-while, for 문을 둘러싼 현재 반복을 종료하고, 다음 반복으로 루프의 실행을 계속합니다. break문과 달리, continue 문은 전체 루프의 실행을 종료하지 않습니다. while 루프에서 그것은 다시 조건으로 이동합니다. for 루프에서 그것은 증가 표현으로 이동합니다.<br>
+                레이블과 함께 continue를 사용하는 경우, continue는 그 레이블로 식별되는 루프 문에 적용됩니다.<br>
+            </p>
+            <div class="code">
+{<br>
+// 1. continue;<br>
+// 2. continue label;<br>
+i = 0;<br>
+n = 0;<br>
+while (i < 5) {<br>
+  i++;<br>
+  if (i == 3) {<br>
+    continue;<br>
+  }<br>
+  n += i;<br>
+ }<br>
+}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

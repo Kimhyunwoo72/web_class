@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3월4일 테스트</title>
+    <style>
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'GmarketSans';
+        }
+
+        section {
+            width: 1160px;
+            height: 831px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .text {
+            color: #777777;
+            margin: 160px 0 20px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom: 1px solid #777;
+            width: 151px;
+        }
+
+        h1 {
+            width: 303px;
+            height: 116px;
+            color: #111;
+            font-size: 50px;
+            font-weight: 300;
+            margin-bottom: 35px;
+        }
+
+        p {
+            width: 332px;
+            height: 108px;
+            color: #777;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .btn a {
+            width: 220px;
+            height: 47px;
+            background-color: #000;
+            padding: 10px 25px 9px 24px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.53;
+            text-decoration: none;
+        }
+
+        .imgBox {
+            display: flex;
+        }
+
+        .imgBox1 {
+            width: 374px;
+            height: 512px;
+            background-color: #fff;
+            margin-left: 61px;
+            margin-right: 20px;
+            margin-top: 199px;
+            border-radius: 10px;
+            background-image: url(../layout/img/site01.png);
+            position: relative;
+
+        }
+
+        .imgBox2 {
+            width: 374px;
+            height: 512px;
+            margin-top: 120px;
+            background-color: #fff;
+            border-radius: 10px;
+            background-image: url(../layout/img/site02.png);
+            position: relative;
+        }
+
+        .span1 {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .span2 {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+
+        span a {
+            padding: 8px 24px;
+            padding-top: 10px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.53;
+            color: #fff;
+            background-color: #000;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+
+        @media (max-width:600px) {
+            section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .textBox {
+                margin: 0 auto;
+            }
+
+            .imgBox {
+                margin: 0 auto;
+                flex-direction: column;
+            }
+            .imgBox1 {
+                margin: 0;
+                margin-top: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="textBox">
+            <div class="text">이미지 텍스트 유형01</div>
+            <h1>웹스토리보이<br>
+                사이트</h1>
+            <p>
+                웹디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 강의 사이트입니다. <br>
+                Gmarket Sans Light 22px 150% #67778A
+            </p>
+            <div class="btn"><a href="#">더 많은 유형 살펴보기</a></div>
+        </div>
+        <div class="imgBox">
+            <div class="imgBox1 box">
+                <span class="span1"><a href="#">레퍼런스 사이트</a></span>
+            </div>
+            <div class="imgBox2 box">
+                <span class="span2"><a href="#">튜토리얼 사이트</a></span>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

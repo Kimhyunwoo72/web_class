@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>김현우</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>레퍼런스 북</em></a></h2>
+
+
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block.inline</a></li>
+                <li class="active"><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float</a></li>
+                <li><a href="cssRefer07.html">vendor prefix</a></li>
+                <li><a href="cssRefer08.html">background-image</a></li>
+                <li><a href="cssRefer09.html">ir 기법</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS 단위</h3>
+                <h4>상대(relative) 단위</h4>
+                <p>
+                    고정되지 않고 어떤 기준에 따라서 유동적으로 바뀔 수 있는 길이를 나타내는 단위입니다. em과 rem을 포함해 %, vw, vh 등이 대표적인 CSS의 상대
+                    단위입니다.
+                </p>
+                <h4>절대(absolute) 단위</h4>
+                <p>
+                    어떤 상황에서든 항상 고정된 길이를 나타내는 단위입니다. 대표적으로 예전부터 현재까지 많이 사용되는 px와 pt를 들 수 있고, cm나 in와 같은 실생활에서 많이 사용되는
+                    단위들도 이 절대 단위에 범주에 속합니다.
+                </p>
+
+                <h4>px</h4>
+                <p>모니터 위에서 화면을 나타내는 가장 작은 단위이며 반응형으로 사용하기는 힘들어서 정적인 웹페이지에 사용한다.
+                    컨테이너 사이즈 변경되어도 콘텐츠의 크기는 변경 없이 그대로 고정되어 있기 때문이다
+                    또한 픽셀로 폰트 크기를 변경하는 경우, 브라우저에서 폰트 크기를 변경해도 아무런 반응을 하지 않음 (아예 고정되어있음)
+                    이는 웹 접근성이 떨어진다고 볼 수 있다.</p>
+
+                <h4>rem</h4>
+                <p>
+                    rem 의 개념은 기준이 되는 값을 지정된 배수로 변환해 표현한 크기를 의미합니다. 여기서 기준이 되는 값은 최상위 요소(보통은 html 태그)에서 지정된 font-size 의 값을 이야기 합니다.
+                    예를 들어 기준이 되는 값, 즉 html 태그의 font-size 값이 이 16px 라면 2rem 은 32px 을 의미합니다.
+                </p>
+                
+
+                <h4>em</h4>
+                <p>em 의 개념은 기준이 되는 값을 지정된 배수로 변환해 표현한 크기를 의미합니다. 여기서 기준이 되는 값이란 현재 스타일 지정 요소의 font-size 값을 의미합니다.
+                    예를 들어 기준이 되는 값, 즉 현재 요소의 font-size 값이 16px 이라면 2em 은 32px 을 의미합니다.<br>
+                    많은 CSS 가이드들이 em을 사용해야만 하는 타당한 이유가 없는 경우라면 가급적 rem을 우선적으로 쓰도록 권고하고 있습니다. (특히 초보자들에게…) 왜냐하면 em의 경우 위에서 보았듯이
+                    실제 몇 px로 변환될지에 영향을 주는 변수가 많아지기 때문에, em을 사용해서 스타일된 요소의 경우 재사용이 어렵고 유지보수가 힘들어지는 경향이 있기 때문입니다.
+                </p>
+
+                <h4>%</h4>
+                <p>부모 요소에 상대적으로 계산되어 em과 같음</p>
+
+
+
+                <h4>vh</h4>
+                <p>vh 요소는 높이값의 100분의 1의 단위입니다. 예를 들어 브라우저 높이값이 900px일때 1vh는 9px이라는 뜻이 되지요. 그와 유사하게 뷰포트의 너비값이 750px이면
+                    1vw는 7.5px이 됩니다.
+                    이 규칙에는 무궁무진한 사용방법이 있습니다. 예를 들면, 최대 높이값이나 그의 유사한 높이값의 슬라이드를 제작할때 아주 간단한 CSS만 입력하면 됩니다.</p>
+
+                <h4>vw</h4>
+                <p>vw는 Viewport weigth의 축약어이다.
+                    1vw로 속성값을 설정할 경우 뷰포트 너비의 1% 만큼 계산이 된다.</p>
+
+                <h4>vmax</h4>
+                <p>너비값과 높이값 중에서 더 긴 쪽으로 기준을 잡고 크기를 결정하는 단위이다. 예를 들어서 너비값이 100이고
+                    높이값이 20이다. 그러면 너비값 100에 기준을 맞추는 것이다. 아니면 너비값이 50이고 높이값이 70이다.
+                    그러면 높이값70에 기준을 맞추는 것이다.
+                </p>
+
+                <h4>vmin</h4>
+                <p>vmax와 반대로 작은것에 기준을 맞춘다.</p>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

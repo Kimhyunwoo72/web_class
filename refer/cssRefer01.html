@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>김현우</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>레퍼런스 북</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li class="active"><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block.inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float</a></li>
+                <li><a href="cssRefer07.html">vendor prefix</a></li>
+                <li><a href="cssRefer08.html">background-image</a></li>
+                <li><a href="cssRefer09.html">ir 기법</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS란?</h3>
+                <p>Cascading Style Sheets 는 documents가 사용자에게 어떻게 보여질까를 기술하는 언어이다.
+
+                    HTML이 정보를 표현한다면 CSS는 HTML문서를 시작적으로 꾸며주는 역할을 한다.</p>
+
+                <h3>CSS 주석 표시</h3>
+                <div class="code">
+                    /*  */를 쓰고 가운데에 주석명을 입력합니다.(단축기 ctrl + /)
+                </div>
+                <h3>CSS 선언 방법</h3>
+                <h4>내부 스타일</h4>
+                <p>여러 문서에 적용되는 CSS의 경우는 외부 스타일 시트로 빼는게 좋지만,
+                    한 가지 문서(HTML) 에는 따로 css를 빼는 것보다 현재 문서에만 적용할 때 유용하다.
+                    (단, 스타일태그가 길어질 경우 외부 스타일 시트로 빼는것이 좋다.)</p>
+                    <div class="code">
+                        &lt;head&gt;<br>
+                        &lt;style&gt<br>
+                        Selector {property: value;}<br>
+                        h1 {color:red} <br>
+                        &lt;/style&gt<br>
+                        &lt;/head&gt<br>
+                    </div>
+
+                <h3>외부 스타일</h3>
+                <p>css라는 확장자를 가진 스타일 시트 파일을 만들고 이 파일을 HTML 문서에 연결하여 사용하는 방법
+                    3가지 방법중 가장 좋은 방법으로, CSS의 장점을 모두 갖춘 형식이다.
+                    분리된 디자인 파일로 관리하며 홈페이지 스타일을 일관성 있게 유지/보수하며 효율성을 극대화 할 수 있다.
+                    단점으로는 외부 스타일 시트가 지나치게 복잡해지면 곤란하므로 전문성 있는 관리 노하우가 필요하다.
+                </p>
+                <div class="code">
+                    &lt;head&gt;<br>
+                    &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br>
+                    &lt;/head&gt;<br>
+                </div>
+
+                <h4>인라인 스타일</h4>
+                <p>위 스타일은 스타일을 지정하고싶은 태그에 직접적으로 주입해주는 방식이다.
+                    style 속성으로, property: value 의 값을 가진다.
+                    css의 장점인 내용과 스타일의 분리, 스타일에 대한 일괄 변경이 불가능한 가장 비효율적인 방식이다.
+                    하지만 특정 상황에서 직관적이고, 수정이 빠르고 간편한 이유로 간단한 테스트나 개발할때 사용된다.</p>
+                <div class="code">
+                    &lt;p style="font-size: 15px;"&gt;인라인 스타일 예제입니다.&lt;/p&gt;
+                </div>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

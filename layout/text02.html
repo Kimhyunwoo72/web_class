@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site01</title>
+
+       <!-- 파비콘 -->
+       <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+       <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+       <link rel="icon" href="../assets/>
+       <meta property=" og:type" content="article" />
+       <meta property="og:title" content="김현우" />
+       <meta property="og:url" content="https://webstoryboy.co.kr/" />
+       <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+       <meta property="og:site_name" content="김현우" />
+       <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+       
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        #header {
+            width: 100%;
+            height: 112px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #header .logo {
+            line-height: 3;
+            margin-left: 90px;
+        }
+        #header .nav li{
+            display: inline-block;
+            /* padding: 10px; */
+            line-height: 5;
+            margin-right: 90px;
+            font-weight: 700;
+        }
+        #header .nav li a{
+            font-size: 20px;
+            color: black;
+        }
+        #section .text {
+            width: 1200px;
+            height: 408px;
+            display:block;
+        }
+        #section .text h2 {
+            top: 180px;
+            left: 30px;
+            display:flex;
+            position: relative;
+            font-size: 45px;
+        }
+        #section {
+            width: 1200px;
+            height: 2490px;
+            margin: 0 auto;
+        }
+        #section .contents1 {
+            height: 600px;
+        }
+        #section .contents1 ul {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            /* top: 41px; */
+        }
+        #section .contents1 .contents_img1{
+            width: 552px;
+            height: 547px;
+            position: relative;
+        }
+        #section .contents1 .contents_img2{
+            width: 552px;
+            height: 547px;
+            position: relative;
+            top: 50px;
+        }
+        #section .contents1 .contents_img1 .img_text{
+            font-size: 25px;
+            /* bottom: 64px; */
+            position: relative;
+            border-top: 1px solid #000;
+            padding-top: 50px;
+            top: 12px;
+            font-weight: 500;
+        }
+        #section .contents1 .contents_img2 .img_text{
+            font-size: 25px;
+            /* bottom: 64px; */
+            position: relative;
+            border-top: 1px solid #000;
+            padding-top: 50px;
+            top: 12px;
+            font-weight: 500;
+        }
+        .contents2{
+            height: 767px;
+        }
+        .contents2 .contents_img3 {
+            width: 552px;
+            height: 347px;
+            /* background:url(./img/site_img4.jpg); */
+        }
+        .contents2 .contents_img4 {
+            width: 550px;
+            height: 414px;
+            /* background:url(./img/site_img3.jpg); */
+            position: relative;
+            top: 50px;
+        }
+        #section .contents2 ul {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            top: 214px;
+        }
+        #section .contents2 .contents_img3 .img_text{
+            font-size: 25px;
+            /* bottom: 64px; */
+            position: relative;
+            border-top: 1px solid #000;
+            padding-top: 50px;
+            top: 12px;
+        }
+        #section .contents2 .contents_img4 .img_text{
+            font-size: 25px;
+            /* bottom: 64px; */
+            position: relative;
+            border-top: 1px solid #000;
+            padding-top: 50px;
+            top: 12px;
+        }
+        #footer {
+            width: 100%;
+            height: 370px;
+            background-color: #303137;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">
+                <h1>IMFORM</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="section">
+            <div class="text">
+                <h2>We research new opportunities<br>
+                    that inspire success.
+                </h2>
+            </div>
+            <article class="contents1">
+                <ul>
+                    <li class="contents_img1">
+                        <p class="img_text">
+                            스마트한 카라이프<br>
+                            한국타이어
+                        </p>
+                        <img src="./img/site_img1.jpg" alt="이미지1">
+                    </li>
+                    <li class="contents_img2">
+                        <p class="img_text">
+                            한섬 프리미엄 스타일<br>
+                            모바일 룩북
+                        </p>
+                        <img src="./img/site_img2.jpg" alt="이미지2">
+                    </li>
+                </ul>
+            </article>
+            <article class="contents2">
+                <ul>
+                    <li class="contents_img3">
+                        <p class="img_text">
+                            나는 대만족 입니다.<br>
+                            대만관광청 홈페이지 리뉴얼
+                        </p>
+                        <img src="./img/site_img3.jpg" alt="이미지1">
+                    </li>
+                    <li class="contents_img4">
+                        <p class="img_text">
+                            세련된 감각의 까사미아<br>
+                            라이프스타일 매거진
+                        </p>
+                        <img src="./img/site_img4.jpg" alt="이미지2">
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

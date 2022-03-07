@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험</title>
+
+       <!-- 파비콘 -->
+       <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+       <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+       <link rel="icon" href="../assets/>
+       <meta property=" og:type" content="article" />
+       <meta property="og:title" content="김현우" />
+       <meta property="og:url" content="https://webstoryboy.co.kr/" />
+       <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+       <meta property="og:site_name" content="김현우" />
+       <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+       
+    <style>
+        /* 넥슨 고딕1 */
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        /* 전체 셋팅 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ir 셋팅 */
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        #wrap {
+            width: 1920px;
+            height: 6369px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            width: 1920px;
+            height: 109px;
+            background-color: #C2F6C1;
+        }
+
+        #header nav {
+            width: 1200px;
+            height: 109px;
+            background-color: #6ECC6C;
+            margin: 0 auto;
+        }
+
+        #section .contents1 {
+            width: 1920px;
+            height: 893px;
+            background-color: #F89292;
+        }
+
+        #section .contents1_1 {
+            width: 1200px;
+            height: 893px;
+            margin: 0 auto;
+            background-color: #AD7B7B;
+        }
+
+        #section .contents2 {
+            width: 1920px;
+            height: 640px;
+            background-color: #B99E9E;
+        }
+
+        #section .contents2_1 {
+            width: 1200px;
+            height: 640px;
+            margin: 0 auto;
+            background-color: #9EA9B9;
+        }
+
+        #section .contents3 {
+            width: 1920px;
+            height: 3250px;
+            background-color: #9D7777;
+        }
+
+        #section .contents3_1 {
+            width: 1200px;
+            height: 3250px;
+            background-color: #6A3434;
+            margin: 0 auto;
+        }
+
+        .img_container {
+            margin-top: 90px;
+        }
+
+        #section .contents4 {
+            width: 1920px;
+            height: 1076px;
+            margin: 0;
+        }
+
+        #section .contents4_1 {
+            width: 1200px;
+            height: 1076px;
+            margin: 0 auto;
+        }
+
+        #section .contents4_1 .main_text {
+            font-size: 55px;
+            font-family: 'NexonLv1Gothic';
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 100px;
+        }
+
+        #section .contents4_1 .img_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #section .contents4_1 .img_container .imgType01 h4 {
+            font-size: 23px;
+            margin-top: 40px;
+        }
+
+        #section .contents4_1 .img_container .imgType02 h4 {
+            font-size: 23px;
+            margin-top: 40px;
+        }
+
+        #section .contents4_1 .img_container .imgType03 h4 {
+            font-size: 23px;
+            margin-top: 40px;
+        }
+
+        #section .contents4_1 .img_container .imgType01 .img1 {
+            width: 365px;
+            height: 463px;
+            background-image: url(../layout/img/img_text_bg1.jpg);
+        }
+
+        #section .contents4_1 .img_container .imgType02 .img2 {
+            width: 365px;
+            height: 463px;
+            background-image: url(./img/img_text_bg2.jpg);
+        }
+
+        #section .contents4_1 .img_container .imgType03 .img3 {
+            width: 365px;
+            height: 463px;
+            background-image: url(./img/img_text_bg3.jpg);
+        }
+
+        #footer {
+            width: 1920px;
+            height: 399px;
+            background-color: #B99E9E;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="ir_so">헤더영역</h1>
+            <nav>
+                <h2 class="ir_so">메인메뉴</h2>
+            </nav>
+        </header>
+
+        <section id="section">
+            <h2 class="ir_so">컨텐츠영역</h2>
+
+            <article class="contents1">
+                <h3 class="ir_so">컨텐츠1</h3>
+                <div class="contents1_1"></div>
+            </article>
+
+            <article class="contents2">
+                <h2 class="ir_so">컨텐츠2</h2>
+                <div class="contents2_1"></div>
+            </article>
+
+            <article class="contents3">
+                <h2 class="ir_so">컨텐츠3</h2>
+                <div class="contents3_1"></div>
+            </article>
+
+            <article class="contents4">
+                <h2 class="ir_so">컨텐츠4</h2>
+                <div class="contents4_1">
+                    <h3 class="main_text">FIND opportunities</h3>
+                    <div class="img_container">
+
+                        <div class="imgType01">
+                            <div class="img1"></div>
+                            <h4>Digital Marketing</h4>
+                            <p>IMS</p>
+                        </div>
+                        <!-- 이미지1 -->
+
+                        <div class="imgType02">
+                            <div class="img2"></div>
+                            <h4>Platform</h4>
+                            <p>Commerde, Magazine</p>
+                        </div>
+                        <!-- 이미지2 -->
+
+                        <div class="imgType03">
+                            <div class="img3">
+                            </div>
+                            <h4>Fintech</h4>
+                            <p>payment</p>
+                        </div>
+                        <!-- 이미지3 -->
+                        
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <h1 class="ir_so">푸터영역</h1>
+        </footer>
+
+    </div>
+</body>
+
+</html>

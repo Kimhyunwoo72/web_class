@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout1-3</title>
+
+       <!-- 파비콘 -->
+       <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+       <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+       <link rel="icon" href="../assets/>
+       <meta property=" og:type" content="article" />
+       <meta property="og:title" content="김현우" />
+       <meta property="og:url" content="https://webstoryboy.co.kr/" />
+       <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+       <meta property="og:site_name" content="김현우" />
+       <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+       
+    <style>
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #E1F5FE;
+        }
+
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #E1F5FE;
+        }
+
+        #section {
+            width: 100%;
+            height: 880px;
+            background-color: #E1F5FE;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #E1F5FE;
+        }
+
+        .main{
+            margin: 0 auto;
+            height:inherit;
+        }
+        #header  .main{
+            width: 1200px;
+            height: 100px;
+            background-color: #B3E5FC;
+        }
+        #nav  .main{
+            width: 1200px;
+            height: 100px;
+            background-color: #81D5FA;
+        }
+        #section  .main{
+            width: 1200px;
+            height: 880px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height:inherit;
+            display: flex;
+        }
+        #footer  .main{
+            width: 1200px;
+            height: 100px;
+            background-color: #0288D1;
+   
+        }
+        #section  .main .aside{
+            width: 260px;
+            height: 880px;
+            background-color: #4FC2F8;
+        }
+        #section  .main .main1{
+            width: 940px;
+            height: 293px;
+            background-color: #57A45C;
+            display: flex;
+        }
+        #section  .main .main1 .box1 {
+            width: 470px;
+            height: 293px;
+            background-color: #7acaec;
+        }
+        #section  .main .main1 .box2 {
+            width: 470px;
+            height: 293px;
+            background-color: #28B6F6;
+        }
+        #section  .main .main2{
+            width:  940px;
+            height: 293px;
+            background-color: #03A9F5;
+        }
+        #section  .main .main3{
+            width: 940px;
+            height: 294px;
+            background-color: #039BE6;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="main"></div>
+        </header>
+        <nav id="nav">
+            <div class="main"></div>
+        </nav>
+        <section id="section">
+            <div class="main">
+                <div class="aside"></div>
+                <div class="main1">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                </div>
+                <div class="main2"></div>
+                <div class="main3"></div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="main"></div>
+        </footer>
+    </div>
+</body>
+
+</html>

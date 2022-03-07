@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/javascript.png">
+    <link rel="icon" href="../assets/face/javascript.png" sizes="128x128">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+
+    <div class="top"><a href="#header">Top</a></div>
+
+    <header id="header">
+        <h1><a href="index.html"> Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li class="active"><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>함수</h2>
+            <h3>함수란?</h3>
+            <p>변수에는 데이터만 저장할 수 있고, 코드는 저장할 수 없습니다. 하지만 함수를 사용하면 코드를 메모리에 저장했다가
+                필요할 때마다 호출하여 사용할 수 있습니다. 예를 들어 다음 그림의 TV리모컨을 보면 각 채널의 버튼이 있습니다.
+                그리고 각 버튼에는 TV의 해당 채널로 바꿀 수 있는 코드가 저장되어 있죠. 이 코드는 사용자가 리모컨의 버튼을 눌러(호출)
+                야만 실행됩니다. 이때 각 TV리모컨의 버튼은 함수를 저장하고 있으며, 버튼을 누를 때마다 함수가 호출된다고 할 수 있습니다.
+            </p>
+
+            <h2>선언적 함수</h2>
+            <p>함수를 사용하여 코드를 저장한 것을 '함수 정의문'이라고 합니다. 변수를 선언할 때 var키워드를 사용한 것처럼 함수에서는 function
+                키워드를 사용해 변수를 선언합니다. 함수 정의문은 다음과 같이 선언합니다.
+            </p>
+            <p>문법</p>
+            <div class="code">
+function 함수이름(매개변수1, 매개변수2,...) { <br><br>
+
+    함수가 호출되었을 때 실행하고자 하는 실행문;
+    <br><br>
+}
+            </div>
+            <p>함수 정의문({...})안에 작성된 코드는 즉시 실행되지 않습니다. 함수는 메모리에 할당되어 대기하고 있다가 함수가 호출되면 실행됩니다.
+                정의되어 있는 함수를 호출하는 기본형은 다음과 같습니다.
+            </p>
+            <div class="code">
+                함수명();
+                또는 참조 변수();
+            </div>
+            <h4>예제</h4>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    var hello = function(){
+        document.write("Hello World!");
+    };
+    hello();
+}
+    //출력화면
+    Hello World!</code></pre>
+            </div>
+
+            <h2 class="mt50">익명함수</h2>
+            <p>익명 함수는 함수명 대신 변수명에 함수 코드를 저장하는 구현 방식입니다. 익명 함수의 소스 코드는 변수값이므로 끝에 세미콜론 ; 을 대입합니다. 익명 함수는 호출시 변수명을
+                함수명처럼 사용하면 됩니다.</p>
+
+            <p>문법</p>
+            <div class="code">
+                참조변수 = function(){<br>
+                자바스크립트 코드;<br>
+                }<br>
+                <br>
+                var 변수명 = function( 매개변수 ){<br>
+                실행문;<br>
+                };<br>
+            </div>
+            <h4>예제</h4>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    //익명 함수 선언 및 변수에 대입
+    var hello = function(){
+        document.write("Hello World!");
+    };
+    
+    //익명 함수 변수명으로 호출
+    hello();
+}
+    //출력화면
+    Hello World!</code></pre>
+            </div>
+
+            <h2 class="mt50">매개변수 함수</h2>
+            <p>기본 함수 정의문은 함수 안에 있는 코드를 실행할 때 단순히 함수명으로 호출해서 코드를 실행했습니다.
+                즉, 함수를 호출할 때 값을 전달할 수 없었습니다.하지만 매개변수가 있는 함수 정의문은 함수를 호출 할 때 전달하고자 하는 값을 입력하면 호출할 수 있습니다. 이렇게 전달된 값은
+                매개변수가 받아 함수 정의문
+                에서 사용할 수 있게 됩니다.
+            </p>
+            <p>다음은 함수를 호출할 때 값을 전달하는 기본형입니다. 함수를 호출할 때 a데이터는 매개변수1에
+                저장되고 b데이터는 배개변수2에 저장됩니다. 그리고 c데이터는 매개변수 n에 저장됩니다.
+            </p>
+            <div class="code">
+                function 함수명(매개변수1, 매개변수2, .... 3매개변수n){<br>
+                자바스크립트 코드;<br>
+                }<br>
+                함수명(데이터a, 데이터b, ... 데이터c n)<br>
+            </div>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    function myFnc(name,area) {
+        document.write("안녕하세요." + name + "입니다.")
+        document.write("사는 곳은" + area + "입니다.")
+    }
+    myFnc("홍당무","서울")
+    myFnc("깍두기","부산")
+
+    //결과화면
+    안녕하세요. 홍당무입니다.
+    사는 곳은 서울입니다.
+
+    안녕하세요. 깍두기입니다.
+    사는 곳은 부산입니다.
+}</code></pre>
+            </div>
+            <p>다은은 매개변수를 생략한 함수 호출문에서 3개의 숫자형 데이터를 전달하는 예입니다.
+                숫자형 데이터는 배열에 저장되고 argumemts 변수로 참조할 수 있습니다. argumemts의 인덱스를
+                이용해 배열에 저장된 값을 불러와 합을 구하여 결과값을 화면에 출력합니다.
+            </p>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    function sum(){
+        var sum = argumemts[0] + argumemts[1] + argumemts[2];
+        document.write(sum);
+    }
+    sum(10, 20, 30);
+}</code></pre>
+            </div>
+            <h2 class="mt50">리턴값 함수</h2>
+            <p>return 문은 함수에서 결괏값을 반환할 때 사용합니다. 그리고 함수에서 return문이
+                실행되면 반복문의 break문과 비슷하게 코드가 강제로 종료됩니다. 다시 말해 함수 정의문에
+                return문이 사용되면 함수를 호출했을 때 결괏값(data)을 반환합니다.
+            </p>
+            <h4 class="mt30">데이터를 반환하고 강제 종료하는 return문</h4>
+            <p>다음은 return 문의 기본형입니다.</p>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    function 함수명(){
+        자바스크립트 코드1;
+        return 데이터(값)
+
+        자바크립트 코드2;
+    }
+
+    var 변수 = 함수명();
+
+    //순서 : 함수 호출문 - 함수 코드실행 - 자바스크립트 코드2를 무시하고 데이터를 반환
+}</code></pre>
+            </div>
+            <P class="mt50">다음의 기본 예제는 함수 호출과 함께 인자값 10,20을 전달합니다. calc() 함수는 num1(10)과
+                num2(20)의 데이터를 더한 값인 30을 반환합니다. 반환된 값은 변수 result에 저장되어 화면에 출력됩니다.
+            </P>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    function sum(num1, num2){
+        return num1 + num2;
+    }
+
+    let result = sum(10,20);
+    document.write(result);
+}</code></pre>
+            </div>
+            <p class="mt50">코딩예제</p>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    function testAvg(arrdata) {
+        vaar sum = 0;
+        for(let i=0; i&lt;arrData.length; i++) {
+            sum += Number(prompt(arrData[i] + "점수는?0, "0"))
+        }
+
+        let avg = sum / arrData.length;
+        return avg;
+        }
+
+        let arrSubject = ["국어","수학"];
+        let result = testAvg(arrSubject);
+
+        document.write("편균 점수는" + result + "점입니다");
+
+
+        //입력화면
+        국어 점수는? = 80
+        수학 점수는? = 70
+        //결과화면
+        평균 점수는 75점 입니다.
+}</code></pre>
+            </div>
+            <p>함수를 호출하면 데이터가 매개변수에 전달되며 함수에 작성한 코드에 사용됩니다.
+                그리고 계산 결과를 return문을 사용해 함수를 호출한 지점에 되돌려주면 result에 값이 
+                저장됩니다.
+            </p>
+
+        </div>
+
+</body>
+
+</html>

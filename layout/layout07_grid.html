@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃7 : grid</title>
+
+       <!-- 파비콘 -->
+       <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+       <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+       <link rel="icon" href="../assets/>
+       <meta property=" og:type" content="article" />
+       <meta property="og:title" content="김현우" />
+       <meta property="og:url" content="https://webstoryboy.co.kr/" />
+       <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+       <meta property="og:site_name" content="김현우" />
+       <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+       
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #E8F5E9;
+        }
+
+        #wrap {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "side01 contents side02"
+            "footer footer footer"
+            ;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 100px 100px 780px 100px;
+        }
+
+        #header {
+            background-color: #C8E6C9;
+            grid-area: header;
+        }
+
+        #nav {
+            background-color: #A5D6A7;
+            grid-area: nav;
+        }
+
+
+        #side01 {
+            background-color: #81C784;
+            grid-area: side01;
+        }
+
+        
+        #contents {
+            background-color: #66BB6A;
+            grid-area: contents;
+
+        }
+        #side02 {
+            background-color: #4CAF50;
+            grid-area: side02;
+        }
+        
+        #footer {
+            background-color: #43A047;
+            grid-area: footer;
+        }
+
+        @media (max-width: 1300px) {
+            #wrap {
+                width: 96%;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            #wrap {
+            width: 100%;
+            grid-template-areas: 
+            "header header"
+            "nav nav"
+            "side01 contents"
+            "side02 side02"
+            "footer footer"
+            ;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 100px 100px 630px 150px 100px;
+        }
+
+        }
+
+        @media (max-width: 600px) {
+            #wrap {
+            width: 100%;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "side01"
+            "contents"
+            "side02"
+            "footer"
+            ;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 100px 200px 630px 150px 100px ;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="side01"></aside>
+        <section id="contents"></section>
+        <aside id="side02"></aside>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

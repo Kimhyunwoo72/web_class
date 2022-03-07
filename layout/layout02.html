@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout02</title>
+
+       <!-- 파비콘 -->
+       <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+       <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+       <link rel="icon" href="../assets/>
+       <meta property=" og:type" content="article" />
+       <meta property="og:title" content="김현우" />
+       <meta property="og:url" content="https://webstoryboy.co.kr/" />
+       <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+       <meta property="og:site_name" content="김현우" />
+       <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #EBF4EA;
+        }
+        #container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #D0E5CB;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #a5d6a7;
+        }
+        #contents {
+            width: 1200px;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #649D53;
+            clear: both;
+        }
+        #contents .left {
+            width: 300px;
+            height: 780px;
+            background-color: #96C58B;
+            float: left;
+        }
+        #contents .center {
+            width: 600px;
+            height: 780px;
+            background-color: #81B873;
+            float: left;
+        }
+        #contents .right {
+            width: 300px;
+            height: 780px;
+            background-color: #6FAC5C;
+            float: left;
+        }
+        </style>
+    </head>
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="contents">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site02</title>
+
+       <!-- 파비콘 -->
+       <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+       <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+       <link rel="icon" href="../assets/>
+       <meta property=" og:type" content="article" />
+       <meta property="og:title" content="김현우" />
+       <meta property="og:url" content="https://webstoryboy.co.kr/" />
+       <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+       <meta property="og:site_name" content="김현우" />
+       <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap');
+
+        /* ir 효과 */
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-family: 'Poppins', 'sans-serif';
+            font-weight: 400;
+        }
+
+
+        #wrap {
+            height: 100vh;
+        }
+
+        #header {
+            margin: 0 auto;
+            width: 1440px;
+            height: 42px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 52px;
+        }
+
+        #header .logo {
+            width: 160px;
+            height: 35px;
+            background: url(./img/bg-sug.svg);
+            background-position: -0 -100px;
+        }
+
+        #header .menu {
+            padding: 8px 0;
+            display: flex;
+        }
+
+        #header .menu .menu_img01 {
+            margin: 0 10px;
+        }
+
+        #header .menu .menu_img02 {
+            margin: 0 10px;
+        }
+
+        #header .menu .menu_img03 {
+            margin: 0 0 0 10px;
+        }
+
+        #header .menu .menu_img01 {
+            width: 24px;
+            height: 24px;
+            background: url(./img/bg-sug.svg);
+            background-position: 0 -150px;
+        }
+
+        #header .menu .menu_img02 {
+            width: 26px;
+            height: 24px;
+            background: url(./img/bg-sug.svg);
+            background-position: -50px -150px;
+        }
+
+        #header .menu .menu_img03 {
+            width: 24px;
+            height: 24px;
+            background: url(./img/bg-sug.svg);
+            background-position: -100px -150px;
+        }
+
+        #header .nav {
+            width: 58%;
+        }
+
+        #header .nav ul {
+            display: flex;
+        }
+
+        #header .nav ul li {
+            padding: 0 5px;
+            padding-bottom: 8px;
+            margin: 8px 30px;
+            font-size: 17px;
+            font-weight: normal;
+        }
+
+        #header .nav ul li a {
+            font-weight: bolder;
+        }
+
+        #header .nav ul li:hover {
+            border-bottom: 2px solid #000;
+        }
+
+        #container .contents01 {
+            background: url(img/bg_bg01.jpg);
+            /* background-size: 100%; */
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        #container .contents01_box {
+            margin: 0 auto;
+            height: 950px;
+            width: 1440px;
+        }
+
+        #container .contents01 h2 {
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 0.95;
+            padding: 138px 0 55px 0px;
+        }
+
+        #container .contents01 p {
+            font-size: 18px;
+            line-height: 1.56;
+            color: #72696a;
+        }
+
+        #container .contents01 .btn {
+            display: flex;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #container .contents01 .btn .btn01 {
+            width: 202px;
+            height: 70px;
+            background-color: #c4a586;
+            color: #fff;
+            line-height: 4.4;
+            margin: 35px 13px 49px 0;
+        }
+
+        #container .contents01 .btn .btn02 {
+            width: 202px;
+            height: 70px;
+            background-color: #fbfbfb;
+            border: 1px solid #c4a586;
+            color: #c4a586;
+            line-height: 4.4;
+            margin: 35px 13px 49px 0;
+        }
+
+        #container .contents01_img {
+            margin: 0 auto;
+            background-color: rgb(187, 178, 178);
+            position: absolute;
+        }
+
+        #container .contents02 {
+            margin: 0 auto;
+            width: 1440px;
+            height: 300px;
+        }
+
+        #container .contents02_box h2 {
+            text-align: center;
+            position: relative;
+            top: 86px;
+            font-weight: bold;
+        }
+
+        #container .contents02_box .contents02_imgbox {
+            margin: 0 auto;
+            margin-top: 86px;
+            height: 130px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container .contents02_box .contents02_imgbox .contents02_box_img {
+            background-color: #000;
+            margin-top: 68px;
+        }
+
+        #container .contents02_box .contents02_imgbox .contents02_box_img1 {
+            background: url(./img/bg-sug.svg);
+            width: 96px;
+            height: 47px;
+            background-position: 0 -200px;
+        }
+
+        #container .contents02_box .contents02_imgbox .contents02_box_img2 {
+            background: url(./img/bg-sug.svg);
+            width: 109px;
+            height: 47px;
+            background-position: -100px -200px;
+        }
+
+        #container .contents02_box .contents02_imgbox .contents02_box_img3 {
+            background: url(./img/bg-sug.svg);
+            background-position: -250px -200px;
+            width: 147px;
+            height: 50px;
+        }
+
+        #container .contents02_box .contents02_imgbox .contents02_box_img4 {
+            background: url(./img/bg-sug.svg);
+            width: 110px;
+            height: 47px;
+            background-position: 0 -250px;
+        }
+
+        #container .contents02_box .contents02_imgbox .contents02_box_img5 {
+            background: url(./img/bg-sug.svg);
+            width: 67px;
+            height: 28px;
+            background-position: -150px -250px;
+        }
+
+        #container .contents02_box .contents02_imgbox .contents02_box_img6 {
+            background: url(./img/bg-sug.svg);
+            background-position: -250px -250px;
+            width: 122px;
+            height: 24px;
+        }
+
+        #container .contents03 {
+            height: 388px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #container .contents03 .contents03_box01 {
+            height: 388px;
+            width: 50%;
+            background-color: #FCEFE9;
+            background-image: url(img/contents03_box01.jpg);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        #container .contents03 .contents03_box02 {
+            height: 388px;
+            width: 50%;
+            background-color: #FAE2C8;
+            background-image: url(img/contents03_box02.jpg);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        #container .contents03 .contents03_box01 .contents03_text1 {
+            width: 184px;
+            height: 88px;
+        }
+
+        #container .contents03 .contents03_box01 h3 {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.3;
+            color: #3d3d3f;
+            padding: 110px 100px 91px 100px;
+        }
+
+        #container .contents03 .contents03_box01 p {
+            font-size: 20px;
+            padding: 0 100px 79px 100px;
+
+        }
+
+        #container .contents03 .contents03_box02 .contents03_text2 {
+            width: 182px;
+            height: 88px;
+        }
+
+        #container .contents03 .contents03_box02 h3 {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.3;
+            color: #3d3d3f;
+            padding: 110px 100px 91px 100px;
+        }
+
+        #container .contents03 .contents03_box02 p {
+            font-size: 20px;
+            padding: 0 100px 79px 100px;
+
+
+        }
+
+        #container .contents04 {
+            height: 476px;
+            width: 1054px;
+            margin: 0 auto;
+
+        }
+
+        #container .contents04 .contents04_box1 {
+            display: flex;
+        }
+
+        #container .contents04 .contents04_box1 h3 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #3d3d3f;
+            margin: 173px 0 105px 0;
+        }
+
+        #container .contents04 .contents04_box1 p {
+            font-size: 20px;
+            font-weight: 500;
+            color: #a9a7a6;
+            margin: 194px 0 111px 95px;
+        }
+
+        #container .contents04 .contents04_box1 span {
+            margin: 200px 0 111px 228px;
+            width: 110px;
+            height: 19px;
+            background: url(img/bg-sug.svg);
+            background-position: 0 -300px;
+        }
+
+        #container .contents04 .contents04_box2 ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        #container .contents04 .contents04_box2 ul li {
+            padding-left: 59px;
+            font-size: 18px;
+            color: #a9a7a6;
+        }
+
+        #container .contents04 .contents04_box2 ul li:nth-child(4) {
+            color: #000;
+        }
+
+        #container .contents05 {
+            width: 1054px;
+            height: 520px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container .contents05 .contents_box {
+            width: 312px;
+            height: 480px;
+        }
+
+        #container .contents05 .contents05_box1 {
+            width: 312px;
+            height: 480px;
+            background: url(img/item01.jpg);
+            background-size: cover;
+        }
+
+        #container .contents05 .contents05_box2 {
+            background: url(img/item02.jpg);
+            background-size: cover;
+        }
+
+        #container .contents05 .contents05_box3 {
+            background: url(img/item03.jpg);
+            background-size: cover;
+        }
+
+        #container .contents05 h3 {
+            font-size: 26px;
+            font-weight: bold;
+            padding: 43px 0px 32px 51px;
+        }
+
+        #container .contents05>div>div {
+            display: flex;
+        }
+
+        #container .contents05>div>div>span {
+            padding: 0 0 0 51px;
+        }
+
+        #container .contents05>div>div>span:last-child {
+            font-size: 15px;
+            color: #a9a7a6;
+            text-decoration: line-through;
+        }
+
+        /* 666 */
+        #container .contents06 {
+            width: 1054px;
+            height: 520px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container .contents06 .contents_box {
+            width: 312px;
+            height: 480px;
+        }
+
+        #container .contents06 .contents06_box1 {
+            width: 312px;
+            height: 480px;
+            background: url(img/item04.jpg);
+            background-size: cover;
+        }
+
+        #container .contents06 .contents06_box2 {
+            background: url(img/item05.jpg);
+            background-size: cover;
+        }
+
+        #container .contents06 .contents06_box3 {
+            background: url(img/item06.jpg);
+            background-size: cover;
+        }
+
+        #container .contents06 h3 {
+            font-size: 26px;
+            font-weight: bold;
+            padding: 43px 0px 32px 51px;
+        }
+
+        #container .contents06>div>div {
+            display: flex;
+        }
+
+        #container .contents06>div>div>span {
+            padding: 0 0 0 51px;
+        }
+
+        #container .contents06>div>div>span:last-child {
+            font-size: 15px;
+            color: #a9a7a6;
+            text-decoration: line-through;
+        }
+
+
+        #container .contents07 .contents_box {
+            margin: 0 auto;
+            width: 1200px;
+            height: 650px;
+            display: flex;
+            margin-top: 188px;
+        }
+
+        #container .contents07 .contents_box .img {
+            background: url(./img/contents07.jpg) no-repeat;
+            width: 502px;
+            height: 588px;
+        }
+
+        #container .contents07 .contents_box .text {
+            margin-left: 107px;
+            margin-top: 70px;
+        }
+
+        #container .contents07 .contents_box .text h3 {
+            font-size: 53px;
+            font-weight: bold;
+            line-height: 56px;
+            margin-bottom: 43px;
+        }
+
+        #container .contents07 .contents_box .text p {
+            color: #72696a;
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        #container .contents08 {
+            margin: 0 auto;
+            width: 1200px;
+            height: 380px;
+        }
+
+        #container .contents08 .contents_box {
+            display: flex;
+            margin-top: 188px;
+            justify-content: space-between;
+        }
+
+        #container .contents08 .contents_box2 {
+            display: flex;
+            align-items: center;
+            margin: 50px 0 0 520px;
+        }
+
+        #container .contents08 .contents_box .text .btn a {
+            font-size: 14px;
+            color: #fe8432;
+            border: 1px solid #fe8432;
+            padding: 8px 36px;
+            border-radius: 18px;
+            font-weight: 500;
+        }
+
+        #container .contents08 .contents_box .text h3 {
+            font-size: 53px;
+            font-weight: bold;
+            line-height: 56px;
+            margin-top: 38px;
+        }
+
+        #container .contents08 .contents_box2 .icon {
+            width: 75px;
+            height: 60px;
+            background: url(./img/bg-sug.svg);
+            background-position: 0 -400px;
+        }
+
+        #container .contents08 .contents_box .img {
+            background: url(./img/contents08.jpg) right no-repeat;
+            width: 440px;
+            height: 380px;
+        }
+
+        #container .contents08 .contents_box p {
+            font-size: 14px;
+            padding-left: 14px;
+        }
+
+        #footer {
+            width: 1200px;
+            height: 150px;
+            margin: 0 auto;
+            margin-top: 71px;
+        }
+
+        #footer .contents01 {
+            display: flex;
+            justify-content: space-between;
+            height: 20px;
+        }
+
+        #footer .contents01 .logo {
+            width: 160px;
+            height: 35px;
+            background: url(./img/bg-sug.svg);
+            background-position: -0 -100px;
+        }
+
+        #footer .contents01 .nav ul {
+            display: flex;
+        }
+
+        #footer .contents01 .nav ul li {
+            padding: 7px 40px;
+
+        }
+
+        #footer .contents01 .menu {
+            display: flex;
+        }
+
+        #footer .contents01 .menu a {
+            padding-left: 30px;
+            padding-top: 15px;
+        }
+
+        #footer .contents01 .menu .img1 {
+            width: 12px;
+            height: 12px;
+            background: url(./img/bg-sug.svg);
+            background-position: 0 -350px;
+        }
+
+        #footer .contents01 .menu .img2 {
+            width: 17px;
+            height: 12px;
+            background: url(./img/bg-sug.svg);
+            background-position: -50px -350px;
+        }
+
+        #footer .contents01 .menu .img3 {
+            width: 17px;
+            height: 12px;
+            background: url(./img/bg-sug.svg);
+            background-position: -100px -350px;
+        }
+
+        #footer .contents02 p {
+            border-top: 1px solid #dfdfe5;
+            margin-top: 58px;
+            text-align: center;
+            padding: 34px 0;
+            color: #adadad;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">
+              <h1 class="ir_pm">logo</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">products</a></li>
+                    <li><a href="#">faqs</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </nav>
+            <div class="menu">
+                <a href="#">
+                    <div class="menu_img01"></div>
+                </a>
+                <a href="#">
+                    <div class="menu_img02"></div>
+                </a>
+                <a href="#">
+                    <div class="menu_img03"></div>
+                </a>
+            </div>
+        </header>
+        <main id="container">
+            <section class="contents01">
+                <div class="contents01_bg"></div>
+                <div class="contents01_box">
+                    <h2>Modern Furniture For <br>
+                        Modern Living style
+                    </h2>
+                    <p>
+                        In unfeeling existence objection immediate repulsive <br>
+                        on he in. Imprudence comparison uncommonly me <br>
+                        he difficulty diminution resolution. Likewise proposal <br>
+                        differed scarcely dwelling as on raillery. <br>
+                        <br>
+                        September few dependent extremity own continued <br>
+                        and ten prevailed attending. Early to weeks we could. <br>
+                        Do commanded an shameless we disposing do. <br>
+                        Indulgence ten remarkably nor are impression out. <br>
+                        Power is lived means oh every in we quiet.<br>
+                    </p>
+                    <div class="btn">
+                        <a href="#">
+                            <div class="btn01">Request a Quote</div>
+                        </a>
+                        <a href="#">
+                            <div class="btn02">Watch Video</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- <img src="../layout/img/contents01_Image.jpg" alt=""> -->
+            </section>
+            <section class="contents02">
+                <div class="contents02_box">
+                    <h2>SOME OF OUR TRUSTED CLIENTS</h2>
+                    <div class="contents02_imgbox">
+                        <div class="contents02_box_img1 contents02_box_img"></div>
+                        <div class="contents02_box_img2 contents02_box_img"></div>
+                        <div class="contents02_box_img3 contents02_box_img"></div>
+                        <div class="contents02_box_img4 contents02_box_img"></div>
+                        <div class="contents02_box_img5 contents02_box_img"></div>
+                        <div class="contents02_box_img6 contents02_box_img"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="contents03">
+                <div class="contents03_box01">
+                    <h3>Residential<br>
+                        Furniture</h3>
+                    <p>Browse Collection</p>
+                </div>
+                <div class="contents03_box02">
+                    <h3>Hospitality<br>
+                        Furniture</h3>
+                    <p>Browse Collection</p>
+                </div>
+            </section>
+            <section class="contents04">
+                <div class="contents04_box1">
+                    <h3>PRODUCTS</h3>
+                    <p>Best Selling</p>
+                    <p>Most Popular</p>
+                    <span></span>
+                </div>
+                <div class="contents04_box2">
+                    <ul>
+                        <li>All</li>
+                        <li>Bed</li>
+                        <li>Sofa</li>
+                        <li>Chair</li>
+                        <li>Light</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="contents05">
+                <div class="contents_box contents05_box1">
+                    <h3>Ramen Stool</h3>
+                    <div>
+                        <span>$65.00</span>
+                        <span>$95.00</span>
+                    </div>
+                </div>
+                <div class="contents_box contents05_box2">
+                    <h3>Flexform</h3>
+                    <div>
+                        <span>$35.00</span>
+                        <span>$55.00</span>
+                    </div>
+                </div>
+                <div class="contents_box contents05_box3">
+                    <h3>Porada</h3>
+                    <div>
+                        <span>$87.00</span>
+                        <span>$97.00</span>
+                    </div>
+                </div>
+            </section>
+            <section class="contents06">
+                <div class="contents_box contents06_box1">
+                    <h3>Taknion</h3>
+                    <div>
+                        <span>$45.00</span>
+                        <span>$55.00</span>
+                    </div>
+                </div>
+                <div class="contents_box contents06_box2">
+                    <h3>Amora</h3>
+                    <div>
+                        <span>$65.00</span>
+                        <span>$95.00</span>
+                    </div>
+                </div>
+                <div class="contents_box contents06_box3">
+                    <h3>Liquid Contract</h3>
+                    <div>
+                        <span>$35.00</span>
+                        <span>$45.00</span>
+                    </div>
+                </div>
+            </section>
+            <section class="contents07">
+                <div class="contents_box">
+                    <div class="img"></div>
+                    <div class="text">
+                        <h3>Let’s see what our<br>
+                            customer’s say</h3>
+                        <p>Dwelling and speedily ignorant any steepest.<br>
+                            Admiration instrument affronting invitation reasonably<br>
+                            up do of prosperous in. Shy saw declared age debating<br>
+                            ecstatic man. Call in so want pure rank am dear were.<br>
+                            Remarkably to continuing in surrounded diminution on.<br>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="contents08">
+                <div class="contents_box">
+                    <div class="text">
+                        <div class="btn"><a href="#"> Mistrium Interiror</a></div>
+                        <h3>Signup to receive updates<br>
+                            about new products</h3>
+                        <div class="contents_box2">
+                            <div class="icon"></div>
+                            <p>Watch intro video</p>
+                        </div>
+                    </div>
+                    <div class="img"></div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="contents01">
+                <div class="logo"></div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <a href="#">
+                        <div class="img1"></div>
+                    </a>
+                    <a href="#">
+                        <div class="img2"></div>
+                    </a>
+                    <a href="#">
+                        <div class="img3"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="contents02">
+                <p>Copyright © 2022. arshakir.com</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

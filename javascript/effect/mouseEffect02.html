@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+   <!-- 파비콘 -->
+   <link rel="shortcut icon" href="../../assets/face/javascript.png">
+   <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
+   <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
+
+    <link rel="stylesheet" href="css/NexonLv1Gothic.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/cdnjs.css">
+
+    <style>
+        body::before {
+            background: rgba(70, 61, 56, 0.8);
+        }
+
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        .mouse__wrap p:last-child {
+            font-size: 3vw;
+            font-weight: 400;
+        }
+
+        .mouse__wrap p span {
+            border-bottom: 0.15vw solid tomato;
+            color: tomato;
+
+        }
+
+        .cursor {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 10px;
+            height: 10px;
+            z-index: 99999;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s, opacity 0.2s;
+        }
+
+        .cursor-follower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s, opacity 0.2s;
+        }
+
+        /* span */
+        .cursor.active {
+            transform: scale(0);
+        }
+
+        .cursor-follower.active {
+            transform: scale(10);
+            background-color: rgb(216, 142, 92, 0.5);
+        }
+
+        /* info갔을 때 */
+        .cursor.show {
+            transform: scale(0);
+        }
+
+        .cursor-follower.show {
+            transform: scale(3);
+            background-color: rgb(239, 245, 209, 0.5);
+        }
+
+        /* title갔을 때 */
+        .cursor.show2 {
+            transform: scale(0);
+        }
+
+        .cursor-follower.show2 {
+            transform: scale(3);
+            background-color: rgba(197, 66, 209, 0.5);
+        }
+    </style>
+</head>
+
+<body class="img06">
+    <main>
+        <section id="mouseType01">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+            <div class="mouse__wrap">
+                <p><span> Failure</span> is not falling, It will stay in the <span> fallen position.</span></p>
+                <p><span>실패란</span> 넘어지는 것이 아니라, <span> 넘어진 자리에</span> 머무는 것이다.</p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- info  -->
+    <div class="info">
+        <div class="title">
+            <h1><a href="./mouseEffect.html">javascript mouse Effect02</a></h1>
+            <p>마우스 이펙트 - 따라다니기2</p>
+        </div>
+
+        <div class="number">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li class="active"><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+
+        <div class="source">
+            <button class="source-btn">소스보기</button>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="modal-cont">
+                        <div class="code-view">
+                            <div class="view-header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view-cont">
+                                <div>
+                                    <pre><code class="language-html">
+
+
+
+    &lt;main&gt;
+        &lt;section id="mouseType01"&gt;
+            &lt;div class="cursor"&gt;&lt;/div&gt;
+            &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;&gt;&lt;span> Failure&lt;/span&gt; is not falling, It will stay in the &lt;span&gt; fallen position.&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&gt;&lt;span>실패란&lt;/span&gt; 넘어지는 것이 아니라, &lt;span&gt; 넘어진 자리에&lt;/span&gt; 머무는 것이다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+</code></pre>
+                                </div>
+                                <div>
+                                    <pre><code class="language-css">
+
+
+
+    body::before {
+        background: rgba(70, 61, 56, 0.8);
+    }
+
+    .mouse__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        cursor: none;
+    }
+
+    .mouse__wrap p {
+        font-size: 2.5vw;
+        line-height: 2;
+        font-weight: 300;
+    }
+
+    .mouse__wrap p:last-child {
+        font-size: 3vw;
+        font-weight: 400;
+    }
+
+    .mouse__wrap p span {
+        border-bottom: 0.15vw solid tomato;
+        color: tomato;
+
+    }
+
+    .cursor {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 10px;
+        height: 10px;
+        z-index: 99999;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+        user-select: none;
+        pointer-events: none;
+        transition: transform 0.3s, opacity 0.2s;
+    }
+
+    .cursor-follower {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        user-select: none;
+        pointer-events: none;
+        transition: transform 0.3s, opacity 0.2s;
+    }
+
+    /* span */
+    .cursor.active {
+        transform: scale(0);
+    }
+
+    .cursor-follower.active {
+        transform: scale(10);
+        background-color: rgb(216, 142, 92, 0.5);
+    }
+
+    /* info갔을 때 */
+    .cursor.show {
+        transform: scale(0);
+    }
+
+    .cursor-follower.show {
+        transform: scale(3);
+        background-color: rgb(239, 245, 209, 0.5);
+    }
+
+    /* title갔을 때 */
+    .cursor.show2 {
+        transform: scale(0);
+    }
+
+    .cursor-follower.show2 {
+        transform: scale(3);
+        background-color: rgba(197, 66, 209, 0.5);
+    }
+
+    </code></pre>
+                                </div>
+                                <div>
+                                    <pre><code class="language-javascript">
+
+                                        
+
+    const cursor = document.querySelector(".cursor")
+    const follower = document.querySelector(".cursor-follower")
+    const span = document.querySelectorAll(".mouse__wrap span")
+    const info = document.querySelectorAll(".number ul li")
+    const title = document.querySelectorAll(".title")
+
+    window.addEventListener("mousemove", e => {
+        //커서 좌표값 할당
+        // cursor.style.left = e.pageX -5 + "px"
+        // cursor.style.top = e.pageY-5 + "px"
+        // follower.style.left = e.pageX -15 + "px"
+        // follower.style.top = e.pageY - 15 + "px"
+
+        //gsap
+        gsap.to(cursor, {
+            duration: .3,
+            left: e.pageX - 5,
+            top: e.pageY - 5
+        })
+        gsap.to(follower, {
+            duration: .8,
+            left: e.pageX - 15,
+            top: e.pageY - 15
+        })
+
+        //오버 효과
+        //mouseover, mouseenter / mouseout,mouseleave / 이벤트 버블링 차이 정리.
+        span.forEach((e) => {
+            e.addEventListener("mouseover", () => {
+                cursor.classList.add("active")
+                follower.classList.add("active")
+            })
+            e.addEventListener("mouseout", () => {
+                cursor.classList.remove("active")
+                follower.classList.remove("active")
+            })
+        })
+        //inof
+        info.forEach((e) => {
+            e.addEventListener("mouseover", () => {
+                cursor.classList.add("show")
+                follower.classList.add("show")
+            })
+            e.addEventListener("mouseout", () => {
+                cursor.classList.remove("show")
+                follower.classList.remove("show")
+            })
+        })
+        //title
+        title.forEach((e) => {
+            e.addEventListener("mouseover", () => {
+                cursor.classList.add("show2")
+                follower.classList.add("show2")
+            })
+            e.addEventListener("mouseout", () => {
+                cursor.classList.remove("show2")
+                follower.classList.remove("show2")
+            })
+        })
+        //span 오버 했을 때 클래스 active 추가 / 나갔을 때 active 삭제
+
+        //출력
+        document.querySelector(".pageX").innerText = e.pageX
+        document.querySelector(".pageY").innerText = e.pageY
+    })
+    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="attr">
+            <ul>
+                <li>pageX : <span class="pageX">0</span>px</li>
+                <li>pageY : <span class="pageY">0</span>px</li>
+            </ul>
+        </div>
+        <!-- //info -->
+
+        <!-- script -->
+        <script src="js/highlight.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/gsap.min.js"></script>
+        <script>
+            hljs.highlightAll();
+            modal()
+            tabMenu()
+
+            const cursor = document.querySelector(".cursor")
+            const follower = document.querySelector(".cursor-follower")
+            const span = document.querySelectorAll(".mouse__wrap span")
+            const info = document.querySelectorAll(".number ul li")
+            const title = document.querySelectorAll(".title")
+
+            window.addEventListener("mousemove", e => {
+                //커서 좌표값 할당
+                // cursor.style.left = e.pageX -5 + "px"
+                // cursor.style.top = e.pageY-5 + "px"
+                // follower.style.left = e.pageX -15 + "px"
+                // follower.style.top = e.pageY - 15 + "px"
+
+                //gsap
+                gsap.to(cursor, {
+                    duration: .3,
+                    left: e.pageX - 5,
+                    top: e.pageY - 5
+                })
+                gsap.to(follower, {
+                    duration: .8,
+                    left: e.pageX - 15,
+                    top: e.pageY - 15
+                })
+
+                //오버 효과
+                //mouseover, mouseenter / mouseout,mouseleave / 이벤트 버블링 차이 정리.
+                span.forEach((e) => {
+                    e.addEventListener("mouseover", () => {
+                        cursor.classList.add("active")
+                        follower.classList.add("active")
+                    })
+                    e.addEventListener("mouseout", () => {
+                        cursor.classList.remove("active")
+                        follower.classList.remove("active")
+                    })
+                })
+                //inof
+                info.forEach((e) => {
+                    e.addEventListener("mouseover", () => {
+                        cursor.classList.add("show")
+                        follower.classList.add("show")
+                    })
+                    e.addEventListener("mouseout", () => {
+                        cursor.classList.remove("show")
+                        follower.classList.remove("show")
+                    })
+                })
+                //title
+                title.forEach((e) => {
+                    e.addEventListener("mouseover", () => {
+                        cursor.classList.add("show2")
+                        follower.classList.add("show2")
+                    })
+                    e.addEventListener("mouseout", () => {
+                        cursor.classList.remove("show2")
+                        follower.classList.remove("show2")
+                    })
+                })
+                //span 오버 했을 때 클래스 active 추가 / 나갔을 때 active 삭제
+
+                //출력
+                document.querySelector(".pageX").innerText = e.pageX
+                document.querySelector(".pageY").innerText = e.pageY
+            })
+        </script>
+</body>
+
+</html>

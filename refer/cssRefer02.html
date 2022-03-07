@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>김현우</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>레퍼런스 북</em></a></h2>
+
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li  class="active"><a href="cssRefer02.html">Block.inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float</a></li>
+                <li><a href="cssRefer07.html">vendor prefix</a></li>
+                <li><a href="cssRefer08.html">background-image</a></li>
+                <li><a href="cssRefer09.html">ir 기법</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>Block와 Inline</h3>
+                <h4>Block 요소란?</h4>
+                <p>block 속성은 inline과는 달리 한 줄에 나열되지 않고 그 자체로 한 줄을 완전히 차지한다.
+                    예를 들어, header, footer, p, li, table, div, h1 등이 모두 block 요소에 해당하는 태그들이다.
+                    블록 속성을 가지고 있는 태그는 기본적으로 너비 100%(width:100%)속성을 가지고 있다.
+                    화면의 가로 폭을 100%로 완전히 차지하기 때문에, 다음 요소가 양 옆으로 붙을 공간이 없어서 자연히 줄 넘김이 된다.</p>
+                    또한, 인라인 요소와 다르게 margin, width, height 속성을 정의하면 모두 적용된다.
+                    특정 태그가 블록 요소인지 아닌지 가장 쉽게 파악하는 방법은, CSS로 배경색을 입혀보는 것이다.
+
+                <h4>Inline 요소란?</h4>
+                <p>inline 속성이란, 줄을 바꾸지 않고 다른 요소와 함께 한 행에 위치하려는 성향이다.
+
+                    예를 들어, span, a, img 등이 모두 inline 요소에 해당하는 태그들이다.</p><br>
+                    <ol>
+                        <li>상,하단 외부 여백(margin-top,margin-bottom)속성을 정의해도 적용되지 않는다.
+                            인라인 요소의 상,하 여백은 margin이 아닌 line-height 속성에 의해 발생한다.</li><br>
+                        <li>너비(width)와 높이(height) 속성이 적용되지 않는다. 인라인 요소의 너비와 높이는 태그가 품고 있는 내부 요소의 부피에 맞춰진다.</li><br>
+                        <li>인라인 속성을 가진 태그끼리 연속으로 사용되는 경우에는 최소한의 간격을 유지하기 위해서 좌, 우에 약 5px 가량의 외부 여백(margin)이 자동으로 발생한다.</li><br>
+                    </ol>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practive01-1</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism2.css">
+
+    <!-- script -->
+    <script src="assets/js/prism2.js"></script>
+
+
+</head>
+
+<body>
+    <div class="top"><a href="#header">Top</a></div>
+    <div class="back"><a href="practice.html">Back</a></div>
+
+    <main id="main">
+        <div class="test">
+
+            <h2>1부터 100까지 출력하기</h2>
+
+
+            <!-- 01 -->
+            <div id="sample2" class="sample">
+
+                <h3>1.1 while문을 이용해서 1부터 100까지 출력하는 함수를 작성해주세요.</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    let num = 1;
+
+    while(num <= 100){
+        console.log(num);
+        num ++
+    }
+}</code></pre>
+                </div>
+                <div class="result result1t">
+                    <h4>결과보기</h4>
+                    <div class="result1">
+                        1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950<br>
+                        51525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596<br>
+                        979899100<br>
+                    </div>
+                </div>
+            </div>
+            <!-- 01 -->
+
+            <!-- 02 -->
+            <div id="sample2" class="sample">
+
+                <h3>1.2 for문 이용해서 1부터 100까지 출력하는 함수를 작성해주세요.</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    for(let i=1; i<=100; i++){
+        console.log(i)
+    }
+        }</code></pre>
+                </div>
+                <div class="result result3t">
+                    <h4>결과보기</h4>
+                    <div class="result3">
+                        1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950<br>
+                        51525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596<br>
+                        979899100<br>
+                    </div>
+                </div>
+            </div>
+            <!-- 02 -->
+
+            <!-- 03 -->
+            <div id="sample2" class="sample">
+
+                <h3>1.3 for문 이용해서 짝수와 홀수를 출력하는 함수를 작성해주세요.</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">
+        //짝수
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                console.log(i);
+            }
+        }
+
+    //홀수
+
+    for( let i=1; i<=100; i++) {
+        if( i % 2 == 1){
+            document.write(i)
+        }
+    }
+
+    //다른방법 1 
+    for ( let i = 1; i <= 100; i++ ) { 
+        if( i % 2 == 0) console.log(i); } 
+
+
+    //다른방법 2
+    for( let i = 2; i<=100; i+=2 ){
+        console.log(i);
+    }</code></pre>
+                </div>
+                <div class="result result3t">
+                    <h4>결과보기</h4>
+                    <div class="result3">
+                        **짝수**<br>
+                        2468101214161820222426283032343638404244464850525456586062646668707274767880828486889092949698100<br>
+                        **홀수**<br>
+                        13579111315171921232527293133353739414345474951535557596163656769717375777981838587899193959799<br>
+                        **다른방법1**<br>
+                        2468101214161820222426283032343638404244464850525456586062646668707274767880828486889092949698100<br>
+                        **다른방법2**<br>
+                        2468101214161820222426283032343638404244464850525456586062646668707274767880828486889092949698100<br>
+                    </div>
+                </div>
+            </div>
+            <!-- //03 -->
+
+            <!-- 04 -->
+            <div id="sample2" class="sample">
+
+                <h3>1.4 for문 이용해서 1부터 100까지 합을 출력하세요!</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    let sum = 0;
+    for (let i = 1; i <= 100; i++) {
+        sum = sum + i
+    }
+    document.write(sum)
+}</code></pre>
+                </div>
+                <div class="result result3t">
+                    <h4>결과보기</h4>
+                    <div class="result3">
+                        5050
+                    </div>
+                </div>
+            </div>
+            <!-- //04 -->
+
+        </div>
+    </main>
+    <!-- script -->
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        //짝수
+        {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 == 0) {
+                    console.log(i);
+                }
+            }
+        }
+
+        //홀수
+        {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 != 0) {
+                    console.log(i);
+                }
+            }
+        }
+
+        //짝수
+        {
+            for (let i = 2; i <= 100; i += 2) {
+                console.log(i);
+            }
+        }
+        //1.4 for문 이용해서 1부터 100까지 합을 출력하세요!
+        // {
+        //     let sum = 0;
+        //     for (let i = 1; i <= 100; i++) {
+        //         sum = sum + i
+        //     }
+        //     document.write(sum)
+        // }
+    </script>
+</body>
+
+</html>
