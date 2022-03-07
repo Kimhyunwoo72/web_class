@@ -161,7 +161,7 @@ body::before {
 .source {
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 10px;
 }
 
 .source button {
