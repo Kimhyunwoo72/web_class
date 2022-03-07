@@ -119,12 +119,6 @@
             .quiz__wrap {
                     flex-direction: column;
             }
-            .source button{
-                bottom: -240vh;
-            }
-            .source button.hide{
-                bottom: -2900vh;
-            }
             }
         .quiz {
             max-width: 500px;
@@ -886,14 +880,8 @@
                     const div = document.createElement("div");
                     quizSelectsWrap.appendChild(div).innerHTML = `<p class="quiz__ex">${question.answerEx}</p>`;
                 }
-                document.querySelector(".source button").classList.add("hide")
             });
-            
-            //해결안됨
-            // const screen = window.matchMedia("screen and (max-width: 450px)");
-            // screen.addListener(()=>{
-            //     document.querySelector(".source button").style.bottom = "-"+ 190 +"vh" // 모바일 버전에서 정답확인을 하면 더 밑으로 내려오게
-            // }) 
+
 
             
             quizResult.innerHTML = `${quizInfo.length} 문제 중에 ${scoreCurrent} 문제를 맞추었습니다.`;
