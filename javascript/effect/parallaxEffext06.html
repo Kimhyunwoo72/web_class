@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴랙스 효과02</title>
+    <title>패럴랙스 효과06</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap"
         rel="stylesheet">
@@ -59,11 +59,16 @@
         #parallax__nav {
             position: fixed;
             right: 20px;
-            top: 20px;
+            top: -200px;
             z-index: 1000;
             background-color: rgba(0, 0, 0, 0.4);
             padding: 15px 20px;
             border-radius: 50px;
+            transition: top 0.4s ease-in-out;
+        }
+
+        #parallax__nav.show {
+            top: 20px;
         }
 
         #parallax__nav li {
@@ -73,9 +78,7 @@
 
         #parallax__nav li a {
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
+            padding: 5px 20px;
             text-align: center;
             line-height: 30px;
         }
@@ -83,7 +86,7 @@
         #parallax__nav li.active a {
             background: #fff;
             color: #000;
-            border-radius: 50%;
+            border-radius: 30px;
         }
 
         @media(max-width:450px) {
@@ -97,16 +100,16 @@
             }
 
             #parallax__nav {
-                padding: 15px 15px;
-                margin: 0 auto;
+                width: 90%;
+                font-size: 12px;
                 right: 0;
-                top: 0;
                 left: 0;
-                border-radius: 0;
             }
 
             #parallax__nav ul {
                 text-align: center;
+                display: flex;
+                justify-content: space-around;
             }
 
             #parallax__nav li {
@@ -115,11 +118,12 @@
 
             #parallax__nav li a {
                 display: inline-block;
-                width: 20px;
-                height: 10px;
-                padding: 0px 5px;
+                width: 30px;
+                height: 20px;
+                line-height: 2;
+                padding: 5px 5px;
                 text-align: center;
-                line-height: 10px;
+                white-space: nowrap;
             }
 
             #parallax__nav li.active a {
@@ -308,45 +312,43 @@
             line-height: 1.6;
         }
 
-        #parallax__dot {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px 10px;
-            border-radius: 30px;
-        }
+        /* option */
 
-        #parallax__dot li {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            list-style: none;
-            margin: 12px 8px;
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-            transition: box-shadow .2s ease;
-        }
+        /* 한번에 나타나기 */
+        /* .content__item__desc span {
+            opacity: 0;
+            transition: all 0.33s ease-in-out;
+        } */
 
-        #parallax__dot li a {
-            background: #fff;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 50%;
-            transition: all .2s ease;
-        }
+        /* .content__item__desc.show span:nth-child(1){transition-delay: 0.1s;}
+        .content__item__desc.show span:nth-child(2){transition-delay: 0.2s;}
+        .content__item__desc.show span:nth-child(3){transition-delay: 0.3s;}
+        .content__item__desc.show span:nth-child(4){transition-delay: 0.4s;}
+        .content__item__desc.show span:nth-child(5){transition-delay: 0.5s;}
+        .content__item__desc.show span:nth-child(6){transition-delay: 0.6s;}
+        .content__item__desc.show span:nth-child(7){transition-delay: 0.7s;}
+        .content__item__desc.show span:nth-child(8){transition-delay: 0.8s;}
+        .content__item__desc.show span:nth-child(9){transition-delay: 0.9s;}
+        .content__item__desc.show span:nth-child(10){transition-delay: 1s;}
 
-        #parallax__dot li.active {
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
-        }
+        .content__item__desc.show span:nth-child(1){opacity: 1;}
+        .content__item__desc.show span:nth-child(2){opacity: 1;}
+        .content__item__desc.show span:nth-child(3){opacity: 1;}
+        .content__item__desc.show span:nth-child(4){opacity: 1;}
+        .content__item__desc.show span:nth-child(5){opacity: 1;}
+        .content__item__desc.show span:nth-child(6){opacity: 1;}
+        .content__item__desc.show span:nth-child(7){opacity: 1;}
+        .content__item__desc.show span:nth-child(8){opacity: 1;}
+        .content__item__desc.show span:nth-child(9){opacity: 1;}
+        .content__item__desc.show span:nth-child(10){opacity: 1;} */
 
-        #parallax__dot li.active a {
-            transform: scale(0.4);
+        /* 순차적으로 나타내기 */
+        .content__item__desc span {
+            opacity: 0;
+            transition: all 0.33s ease-in-out;
+        }
+        .content__item__desc span.show {
+            opacity: 1;
         }
     </style>
 </head>
@@ -355,37 +357,21 @@
 
     <!-- parallax__title -->
     <header id="parallax__title">
-        <h1><a href="./parallaxEffext.html">javascript parallaxEffext Effect02</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 사이드 메뉴</p>
+        <h1><a href="./parallaxEffext.html">javascript parallaxEffext Effect06</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 텍스트 효과</p>
         <ul>
             <li><a href="parallaxEffext01.html">s1</a></li>
-            <li class="active"><a href="parallaxEffext02.html">s2</a></li>
+            <li><a href="parallaxEffext02.html">s2</a></li>
             <li><a href="parallaxEffext03.html">s3</a></li>
             <li><a href="parallaxEffext04.html">s4</a></li>
             <li><a href="parallaxEffext05.html">s5</a></li>
-            <li><a href="parallaxEffext06.html">s6</a></li>
+            <li class="active"><a href="parallaxEffext06.html">s6</a></li>
             <li><a href="parallaxEffext07.html">s7</a></li>
             <li><a href="parallaxEffext08.html">s8</a></li>
             <li><a href="parallaxEffext09.html">s9</a></li>
         </ul>
     </header>
     <!-- //parallax__title -->
-
-    <!-- parallax__nav -->
-    <nav id="parallax__dot">
-        <ul>
-            <li class="active"><a href="#section1"><span>s1</span></a></li>
-            <li><a href="#section2"><span>s2</span></a></li>
-            <li><a href="#section3"><span>s3</span></a></li>
-            <li><a href="#section4"><span>s4</span></a></li>
-            <li><a href="#section5"><span>s5</span></a></li>
-            <li><a href="#section6"><span>s6</span></a></li>
-            <li><a href="#section7"><span>s7</span></a></li>
-            <li><a href="#section8"><span>s8</span></a></li>
-            <li><a href="#section9"><span>s9</span></a></li>
-        </ul>
-    </nav>
-    <!-- //parallax__dot -->
 
     <!-- main -->
     <main id="parallax__cont">
@@ -490,84 +476,48 @@
     <!-- //info -->
 
     <!-- script -->
+    <script src="js/gsap.min.js"></script>
     <script>
-        document.querySelectorAll("#parallax__dot a").forEach(el => {
-            el.addEventListener("click", e => {
-                e.preventDefault();
-                // window.scroll(0, 1000)
+        //글자 나누기
 
-                // window.scrollTo(0,1000)
-                // window.scrollTo({left:0, top:1000})
-                // window.scrollTo({left:0, top:1000, behavior: "smooth"})
+        // let text = document.querySelector("#section1 .content__item__desc")
+        // let splitText = text.innerText
+        // let splitWrap = splitText.split(' ').join("</span><span>")
+        //     splitWrap = "<span>" + splitWrap + "</span>"
+        //     text.innerHTML = splitWrap
 
-                // window.scrollBy(0,1000)
-                // window.scrollBy({left:0, top:1000})
-                // window.scrollBy({left:0, top:1000, behavior: "smooth"})
-                document.querySelector(el.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
+        document.querySelectorAll(".content__item__desc").forEach(desc => {
+            let splitText = desc.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+                splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+                desc.innerHTML = splitWrap;
+                desc.setAttribute("aria-label", splitText);
+        })
+        function scroll(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
 
-        });
-
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
-
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop)
-
-            //for
-            // for(let i = 1; i<=9; i++){
-            //     if(scrollTop >= document.getElementById("section"+i).offsetTop -2){
-            //         document.querySelectorAll("#parallax__dot li").forEach(li=>{
-            //             li.classList.remove("active")
-            //         })
-            //         document.querySelector("#parallax__dot li:nth-child("+i+")").classList.add("active")
+            //한번에 나타나기
+            // document.querySelectorAll(".content__item").forEach(item => {
+            //     if(scrollTop >= item.offsetTop){
+            //         item.querySelector(".content__item__desc").classList.add("show");
             //     }
-            // }
+            // })
 
-            // forEach
-            document.querySelectorAll(".content__item").forEach((el, i) => {
-                if (scrollTop >= el.offsetTop) {
-                    document.querySelectorAll("#parallax__dot ul li").forEach(li => {
-                        li.classList.remove("active")
+            document.querySelectorAll(".content__item").forEach(item => {
+                if(scrollTop > item.offsetTop){
+                    item.querySelectorAll(".content__item__desc span").forEach((span, index) => {
+                        setTimeout(() => {  // 한번만 실행되어져야해서 setTimeout 사용
+                            span.classList.add("show");
+                        }, 50 * (index+1))
                     })
-                    document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList
-                        .add("active")
                 }
             })
+            requestAnimationFrame(scroll)
+        }
+        scroll();
 
-        })
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // //스크롤 값 구하기
-        // window.screenY
-        // window.pageYOffset
-        // document.documentElement.scrollTop
-
-        // window.screenX //익스플로러에서 작동 안됨 최신 브라우저에서 사용
-        // window.pageXOffset
-        // document.documentElement.scrollLeft
-
-        // //스크롤 값으로 이동하기
-        // window.scroll()
-        // window.scrollTo() //절대적 위치
-        // window.scrollBy() //상대적 위치
-
-        // element.scroll()
-        // element.scrollTo()
-        // element.scrollBy()
-        // element.scrollIntoView()
+        
     </script>
 </body>
 
