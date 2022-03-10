@@ -229,7 +229,6 @@
         .content__item__imgWrap {
             width: 100%;
             padding-bottom: 56.25%;
-            background-color: #000;
             position: relative;
             overflow: hidden;
         }
@@ -333,15 +332,20 @@
         }
 
         /* option */
-        .reveal > span {
+        .reveal>span,
+        .reveal>div {
             opacity: 0;
         }
-        .reveal.show > span {
+
+        .reveal.show>span,
+        .reveal.show>div {
             animation: opacity 1s linear forwards;
         }
+
         .reveal {
             position: relative;
         }
+
         .reveal::before {
             content: '';
             position: absolute;
@@ -349,32 +353,171 @@
             top: 0;
             width: 0%;
             height: 100%;
-            background-color: rgb(131, 131, 131);
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
         }
+
+        .reveal.reveal-two::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 1;
+            background-color: rgb(235, 159, 124);
+        }
+
+        /* 기본값 */
         .reveal.show::before {
             animation: reveal 1s;
         }
+
         .reveal.reveal-RTL.show::before {
             animation: reveal-RTL 1s;
         }
-   
+
+        .reveal.reveal-TTB.show::before {
+            animation: reveal-TTB 1s;
+        }
+
+        .reveal.reveal-BBT.show::before {
+            animation: reveal-BBT 1s;
+        }
+
+        /* 두가지 */
+        .reveal.show::after {
+            animation: reveal 1000ms 300ms;
+        }
+
+        .reveal.reveal-RTL.show::after {
+            animation: reveal-RTL 1000ms 300ms;
+        }
+
+        .reveal.reveal-TTB.show::after {
+            animation: reveal-TTB 1000ms 300ms;
+        }
+
+        .reveal.reveal-BBT.show::after {
+            animation: reveal-BBT 1000ms 300ms;
+        }
+
         @keyframes opacity {
-            0% {opacity: 0;}
-            60% {opacity: 0;}
-            70% {opacity: 1;}
-            100% {opacity: 1;}
+            0% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
+
         @keyframes reveal {
-            0% {width: 0; left: 0;}
-            50% {width: 100%; left: 0;}
-            80% {width: 100%; left: 0;}
-            100% {width: 0; left: 100%;}
+            0% {
+                width: 0;
+                left: 0;
+            }
+
+            50% {
+                width: 100%;
+                left: 0;
+            }
+
+            80% {
+                width: 100%;
+                left: 0;
+            }
+
+            100% {
+                width: 0;
+                left: 100%;
+            }
         }
+
         @keyframes reveal-RTL {
-            0% {width: 0; right: 0;}
-            50% {width: 100%; right: 0;}
-            80% {width: 100%; right: 0;}
-            100% {width: 0; right: 100%;}
+            0% {
+                width: 0;
+                right: 0;
+            }
+
+            50% {
+                width: 100%;
+                right: 0;
+            }
+
+            80% {
+                width: 100%;
+                right: 0;
+            }
+
+            100% {
+                width: 0;
+                right: 100%;
+            }
+        }
+
+        @keyframes reveal-TTB {
+            0% {
+                width: 100%;
+                height: 0;
+                top: 0;
+            }
+
+            50% {
+                width: 100%;
+                height: 100%;
+                top: 0;
+            }
+
+            80% {
+                width: 100%;
+                height: 100%;
+                top: 0;
+            }
+
+            100% {
+                width: 100%;
+                height: 0;
+                top: 100%;
+            }
+        }
+
+        @keyframes reveal-BBT {
+            0% {
+                width: 100%;
+                height: 0;
+                top: auto;
+                bottom: 0;
+            }
+
+            50% {
+                width: 100%;
+                height: 100%;
+                top: auto;
+                bottom: 0;
+            }
+
+            80% {
+                width: 100%;
+                height: 100%;
+                top: auto;
+                bottom: 0;
+            }
+
+            100% {
+                width: 100%;
+                height: 0;
+                top: auto;
+                bottom: 100%;
+            }
         }
     </style>
 </head>
@@ -408,17 +551,17 @@
             <section id="section1" class="content__item">
                 <span class="content__item__num">01</span>
                 <h2 class="content__item__title">section1</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.</span></p>
+                <p class="content__item__desc reveal">오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.</p>
             </section>
             <!-- //section1 -->
 
             <section id="section2" class="content__item">
                 <span class="content__item__num">02</span>
                 <h2 class="content__item__title">section2</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
                 <p class="content__item__desc reveal reveal-RTL"><span>행복은 습관이다, 그것을 몸에 지녀라.</span></p>
@@ -428,50 +571,53 @@
             <section id="section3" class="content__item">
                 <span class="content__item__num">03</span>
                 <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal-TTB">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</span></p>
+                <p class="content__item__desc reveal reveal-TTB"><span>꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</span></p>
             </section>
             <!-- //section3 -->
 
             <section id="section4" class="content__item">
                 <span class="content__item__num">04</span>
                 <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal-BBT">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기 위해서이다.</p>
+                <p class="content__item__desc reveal reveal-BBT"><span>사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기 위해서이다.</span>
+                </p>
             </section>
             <!-- //section4 -->
 
             <section id="section5" class="content__item">
                 <span class="content__item__num">05</span>
                 <h2 class="content__item__title">section5</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal-two">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.</p>
+                <p class="content__item__desc reveal reveal-two"><span>사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.</span></p>
             </section>
             <!-- //section5 -->
 
             <section id="section6" class="content__item">
                 <span class="content__item__num">06</span>
                 <h2 class="content__item__title">section6</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal reveal-two reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다.</p>
+                <p class="content__item__desc reveal reveal reveal-two reveal-RTL"><span>성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에
+                        성공한 것이다.</span></p>
             </section>
             <!-- //section6 -->
 
             <section id="section7" class="content__item">
                 <span class="content__item__num">07</span>
                 <h2 class="content__item__title">section7</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal reveal reveal-two reveal-BBT">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc"> 작은 기회로 부터 종종 위대한 업적이 시작된다.</p>
+                <p class="content__item__desc reveal reveal reveal-two" data-delay="500"><span>작은 기회로 부터 종종 위대한 업적이
+                        시작된다.</span></p>
             </section>
             <!-- //section7 -->
 
@@ -481,7 +627,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.</p>
+                <p class="content__item__desc"><span>세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.</span></p>
             </section>
             <!-- //section8 -->
 
@@ -491,7 +637,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">최고에 도달하려면 최저에서 시작하라.</p>
+                <p class="content__item__desc"><span>최고에 도달하려면 최저에서 시작하라.</span></p>
             </section>
             <!-- //section9 -->
         </div>
@@ -507,6 +653,9 @@
     <!-- script -->
     <script src="js/gsap.min.js"></script>
     <script>
+        //만약에 reveal클래스가 있는데
+        //글씨를 span으로 감싸고 글씨를 다 넣어줘야함.
+
         //#id 이동하기
         document.querySelectorAll("a[href^='#']").forEach(el => {
             el.addEventListener("click", (event) => {
@@ -518,6 +667,14 @@
         })
 
 
+        document.querySelectorAll(".content__item__desc").forEach(e => {
+                let text = e.innerText;
+
+                if (e.classList.contains("reveal")) {
+                    e.innerHTML = "<span>" + text + "</span>"
+                }
+            })
+
         // 패럴랙스
         function scroll() {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
@@ -526,10 +683,16 @@
 
             reveal.forEach(el => {
                 let revealOfftset = el.offsetTop + el.parentElement.offsetTop
-                console.log(revealOfftset);
+                let revealDelay = el.dataset.delay
 
                 if (scrollTop >= revealOfftset - window.innerHeight / 2) {
-                    el.classList.add("show")
+                    if (revealDelay == undefined) {
+                        el.classList.add("show")
+                    } else {
+                        setTimeout(() => {
+                            el.classList.add("show")
+                        }, revealDelay)
+                    }
                 }
             })
 
@@ -537,6 +700,32 @@
             requestAnimationFrame(scroll)
         }
         scroll();
+
+        //         function scroll() {
+        //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+        //     const reveal = document.querySelectorAll(".reveal")
+
+        //     reveal.forEach(el => {
+        //         let revealOfftset = el.offsetTop + el.parentElement.offsetTop
+        //         let revealDelay = el.dataset.delay
+
+        //         if (scrollTop >= revealOfftset - window.innerHeight / 2) {
+        //             if(revealDelay == undefined){
+        //             el.classList.add("show")
+        //             }else {
+        //                 setTimeout(()=>{
+        //                     el.classList.add("show")
+        //                 }, revealDelay)
+        //             }
+        //         }
+
+        //     })
+
+
+        //     requestAnimationFrame(scroll)
+        // }
+        // scroll();
     </script>
 </body>
 
