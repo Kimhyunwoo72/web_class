@@ -74,12 +74,25 @@
         .section2_bg {
             width: 100%;
             height: 100vh;
-            background: #000;
+            background: #222;
         }
         .section2_text1 {
             color: #fff;
             font-size: 5vw;
             text-align: center;
+        }
+        .section2_img1 {
+
+        }
+        .section2_img1_site {
+            position: absolute;
+            left: 50%;top: 1.5vw;
+            transform: translate(-50%);
+            width: 46vw;
+            height: calc(100% - 5vw);
+            border: 1px solid #fff;
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
         }
         </style>
 </head>
@@ -164,19 +177,27 @@
             data-16000 = "width: 100%; height: 100vh; border-radius: 0%"
             ></div>
             <div class="section2_text1 fixed"
-            data-15000 = "transform: translate(-50%, -50%) scale(0.5)"
-            data-16000 = "transform: translate(-50%, -200%) scale(1)"
+            data-15000 = "top: 200%;"
+            data-16000 = "top: 15%;"
             >
+            <!-- data-15000 = "transform: translate(-50%, -50%) scale(0.5)"
+            data-16000 = "transform: translate(-50%, -50%) scale(1)" -->
             Let me show you my work.<br>
             </div>
             <div class="section2_img1 fixed"
-            data-16000 = "transform: translate(-50%, 300%) scale(0.5)"
-            data-16500 = "transform: translate(-50%, -30%) scale(1); width: 60%"
+            data-15000 = "transform: translate(-50%, 300%) scale(0.5)"
+            data-16000 = "transform: translate(-50%, -30%) scale(1); width: 60%"
             >
             <img src="img/mockup/MacBook Pro 13.png" alt="mockup"
-            data-15000="display: none"
-            data-16000="display: block"
-            >
+            data-14500="display: none"
+            data-15500="display: block">
+            <div class="section2_img1_site">
+                <div><img src="./img/site.jpg" alt="사이트01"
+            data-16000 = "transform: translate(0%, 0%); width: 100%"
+            data-17000 = "transform: translate(0%, 0%); width: 100%"
+            data-18000 = "transform: translate(0%, -100%); width: 100%;"
+                    ></div>
+            </div>
             </div>
         </section>
         <!-- //section2 -->
