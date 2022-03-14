@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,14 +14,16 @@
             font-family: 'GmarketSans';
             font-weight: 400;
         }
+
         body {
             height: 20000px;
         }
+
         .scrollTop {
             position: fixed;
             left: 20px;
             top: 20px;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
             color: #fff;
             width: 60px;
             height: 30px;
@@ -28,197 +31,294 @@
             line-height: 30px;
             z-index: 10000;
         }
+
         /* commeon */
-             /* common */
-             .fixed {
+        /* common */
+        .fixed {
             position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 1000;
         }
+
         img {
             width: 100%;
             vertical-align: top;
             object-fit: cover;
         }
+
         /* section1__bg */
-        .section1__bg img{
+        .section1__bg img {
             width: 70%;
             height: 17vh;
         }
+
         .section1_text1 {
             color: #fff;
             font-size: 5vw;
             transform: translate(-50%, -50%) scale(0);
         }
+
         .section1_text2 {
             color: #fff;
             font-size: 4vw;
             transform: translate(-50%, -50%) scale(0);
             font-weight: 500;
         }
+
         .section1_text3 {
             color: #fff;
             font-size: 4vw;
             transform: translate(-50%, -50%) scale(0);
             font-weight: 500;
         }
+
         .section1_text4 {
             color: #fff;
             font-size: 10vw;
             transform: translate(-50%, -50%) scale(0);
             font-weight: 500;
         }
-                /* section2*/
+
+        /* section2*/
         .section2_bg {
             width: 100%;
             height: 100vh;
-            background: #222;
+            background: #76BFB2;
         }
+
         .section2_text1 {
             color: #fff;
             font-size: 5vw;
             text-align: center;
         }
-        .section2_img1 {
 
-        }
         .section2_img1_site {
             position: absolute;
-            left: 50%;top: 1.5vw;
+            left: 50%;
+            top: 1.5vw;
             transform: translate(-50%);
             width: 46.5vw;
             height: calc(100% - 5vw);
             border-radius: 1vw 1vw 0 0;
             overflow: hidden;
         }
-        </style>
+
+        .section2_img1_site a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            background-color: rgb(118, 191, 178,0.6);
+            padding: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        .section2_img2_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 46.5vw;
+            height: calc(100% - 5vw);
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+
+        .section2_img2_site a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            background-color: rgb(118, 191, 178,0.6);
+            padding: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        .section2_img3_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 46.5vw;
+            height: calc(100% - 5vw);
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+
+        .section2_img3_site a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            background-color: rgb(118, 191, 178,0.6);
+            padding: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
     <div class="scrollTop"></div>
 
     <div id="contents">
-        <section id="section1"
-        data-14500="display: block"
-        data-14501="display: none"
-        >
+        <section id="section1" data-14500="display: block" data-14501="display: none">
             <div class="section1__bg">
-                <img class="fixed" src="img/bg02.jpg" alt="이미지"
-                data-0 = "width: 70%; height: 17vh;"
-                data-1000 = "width: 100%; height: 17vh;" 
-                data-2000 = "width: 100%; height: 50vh;" 
-                data-3000 = "width: 100%; height: 50vh;" 
-                data-13000 = "width: 100%; height: 50vh;" 
-                data-14500 = "width: 100%; height: 0vh;" 
-                >
+                <img class="fixed" src="img/bg02.jpg" alt="이미지" data-0="width: 70%; height: 17vh;"
+                    data-1000="width: 100%; height: 17vh;" data-2000="width: 100%; height: 50vh;"
+                    data-3000="width: 100%; height: 50vh;" data-13000="width: 100%; height: 50vh;"
+                    data-14500="width: 100%; height: 0vh;">
             </div>
-            <div class="section1_text1 fixed"
-            data-1100 = "transform: translate(-50%, -50%) scale(0); top: 50%"
-            data-1100 = "transform: translate(-50%, -50%) scale(0); top: 50%"
-            data-2000 = "transform: translate(-50%, -50%) scale(1); top: 50%"
-            data-3000 = "transform: translate(-50%, -50%) scale(1); top: 50%"
-            data-4000 = "transform: translate(-50%, -50%) scale(1); top: -10%"
-            >
+            <div class="section1_text1 fixed" data-1100="transform: translate(-50%, -50%) scale(0); top: 50%"
+                data-1100="transform: translate(-50%, -50%) scale(0); top: 50%"
+                data-2000="transform: translate(-50%, -50%) scale(1); top: 50%"
+                data-3000="transform: translate(-50%, -50%) scale(1); top: 50%"
+                data-4000="transform: translate(-50%, -50%) scale(1); top: -10%">
                 안녕하세요!
             </div>
-            <div class="section1_text2 fixed"
-            data-3000 = "transform: translate(-50%, -50%) scale(1); top: 100%"
-            data-4000 = "transform: translate(-50%, -50%) scale(1); top: 50%"
-            data-5000 = "transform: translate(-50%, -50%) scale(1); left: 50%"
-            data-6000 = "transform: translate(-50%, -50%) scale(1); left: -50%"
-            >
+            <div class="section1_text2 fixed" data-3000="transform: translate(-50%, -50%) scale(1); top: 100%"
+                data-4000="transform: translate(-50%, -50%) scale(1); top: 50%"
+                data-5000="transform: translate(-50%, -50%) scale(1); left: 50%"
+                data-6000="transform: translate(-50%, -50%) scale(1); left: -50%">
                 저의 포트폴리오에 오신걸 환영합니다!
             </div>
-            <div class="section1_text3 fixed"
-            data-5000 = "transform: translate(-50%, -50%) scale(0); left: 100%"
-            data-6000 = "transform: translate(-50%, -50%) scale(1); left: 50%"
-            data-7000 = "transform: translate(-50%, -50%) scale(0); left: 50%"
-            data-8000 = "transform: translate(-50%, -50%) scale(1); left: -30%"
-            >
+            <div class="section1_text3 fixed" data-5000="transform: translate(-50%, -50%) scale(0); left: 100%"
+                data-6000="transform: translate(-50%, -50%) scale(1); left: 50%"
+                data-7000="transform: translate(-50%, -50%) scale(0); left: 50%"
+                data-8000="transform: translate(-50%, -50%) scale(1); left: -30%">
                 지금부터 시작하겠습니다!
             </div>
-            <div class="section1_text4 fixed"
-            data-7000 = "transform: translate(-50%, -50%) scale(0); left: 100%"
-            data-8000 = "transform: translate(-50%, -50%) scale(1); left: 50%"
-            data-9000 = "transform: translate(-50%, -50%) scale(0); left: 50%"
-            data-10000 = "transform: translate(-50%, -50%) scale(1); left: -30%"
-            >
+            <div class="section1_text4 fixed" data-7000="transform: translate(-50%, -50%) scale(0); left: 100%"
+                data-8000="transform: translate(-50%, -50%) scale(1); left: 50%"
+                data-9000="transform: translate(-50%, -50%) scale(0); left: 50%"
+                data-10000="transform: translate(-50%, -50%) scale(1); left: -30%">
                 3
             </div>
-            <div class="section1_text4 fixed"
-            data-9000 = "transform: translate(-50%, -50%) scale(0); left: 100%"
-            data-10000 = "transform: translate(-50%, -50%) scale(1); left: 50%"
-            data-11000 = "transform: translate(-50%, -50%) scale(0); left: 50%"
-            data-12000 = "transform: translate(-50%, -50%) scale(1); left: -30%"
-            >
+            <div class="section1_text4 fixed" data-9000="transform: translate(-50%, -50%) scale(0); left: 100%"
+                data-10000="transform: translate(-50%, -50%) scale(1); left: 50%"
+                data-11000="transform: translate(-50%, -50%) scale(0); left: 50%"
+                data-12000="transform: translate(-50%, -50%) scale(1); left: -30%">
                 2
             </div>
-            <div class="section1_text4 fixed"
-            data-11000 = "transform: translate(-50%, -50%) scale(0); left: 100%"
-            data-12000 = "transform: translate(-50%, -50%) scale(1); left: 50%"
-            data-13000 = "transform: translate(-50%, -50%) scale(1); left: 50%"
-            data-14000 = "transform: translate(-50%, -50%) scale(1); left: -100%"
-            >
+            <div class="section1_text4 fixed" data-11000="transform: translate(-50%, -50%) scale(0); left: 100%"
+                data-12000="transform: translate(-50%, -50%) scale(1); left: 50%"
+                data-13000="transform: translate(-50%, -50%) scale(1); left: 50%"
+                data-14000="transform: translate(-50%, -50%) scale(1); left: -100%">
                 1
             </div>
-            
-            
+
+
         </section>
         <!-- //section1 -->
-        
-        <section id="section2"
-        data-15000="display: none"
-        data-15001="display: block"
-        >
-            <div class="section2_bg fixed"
-            data-15000 = "width: 0%; height: 0vh; border-radius: 500px"
-            data-16000 = "width: 100%; height: 100vh; border-radius: 0%"
-            ></div>
-            <div class="section2_text1 fixed"
-            data-15000 = "transform: translate(-50%, -50%) scale(0); top: 53%"
-            data-15500 = "transform: translate(-50%, -50%) scale(1); top: 50%"
-            data-16500 = "transform: translate(-50%, -50%) scale(1); top: 15%"
-            >
-            <!-- data-15000 = "transform: translate(-50%, -50%) scale(0.5)"
-            data-16000 = "transform: translate(-50%, -50%) scale(1)" -->
-            Let me show you my work.<br>
-            </div>
-            <div class="section2_img1 fixed"
-            data-15000 = "transform: translate(-50%, 400%) scale(0.5)"
-            data-16700 = "transform: translate(-50%, -30%) scale(1); width: 60%"
-            >
-            <img src="img/mockup/MacBook Pro 13.png" alt="mockup"
-            data-14500="display: none"
-            data-15500="display: block">
-            <div class="section2_img1_site">
-                <div><img src="./img/site.jpg" alt="사이트01"
-            data-17000 = "transform: translate(0%, 0%); width: 100%"
-            data-17500 = "transform: translate(0%, 0%); width: 100%"
-            data-19000 = "transform: translate(0%, -78%); width: 100%; top:100%"
-                    ></div>
-            </div>
-            </div>
-        </section>
-        <!-- //section2 -->
 
-        <section id="section3"></section><!-- //section3 -->
-        <section id="section4"></section><!-- //section4 -->
-        <section id="section5"></section><!-- //section5 -->
-        <section id="section6"></section><!-- //section6 -->
+        <section id="section2" data-15000="display: none" data-15001="display: block">
+            <div class="section2_bg fixed" data-15000="width: 0%; height: 0vh; border-radius: 500px"
+                data-16000="width: 100%; height: 100vh; border-radius: 0%"></div>
+            <div class="section2_text1 fixed" data-15000="transform: translate(-50%, -50%) scale(0); top: 53%"
+                data-15500="transform: translate(-50%, -50%) scale(1); top: 50%"
+                data-16500="transform: translate(-50%, -50%) scale(1); top: 15%"
+                data-30500="transform: translate(-50%, -50%) scale(1); top: 15%"
+                data-31000="transform: translate(-50%, -50%) scale(1); top: 50%"
+                >
+                Let me show you My work.<br>
+            </div>
+
+            <!-- section2_img1_site -->
+            <div class="section2_img1 fixed" data-15000="transform: translate(-50%, 400%) scale(0.5)"
+                data-16700="transform: translate(-50%, -30%) scale(1); width: 60%"
+                data-21000="transform: translate(-50%, -30%) scale(1); width: 60%"
+                data-22000="transform: translate(-300%, -30%) scale(1); width: 60% left:auto">
+                <img src="img/mockup/MacBook Pro 13.png" alt="mockup" data-14500="display: none"
+                    data-15500="display: block">
+
+                <div class="section2_img1_site">
+                    <div><img src="./img/site.jpg" alt="사이트01" data-17000="transform: translate(0%, 0%); width: 100%"
+                            data-17500="transform: translate(0%, 0%); width: 100%"
+                            data-20000="transform: translate(0%, -78%); width: 100%; top:100%">
+                        <a href="../site/webClass/js/index.html" data-19000="display: none" data-20000="display: block"
+                            data-21000>사이트 보러가기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //section2_img1_site -->
+
+            <!-- section2_img2_site -->
+            <div class="section2_img2 fixed"
+                data-21000="transform: translate(100%, -30%) scale(1); width: 60% left:auto"
+                data-22000="transform: translate(-50%, -30%) scale(1); width: 60%"
+                data-25000="transform: translate(-50%, -30%) scale(1); width: 60%"
+                data-26000="transform: translate(-300%, -30%) scale(1); width: 60% left:auto">
+                <img src="img/mockup/MacBook Pro 13.png" alt="mockup" data-20000="display: none"
+                    data-21001="display: block">
+
+                <div class="section2_img2_site">
+                    <div><img src="./img/site 2.jpg" alt="사이트01" data-22000="transform: translate(0%, 0%); width: 100%"
+                            data-22500="transform: translate(0%, 0%); width: 100%"
+                            data-23000="transform: translate(0%, -15%); width: 100%; top:100%">
+                        <a href="../webstandard/index.html" 
+                            data-23000="display: none"
+                            data-23010="display: block">사이트 보러가기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //section2_img2_site -->
+
+
+            <!-- section2_img3_site -->
+            <div class="section2_img3 fixed" 
+                data-25000="transform: translate(150%, -30%) scale(1); width: 60%"
+                data-26000="transform: translate(-50%, -30%) scale(1); width: 60% left:auto"
+                data-30000="transform: translate(-50%, -30%) scale(1); width: 60% left:auto"
+                data-31000="transform: translate(-200%, -30%) scale(1); width: 60%"
+                >
+                <img src="img/mockup/MacBook Pro 13.png" alt="mockup" 
+                    data-25000="display: none"
+                    data-25001="display: block">
+
+                <div class="section2_img3_site">
+                    <div><img src="./img/site3.png" alt="사이트01" 
+                            data-26000="transform: translate(0%, 0%); width: 100%"
+                            data-26500="transform: translate(0%, 0%); width: 100%"
+                            data-29000="transform: translate(0%, -91%); width: 100%; top:100%">
+                        <a href="../site/webClass/js/project.html" 
+                            data-29000="display: none"
+                            data-29010="display: block"
+                            data-29500>사이트 보러가기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- //section2_img3_site -->
+
+    </div>
+    </section>
+    <!-- //section2 -->
+
+    <section id="section3"></section><!-- //section3 -->
+    <section id="section4"></section><!-- //section4 -->
+    <section id="section5"></section><!-- //section5 -->
+    <section id="section6"></section><!-- //section6 -->
     </div>
 
     <script type="text/javascript" src="js/skrollr.min.js"></script>
     <script type="text/javascript">
-        function scroll(){
+        function scroll() {
             var s = skrollr.init();
-            
+
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
             document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
-            
+
             requestAnimationFrame(scroll)
         }
         scroll();
     </script>
 </body>
+
 </html>
