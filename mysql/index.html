@@ -519,92 +519,192 @@ mysql>  SELECT * FROM myData WHERE youEmail like '%naver%';
 
                     <h4 class="pt20">정렬 삭제 : 이름을 기준으로 5번째까지 멤버를 삭제</h4>
                     <pre class="language-js"><code>DELETE FROM mymember ORDER BY youName LIMIT 5;</code></pre>
-                    
+
                     <h4 class="pt20">지정 삭제 : 지정한 멤버를 삭제</h4>
                     <pre class="language-js"><code>DELETE FROM mymember WHERE myMemberID IN(2,8,9,10)</code></pre>
 
                 </div>
                 <!-- //box -->
 
+                <!-- box -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">테이블 합치기</h2>
+
+                    <h3 id="intro8-1" class="page-header">join 사용하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 엘리어스 JOIN 연결할 테이블명 엘리어스 ON(조건문);
+                    </div>
+                    <pre
+                        class="language-js"><code>SELECT m.youName, m.youEmail, r.youCont, r.regTime FROM myMember m JOIN myReview r ON(m.memberID = r.memberID);</code></pre>
+                    <pre class="language-js"><code>    CREATE TABLE myMember (
+        memberID int(10) unsigned auto_increment,
+        youEmail varchar(40) NOT NULL,
+        youName varchar(20) NOT NULL,
+        youPass varchar(20) NOT NULL,
+        youBirth varchar(20) NOT NULL,
+        youAge varchar(20) NOT NULL,
+        youPhone varchar(20) NOT NULL,
+        regTime varchar(11) NOT NULL,
+        PRIMARY KEY (myMemberID)
+    ) charset=utf8;
+
+    CREATE TABLE myReview (
+        reviewID int(10) unsigned auto_increment,
+        memberID int(10) unsigned auto_increment,
+        youCont tinytext NOT NULL,
+        regTime varchar(11) NOT NULL,
+        PRIMARY KEY (reviewID)
+    ) charset=utf8;
+
+Insert INTO myReview(memberID, youCont, regTime) VALUES('4', '잘 보고 갑니다!. 자주 방문할께요~', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('5', '유용한 정보네요~ 감사합니다.', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('6', '생각보다 별로던데??', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('7', '로딩이 잘 안됩니다. 확인해주세[요', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('8', '잘 보고 갑니다!.', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('9', '자주 방문할께요~', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('1', '정말 감사합니다~!!', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('2', '감사합니다!! 잘보고 가요~', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('3', '가격 공지좀요~', '12345');
+Insert INTO myReview(memberID, youCont, regTime) VALUES('11', '믿고 퍼갑니다~ 감사합니다.', '12345');
+</code></pre>
+                    <h4 id="intro5-2" class="page-header">필드명 바꾸기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 AS 기존 필드명 대신 출력할 필드명 FROM 테이블명
+                    </div>
+
+                    <!-- //box -->
+
+                    <!-- box -->
+                    <div class="bs-docs-section">
+                        <h2 id="intro9" class="page-header">집게함수</h2>
+
+                        <pre class="language-js"><code>     CREATE TABLE myRecode (
+        reviewID int(10) unsigned auto_increment,
+        memberID int(10) unsigned,
+        JavaScript tinyint NOT NULL,
+        html tinyint NOT NULL,
+        css tinyint NOT NULL,
+        mysql tinyint NOT NULL,
+        react tinyint NOT NULL,
+        PRIMARY KEY (reviewID)
+    ) charset=utf8;
+
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(1, 2, 30, 70, 90, 10);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(2, 15, 50, 10, 9, 15);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(19, 85, 7, 72, 95, 12);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(12, 77, 35, 71, 54, 50);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(15, 64, 25, 66, 9, 40);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(20, 25, 77, 81, 99, 55);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(11, 55, 30, 70, 84, 46);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(8, 80, 20, 40, 14, 26);
+INSERT INTO myRecode(memberID, JavaScript, html, css, mysql, react) VALUES(6, 60, 55, 69, 87, 56);
+</code></pre>
+
+                        <h3 class="pt20 page-header">집계함수의 종류</h3>
+                        <pre class="language-js"><code>SELECT count(JavaScript) from myRecode;</code></pre>
+                        <pre class="language-js"><code>SELECT sum(JavaScript) from myRecode;</code></pre>
+                        <pre class="language-js"><code>SELECT max(JavaScript) from myRecode;</code></pre>
+                        <pre class="language-js"><code>SELECT min(JavaScript) from myRecode;</code></pre>
+
+                        <h3 class="page-header">그룹별 집계</h3>
+                        <h4>GROUP</h4>
+                        <div class="bs-callout bs-callout-info">
+                            SELECT 필드명 FROM 테이블명 GROUP BY 필드명
+                        </div>
+    <pre class="language-js"><code></code></pre>
+
+                    </div>
+                    <!-- //box -->
+
+                </div>
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#intro1">MySQL</a></li>
+                            <li><a href="#intro2">MySQL 설치</a></li>
+                            <li><a href="#intro3">MySQL 실행</a></li>
+                            <li><a href="#intro4">데이터베이스</a>
+                                <ul class="nav bs-sidenav">
+                                    <li><a href="#intro4-1">데이터베이스 만들기</a></li>
+                                    <li><a href="#intro4-2">데이터베이스 보기</a></li>
+                                    <li><a href="#intro4-3">데이터베이스 사용</a></li>
+                                    <li><a href="#intro4-4">데이터베이스 삭제</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#intro5">테이블</a>
+                                <ul class="nav bs-sidenav">
+                                    <li><a href="#intro5-1">테이블 만들기</a></li>
+                                    <li><a href="#intro5-2">테이블 전체 보기</a></li>
+                                    <li><a href="#intro5-3">테이블 보기</a></li>
+                                    <li><a href="#intro5-4">테이블 삭제</a></li>
+                                    <li><a href="#intro5-5">테이블 복사</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#intro6">테이블 수정</a>
+                                <ul class="nav bs-sidenav">
+                                    <li><a href="#intro6-1">필드 추가하기</a></li>
+                                    <li><a href="#intro6-2">필드 수정하기</a></li>
+                                    <li><a href="#intro6-3">필드 삭제하기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#intro7">테이블 데이터</a>
+                                <ul class="nav bs-sidenav">
+                                    <li><a href="#intro7-1">데이터 입력하기</a></li>
+                                    <li><a href="#intro7-2">데이터 불러오기</a></li>
+                                    <li><a href="#intro7-3">데이터 수정하기</a></li>
+                                    <li><a href="#intro7-4">데이터 삭제하기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#intro8">테이블 합치기</a>
+                                <ul class="nav bs-sidenav">
+                                    <li><a href="#intro8-1">테이블 JOIN</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#intro9">집게함수</a>
+                                <ul class="nav bs-sidenav">
+                                    <li><a href="#intro8-1"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //row -->
+
             </div>
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">MySQL</a></li>
-                        <li><a href="#intro2">MySQL 설치</a></li>
-                        <li><a href="#intro3">MySQL 실행</a></li>
-                        <li><a href="#intro4">데이터베이스</a>
-                            <ul class="nav bs-sidenav">
-                                <li><a href="#intro4-1">데이터베이스 만들기</a></li>
-                                <li><a href="#intro4-2">데이터베이스 보기</a></li>
-                                <li><a href="#intro4-3">데이터베이스 사용</a></li>
-                                <li><a href="#intro4-4">데이터베이스 삭제</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#intro5">테이블</a>
-                            <ul class="nav bs-sidenav">
-                                <li><a href="#intro5-1">테이블 만들기</a></li>
-                                <li><a href="#intro5-2">테이블 전체 보기</a></li>
-                                <li><a href="#intro5-3">테이블 보기</a></li>
-                                <li><a href="#intro5-4">테이블 삭제</a></li>
-                                <li><a href="#intro5-5">테이블 복사</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#intro6">테이블 수정</a>
-                            <ul class="nav bs-sidenav">
-                                <li><a href="#intro6-1">필드 추가하기</a></li>
-                                <li><a href="#intro6-2">필드 수정하기</a></li>
-                                <li><a href="#intro6-3">필드 삭제하기</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#intro7">테이블 데이터</a>
-                            <ul class="nav bs-sidenav">
-                                <li><a href="#intro7-1">데이터 입력하기</a></li>
-                                <li><a href="#intro7-2">데이터 불러오기</a></li>
-                                <li><a href="#intro7-3">데이터 수정하기</a></li>
-                                <li><a href="#intro7-4">데이터 삭제하기</a></li>
-                            </ul>
-                        </li>
+            <!-- //container -->
+
+            <!-- Footer -->
+            <footer class="bs-footer" role="contentinfo">
+                <div class="container">
+                    <ul class="footer-links muted">
+                        <li>Currently v2.0</li>
+                        <li>&middot;</li>
+                        <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
+                        <li>&middot;</li>
+                        <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                        <li>&middot;</li>
+                        <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
                     </ul>
                 </div>
-            </div>
-            <!-- //row -->
+            </footer>
+            <!-- //Footer -->
+            <!-- Bootstrap core JavaScript -->
+            <script src="../assets/js/jquery-1.9.1.min.js"></script>
+            <script src="../assets/js/bootstrap.min.js"></script>
+            <script src="../assets/js/docs.min.js"></script>
+            <script src="../assets/js/prism.js"></script>
 
-        </div>
-        <!-- //container -->
-
-        <!-- Footer -->
-        <footer class="bs-footer" role="contentinfo">
-            <div class="container">
-                <ul class="footer-links muted">
-                    <li>Currently v2.0</li>
-                    <li>&middot;</li>
-                    <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
-                    <li>&middot;</li>
-                    <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
-                    <li>&middot;</li>
-                    <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
-                </ul>
-            </div>
-        </footer>
-        <!-- //Footer -->
-        <!-- Bootstrap core JavaScript -->
-        <script src="../assets/js/jquery-1.9.1.min.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <script src="../assets/js/docs.min.js"></script>
-        <script src="../assets/js/prism.js"></script>
-
-        <script>
-            //부드럽게 옴직이기 
-            //         document.querySelectorAll("#header ul li a").forEach(li => {
-            //     li.addEventListener("click", (e) => {
-            //         e.preventDefault();
-            //         document.querySelector(li.getAttribute("href")).scrollIntoView({
-            //             behavior: "smooth"
-            //         })
-            //     })
-            // })
-        </script>
+            <script>
+                //부드럽게 옴직이기 
+                //         document.querySelectorAll("#header ul li a").forEach(li => {
+                //     li.addEventListener("click", (e) => {
+                //         e.preventDefault();
+                //         document.querySelector(li.getAttribute("href")).scrollIntoView({
+                //             behavior: "smooth"
+                //         })
+                //     })
+                // })
+            </script>
 </body>
 
 </html>
