@@ -1413,7 +1413,17 @@
         }
             }
 
-
+                /* info */
+                .scrollTop {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50%;
+        }
         /* //footer */
     </style>
 </head>
@@ -1635,9 +1645,14 @@
         <div class="copy">&copy;ChargerFind.Project 2022</div>
     </footer>
     <!-- //footer -->
-
+   <!-- info -->
+   <div class="scrollTop">
+    scrollTop : <span>0</span>px
     <!--script-->
     <script>
+        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
+        document.querySelector(".scrollTop span").innerText = Math.round(scrollTop)
+
         document.querySelectorAll("#header ul li a").forEach(li => {
             li.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -1670,8 +1685,6 @@
         header_menu.addEventListener("click", () => {
             header_ul.classList.toggle("active")
             header_a.classList.toggle("active")
-
-
         })
         
 
