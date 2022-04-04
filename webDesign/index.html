@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webDesign</title>
+
+
 </head>
 <style>
     *{
@@ -27,7 +29,7 @@
     .gray {
         color: #979797;
     }
-    svg {
+    .svg {
         width: 20px;
         height: 20px;
         position: relative;
@@ -49,6 +51,7 @@
         width: 960px;
         height: 100vh;
         margin: 0 auto;
+        
     }
     /* #header {
         width: 100%;
@@ -71,10 +74,13 @@
     #header .logo img {
         width: 60%;
     } */
-    #header {height: 100px;}
+    #header {
+        width: 100%;
+        height: 100px;
+    }
     #header h1 {float: left; padding-top: 5px;}
     #header h1 img {width: 130px;}
-    #header .nav {float: right; z-index: 100; position: relative; margin-top: 20px;}
+    #header .nav {float: right !important; z-index: 100; position: relative; margin-top: 20px;}
     #header .nav li {position: relative; float: left; width: 120px; text-align: center;}
     #header .nav li a {display: block; padding: 20px 15px; background: #ccc;}
     #header .nav li a:hover {background: #ddd;}
@@ -109,7 +115,7 @@
         font-weight: bold;
         position: relative;
     }
-    .board .title::before {
+    /* .board .title::before {
         position: absolute;
         content: '';
         width: 2.3px;
@@ -129,7 +135,18 @@
         font-weight: bold;
         font-size: 20px;
         position: relative;
-    }
+    } */
+
+    .notice {position: relative; padding: 30px; width: 50%;}
+    .notice ul li {float: left; margin-right: 20px;}
+    .notice ul li a {font-size: 24px; color: #999; font-weight: bold;}
+    .notice ul li.active a {color: #000;}
+    .notice ul li ul {position: absolute; left: 30px; top: 70px;}
+    .notice ul li ul li {width: 95%; padding: 5px 0;}
+    .notice ul li ul li a {float: left; width: 60%; font-size: 16px; color: #333;
+        overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: normal;}
+    .notice ul li ul li span {float: right; width: 20%;}
+    .notice .more {position: absolute; right: 30px; top: 35px;}
     .board .dot::before {
         position: absolute;
         content: '';
@@ -198,6 +215,8 @@
         height: 200px;
         border-top: 1px solid #dbdbdb;
     }
+    .clearfix a {
+    }
 </style>
 <body>
     <main id="main">
@@ -253,33 +272,27 @@
             <img src="./img/banner.jpg" alt="배너">
         </section>
         <section id="section2">
-            <div class="board">
-                <span class="title">롯데월드 소식</span>
-                <span class="dot gray notice ml20">뉴스 공지</span>
-                <span class="right gray">더보기 
-                   
-                </span>
-                <div class="board_list">
-                    <ul>
-                        <li>
-                            <span>그럴싸진관 미라클</span>
-                            <span class="right gray">2018.11.19</span>
-                        </li>
-                        <li>
-                            <span>드림스테이지 '힘내 소중한 너'</span>
-                            <span class="right gray">2018.11.20</span>
-                        </li>
-                        <li>
-                            <span>'힘내 소중한 너'음원 발매</span>
-                            <span class="right gray">2018.11.13</span>
-                        </li>
-                        <li>
-                            <span>이용 요금 조정 안내</span>
-                            <span class="right gray">2018.11.12</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <article class="notice">
+                <ul class="clearfix">
+                    <li class="active"><a href="#">롯데월드 소식</a>
+                        <ul>
+                            <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                            <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                            <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                            <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">뉴스&middot;공지</a>
+                        <ul>
+                            <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                            <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                            <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                            <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                        </ul>
+                    </li>
+                    <a href="#" class="right">더보기 <img class="svg" src="./img/plus.svg" alt="플러스"></a>
+                </ul>
+            </article>
             <div class="Advertisement">
                 <img src="./img/Advertisement.jpg" alt="광고이미지">
             </div>
@@ -313,7 +326,15 @@
             <p>COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED.</p>
         </footer>
     </main>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("h1").click(function(){
+            alert("bb")
+            })
+        })
+    </script>
 </body>
 </html>
