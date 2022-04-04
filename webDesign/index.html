@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webDesign</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+    .gray {
+        color: #979797;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 5px;
+        left: 2px;
+    }
+    .mt20 {margin-top: 20px;}
+    .mt30 {margin-top: 30px;}
+    .mt40 {margin-top: 40px;}
+    .mt50 {margin-top: 50px;}
+    .mt100 {margin-top: 100px;}
+
+    .ml20 {margin-left: 20px;}
+    .ml30 {margin-left: 30px;}
+    .ml40 {margin-left: 40px;}
+    .ml50 {margin-left: 50px;}
+    .ml100 {margin-left: 100px;}
+    #main {
+        width: 960px;
+        height: 100vh;
+        margin: 0 auto;
+    }
+    /* #header {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    #header nav ul {
+        display: flex;
+    }
+    #header nav ul li {
+        padding: 20px 0px 20px 40px ;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+    #header .logo {
+        padding-top: 30px;
+    }
+    #header .logo img {
+        width: 60%;
+    } */
+    #header {height: 100px;}
+    #header h1 {float: left; padding-top: 5px;}
+    #header h1 img {width: 130px;}
+    #header .nav {float: right; z-index: 100; position: relative; margin-top: 20px;}
+    #header .nav li {position: relative; float: left; width: 120px; text-align: center;}
+    #header .nav li a {display: block; padding: 20px 15px; background: #ccc;}
+    #header .nav li a:hover {background: #ddd;}
+    #header .nav li ul.submenu {display: none; position: absolute; left: 0; top: 59px; background: #ddd;}
+    #header .nav li ul.submenu li a {padding: 10px;}
+    #header .nav li ul.submenu li a:hover {background: #999;}
+    .clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+    #section1 img {
+        width: 100%;
+    }
+    #section2 {
+        width: 100%;
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+    }
+    #section2 .board {
+        width: 49%;
+        height: 211.58px;
+        border: 1px solid #dbdbdb;
+    }
+    #section2 .Advertisement{
+        width: 49%;
+    }
+    #section2 .Advertisement img{
+        width: 100%;
+    }
+    .title {
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 11px;
+        font-weight: bold;
+        position: relative;
+    }
+    .board .title::before {
+        position: absolute;
+        content: '';
+        width: 2.3px;
+        height: 20px;
+        background-color: #000;
+        top: 5px;
+        left: 138px;
+    }
+    .board_list li{
+        padding-bottom: 10px;
+        color: #606060;
+    }
+    .board {
+        padding: 30px;
+    }
+    .board .notice{
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+    }
+    .board .dot::before {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #979797;
+        top: 12px;
+        left: 41px;
+    }
+    #section3 {
+        width: 100%;
+    }
+    #section3 > p{
+        font-size: 23px;
+        font-weight: bold;
+        margin-top: 35px;
+    }
+    #section3 > div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .img p {
+        font-size: 17px;
+    }
+    .img1 {
+        width: 100%;
+    }
+    .img2 {
+        width: 100%;
+    }
+    .img3 {
+        width: 100%;
+    }
+    .img4 {
+        width: 93%;
+    }
+    .img1 img {
+        width: 227px;
+        height: 228px;
+        margin-bottom: 13px;
+        margin-top: 20px;
+    }
+    .img2 img {
+        width: 227px;
+        height: 228px;
+        margin-bottom: 13px;
+        margin-top: 20px;
+    }
+    .img3 img {
+        width: 227px;
+        height: 228px;
+        margin-bottom: 13px;
+        margin-top: 20px;
+    }
+    .img4 img {
+        width: 227px;
+        height: 228px;
+        margin-bottom: 13px;
+        margin-top: 20px;
+    }
+    #footer {
+        color: #919191;
+        margin-top: 70px;
+        height: 200px;
+        border-top: 1px solid #dbdbdb;
+    }
+</style>
+<body>
+    <main id="main">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="./img/logo.jpg" alt="롯데월드"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">즐길거리</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금/우대혜택</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용가이드</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        <section id="section1">
+            <img src="./img/banner.jpg" alt="배너">
+        </section>
+        <section id="section2">
+            <div class="board">
+                <span class="title">롯데월드 소식</span>
+                <span class="dot gray notice ml20">뉴스 공지</span>
+                <span class="right gray">더보기 
+                   
+                </span>
+                <div class="board_list">
+                    <ul>
+                        <li>
+                            <span>그럴싸진관 미라클</span>
+                            <span class="right gray">2018.11.19</span>
+                        </li>
+                        <li>
+                            <span>드림스테이지 '힘내 소중한 너'</span>
+                            <span class="right gray">2018.11.20</span>
+                        </li>
+                        <li>
+                            <span>'힘내 소중한 너'음원 발매</span>
+                            <span class="right gray">2018.11.13</span>
+                        </li>
+                        <li>
+                            <span>이용 요금 조정 안내</span>
+                            <span class="right gray">2018.11.12</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Advertisement">
+                <img src="./img/Advertisement.jpg" alt="광고이미지">
+            </div>
+        </section>
+        <section id="section3">
+            <p>특별한 경험</p>
+            <div>
+                <div class="img1 img">
+                    <img src="./img/img1.jpg" alt="이미지">
+                    <p>연간회원안내</p>
+                </div>
+                <div class="img2 img">
+                    <img src="./img/img2.jpg" alt="이미지">
+                    <p>프리미엄투어</p>
+                </div>
+                <div class="img3 img">
+                    <img src="./img/img3.jpg" alt="이미지">
+                    <p>공연참여 프로그램</p>
+                </div>
+                <div class="img4 img">
+                    <img src="./img/img4.jpg" alt="이미지">
+                    <p>단체프로그램</p>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <p class="mt40">서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 | 대표자: 박동기<br>
+                사업자등록번호: 219-85-00014 | 통신판매업신고번호: 송파 제5513호 | 전화: 1661-2000
+            </p>
+            <br>
+            <p>COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED.</p>
+        </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
