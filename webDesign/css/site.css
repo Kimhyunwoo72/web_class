@@ -26,7 +26,7 @@ a {
 .pr10 {padding-right: 10px;}
 
 .hid {
-    /* display: none; */
+    display: none;
     text-align: center !important;
     color: #000;
     position: relative;
