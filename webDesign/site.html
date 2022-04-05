@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,16 @@
 
     <link rel="stylesheet" href="./css/site.css">
 </head>
+
 <body>
+
+    <!-- layer -->
+    <div class="layer_bg"></div>
+    <div class="layer">
+        <h2>제목</h2>
+        <a href="#" class="close">닫기</a>
+    </div>
+
     <main id="main">
         <header id="header">
             <div class="logo"><img src="./img/siteImg/logo.jpg" alt="로고"></div>
@@ -63,18 +73,31 @@
             </nav>
         </header>
         <section id="section1" class="slider__wrap">
-            <div class="slider__img">
-                <div class="slider__inner">       
-                <img class="slider" src="./img/siteImg/banner.jpg" alt="베너">
-                <img class="slider" src="./img/siteImg/default.jpg" alt="베너">
+            <div class="slideList">
+                <div class="slideImg">
+                    <h2>이미지1</h2>
+                    <img class="slider" src="./img/siteImg/banner.jpg" alt="베너">
                 </div>
+                <div class="slideImg">
+                    <h2>이미지2</h2>
+                    <img class="slider" src="./img/siteImg/default.jpg" alt="베너">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지3</h2>
+                    <img class="slider" src="./img/siteImg/default.jpg" alt="베너">
+                </div>
+                <!-- <div class="slideImg">
+                <h2>이미지3</h2>
+                <img src="images/banner01.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트3">
+            </div> -->
             </div>
         </section>
         <section id="section2">
+
             <div class="box">
                 <div class="box_text">
-                    <h3 class="title">우리집도 COOKIT 배송이 되나요?</h3>
-                    <p class="desc">배송이 가능한지 알려드려요.</p>
+                    <h3 class="title right">우리집도 COOKIT 배송이 되나요?</h3>
+                    <p class="desc right">배송이 가능한지 알려드려요.</p>
                     <p class="time time1">
                         <img src="./img/siteImg/pin.jpg" alt="핀">
                         배송지 검색
@@ -86,8 +109,9 @@
             </div>
             <div class="box">
                 <div class="box_text">
-                    <h3 class="title">7월 30일(화)에 받을 수 있어요</h3>
-                    <p class="desc">오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                    <h3 class="title right">7월 30일(화)에 받을 수 있어요
+                    </h3>
+                    <p class="desc right">오전 7시까지 주문하시면 다음날 배송됩니다.</p>
                     <p class="time">
                         <img src="./img/siteImg/time.jpg" alt="핀">
                         63:28:32 <span>남은시간</span>
@@ -135,20 +159,20 @@
                 <div class="comment">
                     <div>
                         <div class="comment_desc">
-                        댓글 목록<br>
-                        댓글입니다!
+                            댓글 목록<br>
+                            댓글입니다!
                         </div>
                     </div>
                     <div>
                         <div class="comment_desc">
-                        댓글 목록<br>
-                        댓글입니다!
+                            댓글 목록<br>
+                            댓글입니다!
                         </div>
                     </div>
                     <div>
                         <div class="comment_desc">
-                        댓글 목록<br>
-                        댓글입니다!
+                            댓글 목록<br>
+                            댓글입니다!
                         </div>
                     </div>
                 </div>
@@ -173,7 +197,45 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="./js/site.js">
+    <script>
+        var currentIndex = 0;
+        setInterval(function () {
+            if (currentIndex < 2) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            var slidePosition = currentIndex * (-1000) + "px";
+            $(".slideList").animate({
+                left: slidePosition
+            }, 400);
+        }, 3000)
+
+        $(".right").click(function () {
+            $(".layer").slideDown(300);
+            $(".layer_bg").show();
+        })
+        $(".layer .close").click(function () {
+            $(".layer").slideUp(300);
+            $(".layer_bg").hide();
+        })
+
+        $("#header > nav > ul > li").mouseover(() => {
+            $("#header > nav > ul > li").find(".hid").stop().slideDown();
+        })
+        $("#header > nav > ul > li").mouseout(() => {
+            $("#header > nav > ul > li").find(".hid").stop().slideUp();
+        })
+
+        $(".imgBox > h2 > a").click(() => {
+            $(".imgBox .best").addClass("active")
+            $(".imgBox .comment").removeClass("active")
+        })
+        $(".imgBox > span > a").click(() => {
+            $(".imgBox .comment").addClass("active")
+            $(".imgBox .best").removeClass("active")
+        })
     </script>
 </body>
+
 </html>
