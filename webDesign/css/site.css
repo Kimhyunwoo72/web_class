@@ -79,12 +79,39 @@ a {
 }
 #section1 {
     width: 100%;
+    display: flex;
+    overflow: hidden;
 }
 #section1 img{
-    width: 100%;
-    margin-bottom: 50px;
+    /* width: 100%;
+    height: 390px; */
+}
+.slider__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__img {
+    /*화면 보이는 구간*/
+    width: 1000px;
+    height: 390px;
+    overflow: hidden;
+}
+.slider__inner {
+    /*이미지 움직이는 영역*/
+    display: flex;
+    width: 3000px;
+    /*이미지 총 길이*/
+    transform: translateX(0);
+}
+
+.slider {
+    width: 1000px;
+    height: 390px;
 }
 #section2 {
+    margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
