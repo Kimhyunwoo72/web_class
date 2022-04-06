@@ -1,32 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .wrap {
-            width: 100%;
-            height: 1500px;
-            background-color: #000;
-        }
-        .wrap div {
-            width: 500px;
-            height: 500px;
-            background-color: #fff;
+        main {
+            width: 1000px;
             margin: 0 auto;
         }
-        .wrap div span{
+        
+        #section1 {
+            width: 100%;
+            overflow: hidden;
         }
+        
+        
+        .slideList {
+            position: relative;
+            width: 3000px;
+        }
+        
+        .slideList .slideImg {
+            width: 1000px;
+            float: left;
+        }
+        .slider {
+            width: 1000px;
+            height: 500px;
+        }
+        
+
+
+        /* .slider {
+            width: 1000px;
+            height: 390px;
+        }
+
+        .slideList {
+            position: relative;
+            width: 3000px;
+            z-index: 50;
+        }
+
+        .slideList .slideImg {
+            position: relative;
+            width: 1000px;
+            float: left;
+        }
+
+        .slideList .slideImg h2 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px 30px;
+            border-radius: 20px;
+        } */
     </style>
 </head>
-<body>
-    <div class="wrap">
-        <div>
-            <span></span>
-        </div>
-    </div>
 
+<body>
+    <main>
+        <section id="section1" class="slider__wrap">
+            <div class="slideList">
+                <div class="slideImg">
+                    <h2>이미지1</h2>
+                    <img class="slider" src="./webDesign/img/siteImg/banner.jpg" alt="베너">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지2</h2>
+                    <img class="slider" src="./webDesign//img/siteImg/default.jpg" alt="베너">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지3</h2>
+                    <img class="slider" src="./webDesign//img/siteImg/main3.jpg" alt="베너">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var currentIndex = 0;
+        setInterval(function () {
+            if (currentIndex < 2) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            var slidePosition = currentIndex * (-1000) + "px";
+            $(".slideList").animate({
+                left: slidePosition
+            }, 400);
+        }, 3000)
+    </script>
 </body>
+
 </html>
