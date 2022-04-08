@@ -503,6 +503,7 @@
                 let totalSec = Math.floor(audioDuration % 60) 
                 if(totalSec < 10) totalSec = `0${totalSec}`;
                 liAudioDuration.innerText = `${totalMin}:${totalSec}`;
+                liAudioDuration.setAttribute("data-duration", `${totalMin}:${totalSec}`)
             })
         }
 
@@ -515,6 +516,8 @@
 
             if(musicListAll[j].classList.contains("playing")){
                 musicListAll[j].classList.remove("playing")
+                let adioDuration = audioTag.getAttribute("data-duration")
+                audioTag.innerText = adioDuration
             }
 
             if(musicListAll[j].getAttribute("data-index") == musicIndex){
