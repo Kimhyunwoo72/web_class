@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 아이콘 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        :root {
+            --border: #282828;
+            --desc: rgba(255, 255, 255, 0.5);
+        }
+
+        #wrap {
+            display: flex;
+        }
+
+        #aside {
+            width: 15%;
+            height: auto;
+            background-color: #000;
+            border-right: 1px solid var(--border);
+        }
+
+        #aside h3 {
+            text-align: center;
+            font-size: 20px;
+            padding: 23px;
+        }
+
+        #main {
+            width: 85%;
+            height: auto;
+            background-color: #000;
+        }
+
+        .login {
+            width: 169px;
+            height: 50px;
+            border-bottom: 1px solid var(--border);
+            border-top: 1px solid var(--border);
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .login img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            margin-right: 13px;
+        }
+
+        .chart {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 169px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .chart ul li {
+            padding: 5px;
+        }
+
+        .chart ul li a {
+            display: inline-block;
+            padding-top: 2px;
+            padding-left: 14.5px;
+            vertical-align: top;
+        }
+
+        .play_list {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 169px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .play_list a {
+            vertical-align: top;
+            padding-top: 1px;
+            display: inline-block;
+        }
+
+        .play_list ul li {
+            display: flex;
+            justify-content: space-between;
+            padding: 7px 0;
+        }
+
+        .play_list ul li a,
+        .play_list ul li i {
+            color: var(--desc);
+        }
+
+        .info {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 169px;
+            margin: 0 auto;
+        }
+
+        .info ul li a {
+            display: inline-block;
+            padding: 3px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        #main form {
+            margin-left: 56px;
+            margin-right: 56px;
+            margin-top: 66px;
+        }
+
+        #main form fieldset {
+            background-color: #1a1a1a;
+            border: none;
+        }
+
+        #main form fieldset label {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            color: var(--desc);
+        }
+
+        #main form fieldset input {
+            background-color: #1a1a1a;
+            border: none;
+            width: 100%;
+            padding: 25px;
+        }
+
+        .banner {
+            margin-left: 56px;
+            margin-right: 56px;
+
+            display: flex;
+        }
+
+        .banner .imgBox {
+            width: 50%;
+            height: 340px;
+            background-image: url(./images/music_site/banner1.jpg);
+        }
+
+        .banner .textBox {
+            width: 50%;
+            height: 340px;
+            background-image: url(./images/music_site/banner2.jpg);
+        }
+
+        .banner .textBox img {
+            width: 130px;
+            height: 30px;
+        }
+
+        .banner .textBox .textBox_wrap {
+            width: 90%;
+            margin: 50px auto;
+        }
+
+        .banner .textBox .textBox_wrap h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .banner .textBox .textBox_wrap p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--desc);
+        }
+
+        .musicWrap {
+            margin-left: 56px;
+            margin-right: 20px;
+            height: auto;
+        }
+
+        .musicWrap h3 {
+            padding-top: 60px;
+            margin-bottom: 22px;
+            font-size: 22px;
+        }
+
+        .musicWrap .music_box {
+            width: 350px;
+        }
+
+        .musicWrap .music_box h4 {
+            font-size: 22px;
+            padding-top: 21px;
+            padding-bottom: 32px;
+        }
+
+        .musicWrap .music_box p {
+            font-size: 18px;
+            color: var(--desc);
+        }
+
+        .musicWrap ul {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .musicWrap ul li {
+            margin-right: 20px;
+        }
+
+        /* music_box */
+
+        .musicWrap .music_box2 {
+            width: 250px;
+        }
+
+        .musicWrap .music_box2 h4 {
+            height: 90px;
+            font-size: 22px;
+            padding-top: 21px;
+            padding-bottom: 32px;
+        }
+
+        .musicWrap .music_box2 p {
+            font-size: 16px;
+            color: var(--desc);
+        }
+
+        .musicWrap .music_box2 img {
+            width: 250px;
+            height: 250px;
+        }
+
+        /* //music_box2 */
+
+        .musicWrap .music_box3 {
+            width: 250px;
+            margin-bottom: 100px;
+        }
+
+        .musicWrap .music_box3 h4 a {
+            display: block;
+            height: 90px;
+            font-size: 22px;
+            padding-top: 21px;
+            padding-bottom: 32px;
+        }
+
+        .musicWrap .music_box3 p a {
+            margin-top: 20px;
+            display: block;
+            font-size: 16px;
+            color: var(--desc);
+        }
+
+        .musicWrap .music_box3 img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+
+        /* //music_box3 */
+
+        .musicWrap .music_box4 {
+            width: 250px;
+            margin-bottom: 100px;
+        }
+
+        .musicWrap .music_box4 h4 a {
+            display: block;
+            height: 90px;
+            font-size: 22px;
+            padding-top: 21px;
+            padding-bottom: 32px;
+        }
+
+        .musicWrap .music_box4 p a {
+            margin-top: 20px;
+            display: block;
+            font-size: 16px;
+            color: var(--desc);
+        }
+
+        .musicWrap .music_box4 img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+
+        /* //music_box4 */
+
+        /* playBar */
+        .play {
+            width: 100%;
+            height: 3px;
+            background-color: #ccc;
+        }
+
+        .playBar {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .play_btn i {
+            margin-left: 40px;
+        }
+
+        .play_btn i:nth-child(1) {
+            margin-left: 64px;
+        }
+
+        .play_btn i:nth-child(1),
+        .play_btn i:nth-child(3) {
+            font-size: 34px;
+        }
+
+        .play_btn i:nth-child(2) {
+            font-size: 45px;
+        }
+
+        .playList {
+            display: flex;
+            align-items: center;
+        }
+
+        .playList img {
+            width: 60px;
+            height: 60px;
+            margin-right: 18px;
+        }
+
+        .play_info p {
+            margin-bottom: 7px;
+            font-size: 17px;
+        }
+
+        .play_info div {
+            font-size: 15px;
+        }
+
+        .playControl {
+            display: flex;
+        }
+
+        .playControl i {
+            margin-right: 43px;
+            font-size: 32px;
+        }
+
+        /* //playBar */
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h3>Music Awarrd</h3>
+            <div class="login">
+                <img class="left" src="./images/music01.jpg" alt="이미지">
+                <p>최고의 별자리</p>
+            </div>
+            <div class="chart">
+                <ul>
+                    <li>
+                        <i class="material-icons">queue_music</i>
+                        <a href="javascript:;">투데이</a>
+                    </li>
+                    <li>
+                        <i class="material-icons">equalizer</i>
+                        <a href="javascript:;">차트</a>
+                    </li>
+                    <li>
+                        <i class="material-icons">headphones</i>
+                        <a href="javascript:;">최신음악</a>
+                    </li>
+                    <li>
+                        <i class="material-icons">lyrics</i>
+                        <a href="javascript:;">이달의 뮤직</a>
+                    </li>
+                    <li>
+                        <i class="material-icons">shuffle</i>
+                        <a href="javascript:;">랜덤 뮤직</a>
+                    </li>
+                    <li>
+                        <i class="material-icons">portrait</i>
+                        <a href="javascript:;">나의 뮤직</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="play_list">
+                <ul>
+                    <li><a href="javascript:;">플레이 리스트1</a><i class="material-icons">chevron_right</i></li>
+                    <li><a href="javascript:;">플레이 리스트2</a><i class="material-icons">chevron_right</i></li>
+                    <li><a href="javascript:;">플레이 리스트3</a><i class="material-icons">chevron_right</i></li>
+                </ul>
+            </div>
+            <div class="info">
+                <ul>
+                    <li><a href="javascript:;">서비스 소개</a></li>
+                    <li><a href="javascript:;">사용방법</a></li>
+                    <li><a href="javascript:;">저작권 안내</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main id="main">
+            <form action="#">
+                <fieldset>
+                    <label class="material-icons">search<input type="text" placeholder="음악을 검색해 주세요."></label>
+                </fieldset>
+            </form>
+            <div class="banner">
+                <div class="imgBox">
+
+                </div>
+                <div class="textBox">
+                    <div class="textBox_wrap">
+                        <img src="./images/music_site/btn.png" alt="버튼">
+                        <h2>완전히 새로운 음악<br> 오늘의 뮤직 차트</h2>
+                        <p>
+                            항상 트렌디한 음악을 추구해 온 글렌체크가 한참의 휴식기를 거치고 무규칙적인 트랙리스트를 빼곡히
+                            채운 정규앨범으로 돌아왔다. 90년대 록 사운드부터 언더그라운드 댄스까지, 글렌 체크가 손을 대면
+                            왜 찬란하게 새로워지는 걸까?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //배너 -->
+            <div class="musicWrap">
+                <h3>오늘의 음악</h3>
+                <ul>
+                    <li>
+                        <div class="music_box">
+                            <img src="./images/music_site/music1_img1.jpg" alt="이미지">
+                            <h4>기분 업 통통 튀는 팝</h4>
+                            <p>캐치한 멜로디로 귀를 사로잡는 팝 음악을 감상하세요. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box">
+                            <img src="./images/music_site/music1_img2.jpg" alt="이미지">
+                            <h4>기분 업 통통 튀는 팝</h4>
+                            <p>캐치한 멜로디로 귀를 사로잡는 팝 음악을 감상하세요. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box">
+                            <img src="./images/music_site/music1_img3.jpg" alt="이미지">
+                            <h4>기분 업 통통 튀는 팝</h4>
+                            <p>캐치한 멜로디로 귀를 사로잡는 팝 음악을 감상하세요. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box">
+                            <img src="./images/music_site/music1_img4.jpg" alt="이미지">
+                            <h4>기분 업 통통 튀는 팝</h4>
+                            <p>캐치한 멜로디로 귀를 사로잡는 팝 음악을 감상하세요. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box">
+                            <img src="./images/music_site/music1_img1.jpg" alt="이미지">
+                            <h4>기분 업 통통 튀는 팝</h4>
+                            <p>캐치한 멜로디로 귀를 사로잡는 팝 음악을 감상하세요. </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //musicWrap -->
+
+            <div class="musicWrap">
+                <h3>오늘 같은 날엔</h3>
+                <ul>
+                    <li>
+                        <div class="music_box2">
+                            <img src="./images/music_site/music2_img1.jpg" alt="이미지">
+                            <h4>당충전 국내 댄스 음악</h4>
+                            <p>오마이걸(OH MY GIRL),
+                                TWICE(트와이스),아이유...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2">
+                            <img src="./images/music_site/music2_img2.jpg" alt="이미지">
+                            <h4>봄비와 어울리는 국내가요</h4>
+                            <p>아이유(IU), 백예린, 정승환,
+                                BTS(방탄소년단)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2">
+                            <img src="./images/music_site/music2_img3.jpg" alt="이미지">
+                            <h4>그루비한 국내 재즈 힙합</h4>
+                            <p>재즈 힙합과 함께 달콤한 감상에 젖어 보세요. 세련되면서도 ....</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2">
+                            <img src="./images/music_site/music2_img4.jpg" alt="이미지">
+                            <h4>봄 향기가 배어있는 국내 인디음악</h4>
+                            <p>달빙정원, 뎁트, 아이유(IU), 그_냥</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2">
+                            <img src="./images/music_site/music2_img5.jpg" alt="이미지">
+                            <h4>산뜻한 기분 전환 케이팝</h4>
+                            <p>아이유(IU), NCT DREAM, 오마이걸
+                                (OH MY GIRL) ....</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2">
+                            <img src="./images/music_site/music2_img6.jpg" alt="이미지">
+                            <h4>봄 느낌 물씬나는 국내 힙합/R&B</h4>
+                            <p>르꼬, 원슈타인, 백예린, 미노이</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //musicWrap2 -->
+
+            <div class="musicWrap">
+                <h3>드라마 & 영화 OST</h3>
+                <ul>
+                    <li>
+                        <div class="music_box3">
+                            <img src="./images/music_site/music3_img1.jpg" alt="이미지">
+                            <h4><a href="javascript:;">마음을 녹이는 남성 보컬
+                                    드라마 OST</a></h4>
+                            <p><a href="javascript:;">마음을 녹이는 남성 보컬
+                                    드라마 OST</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box3">
+                            <img src="./images/music_site/music3_img2.jpg" alt="이미지">
+                            <h4><a href="javascript:;">명장면이 떠오르는 국내
+                                    드라마 OST</a></h4>
+                            <p><a href="javascript:;">윤미래, 아이유(IU), 성시경, 다비치</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box3">
+                            <img src="./images/music_site/music3_img3.jpg" alt="이미지">
+                            <h4><a href="javascript:;">응답하라 시리즈 OST
+                                    베스트</a></h4>
+                            <p><a href="javascript:;">김필 , 서인국, 정은지, 오혁
+                                </a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box3">
+                            <img src="./images/music_site/music3_img4.jpg" alt="이미지">
+                            <h4><a href="javascript:;">드라마 OST 베스트</a></h4>
+                            <p><a href="javascript:;">조장혁, 장현철, Son Jichang, 정원준</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box3">
+                            <img src="./images/music_site/music3_img5.jpg" alt="이미지">
+                            <h4><a href="javascript:;">21세기 디즈니 히트곡</a></h4>
+                            <p><a href="javascript:;">메그 도널리, 조단 피셔, 나오미 스콧, 피니어스 오코넬
+                                </a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box3">
+                            <img src="./images/music_site/music3_img6.jpg" alt="이미지">
+                            <h4><a href="javascript:;">추억의 홍콩 영화 OST</a></h4>
+                            <p><a href="javascript:;">장국영, 왕페이, 엽청문, Roel A. Gracia</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //musicWrap3 -->
+
+            <div class="musicWrap">
+                <h3>카페음악</h3>
+                <ul>
+                    <li>
+                        <div class="music_box2 music_box4">
+                            <img src="./images/music_site/music4_img1.jpg" alt="이미지">
+                            <h4><a href="javascript:;">따스한 국내 발라드</a></h4>
+                            <p><a href="javascript:;">폴킴(Paul Kim), 아이유(IU), Jukjae, 다비치</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2 music_box4">
+                            <img src="./images/music_site/music4_img2.jpg" alt="이미지">
+                            <h4><a href="javascript:;">기타치는 꿀성대 인디/어쿠스틱
+                                </a></h4>
+                            <p><a href="javascript:;">우주히피, 어쿠루브, 안희수, 10CM</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2 music_box4">
+                            <img src="./images/music_site/music4_img3.jpg" alt="이미지">
+                            <h4><a href="javascript:;">상수동 카페 감성 국내 인디</a></h4>
+                            <p><a href="javascript:;">
+                                    러비, 스무살, 빅베이비드라이버, 1415</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2 music_box4">
+                            <img src="./images/music_site/music4_img4.jpg" alt="이미지">
+                            <h4><a href="javascript:;">80년대 추억의 국내 발라드</a></h4>
+                            <p><a href="javascript:;">변진섭, 이지연, 이승철, 조정현</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2 music_box4">
+                            <img src="./images/music_site/music4_img5.jpg" alt="이미지">
+                            <h4><a href="javascript:;">뒹굴뒹굴 누워 듣는 팝</a></h4>
+                            <p><a href="javascript:;">Ed Sheeran(에드 시런), Sam Smith(샘 스미스),</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="music_box2 music_box4">
+                            <img src="./images/music_site/music4_img6.jpg" alt="이미지">
+                            <h4><a href="javascript:;">재즈 팝 컬렉션</a></h4>
+                            <p><a href="javascript:;">Norah Jones, 그레고리 포터, 멜로디 가르도, 제이미 컬럼
+                                </a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //musicWrap2 -->
+
+            <div class="play"></div>
+            <div class="playBar">
+                <div class="play_btn">
+                    <a href="javascript:;"><i class="material-icons">skip_previous</i></a>
+                    <a href="javascript:;"><i class="material-icons">play_arrow</i></a>
+                    <a href="javascript:;"><i class="material-icons">skip_next</i></a>
+                </div>
+                <div class="playList">
+                    <a href="javascript:;"><img src="./images/music01.jpg" alt="이미지"></a>
+
+                    <div class="play_info">
+                        <p><a href="javascript:;">늦은 밤 너의 집 앞 골목길에서</a></p>
+                        <div><a href="javascript:;">노을 - 늦은 밤 너의 집 앞 골목길에서 - 2019</a></div>
+                    </div>
+                </div>
+                <div class="playControl">
+                    <a href="javascript:;"><i class="material-icons">volume_up</i></a>
+                    <a href="javascript:;"><i class="material-icons">repeat</i></a>
+                    <a href="javascript:;"><i class="material-icons">shuffle</i></a>
+                    <a href="javascript:;"><i class="material-icons">expand_less</i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

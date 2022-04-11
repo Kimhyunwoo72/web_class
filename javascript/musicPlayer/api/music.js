@@ -42,20 +42,20 @@ let allMusic = [
         audio : "music07"
     },   
     {
-        name: "8. 노래제목입니다.",
-        artist : "jone Mickal",
+        name: "8. Heal You",
+        artist : "Freedom Trail Studio",
         img : "music08",
         audio : "music08"
     },   
     {
-        name: "9. 노래제목입니다.",
-        artist : "jone Mickal",
+        name: "9. Tempos Vari",
+        artist : "TrackTribe",
         img : "music09",
         audio : "music09"
     },   
     {
-        name: "10. 노래제목입니다.",
-        artist : "jone Mickal",
+        name: "10. By the Fireplace",
+        artist : "TrackTribe",
         img : "music10",
         audio : "music10"
     },   
