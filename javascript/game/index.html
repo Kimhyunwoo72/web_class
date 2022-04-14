@@ -57,19 +57,35 @@
             background-color: rgb(65, 55, 55);
             transition: transform 0.25s linear;
             backface-visibility: hidden;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+            pointer-events: none;
         }
         .cards li .view.front {
             z-index: 10;
             transform: rotateY(0);
         }
-        .cards li:hover .view.front {
+        .cards li.flip .view.front {
             transform: rotateY(180deg);
         }
         .cards li .view.back {
             transform: rotateY(-180deg);
         }
-        .cards li:hover .view.back {
+        .cards li.flip .view.back {
             transform: rotateY(0);
+        }
+        .cards li.shake {
+            animation: shake 0.35s ease-in-out;
+        }
+        @keyframes shake {
+            0% {transform:translateX(0);}
+            20% {transform:translateX(-13px);}
+            40% {transform:translateX(13px);}
+            60% {transform:translateX(-8px);}
+            80% {transform:translateX(8px);}
+            100% {transform:translateX(0);}
         }
     </style>
 </head>
@@ -91,7 +107,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon02.svg" alt="이미지">
+                        <img src="./img/icon01.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -107,7 +123,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon04.svg" alt="이미지">
+                        <img src="./img/icon03.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -123,15 +139,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon06.svg" alt="이미지">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/icon10.svg" alt="이미지">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon07.svg" alt="이미지">
+                        <img src="./img/icon05.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -147,7 +155,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon09.svg" alt="이미지">
+                        <img src="./img/icon08.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -155,7 +163,15 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
+                        <img src="./img/icon27.svg" alt="이미지">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
                         <img src="./img/icon10.svg" alt="이미지">
+                    </div>
+                    <div class="view back">
+                        <img src="./img/icon27.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -171,15 +187,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon12.svg" alt="이미지">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/icon10.svg" alt="이미지">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon13.svg" alt="이미지">
+                        <img src="./img/icon11.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -195,7 +203,15 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon16.svg" alt="이미지">
+                        <img src="./img/icon15.svg" alt="이미지">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="./img/icon10.svg" alt="이미지">
+                    </div>
+                    <div class="view back">
+                        <img src="./img/icon17.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -209,5 +225,70 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        // 01. HTML/CSS 디자인 구성
+        //02. 클릭한 카드 뒤집기
+        //03.두개의 카드 뒤집기 확인하기.
+        // 04. 클릭한 카드 두개의 이미지 가져오기
+        // 05. 두개의 이미지 비교하기
+        //06. 틀린 이미지 애니메이션 효과 주기
+        // 07. 빨리 클릭하면 버그발생
+        
+        //ㄴdisableDeck 변수 생성 후 false 값 넣어주고 -> if문에 조건식으로 폴스면 실행되게 하고 다시 true값을 준다
+        //그렇게 하면 실행되는 동안 건드릴 수 없게 된다.
+
+        const cards = document.querySelectorAll(".cards li")
+
+        let cardOne,cardTwo;
+        let disableDeck =false
+        function flipCard(e){
+            let clickedCard = e.target  
+           
+        // 07. 빨리 클릭하면 버그발생
+            if(clickedCard !== cardOne && !disableDeck){
+                clickedCard.classList.add("flip")
+
+                if(!cardOne){
+                    return cardOne = clickedCard;
+                }
+                cardTwo = clickedCard
+                disableDeck = true
+
+                // 이미지 정보 가져오기
+                let cardOneImg = cardOne.querySelector(".back img").src 
+                let cardTwoImg = cardTwo.querySelector(".back img").src 
+                // src는 속성값을 전달해줌
+
+                matchCards(cardOneImg,cardTwoImg)
+            }
+        }
+
+        // 05. 두개의 이미지 비교하기
+        function matchCards(img1, img2) {
+            if (img1 == img2) {
+                cardOne.removeEventListener("click", flipCard)
+                cardTwo.removeEventListener("click", flipCard)
+                cardOne = cardTwo =""; //빈칸을 넣어 초기화시켜준다.
+                disableDeck =false
+            }else {
+                setTimeout(()=>{
+                    cardOne.classList.add("shake")
+                    cardTwo.classList.add("shake")
+                },400)
+
+                setTimeout(()=>{
+                    cardOne.classList.remove("shake","flip")
+                    cardTwo.classList.remove("shake","flip")
+                    cardOne = cardTwo =""; //빈칸을 넣어 초기화시켜준다.
+                    disableDeck =false
+                },1200)
+            }
+        }
+        //02. 클릭한 카드 뒤집기
+        cards.forEach(cards => {
+            cards.addEventListener("click", flipCard) 
+        })
+    </script>
 </body>
 </html>
