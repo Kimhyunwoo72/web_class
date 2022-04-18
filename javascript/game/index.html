@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게임</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -87,19 +88,61 @@
             80% {transform:translateX(8px);}
             100% {transform:translateX(0);}
         }
+        .card__sound {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+          
+        }
+        .card__sound button {
+            background-color: #fff;
+            width: 40px;
+            height: 40px;
+            color: rgb(81, 81, 81);
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            line-height: 40px;
+            border: 0;
+        }
+        .card__start {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+
+        }
+        .card__start button {
+            background-color: #fff;
+            width: 40px;
+            height: 40px;
+            color: rgb(81, 81, 81);
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            line-height: 40px;
+            border: 0;
+        }
     </style>
 </head>
 
 <body>
     <div class="wrap__card">
         <div class="card__inner">
+            <div class="card__start">
+                <button class="material-icons">face</button>
+            </div>
+            <div class="card__sound">
+                <button class="material-icons">volume_off</button>
+                <!-- <button class="material-icons">volume_up</button> -->
+                <audio id="song" src="./song/Jeremy_Black.mp3" loop="loop""></audio>
+            </div>
             <ul class="cards">
                 <li>
                     <div class="view front">
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon01.svg" alt="이미지">
+                        <img src="./img/icon1.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -107,7 +150,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon01.svg" alt="이미지">
+                        <img src="./img/icon1.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -115,7 +158,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon03.svg" alt="이미지">
+                        <img src="./img/icon2.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -123,7 +166,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon03.svg" alt="이미지">
+                        <img src="./img/icon2.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -131,7 +174,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon05.svg" alt="이미지">
+                        <img src="./img/icon9.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -139,39 +182,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon05.svg" alt="이미지">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/icon10.svg" alt="이미지">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon08.svg" alt="이미지">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/icon10.svg" alt="이미지">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon08.svg" alt="이미지">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/icon10.svg" alt="이미지">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon27.svg" alt="이미지">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/icon10.svg" alt="이미지">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon27.svg" alt="이미지">
+                        <img src="./img/icon9.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -195,7 +206,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon15.svg" alt="이미지">
+                        <img src="./img/icon5.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -203,7 +214,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon15.svg" alt="이미지">
+                        <img src="./img/icon5.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -211,7 +222,7 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon17.svg" alt="이미지">
+                        <img src="./img/icon6.svg" alt="이미지">
                     </div>
                 </li>
                 <li>
@@ -219,7 +230,39 @@
                         <img src="./img/icon10.svg" alt="이미지">
                     </div>
                     <div class="view back">
-                        <img src="./img/icon17.svg" alt="이미지">
+                        <img src="./img/icon6.svg" alt="이미지">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="./img/icon10.svg" alt="이미지">
+                    </div>
+                    <div class="view back">
+                        <img src="./img/icon7.svg" alt="이미지">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="./img/icon10.svg" alt="이미지">
+                    </div>
+                    <div class="view back">
+                        <img src="./img/icon7.svg" alt="이미지">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="./img/icon10.svg" alt="이미지">
+                    </div>
+                    <div class="view back">
+                        <img src="./img/icon8.svg" alt="이미지">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="./img/icon10.svg" alt="이미지">
+                    </div>
+                    <div class="view back">
+                        <img src="./img/icon8.svg" alt="이미지">
                     </div>
                 </li>
             </ul>
@@ -227,21 +270,40 @@
     </div>
 
     <script>
-        // 01. HTML/CSS 디자인 구성
+        //01. HTML/CSS 디자인 구성
         //02. 클릭한 카드 뒤집기
         //03.두개의 카드 뒤집기 확인하기.
-        // 04. 클릭한 카드 두개의 이미지 가져오기
-        // 05. 두개의 이미지 비교하기
+        //04. 클릭한 카드 두개의 이미지 가져오기
+        //05. 두개의 이미지 비교하기
         //06. 틀린 이미지 애니메이션 효과 주기
-        // 07. 빨리 클릭하면 버그발생
+        //07. 빨리 클릭하면 버그발생
+        //08. 다 완성 했을 때
+        //09. 카드 섞기
         
         //ㄴdisableDeck 변수 생성 후 false 값 넣어주고 -> if문에 조건식으로 폴스면 실행되게 하고 다시 true값을 준다
         //그렇게 하면 실행되는 동안 건드릴 수 없게 된다.
 
         const cards = document.querySelectorAll(".cards li")
+        const cardSound = document.querySelector(".card__sound button")
+        const cardSong = document.querySelector("#song")
+        const cardStart = document.querySelector(".card__start")
 
         let cardOne,cardTwo;
-        let disableDeck =false
+        let disableDeck =false;
+        let  matchedCard = 0;
+
+        let sound = [
+            "song/match2.mp3",
+            "song/match.mp3",
+            "song/up.mp3"
+        ]
+
+        let soundMatch = new Audio(sound[0]);
+        let soundNoMatch = new Audio(sound[1]);
+        let soundSusess = new Audio(sound[2]);
+
+    
+
         function flipCard(e){
             let clickedCard = e.target  
            
@@ -267,10 +329,19 @@
         // 05. 두개의 이미지 비교하기
         function matchCards(img1, img2) {
             if (img1 == img2) {
+                matchedCard++
+
+                if(matchedCard == 8){
+                    setTimeout(()=>{
+                        alert("모두 맞췄습니다!")
+                    },500)
+                }
+
                 cardOne.removeEventListener("click", flipCard)
                 cardTwo.removeEventListener("click", flipCard)
                 cardOne = cardTwo =""; //빈칸을 넣어 초기화시켜준다.
                 disableDeck =false
+                soundMatch.play()
             }else {
                 setTimeout(()=>{
                     cardOne.classList.add("shake")
@@ -283,10 +354,74 @@
                     cardOne = cardTwo =""; //빈칸을 넣어 초기화시켜준다.
                     disableDeck =false
                 },1200)
+                soundNoMatch.play()
             }
         }
-        //02. 클릭한 카드 뒤집기
+        
+        //카드 섞기
+        function shuffledCard() {
+            cardOne,cardTwo = "";
+            disableDeck =false;
+            matchedCard = 0;
+
+            let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
+            let result = arr.sort(()=> Math.random() > 0.5 ? 1 : -1)
+
+            cards.forEach((card, index)=>{
+                card.classList.remove("flip");
+                setTimeout(()=>{
+                    card.classList.add("flip");
+                },100 * index)
+                setTimeout(()=>{
+                    card.classList.remove("flip");
+                }, 3000)
+
+                    let imgTag = card.querySelector(".back img")
+                    imgTag.src = `./img/icon${arr[index]}.svg`;
+            })
+        }
+        shuffledCard()
+        // // 음향 조절
+        // let sound2 = document.querySelector(".material-icons .active")
+        // sound.addEventListener("click", ()=>{
+        //     sound.classList.toggle("active")
+        //     sound.innerText = "volume_off"
+        // })
+
+            //뮤직재생
+            cardSound.addEventListener("click",()=>{
+            cardSound.classList.toggle("is-playing")
+
+            if(cardSound.classList.contains("is-playing")){
+                cardSound.innerText = "volume_up"
+                cardSong.play()
+            } else {
+                cardSound.innerText = "volume_off"
+                cardSong.pause()
+            }
+        })
+
+        //위 예전 방식
+        // cardSound.addEventListener("click", function () {
+        //     this.classList.toggle("is-playing")
+
+        //     if(cardSound.classList.contains("is-playing")){
+        //         cardSound.innerText = "volume_up"
+        //         cardSong.play()
+        //     } else {
+        //         cardSound.innerText = "volume_off"
+        //         cardSong.pause()
+        //     }
+        // })
+
+        //시작 버튼
+        cardStart.addEventListener("click",()=>{
+            shuffledCard()
+        })
+
+        //02. 카드 클릭
         cards.forEach(cards => {
+            // card.classList.add("flip")
             cards.addEventListener("click", flipCard) 
         })
     </script>
