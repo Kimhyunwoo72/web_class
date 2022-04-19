@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bg -->
+    <link rel="stylesheet" href="./bg.css">
+    <style>
+        @font-face {
+            font-family: 'LABDigital';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'LABDigital';
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            /* background: url(./img/game_bg.jpg); */
+            /* background-size: cover;
+            background-repeat: no-repeat; */
+        }
+
+        #header {
+            width: 100%;
+            height: 50px;
+            background-color: #7c0685;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            color: rgb(242, 242, 242);
+        }
+        #header #time {
+            padding-right: 20px;
+        }
+
+        .typing_html,
+        .music_html,
+        .game_html {
+            top: 100px;
+            position: fixed;
+            left: 3000px;
+            transition: all 1s;
+        }
+
+        .game_html.active {
+            position: fixed;
+            top: 100px;
+            left: 587px;
+            transition: all 1s;
+        }
+
+        .game_html.active {
+            position: fixed;
+            top: 100px;
+            left: 587px;
+            transition: all 1s;
+        }
+
+        .music_html.active {
+            position: fixed;
+            top: -50px;
+            left: 1500px;
+            transition: all 0.8s;
+        }
+
+        .typing_html.active {
+            position: fixed;
+            top: 100px;
+            left: 587px;
+            transition: all 1s;
+        }
+
+        .icons_box ul {
+            display: flex;
+            padding: 50px 50px;
+        }
+
+        .icons_box li {
+            width: 100px;
+            height: 100px;
+            margin: 0px 30px;
+            border-radius: 50%;
+            background: linear-gradient(rgb(247, 131, 131), rgb(60, 60, 253));
+        }
+
+        .icons_box li:hover {
+            background: rgb(90, 239, 76);
+        }
+
+        .cursor {
+            position: absolute;
+            left: -100px;
+            top: -100px;
+            width: 50px;
+            height: 50px;
+            z-index: 100;
+            user-select: none;
+            pointer-events: none;
+   
+        }
+
+        .icons_box li a {
+            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            /* color: #fff; */
+        }
+
+        .icons_box li a span {
+            padding: 5px 20px;
+            background-color: #c971f2;
+        }
+
+        .icons_box li a .icon {
+            font-size: 70px;
+        }
+
+        .icons_box li a .icon .game_img {
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>GAME SITE</h1>
+        <div id="time"></div>
+    </header>
+    <div id="wrap">
+        <div class="cursor"><img src="./img/cursor.svg" alt="이미지"></div>
+        <section class="container">
+            <div class="icons_box">
+                <iframe class="music_html" src="../javascript/musicPlayer/index.html" frameborder="0" width="380px"
+                    height="900px"></iframe>
+                <iframe class="game_html" src="../javascript/game/index.html" frameborder="0" width="1300px"
+                    height="800px"></iframe>
+                <iframe class="typing_html" src="../javascript/typingGame/index.html" frameborder="0" width="1300px"
+                    height="800px"></iframe>
+                <ul>
+                    <li class="btn1">
+                        <a href="#">
+                            <div class="icon icon1 music material-icons">audiotrack</div>
+                            <span>game1</span>
+                        </a>
+                    </li>
+                    <!-- <li class="btn2">
+                        <a href="#">
+                            <div class="icon icon2 material-icons"><img class="game_img" src="./img/game1.png" alt="이미지"></div>
+                            <span>game2</span>
+                        </a>
+                    </li>
+                    <li class="btn3">
+                        <a href="#">
+                            <div class="icon icon3 material-icons"><img class="game_img" src="./img/game2.png" alt="이미지"></div>
+                            <span>game3</span>
+                        </a>
+                    </li> -->
+                    <li class="btn4">
+                        <a href="#">
+                            <div class="icon icon4 material-icons"><img src="./img/game3.png" alt="이미지"
+                                    class="game_img"></div>
+                            <span>game4</span>
+                        </a>
+                    </li>
+                    <li class="btn5">
+                        <a href="#">
+                            <div class="icon icon5 game4 material-icons"><img src="./img/game4.png" alt="이미지"
+                                    class="game_img"></div>
+                            <span>game5</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        //시간 출력
+        function printTime() {
+
+            var clock = document.getElementById("time"); // 출력할 장소 선택
+            var now = new Date(); // 현재시간
+            var nowTime = now.getFullYear() + "년" + (now.getMonth() + 1) + "월" + now.getDate() + "일" + now.getHours() +
+                "시" + now.getMinutes() + "분" + now.getSeconds() + "초";
+
+            clock.innerHTML = nowTime; // 현재시간을 출력
+            setTimeout("printTime()", 1000); // setTimeout(“실행할함수”,시간) 시간은1초의 경우 1000
+        }
+
+        window.onload = function () { // 페이지가 로딩되면 실행
+            printTime();
+        }
+
+        // 마우스효과
+            const cursor = document.querySelector(".cursor")
+            const follower = document.querySelector(".cursor-follower")
+
+                // 마우스 움직이기
+                window.addEventListener("mousemove", (e) => {
+                document.querySelector(".cursor").style.left = e.clientX - 25 + "px"
+                document.querySelector(".cursor").style.top = e.clientY - 25 + "px"
+
+                // 방법2
+                // let x = e.clientX - 25 + "px";
+                // let y = e.clientY - 25 + "px";
+                // document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+            })
+
+
+            // 아이콘 움직이기
+            $(".btn1").draggable()
+        $(".btn2").draggable()
+        $(".btn3").draggable()
+        $(".btn4").draggable()
+        $(".btn5").draggable()
+
+        //클릭했을 떄
+        document.querySelector(".music").addEventListener("click", () => {
+            document.querySelector(".music_html").classList.toggle("active")
+            document.querySelector(".game_html").classList.remove("active")
+            document.querySelector(".typing_html").classList.remove("active")
+
+        })
+        document.querySelector(".btn5").addEventListener("click", () => {
+            document.querySelector(".game_html").classList.toggle("active")
+            document.querySelector(".music_html").classList.remove("active")
+            document.querySelector(".typing_html").classList.remove("active")
+        })
+        document.querySelector(".btn4").addEventListener("click", () => {
+            document.querySelector(".typing_html").classList.toggle("active")
+            document.querySelector(".game_html").classList.remove("active")
+            document.querySelector(".music_html").classList.remove("active")
+        })
+    </script>
+</body>
+
+</html>
