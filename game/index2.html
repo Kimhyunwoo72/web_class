@@ -391,6 +391,8 @@
         <button class="restart">다시 도전하기</button>
     </div>
 </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>
         const startBtn = document.querySelector(".start__btn");
         const infoBox = document.querySelector(".info__box");
@@ -538,6 +540,12 @@
                 imgTag.src = `../javascript/game/img/icon${arr[index]}.svg`;
             })            
         }
+        $(function() {
+            $(document).on("click", ".stop", function() {
+                var target = $(".memoryBox", window.parent.document);
+                target.removeClass("active");
+            });
+        });
        
         
     </script>

@@ -25,8 +25,14 @@
         <div class="cursor"><img src="./asset/img/cursor.svg" alt="이미지"></div>
         <section class="container">
             <div class="icons_box">
-                <iframe class="music_html" src="../javascript/musicPlayer/index.html" frameborder="0" width="380px" height="900px"></iframe>
-                <iframe class="typing_html" src="../javascript/typingGame/index.html" frameborder="0" width="380px" height="900px"></iframe>
+                <div class="music_html">
+                    <p class="close">닫기</p>
+                    <iframe " src="../javascript/musicPlayer/index.html" frameborder="0" width="380px" height="900px"></iframe>
+                </div>
+                <div class="typing_html">
+                    <p class="close2">닫기</p>
+                    <iframe src="../javascript/typingGame/index.html" frameborder="0" width="380px" height="900px"></iframe>
+                </div>
                 <ul>
                     <li class="btn1">
                         <a href="#">
@@ -58,7 +64,6 @@
     </div>
 
     <div class="memoryBox">
-        <!-- https://kimhyunwoo72.github.io/webs_class/game/index2.html -->
         <iframe src="./index2.html" frameborder="0"></iframe>
     </div>
 
@@ -108,6 +113,12 @@
         document.querySelector(".music").addEventListener("click", () => {
             document.querySelector(".music_html").classList.toggle("active")
             document.querySelector(".memoryBox").classList.remove("active")
+            document.querySelector(".typing_html").classList.remove("active")
+        })
+        document.querySelector(".close").addEventListener("click", () => {
+            document.querySelector(".music_html").classList.remove("active")
+        })
+        document.querySelector(".close2").addEventListener("click", () => {
             document.querySelector(".typing_html").classList.remove("active")
         })
         document.querySelector(".btn2").addEventListener("click", () => {
