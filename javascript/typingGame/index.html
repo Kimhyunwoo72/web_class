@@ -248,11 +248,11 @@
                 typingMistake.innerText = mistakes
 
                 //전체 글자수 : charIndex
-                let wpm = Math.round((((charIndex - mistakes)/5) / (maxTime - timeLeft))*6)
+                let wpm = Math.round((((charIndex - mistakes)/5) / (maxTime - timeLeft))*60)
                 wpm = wpm <0 || !wpm || wpm == Infinity ? 0 : wpm
                 typinWpm.innerText = wpm
                 typinCpm.innerText = charIndex - mistakes
-                // cpm =
+
                 } else {
                     clearInterval(timer)
                     inputField.value = ""

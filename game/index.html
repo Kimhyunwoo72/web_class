@@ -11,9 +11,6 @@
     <!-- bg -->
     <link rel="stylesheet" href="asset/css/bg.css">
     <link rel="stylesheet" href="asset/css/style.css">
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -64,6 +61,7 @@
     </div>
 
     <div class="memoryBox">
+        <p class="close3">닫기</p>
         <iframe src="./index2.html" frameborder="0"></iframe>
     </div>
 
@@ -120,6 +118,9 @@
         })
         document.querySelector(".close2").addEventListener("click", () => {
             document.querySelector(".typing_html").classList.remove("active")
+        })
+        document.querySelector(".close3").addEventListener("click", () => {
+            document.querySelector(".memoryBox").classList.remove("active")
         })
         document.querySelector(".btn2").addEventListener("click", () => {
             document.querySelector(".memoryBox").classList.toggle("active")

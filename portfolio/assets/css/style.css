@@ -1,0 +1,237 @@
+
+
+/*  header */
+#header {
+    width: 100%;
+    height: 90px;
+    font-size: 25px;
+    position: fixed;
+    z-index: 10;
+    top: -1000px;
+}
+#main {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+#header ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+#header ul li a {
+    font-family: var(--sub_font);
+}
+#header img {
+    width: 30px;
+    height: 23px;
+}
+/*  //header */
+
+/*  main_page */
+.main_wrap {
+    width: 100%;
+    padding-top: 170px;
+}
+.main_page {
+    height: 340px;
+    display: flex;
+    overflow: hidden;
+}
+.main_page h1 {
+    font-size: 5.5vw;
+    line-height: 1.11;
+    font-weight: 400;
+    white-space: nowrap;
+    padding-left: 12vw;
+
+}
+.main_page h1 i {
+    position: relative;
+    opacity: 0;
+    bottom: -500px;
+}
+.main_page h1 span {
+    font-weight: 300;
+    position: relative;
+    opacity: 0;
+    bottom: -500px;
+}
+.sub_text {
+    margin-left: 9.6vw;
+    color: var(--sub_color);
+    font-family: var(--sub_font);
+    width: 15%;
+    width: 15vw;
+    height: 40px;
+    border-top: 1px solid var(--sub_color);
+    font-size: 1.5vw;
+    margin-top: 5vw;
+    position: relative;
+    left: -100px;
+    opacity: 0;
+}
+
+.main_inpo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vw;
+    border-top: 1px solid var(--sub_color);
+    overflow: hidden;
+    animation-name: line;
+    animation-duration: 4s;
+}
+@keyframes line {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.main_inpo p {
+    padding: 0 15vw 0 10vw;
+    color: var(--sub_color);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: -3.5vw;
+    white-space: nowrap;
+    opacity: 0;
+}
+.main_banner {
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    animation-name: main_img;
+    animation-duration: 2s;
+    -webkit-animation-delay: 4s;
+    animation-fill-mode:forwards
+}
+@keyframes main_img {
+    from {
+        height: 0;
+    }
+    to {
+        height: 15vw;
+        opacity: 1;
+    }
+}
+.main_banner .banner_inner {
+    position: relative;
+}
+.banner_inner figure {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+
+.banner_inner figure:hover {
+    transform: scale(1.025);
+}
+.banner_inner figure img {
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    opacity: 0.7; 
+    object-fit: cover;
+}
+/*  //main_page */
+
+/* about_page */
+.about_page {
+    margin-top: 100px;
+    width: 100%;
+}
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.container .about_title {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 50px;
+}
+.container .about_title h2 {
+    font-size: 5.5vw;
+    line-height: 1.11;
+    font-weight: 400;
+}
+.container .about_title span {
+    font-weight: 300;
+    float: right;
+}
+.about_cont {
+    width: 100%;
+    height: 62vh;
+    border-top: 1px solid var(--sub_color);
+    border-bottom: 1px solid var(--sub_color);
+}
+.about_cont ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.about_cont ul li:nth-child(1){
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    background-image: url(../img/about01.jpg);
+}
+.about_cont ul li:nth-child(2){
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid var(--sub_color);
+    
+}
+.about_cont ul li:nth-child(3){
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid var(--sub_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about_cont ul li:nth-child(4){
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid var(--sub_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 20px;
+}
+.about_cont ul li span {
+    display: block;
+    font-size: 140px;
+    width: 85%;
+    margin: 0 auto; 
+    font-family: "Fabringo";
+}
+.about_cont ul li p {
+    color: var(--sub_color);
+    width: 85%;
+    margin: 0 auto; 
+    font-family: "ChosunilboNM";
+}
+.about_text {
+    width: 100%;
+    height: 20vw;
+    font-weight: 300;
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about__img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* //about_page */
+
