@@ -105,8 +105,8 @@
     opacity: 0;
     animation-name: main_img;
     animation-duration: 2s;
-    -webkit-animation-delay: 4s;
-    animation-fill-mode:forwards
+    animation-delay: 4s;
+    animation-fill-mode:forwards;
 }
 @keyframes main_img {
     from {
