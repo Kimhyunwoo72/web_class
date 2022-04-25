@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,6 +48,12 @@
                             <span>game4</span>
                         </a>
                     </li>
+                    <li class="btn5">
+                        <a href="#">
+                            <div class="icon icon4"><img src="./asset/img/game2.png" alt="이미지" class="game_img"></div>
+                            <span>game4</span>
+                        </a>
+                    </li>
                     <li class="btn4">
                         <a href="https://hyunwoo9.netlify.app" target="blink">
                             <div class="icon icon4"><img src="./asset/img/forder.png" alt="이미지" class="game_img"></div>
@@ -63,6 +68,11 @@
     <div class="memoryBox">
         <p class="close3">닫기</p>
         <iframe src="./index2.html" frameborder="0"></iframe>
+    </div>
+    <!-- style="display: none" -->
+    <div class="tetris" >
+        <p class="close4">닫기</p>
+        <iframe src="./tetris/index.html" frameborder="0"></iframe>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -122,6 +132,9 @@
         document.querySelector(".close3").addEventListener("click", () => {
             document.querySelector(".memoryBox").classList.remove("active")
         })
+        document.querySelector(".close4").addEventListener("click", () => {
+            document.querySelector(".tetris").classList.remove("active")
+        })
         document.querySelector(".btn2").addEventListener("click", () => {
             document.querySelector(".memoryBox").classList.toggle("active")
             document.querySelector(".music_html").classList.remove("active")
@@ -129,6 +142,12 @@
         })
         document.querySelector(".btn3").addEventListener("click", () => {
             document.querySelector(".typing_html").classList.toggle("active")
+            document.querySelector(".memoryBox").classList.remove("active")
+            document.querySelector(".music_html").classList.remove("active")
+        })
+        document.querySelector(".btn5").addEventListener("click", () => {
+            document.querySelector(".tetris").classList.toggle("active")
+            document.querySelector(".typing_html").classList.remove("active")
             document.querySelector(".memoryBox").classList.remove("active")
             document.querySelector(".music_html").classList.remove("active")
         })

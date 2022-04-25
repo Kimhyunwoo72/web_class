@@ -1,5 +1,7 @@
-
-
+/* 부드럽게 */
+html {
+    scroll-behavior: smooth;
+    }
 /*  header */
 #header {
     width: 100%;
