@@ -371,9 +371,11 @@
                 card.classList.remove("flip");
                 setTimeout(()=>{
                     card.classList.add("flip");
+                    disableDeck =true;
                 },100 * index)
                 setTimeout(()=>{
                     card.classList.remove("flip");
+                    disableDeck =false;
                 }, 3000)
 
                     let imgTag = card.querySelector(".back img")

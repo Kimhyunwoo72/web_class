@@ -2,61 +2,95 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
 
-    <!-- 폰트 -->
-    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+  <!-- 폰트 -->
+  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <style>
+  body {
+    height: 20000px;
+  }
 
+  .fixed {
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
 </style>
-<body>
-    <header id="header">
-        <ul>
-            <li><a href="#">HW</a></li>
-            <li><a href="#"><img src="assets/img/menu.svg" alt="이미지"></a></li>
-        </ul>
-    </header>
-    <main id="main">
-        <!--  main_page -->
-        <section class="main_wrap">
-            <div class="cursor">
-            </div>
-            <article class="main_page">
-                <h1><i>FRONTEND</i><br>
-                    <span>INTRODUCTION SITE</span>
-                </h1>
-                <div class="sub_text">
-                    Developer
-                </div>
-            </article>
-            <article class="main_inpo">
-                <p>Front-End Developer 2022</p>
-                <p>KIM HYUN WOO</p>
-            </article>
-            <article class="main_banner">
-                <div class="banner_inner">
-                    <figure>
-                        <img src="./assets/img/main_banner.jpg" alt="이미지">
-                    </figure>
-                </div>
-            </article>
-        </section>
-        <!--  //main_page -->
 
-        <!-- about_page -->
-        <section class="about_page">
+<body>
+  <div class="scrollTop"></div>
+
+  <header id="header">
+    <ul>
+      <li><a href="#">HW</a></li>
+      <li>
+        <a href="#"><img src="assets/img/menu.svg" alt="이미지" /></a>
+      </li>
+    </ul>
+  </header>
+  <main id="main">
+    <!--  main_page -->
+    <section class="main_wrap fixed" data-0="top: 0%" data-1100="top: -100%">
+      <div class="cursor"></div>
+      <article class="main_page">
+        <h1>
+          <i>FRONTEND</i><br />
+          <span>INTRODUCTION SITE</span>
+        </h1>
+        <div class="sub_text">Developer</div>
+      </article>
+      <article class="main_inpo">
+        <p>Front-End Developer 2022</p>
+        <p>KIM HYUN WOO</p>
+      </article>
+      <article class="main_banner">
+        <div class="main_inner">
+          <figure>
+            <img src="./assets/img/main_banner.jpg" alt="이미지" />
+          </figure>
+        </div>
+      </article>
+    </section>
+    <!--  //main_page -->
+
+    <!-- banner -->
+    <section class="banner fixed"
+    data-1100="top: 100%" data-2000="top: -30%" data-6999="top: -30%" data-8001="top: -100%"
+    >
+      <div class="container">
+        <article class="banner_inner">
+          <img src="./assets/img/banner.jpg" alt="이미지">
+          <img class="banner_img" src="./assets/img/Mask group.jpg" alt="이미지" 
+          data-2400="width: 120%; height: 120%;" data-3500="width: 30%; height: 30%;"
+          >
+          <img class="about__img3" src="./assets/img/about_opecity.png" alt="이미지"
+          data-3500="display: none;  transform: scale(7);" data-3501="display: inline-block" data-5000="transform: scale(1)"
+          >
+        </article>
+      </div>
+    </section>
+    <!-- //banner -->
+
+    <!-- about_page -->
+    <!-- <section class="about_page">
             <div class="container">
                 <article class="about_title">
                     <h2>FRONTEND <br>
@@ -106,15 +140,29 @@
                     <img src="./assets/img/about02.jpg" alt="이미지">
                 </div>
             </article>
-        </section>
-        <!-- //about_page -->
-    </main>
+        </section> -->
+    <!-- //about_page -->
+  </main>
 
-    <!-- gsap -->
-    <script src="js/gsap.min.js"></script>
-    <!-- main_page -->
-    <script src="js/main_page.js"></script>
-    <script></script>
+  <!-- gsap -->
+  <script type="text/javascript" src="js/scroll.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <!-- main_page -->
+  <script src="js/main_page.js"></script>
+  <script>
+    function scroll() {
+      var s = skrollr.init();
+
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        window.scrollY;
+      document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+
+      requestAnimationFrame(scroll);
+    }
+    scroll();
+  </script>
 </body>
 
 </html>
