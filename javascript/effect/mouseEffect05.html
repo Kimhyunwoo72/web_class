@@ -18,7 +18,8 @@
 
     <style>
         body::before {
-            background: rgba(70, 61, 56, 0.8);
+            /* background: rgba(70, 61, 56, 0.8); */
+            background: #222;
         }
 
         .mouse__wrap {
@@ -51,6 +52,9 @@
             width: 50vw;
             position: relative;
         }
+        .mouse__img figure img {
+            width: 50%;
+        }
 
         .mouse__img figure::before {
             content: "";
@@ -59,7 +63,7 @@
             bottom: -40px;
             width: 90%;
             height: 40px;
-            background: url(./img/img12.jpg) center center no-repeat;
+            background: url(./img/img23.jpg) center center no-repeat;
             background-size: 100% 40px;
             filter: blur(15px) grayscale(20%);
             opacity: 1;
@@ -104,7 +108,7 @@
             <div class="mouse__wrap">
                 <div class="mouse__img">
                     <figure>
-                        <img src="./img/img12.jpg" alt="이미지">
+                        <img src="./img/img23.jpg" alt="이미지">
                     </figure>
                     <figcaption>
                         <p>There may be players who start better than me,</p>

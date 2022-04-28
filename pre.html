@@ -1,137 +1,195 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴럭스</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-html,
-body {
-  overflow: hidden;
-}
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #000;
+      }
+      .aboutImg_box {
+        overflow: hidden;
+        position: relative;
+        height: 40vh;
+      }
 
-.background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  overflow: hidden;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  height: 130vh;
-  position: fixed;
-  width: 100%;
-  transform: translateY(30vh);
-  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
-}
-.background:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.background:first-child {
-  background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
-  transform: translateY(-15vh);
-}
-.background:first-child .content-wrapper {
-  transform: translateY(15vh);
-}
-.background:nth-child(2) {
-  background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
-}
-.background:nth-child(3) {
-  background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
-}
+      .skw-page {
+        width: 100%;
+        height: 100%;
+      }
+      .skw-page__half {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        transition: transform 1s;
+      }
+      .skw-page__half--left {
+        left: 0;
+        transform: translate3d(-32.4vh, 100%, 0);
+      }
+      .skw-page__half--right {
+        left: 50%;
+        transform: translate3d(32.4vh, -100%, 0);
+      }
+      .skw-page.active .skw-page__half {
+        transform: translate3d(0, 0, 0);
+      }
 
-/* Set stacking context of slides */
-.background:nth-child(1) {
-  z-index: 3;
-}
+      /* 가운데 라인 */
+      .skw-page__skewed {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 140%;
+        height: 100%;
+        transform: skewX(-18deg);
+        background: #000;
+      }
 
-.background:nth-child(2) {
-  z-index: 2;
-}
+      .skw-page__half--left .skw-page__skewed {
+        left: -40%;
+      }
+      .skw-page__half--right .skw-page__skewed {
+        right: -40%;
+      }
 
-.background:nth-child(3) {
-  z-index: 1;
-}
+      .about__img {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        transform: skewX(18deg);
+        transition: transform 1s, opacity 1s;
+        background-size: cover;
+      }
+      /* 이미지 각도 */
+      .skw-page__half--left .about__img {
+        transform-origin: 100% 0;
+      }
+      .skw-page__half--right .about__img {
+        transform-origin: 0 100%;
+      }
 
-.content-wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-flow: column nowrap;
-  color: #fff;
-  font-family: Montserrat;
-  text-transform: uppercase;
-  transform: translateY(40vh);
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
-}
-.content-title {
-  font-size: 12vh;
-  line-height: 1.4;
-}
+      /* 넘어갈 때 효과 */
+      .skw-page.inactive .about__img {
+        opacity: 0.5;
+        transform: skewX(18deg) scale(0.95);
+      }
 
-.background.up-scroll {
-  transform: translate3d(0, -15vh, 0);
-}
-.background.up-scroll .content-wrapper {
-  transform: translateY(15vh);
-}
-.background.up-scroll + .background {
-  transform: translate3d(0, 30vh, 0);
-}
-.background.up-scroll + .background .content-wrapper {
-  transform: translateY(30vh);
-}
-
-.background.down-scroll {
-  transform: translate3d(0, -130vh, 0);
-}
-.background.down-scroll .content-wrapper {
-  transform: translateY(40vh);
-}
-.background.down-scroll + .background:not(.down-scroll) {
-  transform: translate3d(0, -15vh, 0);
-}
-.background.down-scroll + .background:not(.down-scroll) .content-wrapper {
-  transform: translateY(15vh);
-}
+      /* 이미지 */
+      .skw-page-1 .skw-page__half--left .about__img {
+        background-image: url(./portfolio/assets/img/about02.jpg);
+        /* background-size: cover; */
+        background-position: left;
+      }
+      .skw-page-1 .skw-page__half--right .about__img {
+        background-image: url(./portfolio/assets/img/about02.jpg);
+        /* background-size: cover; */
+        background-position: right;
+      }
+      .skw-page-2 .skw-page__half--left .about__img {
+        background-image: url(./portfolio/assets/img/about02.jpg);
+        /* background-size: cover; */
+        background-position: left;
+      }
+      .skw-page-2 .skw-page__half--right .about__img {
+        background-image: url(./portfolio/assets/img/about02.jpg);
+        /* background-size: cover; */
+        background-position: right;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <section class="background">
-          <div class="content-wrapper">
-            <p class="content-title">Full Page Parallax Effect</p>
-            <p class="content-subtitle">Scroll down and up to see the effect!</p>
+  </head>
+  <body>
+    <section class="aboutImg_box">
+      <article class="skw-page skw-page-1 active">
+        <div class="skw-page__half skw-page__half--left">
+          <div class="skw-page__skewed">
+            <div class="about__img"></div>
           </div>
-        </section>
-        <section class="background">
-          <div class="content-wrapper">
-            <p class="content-title">Cras lacinia non eros nec semper.</p>
-            <p class="content-subtitle">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut massa mattis nibh semper pretium.</p>
+        </div>
+        <div class="skw-page__half skw-page__half--right">
+          <div class="skw-page__skewed">
+            <div class="about__img"></div>
           </div>
-        </section>
-        <section class="background">
-          <div class="content-wrapper">
-            <p class="content-title">Etiam consequat lectus.</p>
-            <p class="content-subtitle">Nullam tristique urna sed tellus ornare congue. Etiam vitae erat at nibh aliquam dapibus.</p>
-          </div>
-        </section>
-      </div>
+        </div>
+      </article>
 
-      <script></script>
+      <article class="skw-page skw-page-2">
+        <div class="skw-page__half skw-page__half--left">
+          <div class="skw-page__skewed">
+            <div class="about__img"></div>
+          </div>
+        </div>
+        <div class="skw-page__half skw-page__half--right">
+          <div class="skw-page__skewed">
+            <div class="about__img"></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="./gsap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var curPage = 1;
+        var numOfPages = $(".skw-page").length;
+        var animTime = 1000;
+        var scrolling = false;
+        var pgPrefix = ".skw-page-";
+
+        function pagination() {
+          scrolling = true;
+
+          $(pgPrefix + curPage)
+            .removeClass("inactive")
+            .addClass("active");
+          $(pgPrefix + (curPage - 1)).addClass("inactive");
+          $(pgPrefix + (curPage + 1)).removeClass("active");
+
+          setTimeout(function () {
+            scrolling = false;
+          }, animTime);
+        }
+
+        function navigateUp() {
+          if (curPage === 1) return;
+          curPage--;
+          pagination();
+        }
+
+        function navigateDown() {
+          if (curPage === numOfPages) return;
+          curPage++;
+          pagination();
+        }
+
+        $(document).on("mousewheel DOMMouseScroll", function (e) {
+          if (scrolling) return;
+          if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+            navigateUp();
+          } else {
+            navigateDown();
+          }
+        });
+
+        $(document).on("keydown", function (e) {
+          if (scrolling) return;
+          if (e.which === 38) {
+            navigateUp();
+          } else if (e.which === 40) {
+            navigateDown();
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
