@@ -213,6 +213,13 @@
     height: 62vh;
     border-top: 1px solid var(--sub_color);
     border-bottom: 1px solid var(--sub_color);
+    animation-name: aboutCont_borderBox;
+    animation-duration: 2s;
+}
+@keyframes aboutCont_borderBox {
+    from {
+        width: 0%;
+    }
 }
 .about_cont ul {
     display: flex;
@@ -221,45 +228,157 @@
 }
 .about_cont ul li:nth-child(1){
     width: 40%;
-    height: 100%;
+    height: 0%;
+    overflow: hidden;
     background-color: #fff;
     background-image: url(../img/about01.jpg);
+    animation-name: aboutCont_img;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes aboutCont_img {
+    to {
+        height: 100%;
+    }
 }
 .about_cont ul li:nth-child(2){
     width: 20%;
-    height: 100%;
+    height: 0%;
+    overflow: hidden;
     border-left: 1px solid var(--sub_color);
-    
+    animation-name: aboutCont_border2;
+    animation-duration: 1s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes aboutCont_border2 {
+    to {
+        height: 100%;
+    }
 }
 .about_cont ul li:nth-child(3){
     width: 20%;
-    height: 100%;
+    height: 0%;
+    overflow: hidden;
     border-left: 1px solid var(--sub_color);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation-name: aboutCont_border3;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes aboutCont_border3 {
+    to {
+        height: 100%;
+    }
 }
 .about_cont ul li:nth-child(4){
     width: 20%;
-    height: 100%;
+    height: 0%;
+    overflow: hidden;
     border-left: 1px solid var(--sub_color);
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: 20px;
+    animation-name: aboutCont_border4;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
-.about_cont ul li span {
+@keyframes aboutCont_border4 {
+    to {
+        height: 100%;
+    }
+}
+.about_cont ul li .about_num {
+    position: relative;
     display: block;
     font-size: 140px;
     width: 85%;
     margin: 0 auto; 
     font-family: "Fabringo";
+    left: -100%;
 }
-.about_cont ul li p {
+.about_cont ul li .about_num1 {
+    animation-name: about_num1;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes about_num1 {
+    to {
+        left: 0;
+    }
+}
+.about_cont ul li .about_num2 {
+    animation-name: about_num2;
+    animation-duration: 1s;
+    animation-delay: 2.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes about_num2 {
+    to {
+        left: 0;
+    }
+}
+.about_cont ul li .about_num3 {
+    animation-name: about_num3;
+    animation-duration: 1s;
+    animation-delay: 2.9s;
+    animation-fill-mode: forwards;
+}
+@keyframes about_num3 {
+    to {
+        left: 0;
+    }
+}
+.about_cont ul li .about_desc {
     color: var(--sub_color);
     width: 85%;
     margin: 0 auto; 
     font-family: "ChosunilboNM";
+    position: relative;
+    top: 10%;
+    opacity: 0;
+}
+.about_cont ul li .about_desc1 {
+    animation-name: about_desc1;
+    animation-duration: 1s;
+    animation-delay: 3.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes about_desc1 {
+    to {
+        top: 0%;
+        opacity: 1;
+    }
+}
+.about_cont ul li .about_desc2 {
+    animation-name: about_desc2;
+    animation-duration: 1s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes about_desc2 {
+    to {
+        top: 0%;
+        opacity: 1;
+    }
+}
+.about_cont ul li .about_desc3 {
+    animation-name: about_desc3;
+    animation-duration: 1s;
+    animation-delay: 3.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes about_desc3 {
+    to {
+        top: 0%;
+        opacity: 1;
+    }
 }
 .aboutImg_box {
     margin-top: 400px;
