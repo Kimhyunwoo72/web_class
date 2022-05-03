@@ -28,32 +28,32 @@ document.querySelector(".main_inner").addEventListener("mousemove", (e)=>{
             duration:0.5, 
             top:0,
             ease: "expo.out",
-            delay: 3.2
+            delay: 2.2
         })
         gsap.to(".sub_text", {
             left:0,
             opacity: 1,
             duration:2,
-            delay: 4
+            delay: 2
         })
         gsap.to(".main_page h1 i", {
             bottom:0,
             opacity: 1,
             duration:2,
-            delay: 3
+            delay: 1
 
         })
         gsap.to(".main_page h1 span", {
             bottom:0,
             opacity: 1,
             duration: 2,
-            delay: 3.2
+            delay: 1.2
         })
         gsap.to(".main_inpo p", {
             top:0,
             opacity: 1,
             duration: 1,
-            delay: 4.5
+            delay: 2.5
         })
         // gsap.to(".main_banner", {
         //     opacity: 0,

@@ -90,7 +90,8 @@
   border-top: 1px solid var(--sub_color);
   overflow: hidden;
   animation-name: line;
-  animation-duration: 4s;
+  animation-duration: 2s;
+  animation-timing-function:linear;
 }
 @keyframes line {
   from {
@@ -392,7 +393,6 @@
   justify-content: center;
   align-items: center;
 }
-
 /* //about_page */
 
 /* about_img */
@@ -408,11 +408,9 @@
 @keyframes aboutImg {
   from {
     height: 0vw;
-    opacity: 0;
   }
   to {
     height: 30vw;
-    opacity: 1;
   }
 }
 

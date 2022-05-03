@@ -1,6 +1,4 @@
-function arr() {
-  if (i >= 16000) {
-    $(document).ready(function () {
+   $(document).ready(function () {
       var curPage = 1;
       var numOfPages = $(".skw-page").length;
       var animTime = 1000;
@@ -51,5 +49,3 @@ function arr() {
         }
       });
     });
-  }
-}

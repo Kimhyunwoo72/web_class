@@ -171,8 +171,8 @@
           <div class="about_text">ABOUT</div>
           <div
             class="about__img"
-            data-14700="display:none"
-            data-14701="display:block"
+            data-15000="display:none"
+            data-15001="display:block"
           >
             <div class="skw-page skw-page-1 active">
               <div class="skw-page__half skw-page__half--left">
@@ -283,8 +283,9 @@
     <script src="js/gsap.min.js"></script>
     <!-- main_page -->
     <script src="js/main_page.js"></script>
-    <!-- <script src="js/about.js"></script> -->
+    <script src="js/about.js"></script>
     <script>
+        
       function scroll() {
         var s = skrollr.init();
         let scrollTop =
@@ -296,72 +297,15 @@
         requestAnimationFrame(scroll);
 
         // console.log(scrollTop);
+        if(scrollTop >= 15000) {
+          document.querySelector(".about__img").classList.add("imgShow")
+        } else {
+          document.querySelector(".about__img").classList.remove("imgShow")
+        }
       }
       scroll();
-
-      window.addEventListener("scroll", () => {
-        let i =
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          window.scrollY;
-          
-        $(document).ready(function () {
-          var curPage = 1;
-          var numOfPages = $(".skw-page").length;
-          var animTime = 1000;
-          var scrolling = false;
-          var pgPrefix = ".skw-page-";
-
-          function pagination() {
-            scrolling = true;
-
-            $(pgPrefix + curPage)
-              .removeClass("inactive")
-              .addClass("active");
-            $(pgPrefix + (curPage - 1)).addClass("inactive");
-            $(pgPrefix + (curPage + 1)).removeClass("active");
-
-            setTimeout(function () {
-              scrolling = false;
-            }, animTime);
-          }
-
-          if (i >= 15000) {
-            function navigateUp() {
-              if (curPage === 1) return;
-              curPage--;
-              pagination();
-            }
-
-            function navigateDown() {
-              if (curPage === numOfPages) return;
-              curPage++;
-              pagination();
-            }
-
-            $(document).on("mousewheel DOMMouseScroll", function (e) {
-              if (scrolling) return;
-              if (
-                e.originalEvent.wheelDelta > 0 ||
-                e.originalEvent.detail < 0
-              ) {
-                navigateUp();
-              } else {
-                navigateDown();
-              }
-            });
-
-            $(document).on("keydown", function (e) {
-              if (scrolling) return;
-              if (e.which === 38) {
-                navigateUp();
-              } else if (e.which === 40) {
-                navigateDown();
-              }
-            });
-          }
-        });
-      });
+  
+    
     </script>
   </body>
 </html>
