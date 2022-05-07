@@ -124,7 +124,7 @@
         #section4 {background-image: url(./img/img23.jpg); background-size: cover;}
         #section5 {background-image: url(./img/img24.jpg); background-size: cover;}
         #section6 {background-image: url(./img/img25.jpg); background-size: cover;}
-        #section7 {background-image: url(./img/img26.jpg); background-size: cover;}
+        #section7 {background-image: url(./img/img29.jpg); background-size: cover;}
         #section8 {background-image: url(./img/img27.jpg); background-size: cover;}
         #section9 {background-image: url(./img/img28.jpg); background-size: cover;}
     </style>
@@ -196,22 +196,32 @@
     <script src="js/gsap.min.js"></script>
     <script>
         const parallaxCont = document.getElementById("parallax__cont")
+        const contentItem = document.querySelector(".content__item")
         //패럴렉스 박스 전체 가로값
-        const parallaxWidth = parallaxCont.offsetWidth
-        const parallaxHeidth = parallaxCont.offsetHeight
-
-        //body 높이값에 패럴렉스 박스 전체 가로값을 넣어줘야함
-        document.body.style.height = parallaxWidth +"px"
+  
 
         //스크롤 했을 때 left: scrollTop
         function scroll() {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
+            //기본 크기 셋팅
+            let parallaxWidth = parallaxCont.offsetWidth
+            //body 높이값에 패럴렉스 박스 전체 가로값을 넣어줘야함
+            document.body.style.height = parallaxWidth +"px"
 
-            gsap.to(parallaxCont, {left: -scrollTop})
+            
+            //섹션박스
+            let viewWidth = parallaxWidth - window.innerWidth 
+            let viewHeight = parallaxWidth - window.innerHeight
+            let goLeft = scrollTop * (viewWidth / viewHeight)
+            
+            // 이동하기
+            gsap.to(parallaxCont, {left: -goLeft})
             document.querySelector(".scrollTop span").innerText = scrollTop
             requestAnimationFrame(scroll)
         }
         scroll()
+
+        window.addEventListener("resize", scroll)
     </script>
   </body>
 </html>

@@ -115,21 +115,89 @@
         #section1 {background-color: #999; background-image: url(./img/img20.jpg); background-size: cover; z-index: 7000;}
         #section2 {background-color: #888; background-image: url(./img/img31.jpg); background-size: cover; z-index: 6000;}
         #section3 {background-color: #777; background-image: url(./img/img30.jpg); background-size: cover; z-index: 5000;}
-        #section4 {background-color: #666; 
-            z-index: 4000; 
-            height: 500vh;}
-            #section4 .sec4{
+        #section4 {background-color: #666; z-index: 4000; height: 680vh;}
+        #section4 .sec4{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: flex;
+        }
+        
+        #section4 .sec4 .item {
+            width: 170vh;
+            height: 100vh;
+            position: relative;
+        }
+        #section4 .sec4 .item:nth-child(1) {
+            background-color: #111;
+            background-image: url(./img/800_400_img1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section4 .sec4 .item:nth-child(2) {
+            background-color: #222;
+            background-image: url(./img/800_400_img2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section4 .sec4 .item:nth-child(3) {
+            background-color: #333;
+            background-image: url(./img/800_400_img3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section4 .sec4 .item:nth-child(4) {
+            background-color: #444;
+            background-image: url(./img/800_400_img4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section5 {background-color: #555; background-image: url(./img/img24.jpg); background-size: cover; z-index: 8000;}
+        #section6 {background-color: #444; background-image: url(./img/img25.jpg); background-size: cover; z-index: 9000;}
+        #section7 {background-color: #333; z-index: 7000;  height: 680vh;}
+        #section7 .sec7 .item:nth-child(1) {
+            background-color: #111;
+            background-color: #111;
+            background-image: url(./img/800_400_img1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section7 .sec7 .item:nth-child(2) {
+            background-color: #222;
+            background-color: #111;
+            background-image: url(./img/800_400_img2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section7 .sec7 .item:nth-child(3) {
+            background-color: #333;
+            background-color: #111;
+            background-image: url(./img/800_400_img3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section7 .sec7 .item:nth-child(4) {
+            background-color: #444;
+            background-color: #111;
+            background-image: url(./img/800_400_img4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section7 .sec7{
             position: fixed;
             top: 0;
             left: 0;
-            width: 400vh; height: 100%;
-            background-image: url(./img/img21.jpg); 
             background-repeat: no-repeat;
             background-size: 100%;
+            display: flex;
         }
-        #section5 {background-color: #555; background-image: url(./img/img24.jpg); background-size: cover; z-index: 5000;}
-        #section6 {background-color: #444; background-image: url(./img/img25.jpg); background-size: cover; z-index: 6000;}
-        #section7 {background-color: #333; background-image: url(./img/img29.jpg); background-size: cover; z-index: 7000;}
+        #section7 .sec7 .item {
+            width: 170vh;
+            height: 100vh;
+            position: relative;
+        }
         #section8 {background-color: #222; background-image: url(./img/img27.jpg); background-size: cover; z-index: 8000;}
         #section9 {background-color: #111; background-image: url(./img/img28.jpg); background-size: cover; z-index: 9000;}
         
@@ -169,7 +237,10 @@
         <!-- //section3 -->
         <section id="section4" class="content__item">
                 <div class="sec4">
-                    <span class="content__item__num">04</span>
+                   <div class="item"><span class="content__item__num">04-1</span></div>
+                   <div class="item"><span class="content__item__num">04-2</span></div>
+                   <div class="item"><span class="content__item__num">04-3</span></div>
+                   <div class="item"><span class="content__item__num">04-4</span></div>
                 </div>
         </section>
         <!-- //section4 -->
@@ -182,7 +253,12 @@
         </section>
         <!-- //section6 -->
         <section id="section7" class="content__item">
-            <span class="content__item__num">07</span>
+            <div class="sec7">
+                <div class="item"><span class="content__item__num">07-1</span></div>
+                <div class="item"><span class="content__item__num">07-2</span></div>
+                <div class="item"><span class="content__item__num">07-3</span></div>
+                <div class="item"><span class="content__item__num">07-4</span></div>
+             </div>
         </section>
         <!-- //section7 -->
         <section id="section8" class="content__item">
@@ -212,16 +288,21 @@
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
 
             //4번째 섹션에 왔을 때 스크로랍을 0으로 초기화해서 시작
-            let offest = scrollTop - document.getElementById("section4").offsetTop
+            let section4offest = scrollTop - document.getElementById("section4").offsetTop
+            let section7offest = scrollTop - document.getElementById("section7").offsetTop
 
             // gsap.to(parallaxCont, {left: -scrollTop})
             document.querySelector(".scrollTop span").innerText = scrollTop
-            requestAnimationFrame(scroll)
             
-            if(offest <= scrollTop) {
-                gsap.to(".sec4", {left: -offest, ease: "linear"})
+            if(section4offest <= scrollTop) {
+                gsap.to(".sec4", {left: -section4offest, ease: "linear"})
                 // document.querySelector("#section4").style.background = "#333aa7"
             }
+            if(section7offest <= scrollTop) {
+                gsap.to(".sec7", {left: -section7offest, ease: "linear"})
+                // document.querySelector("#section4").style.background = "#333aa7"
+            }
+            requestAnimationFrame(scroll)
         }
         scroll()
     </script>
