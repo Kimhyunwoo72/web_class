@@ -145,13 +145,9 @@
               <span class="about_num about_num2">2.</span>
               <p class="about_desc about_desc2">
                 책임감은 자신 있습니다! <br />
-                지오다노회사에서 5년간 점장으로 있으면서 리더의 책임감이
-                어떤것인지 크게 깨닫고, 최고의 성과를 얻기 위해 항상 고민하고
-                발전해 갔습니다. 또, 직원들과의 협업이 업무의 성과를 크게
-                좌우하는 요소라고 생각해, 보다 열린 커뮤니케이션을 하기 위해
-                직원들과 소통을 많이 했습니다. 프론트엔드 업무도 혼자서는
-                속도적인 부분에서 한계가 있다고 생각합니다. 그래서 협업할 수
-                있는 직원이 되기 위해 끊임없이 노력할 것입니다.
+                지오다노회사에서 점장으로 있으면서 리더의 책임감이 어떤것인지
+                크게 깨닫고, 최고의 성과를 얻기 위해 항상 고민하고 발전해
+                갔습니다.
               </p>
             </li>
             <li>
@@ -285,7 +281,6 @@
     <script src="js/main_page.js"></script>
     <script src="js/about.js"></script>
     <script>
-        
       function scroll() {
         var s = skrollr.init();
         let scrollTop =
@@ -297,15 +292,13 @@
         requestAnimationFrame(scroll);
 
         // console.log(scrollTop);
-        if(scrollTop >= 15000) {
-          document.querySelector(".about__img").classList.add("imgShow")
+        if (scrollTop >= 15000) {
+          document.querySelector(".about__img").classList.add("imgShow");
         } else {
-          document.querySelector(".about__img").classList.remove("imgShow")
+          document.querySelector(".about__img").classList.remove("imgShow");
         }
       }
       scroll();
-  
-    
     </script>
   </body>
 </html>
