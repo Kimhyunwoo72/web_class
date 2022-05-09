@@ -166,6 +166,11 @@ body {
   line-height: 1.11;
   font-weight: 400;
 }
+@media (max-width: 750px) {
+  .container .about_title h2 {
+    font-size: 7vw;
+  }
+}
 .container .about_title span {
   font-weight: 300;
   float: right;
@@ -197,6 +202,7 @@ body {
 .about_cont ul li:nth-child(2) {
   width: 20%;
   height: 100%;
+  padding-top: 4%;
   overflow: hidden;
   border-left: 1px solid var(--border_color);
 }
@@ -229,7 +235,7 @@ body {
   }
   .about_cont ul li:nth-child(1) {
     width: 100%;
-    height: 300vh;
+    height: 250vh;
     overflow: hidden;
     background-color: #fff;
     background-image: url(../img/about01.jpg);
@@ -330,9 +336,12 @@ body {
   height: 25vw;
 }
 @media (max-width: 750px) {
+  .about__img {
+    padding-top: 5vw;
+  }
   .slider__img01 {
     background-size: cover;
-    min-height: 30vh;
+    min-height: 17vh;
     background-position: center;
   }
 }
