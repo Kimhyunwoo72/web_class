@@ -1,0 +1,28 @@
+
+/*  header */
+#header {
+  width: 100%;
+  height: 90px;
+  font-size: 25px;
+  position: fixed;
+  z-index: 10;
+  /* top: -1000px; */
+  color: #fff;
+}
+#header ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+#header ul li {
+  padding: 0.5% 1% 0 1%;
+}
+#header ul li a {
+  font-family: var(--sub_font);
+}
+#header img {
+  width: 30px;
+  height: 23px;
+}
+/*  //header */
+
