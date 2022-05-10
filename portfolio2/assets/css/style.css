@@ -1,5 +1,5 @@
 body {
-  height: 20000px;
+  height: 30000px;
 }
 
 /*  header */
@@ -408,9 +408,12 @@ body {
   width: 100%;
   height: 19vw;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   border-top: 1px solid var(--white_border);
+}
+
+.text.border {
   border-bottom: 1px solid var(--white_border);
 }
 
@@ -436,7 +439,7 @@ body {
 .effect_info {
   display: flex;
   height: 34vw;
-  margin-top: 10vw;
+  margin-bottom: 10vw;
   border-top: 1px solid var(--white_border);
   border-bottom: 1px solid var(--white_border);
 }
@@ -497,9 +500,15 @@ body {
 
 @media (max-width: 750px) {
   .text {
-    height: 35vw;
-    font-size: 8vw;
-  }
+    width: 100%;
+    height: 31vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid var(--white_border);
+    border-bottom: 1px solid var(--white_border);
+    align-items: flex-start;
+}
 
   .text h2 {
     font-size: 7vw;
@@ -628,6 +637,7 @@ body {
   padding-top: 15vw;
   padding-bottom: 15vw;
 }
+
 .site_wrap .title {
   white-space: nowrap;
 }
@@ -646,6 +656,7 @@ body {
   border-left: 1px solid #CDA89F;
   position: relative;
 }
+
 .site_img {
   width: 60%;
   height: 100%;
@@ -653,20 +664,24 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .site_img img {
   width: 99%;
   height: 90%;
 }
+
 .site_explanation h3 {
   font-size: 3vw;
   font-weight: 300;
   padding: 2vw;
 }
+
 .site_explanation p {
   font-size: 1vw;
   font-family: var(--desc_font);
   padding: 1vw 2vw;
 }
+
 .site_explanation a {
   display: inline-block;
   color: #B7958C;
@@ -675,6 +690,7 @@ body {
   bottom: 7%;
   left: 5%;
 }
+
 .site_explanation a div {
   font-size: 1.1vw;
   letter-spacing: 3px;
@@ -682,23 +698,27 @@ body {
   align-items: center;
 
 }
+
 .site_explanation a div img {
   width: 2vw;
   height: 2vw;
   padding-left: 2%;
 }
-@media (max-width:750px){
+
+@media (max-width:750px) {
   .site_info {
     display: flex;
     flex-direction: column;
-    height: 83vw;
+    height: 85vw;
   }
+
   .site_img {
     width: 100%;
     height: 100%;
     display: block;
     padding-top: 4vw;
   }
+
   .site_explanation {
     width: 100%;
     display: flex;
@@ -708,24 +728,117 @@ body {
   }
 
   .site_explanation a {
-    position:unset;
+    position: unset;
     white-space: nowrap;
     padding: 1vw 0vw;
   }
+
   .site_explanation a div img {
     width: 20px;
     height: 70px;
     padding-left: 1%;
-}
+  }
+
   .site_explanation h3 {
     font-size: 5.5vw;
     font-weight: 300;
     padding: 2vw 0vw;
   }
+
   .site_explanation p {
     font-size: 2.4vw;
     font-family: var(--desc_font);
-    padding: 0vw 5vw 0 0 ;
+    padding: 0vw 5vw 0 0;
+  }
+
+}
+
+/* //site */
+
+/* contact */
+.contact {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15vw;
+}
+
+.contact_desc h2 {
+  font-size: 3.5vw;
+  font-weight: 200;
+}
+
+.contact_desc p {
+  font-weight: 300;
+  font-family: var(--desc_font);
+  font-size: 1vw;
+  text-align: center;
+  padding-top: 5vw;
+}
+
+.contact_form {
+  padding-top: 20vw;
+}
+
+.contact_form h2 {
+  padding-bottom: 5vw;
+  font-size: 3.5vw;
+  font-weight: 200;
+
+}
+
+.contact_form fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form fieldset input {
+  width: 100%;
+  height: 5vh;
+  background-color: #000;
+  border: 0;
+  border-bottom: 1px solid var(--border_color);
+}
+
+.input_desc {
+  text-align: start;
+  display: inline-block;
+  margin-top: 10px;
+  height: 50vh !important;
+  border: 1px solid var(--border_color) !important;
+}
+
+.contact_form fieldset button {
+  background-color: #000;
+  border: 1px solid var(--border_color);
+  font-family: var(--desc_font);
+  width: 78px;
+  height: 38px;
+  margin-top: 1vw;
+  color: #818181;
+}
+
+@media (max-width:1100px) {
+  .contact {
+    width: 60%;
   }
 }
-/* //site */
+
+@media (max-width:750px) {
+  .contact {
+    width: 80%;
+  }
+
+  .contact_desc h2 {
+    font-size: 6.5vw;
+  }
+
+  .contact_desc p {
+    font-size: 2vw;
+  }
+  .contact_form h2 {
+    font-size: 6.5vw;
+}
+}
+
+/* //contact */
