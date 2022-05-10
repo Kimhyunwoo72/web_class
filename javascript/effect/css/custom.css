@@ -128,7 +128,7 @@ body::before {
   margin-bottom: 10px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 670px) {
   .title {
     width: 100%;
     left: 0;
@@ -147,6 +147,17 @@ body::before {
     left: 0;
     text-align: center;
   }
+  .source button {
+    border: 1px solid #fff;
+    background: transparent;
+    font-family: "NexonLv1Gothic";
+    color: #fff;
+    font-size: 10px !important;
+    padding: 7px 15px !important;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
 }
 
 .title p {

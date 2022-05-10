@@ -402,6 +402,7 @@ body {
   background-color: #fff;
   color: #000;
 }
+
 .text {
   width: 100%;
   height: 19vw;
@@ -411,15 +412,18 @@ body {
   border-top: 1px solid var(--border_color);
   border-bottom: 1px solid var(--border_color);
 }
-.text h2{
+
+.text h2 {
   font-size: 5vw;
   line-height: 1.03;
   font-weight: 500;
   padding-left: 5vw;
 }
+
 .text h2 span {
   font-weight: 300;
 }
+
 .text .desc {
   font-size: 1vw;
   line-height: 1.6;
@@ -427,17 +431,21 @@ body {
   padding-top: 8vw;
   padding-right: 5vw;
 }
+
 .effect_info {
+  display: flex;
   height: 34vw;
-  margin-top: 10vh;
+  margin-top: 10vw;
   border-top: 1px solid var(--border_color);
   border-bottom: 1px solid var(--border_color);
 }
+
 .effect_explanation {
   width: 30%;
   height: 100%;
   border-right: 1px solid var(--border_color);
 }
+
 .effect_explanation h3 {
   font-size: 1.5vw;
   font-weight: 300;
@@ -445,6 +453,7 @@ body {
   text-align: center;
   padding-top: 4.4vw;
 }
+
 .effect_explanation p {
   padding-left: 6vw;
   font-size: 1.1vw;
@@ -452,11 +461,13 @@ body {
   padding-top: 17.5vw;
   font-family: var(--desc_font);
 }
+
 .effect_explanation ul {
   display: flex;
   padding-left: 6vw;
-  padding-top: 1vw;
+  padding-top: 0.7vw;
 }
+
 .effect_explanation ul li a {
   color: #000;
   border: 1px solid #000;
@@ -465,8 +476,80 @@ body {
   margin: 1vw 5px 0 0;
   font-size: 14px;
 }
+
 .effect_iframe {
   width: 70%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.slider_effect {
+  width: 85%;
+  height: 74%;
+}
+
+@media (max-width: 750px) {
+  .text {
+    height: 35vw;
+    font-size: 8vw;
+  }
+  .text h2 {
+    font-size: 7vw;
+}
+.text .desc {
+  font-size: 1.6vw;
+  line-height: 1.6;
+  font-family: var(--desc_font);
+  padding-top: 4vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+  .effect_info {
+    display: flex;
+    flex-direction: column;
+    height: 80vw;
+    margin-top: 10vh;
+    border-top: 1px solid var(--border_color);
+    border-bottom: 1px solid var(--border_color);
+  }
+
+  .effect_explanation {
+    width: 100%;
+    height: 100%;
+    border-right: none;
+  }
+
+  .effect_explanation h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 7.2px;
+    text-align: center;
+    padding-top: 4.4vw;
+  }
+
+  .effect_explanation p {
+    padding-left: 0;
+    padding-top: 10.5vw;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .effect_explanation p br {
+    display: none;
+  }
+
+  .effect_explanation ul {
+    padding-left: 0;
+    padding-top: 0.9vw;
+    justify-content: center;
+  }
+
+  .effect_iframe {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
 /* //effect */
