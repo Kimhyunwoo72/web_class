@@ -6,293 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      *,
-      *:before,
-      *:after {
+      * {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+      }
+
+      *:after,
+      *:before {
+        box-sizing: inherit;
       }
 
       body {
-        background: #000;
-        font-family: "Open Sans", Helvetica, Arial, sans-serif;
-      }
-
-      .about__img {
-        overflow: hidden;
-        position: relative;
-        height: 30vw;
-      }
-
-      .skw-page {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-      }
-      .skw-page__half {
-        position: absolute;
-        top: 0;
-        width: 50%;
-        height: 100vw;
-        transition: transform 1s;
-      }
-      .skw-page__half--left {
-        left: 0;
-        transform: translate3d(-32.4vw, 100%, 0);
-      }
-      .skw-page__half--right {
-        left: 50%;
-        transform: translate3d(32.4vw, -100%, 0);
-      }
-      .skw-page.active .skw-page__half {
-        transform: translate3d(0, 0, 0);
-      }
-      .skw-page__skewed {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        width: 160%;
-        height: 100%;
-        transform: skewX(-18deg);
-        background: #292929;
-      }
-      .skw-page__half--left .skw-page__skewed {
-        left: -40%;
-      }
-      .skw-page__half--right .skw-page__skewed {
-        right: -40%;
-      }
-      .skw-page__content {
+        background: #24282a url("https://i.lensdump.com/i/VWR7i.png") repeat;
+        min-height: 100vh;
         display: flex;
-        flex-flow: column wrap;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        overflow: hidden;
+      }
+
+      .hero {
+        padding-left: 8vw;
+        color: white;
+        font-size: 4.5vw;
+        max-width: 50vw;
+        font-weight: 100;
+        line-height: 1.1;
+      }
+      .hero .char {
+        text-shadow: 2px 7px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .char,
+      .word {
+        will-change: transform, opacity;
+      }
+
+      .line {
+        padding: 0 0 0.2em 0;
+        margin: 0 0 -0.1em;
+      }
+
+      button {
         position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        padding: 16% 30%;
+        bottom: 2vh;
+        right: 2vw;
+      }
+
+      .green {
+        color: #56c271;
+      }
+
+      .white {
         color: #fff;
-        transform: skewX(18deg);
-        transition: transform 1s, opacity 1s;
-        background-size: cover;
-      }
-      .skw-page__half--left .skw-page__content {
-        padding-left: 30%;
-        padding-right: 30%;
-        transform-origin: 100% 0;
-      }
-      .skw-page__half--right .skw-page__content {
-        padding-left: 30%;
-        padding-right: 30%;
-        transform-origin: 0 62%;
-      }
-      .skw-page.inactive .skw-page__content {
-        opacity: 0.5;
-        transform: skewX(18deg) scale(0.95);
-      }
-      .skw-page__heading {
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        font-size: 25px;
-        text-align: center;
-      }
-      .skw-page__description {
-        font-size: 18px;
-        text-align: center;
-      }
-      .skw-page__link {
-        color: #ffa0a0;
-      }
-      .skw-page-1 .skw-page__half--left .skw-page__content {
-        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/mousover-img-1.jpg");
-        background-size: contain;
-      }
-      .skw-page-1 .skw-page__half--right .skw-page__content {
-        background: #292929;
-      }
-      .skw-page-2 .skw-page__half--left .skw-page__content {
-        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg");
-        background-size: contain;
-      }
-      .skw-page-2 .skw-page__half--right .skw-page__content {
-        background: #292929;
-      }
-      .skw-page-3 .skw-page__half--left .skw-page__content {
-        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/mousover-img-2.jpg");
-        background-size: contain;
-      }
-      .skw-page-3 .skw-page__half--right .skw-page__content {
-        background: #292929;
-      }
-      .skw-page-4 .skw-page__half--left .skw-page__content {
-        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/sections-3.jpg");
-        background-size: contain;
-      }
-      .skw-page-4 .skw-page__half--right .skw-page__content {
-        background: #292929;
-      }
-      .skw-page-5 .skw-page__half--left .skw-page__content {
-        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/img-test.jpg");
-        background-size: contain;
-      }
-      .skw-page-5 .skw-page__half--right .skw-page__content {
-        background: #292929;
       }
     </style>
   </head>
   <body>
-    <div class="about__img">
-      <div class="skw-page skw-page-1 active">
-        <div class="skw-page__half skw-page__half--left">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content"></div>
-          </div>
-        </div>
-        <div class="skw-page__half skw-page__half--right">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content">
-              <h2 class="skw-page__heading">Skewed One Page Scroll</h2>
-              <p class="skw-page__description">Just scroll down</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="skw-page skw-page-2">
-        <div class="skw-page__half skw-page__half--left">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content"></div>
-          </div>
-        </div>
-        <div class="skw-page__half skw-page__half--right">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content">
-              <h2 class="skw-page__heading">Page 2</h2>
-              <p class="skw-page__description">
-                Nothing to do here, continue scrolling.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="skw-page skw-page-3">
-        <div class="skw-page__half skw-page__half--left">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content"></div>
-          </div>
-        </div>
-        <div class="skw-page__half skw-page__half--right">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content">
-              <h2 class="skw-page__heading">Page 3</h2>
-              <p class="skw-page__description">The end is near, I promise!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="skw-page skw-page-4">
-        <div class="skw-page__half skw-page__half--left">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content"></div>
-          </div>
-        </div>
-        <div class="skw-page__half skw-page__half--right">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content">
-              <h2 class="skw-page__heading">Page 4</h2>
-              <p class="skw-page__description">Ok, ok, just one more scroll!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="skw-page skw-page-5">
-        <div class="skw-page__half skw-page__half--left">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content"></div>
-          </div>
-        </div>
-        <div class="skw-page__half skw-page__half--right">
-          <div class="skw-page__skewed">
-            <div class="skw-page__content">
-              <h2 class="skw-page__heading">Epic finale</h2>
-              <p class="skw-page__description">
-                Feel free to check
-                <a
-                  class="skw-page__link"
-                  href="https://codepen.io/suez/pens/public/"
-                  target="_blank"
-                  >my other pens</a
-                >
-                and follow me on
-                <a
-                  class="skw-page__link"
-                  href="https://twitter.com/NikolayTalanov"
-                  target="_blank"
-                  >Twitter</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="hero">What surface are you running on?</div>
+    <button id="animate">animate</button>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="./gsap.min.js"></script>
     <script>
-      $(document).ready(function () {
-        var curPage = 1;
-        var numOfPages = $(".skw-page").length;
-        var animTime = 1000;
-        var scrolling = false;
-        var pgPrefix = ".skw-page-";
+      //kill any animations and set text back to its pre-split state
 
-        function pagination() {
-          scrolling = true;
+      var tl = new TimelineLite({
+          onComplete: function () {
+            // this.restart();
+          },
+        }),
+        mySplitText = new SplitText(".hero", {
+          type: "lines, words, chars",
+          linesClass: "line",
+          wordClass: "word",
+          charsClass: "char",
+        }),
+        chars = mySplitText.chars,
+        words = mySplitText.words; //an array of all the divs that wrap each
 
-          $(pgPrefix + curPage)
-            .removeClass("inactive")
-            .addClass("active");
-          $(pgPrefix + (curPage - 1)).addClass("inactive");
-          $(pgPrefix + (curPage + 1)).removeClass("active");
+      function kill() {
+        tl.clear().time(0);
+        mySplitText.revert();
+      }
 
-          setTimeout(function () {
-            scrolling = false;
-          }, animTime);
-        }
+      tl.set(".hero", { perspective: 800 });
 
-        function navigateUp() {
-          if (curPage === 1) return;
-          curPage--;
-          pagination();
-        }
+      //cache tween in a variable
+      tl.staggerFromTo(
+        words,
+        3,
+        {
+          autoAlpha: 0,
+          delay: 2,
+          scale: 1,
+          y: "30",
+          z: "0",
+          webkitFilter: "blur(5px)",
+          fitler: "blur(5px)",
+          // cassName: "+=green",
+          transformStyle: "preserve-3d",
+          force3D: true,
+        },
+        {
+          autoAlpha: 1,
+          scale: 1,
+          y: 0,
+          z: 0,
+          webkitFilter: "blur(0px)",
+          fitler: "blur(0px)",
+          ease: Back.easeOut.config(2),
+          force3D: true,
+          // className: "+=white"
+        },
+        0.09,
+        "outro+=2"
+      ).addLabel("intro");
 
-        function navigateDown() {
-          if (curPage === numOfPages) return;
-          curPage++;
-          pagination();
-        }
+      // tl.staggerFromTo(
+      //   words,
+      //   .1,
+      //   {
+      //     color: "#00ff00",
+      //   },
+      //   {
+      //     color: "#ffffff",
+      //     // className: "+=white"
+      //   },
+      //   0.02,
+      //   "intro-=2.5"
+      // );
 
-        $(document).on("mousewheel DOMMouseScroll", function (e) {
-          if (scrolling) return;
-          if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-            navigateUp();
-          } else {
-            navigateDown();
-          }
+      // tl.staggerFromTo(
+      //   words,
+      //   1.3,
+      //   {
+      //     autoAlpha: 1,
+      //     x: "0",
+      //     z: 0,
+      //     webkitFilter:"blur(0px)",
+      //     fitler:"blur(0px)",
+      //     transformStyle: "preserve-3d"
+      //   },
+      //   {
+      //     autoAlpha: 0,
+      //     scale: 1,
+      //     x: "-40",
+      //     z: "-60",
+      //     ease: Power3.easeIn,
+      //     webkitFilter:"blur(2px)",
+      //     fitler:"blur(2px)",
+      //     force3D: true
+      //   },
+      //   0.03,
+      //   "intro+=0.1"
+      // ).addLabel("outro");
+
+      document
+        .querySelector("#animate")
+        .addEventListener("click", function (e) {
+          tl.restart(true, false);
         });
-
-        $(document).on("keydown", function (e) {
-          if (scrolling) return;
-          if (e.which === 38) {
-            navigateUp();
-          } else if (e.which === 40) {
-            navigateDown();
-          }
-        });
-      });
     </script>
   </body>
 </html>
