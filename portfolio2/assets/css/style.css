@@ -408,8 +408,8 @@ body {
   width: 100%;
   height: 19vw;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   border-top: 1px solid var(--white_border);
   border-bottom: 1px solid var(--white_border);
 }
@@ -691,7 +691,7 @@ body {
   .site_info {
     display: flex;
     flex-direction: column;
-    height: 85vw;
+    height: 83vw;
   }
   .site_img {
     width: 100%;
