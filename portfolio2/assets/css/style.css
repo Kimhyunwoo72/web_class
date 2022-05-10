@@ -170,7 +170,7 @@ body {
 
 /* about_page */
 .about_page {
-  margin-top: 30vw;
+  margin-top: 20vw;
   width: 100%;
   transform: scale();
   padding-bottom: 15vw;
@@ -401,6 +401,7 @@ body {
   padding-top: 15vw;
   background-color: #fff;
   color: #000;
+  padding-bottom: 15vw;
 }
 
 .text {
@@ -428,7 +429,7 @@ body {
   font-size: 1vw;
   line-height: 1.6;
   font-family: var(--desc_font);
-  padding-top: 8vw;
+  padding-top: 6vw;
   padding-right: 5vw;
 }
 
@@ -462,20 +463,23 @@ body {
   font-family: var(--desc_font);
 }
 
-.effect_explanation ul {
-  display: flex;
+.effect_explanation div {
+  color: var(--border_color);
+  font-family: var(--desc_font);
   padding-left: 6vw;
-  padding-top: 0.7vw;
+  font-size: 1.2vw;
+  letter-spacing: 3px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  
+}
+.effect_explanation div img {
+  width: 2vw;
+  height: 2vw;
+  padding-left: 2%;
 }
 
-.effect_explanation ul li a {
-  color: var(--border_color);
-  border: 1px solid var(--border_color);
-  border-radius: 50%;
-  padding: 5px 10px 4px 10px;
-  margin: 1vw 5px 0 0;
-  font-size: 14px;
-}
 
 .effect_iframe {
   width: 70%;
@@ -539,17 +543,61 @@ body {
   .effect_explanation p br {
     display: none;
   }
-
-  .effect_explanation ul {
-    padding-left: 0;
-    padding-top: 0.9vw;
+  .effect_explanation div {
     justify-content: center;
+    padding-left: 0;
+    font-size: 15px;
+  }
+  .effect_explanation div img{
+    width: 4vw;
+    padding-left: 1.4%;
   }
 
   .effect_iframe {
     width: 100%;
     height: 100vh;
   }
+  .slider__wrap {
+    height: 146vh;
+  }
+  .slider_effect {
+    height: 90%;
+  } 
+}
+/* //effect */
+
+/* gmae */
+.gmae_wrap {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding-top: 15vw;
+  padding-bottom: 15vw;
 }
 
-/* //effect */
+.gmae_info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50vw;
+  width: 100%;
+  margin-top: 5vw;
+}
+.gmae_info h3 {
+  font-size: 2.5vw;
+  font-weight: 300;
+  letter-spacing: 7.2px;
+  padding-top: 4.4vw;
+}
+.gmae_info p {
+  font-size: 1.3vw;
+  font-family: var(--desc_font);
+  margin-top: 0.5vw;
+  padding-bottom: 2vw;
+}
+.gmae_effect {
+  width: 80vw;
+  height: 100%;
+}
+/* //gmae */
