@@ -465,15 +465,16 @@
 .effect_explanation div {
   color: var(--border_color);
   font-family: var(--desc_font);
-  padding-left: 6vw;
   font-size: 1.2vw;
   letter-spacing: 3px;
   height: 60px;
   display: flex;
   align-items: center;
-
 }
-
+.effect_explanation a {
+  display: inline-block;
+  margin-left: 6vw;
+}
 .effect_explanation div img {
   width: 2vw;
   height: 2vw;
@@ -531,7 +532,12 @@
     height: 100%;
     border-right: none;
   }
-
+  .effect_explanation a {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
   .effect_explanation h3 {
     font-size: 24px;
     font-weight: 300;
@@ -567,14 +573,11 @@
     height: 100vh;
   }
 
-  .slider__wrap {
-    height: 146vh;
-  }
-
   .slider_effect {
-    height: 90%;
+    height: 110%;
   }
 }
+
 
 /* //effect */
 
