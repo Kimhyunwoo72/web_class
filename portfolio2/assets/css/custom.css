@@ -101,6 +101,10 @@
     .source {
       position: relative; 
   }
+    .source img {
+      width: 100%;
+      padding: 0 17vw;
+  }
   
   .source .source-btn {
     position: absolute;
@@ -144,7 +148,10 @@
   /* //마우스 이펙트 */
   
   /* modal */
-  #modal {
+  
+  #modal01,
+  #modal02,
+  #modal03 {
     position: fixed;
     left: 0;
     top: 0;
@@ -155,11 +162,15 @@
     transform: scale(0);
   }
   
-  #modal.show {
+  #modal01.show,
+  #modal02.show,
+  #modal03.show {
     animation: foldOut 1s ease forwards;
   }
   
-  #modal.show.hide {
+  #modal01.show.hide,
+  #modal02.show.hide,
+  #modal03.show.hide {
     animation: foldIn 1s ease backwards;
   }
   
@@ -200,11 +211,25 @@
     transform: scale(0);
   }
   
-  #modal.show .modal-wrap {
+  #modal01.show .modal-wrap {
     animation: zoomOut 0.5s 0.8s ease forwards;
   }
   
-  #modal.show.hide .modal-wrap {
+  #modal01.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+  }
+  #modal02.show .modal-wrap {
+    animation: zoomOut 0.5s 0.8s ease forwards;
+  }
+  
+  #modal02.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+  }
+  #modal03.show .modal-wrap {
+    animation: zoomOut 0.5s 0.8s ease forwards;
+  }
+  
+  #modal03.show.hide .modal-wrap {
     animation: zoomIn 0.5s ease forwards;
   }
   
