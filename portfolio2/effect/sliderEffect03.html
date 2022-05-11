@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이드 이펙트4</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/face/javascript.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../../assets/face/javascript.png"
+    />
+    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128" />
+
+    <style>
+      /* 넥슨 고딕1 */
+      @import url(css/cdnjs.css);
+      @import url(css/NexonLv1Gothic.css);
+      @import url(css/custom.css);
+
+      /* slider */
+      .slider__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .slider__img {
+        /*화면 보이는 구간*/
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .slider__inner {
+        /*이미지 움직이는 영역*/
+        /* display: flex; */
+        width: 1000%;
+        /*이미지 총 길이*/
+        transform: translateY(0);
+      }
+
+      .slider {
+        width: 10%;
+        height: 100%;
+        position: relative;
+      }
+
+      .slider::before {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 5px 10px 3px;
+      }
+
+      .slider:nth-child(1)::before {
+        content: "이미지1";
+      }
+
+      .slider:nth-child(2)::before {
+        content: "이미지2";
+      }
+
+      .slider:nth-child(3)::before {
+        content: "이미지3";
+      }
+
+      .slider:nth-child(4)::before {
+        content: "이미지4";
+      }
+
+      .slider:nth-child(5)::before {
+        content: "이미지5";
+      }
+
+      .slider:nth-child(6)::before {
+        content: "이미지1";
+      }
+      @media (max-width: 450px) {
+        .slider__img {
+          height: 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="img01">
+    <!-- main -->
+    <main>
+      <section id="sliderType04">
+        <div class="slider__wrap">
+          <div class="slider__img">
+            <div class="slider__inner">
+              <div class="slider">
+                <img src="img/slider1.jpg" alt="이미지1" />
+              </div>
+              <div class="slider">
+                <img src="img/slider2.jpg" alt="이미지2" />
+              </div>
+              <div class="slider">
+                <img src="img/slider3.jpg" alt="이미지3" />
+              </div>
+              <div class="slider">
+                <img src="img/slider4.jpg" alt="이미지4" />
+              </div>
+              <div class="slider">
+                <img src="img/slider5.jpg" alt="이미지5" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- info  -->
+    <div class="info">
+      <div class="number">
+        <ul>
+          <li><a href="sliderEffect01.html">1</a></li>
+          <li><a href="sliderEffect02.html">2</a></li>
+          <li class="active"><a href="sliderEffect03.html">3</a></li>
+          <li><a href="sliderEffect04.html">4</a></li>
+          <li><a href="sliderEffect05.html">5</a></li>
+          <li><a href="sliderEffect06.html">6</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script> -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <!-- script -->
+    <script>
+      hljs.highlightAll();
+
+      // slider
+      const sliderWrap = document.querySelector(".slider__wrap");
+      const sliderImg = document.querySelector(".slider__img");
+      const sliderInner = document.querySelector(".slider__inner");
+      const slider = document.querySelectorAll(".slider");
+
+      let currentIndex = 0;
+      let sliderCount = slider.length; //이미지 갯수
+      let sliderHeight = sliderImg.offsetHeight; //이미지 세로값을 가져온다
+      let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫번째 이미지 복사
+      sliderInner.appendChild(sliderClone); //첫번째 이미지를 마지막에 넣어줌
+
+      function sliderEffect() {
+        currentIndex++;
+        sliderInner.style.transition = "all 0.3s"; //이미지 넘어갈 때 효과
+        sliderInner.style.transform =
+          "translateY(-" + sliderHeight * currentIndex + "px)"; // 세로로 정렬된 이미지를 이미지높이에 맞는 px만큼 이동시켜준다
+
+        //마지막 사진에 갔을 때
+        if (currentIndex == sliderCount) {
+          //마지막 이미지와 첫번째 이미지가 같지만, 넘어갈 때 마치 이동이 안되어진 것처럼 표현하기 위해
+          setTimeout(() => {
+            //초기화
+            sliderInner.style.transition = "0s";
+            sliderInner.style.transform = "translateX(0px)";
+          }, 300);
+          currentIndex = 0;
+        }
+      }
+      setInterval(sliderEffect, 2000);
+    </script>
+  </body>
+</html>
