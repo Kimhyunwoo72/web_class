@@ -481,7 +481,6 @@
   padding-left: 2%;
 }
 
-
 .effect_iframe {
   width: 70%;
   height: 100%;
@@ -504,7 +503,7 @@
     justify-content: center;
     border-top: 1px solid var(--white_border);
     align-items: flex-start;
-}
+  }
 
   .text h2 {
     font-size: 7vw;
@@ -578,7 +577,6 @@
   }
 }
 
-
 /* //effect */
 
 /* gmae */
@@ -605,7 +603,7 @@ padding: 56.25% 0 0 0;
 .music_effect {
   width: 100%;
   padding: 0 17vw;
-  height: 55vh;
+  height: 30vw;
 }
 .gmae_info {
   display: flex;
@@ -629,25 +627,25 @@ padding: 56.25% 0 0 0;
   margin-top: 0.5vw;
   padding-bottom: 2vw;
 }
-@media (max-width:750px){
+@media (max-width: 750px) {
   .music_effect {
-      padding: 0;
+    padding: 0;
+    height: 40vw;
   }
 }
-
 
 /* //gmae */
 
 /* site */
 .text.beige {
-  border-top: 1px solid #CDA89F;
+  border-top: 1px solid #cda89f;
 }
 
 .site_wrap {
   height: 100%;
   width: 100%;
-  background-color: #2A1A16;
-  color: #B7958C;
+  background-color: #2a1a16;
+  color: #b7958c;
   padding-top: 15vw;
   padding-bottom: 15vw;
 }
@@ -660,14 +658,14 @@ padding: 56.25% 0 0 0;
   display: flex;
   height: 28vw;
   margin-bottom: 10vw;
-  border-bottom: 1px solid #CDA89F;
-  border-top: 1px solid #CDA89F;
+  border-bottom: 1px solid #cda89f;
+  border-top: 1px solid #cda89f;
 }
 
 .site_explanation {
   width: 40%;
   height: 100%;
-  border-left: 1px solid #CDA89F;
+  border-left: 1px solid #cda89f;
   position: relative;
 }
 
@@ -698,7 +696,7 @@ padding: 56.25% 0 0 0;
 
 .site_explanation a {
   display: inline-block;
-  color: #B7958C;
+  color: #b7958c;
   font-family: var(--desc_font);
   position: absolute;
   bottom: 7%;
@@ -710,7 +708,6 @@ padding: 56.25% 0 0 0;
   letter-spacing: 3px;
   display: flex;
   align-items: center;
-
 }
 
 .site_explanation a div img {
@@ -719,7 +716,7 @@ padding: 56.25% 0 0 0;
   padding-left: 2%;
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .site_info {
     display: flex;
     flex-direction: column;
@@ -748,7 +745,7 @@ padding: 56.25% 0 0 0;
   }
   .site_explanation a div {
     font-size: 2.1vw;
-}
+  }
   .site_explanation a div img {
     width: 32px;
     height: 70px;
@@ -800,7 +797,6 @@ padding: 56.25% 0 0 0;
   padding-bottom: 5vw;
   font-size: 3.5vw;
   font-weight: 200;
-
 }
 
 .contact_form fieldset {
@@ -835,13 +831,13 @@ padding: 56.25% 0 0 0;
   cursor: pointer;
 }
 
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
   .contact {
     width: 60%;
   }
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .contact {
     width: 80%;
   }
@@ -855,7 +851,7 @@ padding: 56.25% 0 0 0;
   }
   .contact_form h2 {
     font-size: 6.5vw;
-}
+  }
 }
 
 /* //contact */
