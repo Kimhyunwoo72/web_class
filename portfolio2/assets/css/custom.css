@@ -379,6 +379,11 @@
   .view-cont > div:first-child {
     display: block;
   }
+  @media (max-width:750px){
+    .source img {
+        padding: 0;
+    }
+  }
   @media (max-width: 450px) {
     .view-cont {
       font-size: 13px;
