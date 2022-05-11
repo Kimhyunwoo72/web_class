@@ -19,6 +19,7 @@
     <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
 
     <link rel="stylesheet" href="css/NexonLv1Gothic.css">
+    <link rel="stylesheet" href="./css/common.css">
 
     <style>
         * {
@@ -57,6 +58,7 @@
             color: #fff;
             display: block;
         }
+
         #parallax__title {
             padding: 20px;
         }
@@ -104,7 +106,7 @@
             border-radius: 50%;
         }
 
-        @media(max-width:450px) {
+        @media(max-width:600px) {
             #parallax__title h1 {
                 font-size: 20px;
                 border-bottom: 1px dashed #fff;
@@ -123,9 +125,11 @@
                 left: 0;
                 border-radius: 0;
             }
+
             #parallax__nav ul {
                 text-align: center;
             }
+
             #parallax__nav li {
                 text-align: center;
             }
@@ -138,14 +142,18 @@
                 text-align: center;
                 line-height: 10px;
             }
+
             #parallax__nav li.active a {
-            background: #fff;
-            color: #000;
-            padding: 5px;
-            border-radius: 50%;
-        }
+                background: #fff;
+                color: #000;
+                padding: 5px;
+                border-radius: 50%;
+            }
 
             .scrollInpo {
+                display: none;
+            }
+            .scrollTop {
                 display: none;
             }
         }
@@ -156,13 +164,16 @@
             margin: 0 auto;
             /* background-color: rgba(255,255,255,0.1); */
         }
+
         #parallax__title li {
             display: inline;
         }
+
         #parallax__title ul {
             margin-top: 10px;
         }
-        #parallax__title li a{
+
+        #parallax__title li a {
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -172,7 +183,8 @@
             line-height: 20px;
             font-size: 12px;
         }
-        #parallax__title li.active a{
+
+        #parallax__title li.active a {
             background: #fff;
             color: #000;
         }
@@ -476,7 +488,6 @@
     <!-- //info -->
 
     <script>
-
         //#id 이동하기
         document.querySelectorAll("a[href^='#']").forEach(el => {
             el.addEventListener("click", (event) => {
@@ -513,7 +524,7 @@
 
             //info
             document.querySelector(".scrollTop span").innerHTML = Math.ceil(
-            scrollTop); //화면에 스크롤 값 표시 //Math.ceil은 소수점으로 표시되는 것을 반올림.
+                scrollTop); //화면에 스크롤 값 표시 //Math.ceil은 소수점으로 표시되는 것을 반올림.
 
 
             document.querySelector(".offset1").innerHTML = document.getElementById("section1").offsetTop
