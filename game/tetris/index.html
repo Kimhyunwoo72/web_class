@@ -48,7 +48,7 @@
         left: 0;
         top: 0;
         color: #fff;
-        font-size: 90px;
+        font-size: 6vw;
         font-family: "SF_IceLemon";
       }
       .game-text > button {
@@ -67,7 +67,7 @@
         display: contents;
         width: 12vw;
         text-align: center;
-        font-size: 60px;
+        font-size: 6vw;
         color: #fff;
         font-family: "SF_IceLemon";
         margin-bottom: 10px;
@@ -75,7 +75,7 @@
       .score {
         width: 12vw;
         text-align: center;
-        font-size: 50px;
+        font-size: 5vw;
         color: #fff;
         font-family: "SF_IceLemon";
         margin-bottom: 20px;
@@ -141,6 +141,9 @@
         z-index: 10;
         pointer-events: auto;
         transform: translate(-50%, -50%) scale(1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
       }
       .start__btn button {
         background: #fff;
@@ -149,7 +152,8 @@
         font-size: 1.3em;
       }
       .info__box {
-        width: 500px;
+        width: 66vw;
+        height: 30vw;
         background: #fff;
         border-radius: 5px;
         font-size: 1.3em;
@@ -157,15 +161,19 @@
       .info__box .title {
         border-bottom: 1px solid #ccc;
         padding: 0.8rem 2rem;
-        font-size: 1.3em;
+        font-size: 3vw;
         text-align: center;
       }
       .info__box .list ol {
-        padding: 1.3rem 3rem;
+        padding: 1vw 3vw;
+      }
+      .info__box .list p {
+        font-size: 1.3vw;
+        text-align: center;
       }
       .info__box .buttons {
         border-top: 1px solid #ccc;
-        padding: 0.8rem 2rem;
+        padding: 1vw 2vw;
         text-align: center;
       }
       .info__box .buttons button {
@@ -174,7 +182,7 @@
         color: #fff;
         padding: 0.4rem 2rem;
         border-radius: 5px;
-        font-size: 1em;
+        font-size: 1.3vw;
         border: 1px solid #007bff;
       }
       .info__box .buttons button:first-child {
@@ -258,7 +266,6 @@
         </ol>
       </div>
       <div class="buttons">
-        <button class="stop">그만하기</button>
         <button class="start">도전하기</button>
       </div>
     </div>

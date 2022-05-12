@@ -40,8 +40,8 @@
             
         .mouse__img figure {
             position: relative;
-            width: 50vw;
-            height: 65vh;
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
             background-color: #ccc;
             border: 3px solid #fff;
@@ -65,7 +65,7 @@
             top: 50%;
             transform: translate(-50%,-50%);
             text-align: center;
-            font-size: 1.3vw;
+            font-size: 3.3vw;
             line-height: 1.6;
             white-space: nowrap;
         }
@@ -117,11 +117,6 @@
 
     <!-- info  -->
     <div class="info">
-        <div class="title">
-            <h1><a href="./mouseEffect.html">javascript mouse Effect04</a></h1>
-            <p>마우스 이펙트 - 이미지 효과</p>
-        </div>
-
         <div class="number">
             <ul>
                 <li><a href="mouseEffect01.html">1</a></li>
@@ -130,8 +125,6 @@
                 <li class="active"><a href="mouseEffect04.html">4</a></li>
                 <li><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
-                <li><a href="mouseEffect07.html">7</a></li>
-                <li><a href="mouseEffect08.html">8</a></li>
             </ul>
         </div>
 
@@ -290,15 +283,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="attr">
-            <ul>
-                <li>mousePageX : <span class="mousePageX">0</span>px</li>
-                <li>mousePageY : <span class="mousePageY">0</span>px</li>
-                <li>centerPageX : <span class="centerPageX">0</span>px</li>
-                <li>centerPageY : <span class="centerPageY">0</span>px</li>
-            </ul>
-        </div>
         <!-- //info -->
 
         <!-- script -->
@@ -334,15 +318,9 @@
                 gsap.to(".mouse__img figure img", {duration: 0.3, x: centerPageX/20, y: centerPageY/20});
 
                 let windowHeight = window.screen.height //1080 // 화면 크기
-                console.log(windowHeight);
+                // console.log(windowHeight);
 
 
-
-                //출력
-                document.querySelector(".mousePageX").textContent = mousePageX
-                document.querySelector(".mousePageY").textContent = mousePageY
-                document.querySelector(".centerPageX").textContent = centerPageX
-                document.querySelector(".centerPageY").textContent = centerPageY
             })
         </script>
 </body>

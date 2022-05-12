@@ -1,607 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>패럴랙스 효과</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@1,900&family=Six+Caps&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@1,900&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../../assets/face/ javascript.png">
-    <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
-    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
+    <link rel="shortcut icon" href="../../assets/face/ javascript.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../../assets/face/javascript.png"
+    />
+    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128" />
 
-    <link rel="stylesheet" href="css/NexonLv1Gothic.css">
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="css/NexonLv1Gothic.css" />
+    <link rel="stylesheet" href="./css/common.css" />
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            /* box-sizing: border-box; */
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+      }
 
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
 
-        body {
-            font-family: "NexonLv1Gothic";
-            background-color: #222;
-            color: #fff;
-            font-weight: 300;
-        }
+      body {
+        font-family: "NexonLv1Gothic";
+        background-color: #222;
+        color: #fff;
+        font-weight: 300;
+      }
 
-        /* top */
-        .top {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 10000;
-        }
+      /* top */
+      .top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 10000;
+      }
 
-        .top a {
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            background: #000;
-            color: #fff;
-            display: block;
-        }
+      .top a {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        background: #000;
+        color: #fff;
+        display: block;
+      }
 
+      #parallax__title {
+        padding: 20px;
+      }
+
+      /* #parallax__title h1 {
+        font-size: 30px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      #parallax__title p {
+        font-size: 16px;
+      } */
+      @media (max-width: 750px) {
         #parallax__title {
-            padding: 20px;
+          display: inline;
+          text-align: center;
+          line-height: 10vw;
         }
+      }
 
+      #parallax__nav {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 20px;
+        border-radius: 50px;
+      }
+
+      #parallax__nav li {
+        list-style: none;
+        display: inline;
+      }
+
+      #parallax__nav li a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      #parallax__nav li.active a {
+        background: #fff;
+        color: #000;
+        border-radius: 50%;
+      }
+
+      @media (max-width: 750px) {
         #parallax__title h1 {
-            font-size: 30px;
-            border-bottom: 1px dashed #fff;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            font-weight: 500;
-            display: inline-block;
-        }
-
-        #parallax__title p {
-            font-size: 16px;
+          font-size: 20px;
+          border-bottom: 1px dashed #fff;
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          margin-top: 60px;
+          font-weight: 500;
+          display: inline-block;
         }
 
         #parallax__nav {
-            position: fixed;
-            right: 20px;
-            top: 20px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 15px 20px;
-            border-radius: 50px;
+          padding: 15px 15px;
+          margin: 0 auto;
+          right: 0;
+          top: 0;
+          left: 0;
+          border-radius: 0;
+        }
+
+        #parallax__nav ul {
+          text-align: center;
         }
 
         #parallax__nav li {
-            list-style: none;
-            display: inline;
+          text-align: center;
         }
 
         #parallax__nav li a {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
-            text-align: center;
-            line-height: 30px;
+          display: inline-block;
+          width: 20px;
+          height: 10px;
+          padding: 0px 5px;
+          text-align: center;
+          line-height: 10px;
         }
 
         #parallax__nav li.active a {
-            background: #fff;
-            color: #000;
-            border-radius: 50%;
-        }
-
-        @media(max-width:600px) {
-            #parallax__title h1 {
-                font-size: 20px;
-                border-bottom: 1px dashed #fff;
-                margin-bottom: 10px;
-                padding-bottom: 5px;
-                margin-top: 60px;
-                font-weight: 500;
-                display: inline-block;
-            }
-
-            #parallax__nav {
-                padding: 15px 15px;
-                margin: 0 auto;
-                right: 0;
-                top: 0;
-                left: 0;
-                border-radius: 0;
-            }
-
-            #parallax__nav ul {
-                text-align: center;
-            }
-
-            #parallax__nav li {
-                text-align: center;
-            }
-
-            #parallax__nav li a {
-                display: inline-block;
-                width: 20px;
-                height: 10px;
-                padding: 0px 5px;
-                text-align: center;
-                line-height: 10px;
-            }
-
-            #parallax__nav li.active a {
-                background: #fff;
-                color: #000;
-                padding: 5px;
-                border-radius: 50%;
-            }
-
-            .scrollInpo {
-                display: none;
-            }
-            .scrollTop {
-                display: none;
-            }
-        }
-
-        #parallax__cont {
-            max-width: 1600px;
-            width: 98%;
-            margin: 0 auto;
-            /* background-color: rgba(255,255,255,0.1); */
-        }
-
-        #parallax__title li {
-            display: inline;
-        }
-
-        #parallax__title ul {
-            margin-top: 10px;
-        }
-
-        #parallax__title li a {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 1px dashed #fff;
-            display: inline-block;
-            text-align: center;
-            line-height: 20px;
-            font-size: 12px;
-        }
-
-        #parallax__title li.active a {
-            background: #fff;
-            color: #000;
-        }
-
-        .content__item {
-            width: 1000px;
-            max-width: 70vw;
-            margin: 30vw auto;
-            /* background-color: rgba(255,255,255,0.3); */
-            text-align: left;
-            margin-right: 0;
-            position: relative;
-            padding-top: 15vw;
-        }
-
-        .content__item:nth-child(even) {
-            margin-left: 0;
-            text-align: right;
-        }
-
-        .content__item:nth-child(even) .content__item__num {
-            left: auto;
-            right: -5vw;
-        }
-
-        .content__item__num {
-            font-size: 25vw;
-            position: absolute;
-            left: -5vw;
-            top: -5vw;
-            /* margin-bottom: -10vw; */
-            opacity: 0.07;
-            font-weight: 100;
-            font-family: 'Lato', sans-serif;
-        }
-
-        .content__item__title {
-            padding-bottom: 5px;
-            font-weight: 400;
-        }
-
-        .content__item__imgWrap {
-            width: 100%;
-            padding-bottom: 56.25%;
-            background-color: #000;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content__item__img {
-            position: absolute;
-            left: -5%;
-            top: -5%;
-            width: 110%;
-            height: 110%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            filter: saturate(0%);
-            transition: all 0.8s;
-        }
-
-        .content__item__img:hover {
-            filter: saturate(100%);
-            transform: scale(1.025);
-
-        }
-
-        .content__item:nth-child(1) .content__item__img {
-            background-image: url(img/img18.jpg);
-        }
-
-        .content__item:nth-child(2) .content__item__img {
-            background-image: url(img/img12.jpg);
-        }
-
-        .content__item:nth-child(3) .content__item__img {
-            background-image: url(img/img3.jpg);
-        }
-
-        .content__item:nth-child(4) .content__item__img {
-            background-image: url(img/img4.jpg);
-        }
-
-        .content__item:nth-child(5) .content__item__img {
-            background-image: url(img/img5.jpg);
-        }
-
-        .content__item:nth-child(6) .content__item__img {
-            background-image: url(img/img15.jpg);
-        }
-
-        .content__item:nth-child(7) .content__item__img {
-            background-image: url(img/img7.jpg);
-        }
-
-        .content__item:nth-child(8) .content__item__img {
-            background-image: url(img/img8.jpg);
-        }
-
-        .content__item:nth-child(9) .content__item__img {
-            background-image: url(img/img17.jpg);
-        }
-
-        .content__item__desc {
-            font-size: 4vw;
-            line-height: 1.4;
-            margin-left: -4vw;
-            margin-top: -5vw;
-            z-index: 100;
-            position: relative;
-            word-break: keep-all;
-        }
-
-        .content__item:nth-child(even) .content__item__desc {
-            margin-right: auto;
-            margin-right: -4vw;
-        }
-
-        /* info */
-        .scrollTop {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 50%;
+          background: #fff;
+          color: #000;
+          padding: 5px;
+          border-radius: 50%;
         }
 
         .scrollInpo {
-            position: fixed;
-            left: 20px;
-            bottom: 70px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 10px;
+          display: none;
         }
+        .scrollTop {
+          display: none;
+        }
+      }
 
-        .scrollInpo li {
-            list-style: none;
-            line-height: 1.6;
-        }
+      #parallax__cont {
+        max-width: 1600px;
+        width: 98%;
+        margin: 0 auto;
+        /* background-color: rgba(255,255,255,0.1); */
+      }
+
+      #parallax__title li {
+        display: inline;
+      }
+
+      #parallax__title ul {
+        margin-top: 1vw;
+      }
+
+      #parallax__title li a {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px dashed #fff;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+      }
+
+      #parallax__title li.active a {
+        background: #fff;
+        color: #000;
+      }
+
+      .content__item {
+        width: 1000px;
+        max-width: 70vw;
+        margin: 5vw auto;
+        /* background-color: rgba(255,255,255,0.3); */
+        text-align: left;
+        margin-right: 0;
+        position: relative;
+        padding-top: 15vw;
+      }
+
+      .content__item:nth-child(even) {
+        margin-left: 0;
+        text-align: right;
+      }
+
+      .content__item:nth-child(even) .content__item__num {
+        left: auto;
+        right: -5vw;
+      }
+
+      .content__item__num {
+        font-size: 25vw;
+        position: absolute;
+        left: -5vw;
+        top: -5vw;
+        /* margin-bottom: -10vw; */
+        opacity: 0.07;
+        font-weight: 100;
+        font-family: "Lato", sans-serif;
+      }
+
+      .content__item__title {
+        padding-bottom: 5px;
+        font-weight: 400;
+      }
+
+      .content__item__imgWrap {
+        width: 100%;
+        padding-bottom: 56.25%;
+        background-color: #000;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .content__item__img {
+        position: absolute;
+        left: -5%;
+        top: -5%;
+        width: 110%;
+        height: 110%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: saturate(0%);
+        transition: all 0.8s;
+      }
+
+      .content__item__img:hover {
+        filter: saturate(100%);
+        transform: scale(1.025);
+      }
+
+      .content__item:nth-child(1) .content__item__img {
+        background-image: url(img/img18.jpg);
+      }
+
+      .content__item:nth-child(2) .content__item__img {
+        background-image: url(img/img12.jpg);
+      }
+
+      .content__item:nth-child(3) .content__item__img {
+        background-image: url(img/img3.jpg);
+      }
+
+      .content__item:nth-child(4) .content__item__img {
+        background-image: url(img/img4.jpg);
+      }
+
+      .content__item:nth-child(5) .content__item__img {
+        background-image: url(img/img5.jpg);
+      }
+
+      .content__item:nth-child(6) .content__item__img {
+        background-image: url(img/img15.jpg);
+      }
+
+      .content__item:nth-child(7) .content__item__img {
+        background-image: url(img/img7.jpg);
+      }
+
+      .content__item:nth-child(8) .content__item__img {
+        background-image: url(img/img8.jpg);
+      }
+
+      .content__item:nth-child(9) .content__item__img {
+        background-image: url(img/img17.jpg);
+      }
+
+      .content__item__desc {
+        font-size: 4vw;
+        line-height: 1.4;
+        margin-left: -4vw;
+        margin-top: -5vw;
+        z-index: 100;
+        position: relative;
+        word-break: keep-all;
+      }
+
+      .content__item:nth-child(even) .content__item__desc {
+        margin-right: auto;
+        margin-right: -4vw;
+      }
+
+      /* info */
+      .scrollTop {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50%;
+      }
+
+      .scrollInpo {
+        position: fixed;
+        left: 20px;
+        bottom: 70px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .scrollInpo li {
+        list-style: none;
+        line-height: 1.6;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- top버튼 -->
     <div class="top"><a href="#parallax__title">Top</a></div>
 
     <!-- parallax__title -->
     <header id="parallax__title">
-        <h1><a href="./parallaxEffext.html">javascript parallaxEffext Effect01</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 메뉴 이동</p>
-        <ul>
-            <li class="active"><a href="parallaxEffext01.html">s1</a></li>
-            <li><a href="parallaxEffext02.html">s2</a></li>
-            <li><a href="parallaxEffext03.html">s3</a></li>
-            <li><a href="parallaxEffext04.html">s4</a></li>
-            <li><a href="parallaxEffext05.html">s5</a></li>
-            <li><a href="parallaxEffext06.html">s6</a></li>
-            <li><a href="parallaxEffext07.html">s7</a></li>
-            <li><a href="parallaxEffext08.html">s8</a></li>
-            <li><a href="parallaxEffext09.html">s9</a></li>
-        </ul>
+      <ul>
+        <li class="active"><a href="parallaxEffext01.html">s1</a></li>
+        <li><a href="parallaxEffext02.html">s2</a></li>
+        <li><a href="parallaxEffext03.html">s3</a></li>
+        <li><a href="parallaxEffext04.html">s4</a></li>
+        <li><a href="parallaxEffext05.html">s5</a></li>
+        <li><a href="parallaxEffext06.html">s6</a></li>
+        <li><a href="parallaxEffext07.html">s7</a></li>
+        <li><a href="parallaxEffext08.html">s8</a></li>
+      </ul>
     </header>
     <!-- //parallax__title -->
 
     <!-- parallax__nav -->
     <nav id="parallax__nav">
-        <ul>
-            <li class="active"><a href="#section1">s1</a></li>
-            <li><a href="#section2">s2</a></li>
-            <li><a href="#section3">s3</a></li>
-            <li><a href="#section4">s4</a></li>
-            <li><a href="#section5">s5</a></li>
-            <li><a href="#section6">s6</a></li>
-            <li><a href="#section7">s7</a></li>
-            <li><a href="#section8">s8</a></li>
-            <li><a href="#section9">s9</a></li>
-        </ul>
+      <ul>
+        <li class="active"><a href="#section1">s1</a></li>
+        <li><a href="#section2">s2</a></li>
+        <li><a href="#section3">s3</a></li>
+        <li><a href="#section4">s4</a></li>
+        <li><a href="#section5">s5</a></li>
+        <li><a href="#section6">s6</a></li>
+        <li><a href="#section7">s7</a></li>
+        <li><a href="#section8">s8</a></li>
+        <li><a href="#section9">s9</a></li>
+      </ul>
     </nav>
     <!-- //parallax__nav -->
 
     <!-- main -->
     <main id="parallax__cont">
-        <div id="contents">
-            <section id="section1" class="content__item">
-                <span class="content__item__num">01</span>
-                <h2 class="content__item__title">section1</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.</p>
-            </section>
-            <!-- //section1 -->
+      <div id="contents">
+        <section id="section1" class="content__item">
+          <span class="content__item__num">01</span>
+          <h2 class="content__item__title">section1</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.
+          </p>
+        </section>
+        <!-- //section1 -->
 
-            <section id="section2" class="content__item">
-                <span class="content__item__num">02</span>
-                <h2 class="content__item__title">section2</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">행복은 습관이다, 그것을 몸에 지녀라.</p>
-            </section>
-            <!-- //section2 -->
+        <section id="section2" class="content__item">
+          <span class="content__item__num">02</span>
+          <h2 class="content__item__title">section2</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            행복은 습관이다, 그것을 몸에 지녀라.
+          </p>
+        </section>
+        <!-- //section2 -->
 
-            <section id="section3" class="content__item">
-                <span class="content__item__num">03</span>
-                <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</p>
-            </section>
-            <!-- //section3 -->
+        <section id="section3" class="content__item">
+          <span class="content__item__num">03</span>
+          <h2 class="content__item__title">section4</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.
+          </p>
+        </section>
+        <!-- //section3 -->
 
-            <section id="section4" class="content__item">
-                <span class="content__item__num">04</span>
-                <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기 위해서이다.</p>
-            </section>
-            <!-- //section4 -->
+        <section id="section4" class="content__item">
+          <span class="content__item__num">04</span>
+          <h2 class="content__item__title">section4</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기
+            위해서이다.
+          </p>
+        </section>
+        <!-- //section4 -->
 
-            <section id="section5" class="content__item">
-                <span class="content__item__num">05</span>
-                <h2 class="content__item__title">section5</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.</p>
-            </section>
-            <!-- //section5 -->
+        <section id="section5" class="content__item">
+          <span class="content__item__num">05</span>
+          <h2 class="content__item__title">section5</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.
+          </p>
+        </section>
+        <!-- //section5 -->
 
-            <section id="section6" class="content__item">
-                <span class="content__item__num">06</span>
-                <h2 class="content__item__title">section6</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다.</p>
-            </section>
-            <!-- //section6 -->
+        <section id="section6" class="content__item">
+          <span class="content__item__num">06</span>
+          <h2 class="content__item__title">section6</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다.
+          </p>
+        </section>
+        <!-- //section6 -->
 
-            <section id="section7" class="content__item">
-                <span class="content__item__num">07</span>
-                <h2 class="content__item__title">section7</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc"> 작은 기회로 부터 종종 위대한 업적이 시작된다.</p>
-            </section>
-            <!-- //section7 -->
+        <section id="section7" class="content__item">
+          <span class="content__item__num">07</span>
+          <h2 class="content__item__title">section7</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            작은 기회로 부터 종종 위대한 업적이 시작된다.
+          </p>
+        </section>
+        <!-- //section7 -->
 
-            <section id="section8" class="content__item">
-                <span class="content__item__num">08</span>
-                <h2 class="content__item__title">section8</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.</p>
-            </section>
-            <!-- //section8 -->
+        <section id="section8" class="content__item">
+          <span class="content__item__num">08</span>
+          <h2 class="content__item__title">section8</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.
+          </p>
+        </section>
+        <!-- //section8 -->
 
-            <section id="section9" class="content__item">
-                <span class="content__item__num">09</span>
-                <h2 class="content__item__title">section9</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">최고에 도달하려면 최저에서 시작하라.</p>
-            </section>
-            <!-- //section9 -->
-        </div>
+        <section id="section9" class="content__item">
+          <span class="content__item__num">09</span>
+          <h2 class="content__item__title">section9</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            최고에 도달하려면 최저에서 시작하라.
+          </p>
+        </section>
+        <!-- //section9 -->
+      </div>
     </main>
     <!-- //main -->
 
-    <!-- info -->
-    <div class="scrollTop">
-        scrollTop : <span>0</span>px
-    </div>
-    <div class="scrollInpo">
-        <ul>
-            <li>#section1 offset() : <span class="offset1">0</span>px</li>
-            <li>#section2 offset() : <span class="offset2">0</span>px</li>
-            <li>#section3 offset() : <span class="offset3">0</span>px</li>
-            <li>#section4 offset() : <span class="offset4">0</span>px</li>
-            <li>#section5 offset() : <span class="offset5">0</span>px</li>
-            <li>#section6 offset() : <span class="offset6">0</span>px</li>
-            <li>#section7 offset() : <span class="offset7">0</span>px</li>
-            <li>#section8 offset() : <span class="offset8">0</span>px</li>
-            <li>#section9 offset() : <span class="offset9">0</span>px</li>
-        </ul>
-    </div>
-    <!-- //info -->
-
     <script>
-        //#id 이동하기
-        document.querySelectorAll("a[href^='#']").forEach(el => {
-            el.addEventListener("click", (event) => {
-                event.preventDefault();
-                document.querySelector(el.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        })
+      //#id 이동하기
+      document.querySelectorAll("a[href^='#']").forEach((el) => {
+        el.addEventListener("click", (event) => {
+          event.preventDefault();
+          document.querySelector(el.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
 
-        document.querySelectorAll("#parallax__nav li a").forEach(li => {
-            li.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        })
-        window.addEventListener("scroll", () => {
+      document.querySelectorAll("#parallax__nav li a").forEach((li) => {
+        li.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+      window.addEventListener("scroll", () => {
+        let scrollTop =
+          window.pageYOffset ||
+          window.scrollY ||
+          document.documentElement.scrollTop;
 
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
-
-
-            //forEach
-            document.querySelectorAll(".content__item").forEach((e, i) => {
-                if (scrollTop >= e.offsetTop - 2) {
-                    document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-                        li.classList.remove("active")
-                    })
-                    document.querySelector("#parallax__nav li:nth-child(" + (i + 1) + ")").classList
-                        .add("active")
-                }
-            })
-
-            //info
-            document.querySelector(".scrollTop span").innerHTML = Math.ceil(
-                scrollTop); //화면에 스크롤 값 표시 //Math.ceil은 소수점으로 표시되는 것을 반올림.
-
-
-            document.querySelector(".offset1").innerHTML = document.getElementById("section1").offsetTop
-            document.querySelector(".offset2").innerHTML = document.getElementById("section2").offsetTop
-            document.querySelector(".offset3").innerHTML = document.getElementById("section3").offsetTop
-            document.querySelector(".offset4").innerHTML = document.getElementById("section4").offsetTop
-            document.querySelector(".offset5").innerHTML = document.getElementById("section5").offsetTop
-            document.querySelector(".offset6").innerHTML = document.getElementById("section6").offsetTop
-            document.querySelector(".offset7").innerHTML = document.getElementById("section7").offsetTop
-            document.querySelector(".offset8").innerHTML = document.getElementById("section8").offsetTop
-            document.querySelector(".offset9").innerHTML = document.getElementById("section9").offsetTop
-        })
-        // if(scrollTop > document.getElementById("section1").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(1)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section2").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(2)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section3").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(3)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section4").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(4)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section5").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(5)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section6").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(6)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section7").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(7)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section8").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(8)").classList.add("active")
-        // }
-        // if(scrollTop > document.getElementById("section9").offsetTop){
-        //     document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //         li.classList.remove("active")
-        //     })
-        //     document.querySelector("#parallax__nav ul li:nth-child(9)").classList.add("active")
-        // }
-
-        // for
-        // for (let i = 1; i <= 9; i++) {
-        //     if (scrollTop >= document.getElementById("section" + i).offsetTop) {
-        //         document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-        //             li.classList.remove("active")
-        //         })
-        //         document.querySelector("#parallax__nav ul li:nth-child('+ i +')").classList.add("active")
-        //     }
-        // }
+        //forEach
+        document.querySelectorAll(".content__item").forEach((e, i) => {
+          if (scrollTop >= e.offsetTop - 2) {
+            document.querySelectorAll("#parallax__nav ul li").forEach((li) => {
+              li.classList.remove("active");
+            });
+            document
+              .querySelector("#parallax__nav li:nth-child(" + (i + 1) + ")")
+              .classList.add("active");
+          }
+        });
+      });
     </script>
-</body>
-
+  </body>
 </html>

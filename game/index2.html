@@ -26,6 +26,7 @@
       }
       img {
         width: 100%;
+        height: 100%;
         vertical-align: top;
       }
       button {
@@ -36,6 +37,8 @@
       button:active {
         opacity: 0.6;
       }
+      /* 게임 안내창 */
+      .wrapper,
       .start__btn,
       .info__box,
       .card__wrap,
@@ -45,16 +48,14 @@
         top: 50%;
         transform: translate(-50%, -50%);
         border-radius: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
-          0 6px 10px 0 rgba(0, 0, 0, 0.17);
-
         opacity: 0;
         pointer-events: none;
         transition: all 0.33s ease;
       }
+      .card__wrap.active,
       .start__btn.active,
       .info__box.active,
-      .card__wrap.active,
+      .wrapper.active,
       .result__box.active {
         opacity: 1;
         z-index: 10;
@@ -62,50 +63,144 @@
         transform: translate(-50%, -50%) scale(1);
       }
       .start__btn button {
-        background: #524b4b;
-        border: 1px solid #929292;
+        background: #fff;
         padding: 0.8rem 3rem;
         border-radius: 5px;
-        font-size: 1.3em;
+        font-size: 1vw;
       }
       .info__box {
-        width: 500px;
-        background: #524b4b;
+        width: 50vw;
+        height: 70vh;
+        background: #fff;
         border-radius: 5px;
-        font-size: 1.3em;
+        font-size: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      @media (max-width: 1200px) {
+        .info__box {
+          height: 50vh;
+        }
+      }
+      @media (max-width: 750px) {
+        .info__box {
+          height: 30vh;
+        }
       }
       .info__box .title {
-        border-bottom: 1px solid rgb(0, 0, 0);
-        padding: 0.8rem 2rem;
-        font-size: 1.3em;
+        padding: 1vw 2vw;
+        font-size: 3vw;
         text-align: center;
       }
       .info__box .list ol {
-        padding: 1.3rem 3rem;
+        padding: 1vw 3vw;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+      .info__box .list ol li {
+        font-size: 1.5vw;
+      }
+      .info__box .list p {
+        font-size: 1.5vw;
       }
       .info__box .buttons {
-        border-top: 1px solid rgb(0, 0, 0);
-        padding: 0.8rem 2rem;
+        padding: 1vw 2vw;
         text-align: center;
       }
       .info__box .buttons button {
         margin: 0 0.3em;
-        background: #433a3a;
-        color: rgb(0, 0, 0);
+        background: #007bff;
+        color: #fff;
+        padding: 1vw 2vw;
+        border-radius: 5px;
+        font-size: 1.5vw;
+        border: 1px solid #007bff;
+      }
+      .info__box .buttons button:first-child {
+        background: #fff;
+        border: 1px solid #007bff;
+        color: #007bff;
+      }
+
+      .result__box {
+        width: 500px;
+        background: #fff;
+        border-radius: 5px;
+        font-size: 1.3em;
+        z-index: 100;
+      }
+      .result__box .title {
+        border-bottom: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        font-size: 1.3em;
+        text-align: center;
+      }
+      .result__box .score {
+        text-align: center;
+        padding: 2rem;
+        height: 300px;
+      }
+      .result__box .buttons {
+        border-top: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        text-align: center;
+      }
+      .result__box .buttons button {
+        margin: 0 0.3em;
+        background: #007bff;
+        color: #fff;
         padding: 0.4rem 2rem;
         border-radius: 5px;
         font-size: 1em;
-        border: 1px solid #000000;
+        border: 1px solid #007bff;
       }
-      .info__box .buttons button:first-child {
-        background: #433a3a;
-        border: 1px solid #000000;
-        color: #000000;
+      .result__box .buttons button:first-child {
+        background: #fff;
+        border: 1px solid #007bff;
+        color: #007bff;
+      }
+      .now_inner {
+        position: fixed;
+        top: 0;
+        color: #fff;
+        width: 200px;
+        height: 100px;
+        font-size: 25px;
+        line-height: 3;
+        margin-left: 40px;
+      }
+      .score_box {
+        width: 90%;
+        background-color: #f5f5f5;
+        padding: 10px 0px 10px 5px;
+        font-weight: bold;
       }
       .card__wrap {
-        width: 700px;
-        height: 700px;
+        width: 50vw;
+        height: 40vw;
         background: #000;
+      }
+      @media (max-width: 1000px) {
+        .cards {
+          margin-top: 4.5vw !important;
+          margin-left: 3.5vw !important;
+        }
+        .card__wrap {
+          width: 75vw;
+          height: 60vw;
+          background: #000;
+        }
+        .now_inner {
+          position: fixed;
+          top: 0;
+          color: #fff;
+          height: 5vw;
+          font-size: 1.3vw;
+          line-height: 3;
+          margin-left: 4vw;
+          margin-top: 2vw;
+        }
       }
       .card__wrap li {
         list-style: none;
@@ -122,17 +217,24 @@
         align-content: space-around;
         width: 90%;
         height: 85%;
-        margin-top: 54px;
-        margin-left: 33px;
+        margin-top: 2.5vw;
+        margin-left: 1.5vw;
       }
       .cards li {
-        width: calc(100% / 4 - 10px);
-        height: calc(100% / 4 - 10px);
+        width: calc(100% / 4 - 0.5vw);
+        height: calc(100% / 4 - 0.5vw);
 
         perspective: 1000px; /*원근점 설정*/
         transform-style: preserve-3d; /*3D 쓰겠다고 선언*/
         position: relative;
       }
+      /* .cards li {
+    width: calc(100% / 4);
+    height: calc(100% / 3);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+} */
       .cards li .view {
         position: absolute;
         background: #fff;
@@ -189,6 +291,17 @@
         font-size: 1.3em;
         z-index: 100;
       }
+      @media (max-width: 600px) {
+        .result__box {
+          width: 90vw;
+        }
+        .result__box .title {
+          font-size: 4vw;
+        }
+        .result__box .score {
+          height: 40vw;
+        }
+      }
       .result__box .title {
         border-bottom: 1px solid rgb(0, 0, 0);
         padding: 0.8rem 2rem;
@@ -223,11 +336,10 @@
         position: fixed;
         top: 0;
         color: #fff;
-        width: 200px;
-        height: 100px;
-        font-size: 25px;
+        height: 5vw;
+        font-size: 1.3vw;
         line-height: 3;
-        margin-left: 40px;
+        margin-left: 2vw;
       }
     </style>
   </head>
@@ -249,7 +361,6 @@
         </ol>
       </div>
       <div class="buttons">
-        <button class="stop">그만하기</button>
         <button class="start">도전하기</button>
       </div>
     </div>
@@ -399,7 +510,6 @@
         당신의 점수는 몇 <span class="score_num"></span>점입니다.
       </div>
       <div class="buttons">
-        <button class="stop">그만하기</button>
         <button class="restart">다시 도전하기</button>
       </div>
     </div>

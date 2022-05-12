@@ -133,9 +133,6 @@ body::before {
   .title p {
     display: none;
   }
-  .info .number {
-    top: 54px;
-  }
 }
 @media (max-width: 670px) {
   .title {
@@ -325,7 +322,7 @@ body::before {
 .modal-cont {
   opacity: 1;
   position: relative;
-  width: 40vw;
+  width: 90vw;
 }
 
 @media (max-width: 450px) {
@@ -335,7 +332,7 @@ body::before {
 }
 
 .code-view {
-  height: 60vh;
+  height: 80vh;
   background: #fff;
   border: 1px solid #f2f2f2;
   border-radius: 5px;
@@ -434,7 +431,7 @@ body::before {
 
 .view-cont pre code.hljs {
   line-height: 1.6;
-  height: 60vh;
+  font-size: 1.2vw;
 }
 
 .view-cont > div {

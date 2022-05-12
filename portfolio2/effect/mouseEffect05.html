@@ -53,7 +53,8 @@
             position: relative;
         }
         .mouse__img figure img {
-            width: 50%;
+            width: 70%;
+            height: 40vw;
         }
 
         .mouse__img figure::before {
@@ -123,11 +124,6 @@
 
     <!-- info  -->
     <div class="info">
-        <div class="title">
-            <h1><a href="./mouseEffect.html">javascript mouse Effect05</a></h1>
-            <p>마우스 이펙트 - 이미지 효과</p>
-        </div>
-
         <div class="number">
             <ul>
                 <li><a href="mouseEffect01.html">1</a></li>
@@ -136,8 +132,6 @@
                 <li><a href="mouseEffect04.html">4</a></li>
                 <li class="active"><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
-                <li><a href="mouseEffect07.html">7</a></li>
-                <li><a href="mouseEffect08.html">8</a></li>
             </ul>
         </div>
 
@@ -321,17 +315,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="attr">
-            <ul>
-                <li>mousePageX : <span class="mousePageX">0</span>px</li>
-                <li>mousePageY : <span class="mousePageY">0</span>px</li>
-                <li>centerPageX : <span class="centerPageX">0</span>px</li>
-                <li>centerPageY : <span class="centerPageY">0</span>px</li>
-                <li>maxPageX : <span class="maxPageX">0</span>px</li>
-                <li>maxPageY : <span class="maxPageY">0</span>px</li>
-            </ul>
-        </div>
         <!-- //info -->
 
         <!-- script -->
@@ -382,66 +365,9 @@
                     left: circleWidth,
                     top: circleHeight
                 })
-
-                //출력
-                document.querySelector(".mousePageX").textContent = mousePageX;
-                document.querySelector(".mousePageY").textContent = mousePageY;
-                document.querySelector(".centerPageX").textContent = centerPageX;
-                document.querySelector(".centerPageY").textContent = centerPageY;
-                document.querySelector(".maxPageX").textContent = maxPageX;
-                document.querySelector(".maxPageY").textContent = maxPageY;
             }
             document.addEventListener("mousemove", mouseMove)
 
-            // const circle = document.querySelector(".cursor").getBoundingClientRect();
-
-            // function mouseMove(e) {
-
-            //     //마우스 좌표값
-            //     let mousePageX = e.pageX
-            //     let mousePageY = e.pageY
-
-            //     //마우스 좌표 기준점을 가운데로 변경
-            //     let centerPageX = window.innerWidth / 2 - mousePageX
-            //     let centerPageY = window.innerHeight / 2 - mousePageY
-
-            //     //최소값은 -50 최대값은 50 설정
-            //     let maxPageX = Math.max(-800, Math.min(800, centerPageX))
-            //     let maxPageY = Math.max(-300, Math.min(300, centerPageY))
-
-            //     // //각도 줄이는 설정
-            //     // let anlexpageX = maxPageX * 0.12
-            //     // let anlexpageY = maxPageY * 0.12
-
-            //     // //부드럽게 설정
-            //     // let softPageX = 0 
-            //     // let softPageY = 0
-            //     // softPageX += (anlexpageX - anlexpageX) * 0.4;
-            //     // softPageY += (anlexpageY - anlexpageY) * 0.4;
-
-            //     //원 크기
-            //     // let circleWidth = centerPageX-circle.width/2
-            //     // let circleHeight = centerPageY-circle.height/2
-
-
-            //     //transform: rotateX(0deg) rotateY(0deg);
-
-            //     const imgMove = document.querySelector(".mouse__img")
-            //     imgMove.style.transform = "rotateX("+softPageY+"deg) rotateY("+ - softPageX+"deg)";
-
-            //     //커서
-            //     gsap.to(".cursor", {duration: .3, left: mousePageX - circle.width/2, top: mousePageY - circle.height/2})
-
-            //     //출력
-            //     document.querySelector(".mousePageX").textContent = mousePageX
-            //     document.querySelector(".mousePageY").textContent = mousePageY
-            //     document.querySelector(".centerPageX").textContent = centerPageX
-            //     document.querySelector(".centerPageY").textContent = centerPageY
-            //     document.querySelector(".maxPageX").textContent = maxPageX
-            //     document.querySelector(".maxPageY").textContent = maxPageY
-            // }
-
-            // document.addEventListener("mousemove", mouseMove)
         </script>
 </body>
 

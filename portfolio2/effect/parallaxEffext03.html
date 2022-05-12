@@ -1,550 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴랙스 효과03</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>패럴랙스 효과04</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@1,900&family=Six+Caps&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@1,900&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../../assets/face/javascript.png">
-    <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
-    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
+    <link rel="shortcut icon" href="../../assets/face/javascript.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../../assets/face/javascript.png"
+    />
+    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128" />
 
-    <link rel="stylesheet" href="css/NexonLv1Gothic.css">
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="css/NexonLv1Gothic.css" />
+    <link rel="stylesheet" href="./css/common.css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            /* box-sizing: border-box; */
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+      }
 
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
 
-        body {
-            font-family: "NexonLv1Gothic";
-            background-color: #222;
-            color: #fff;
-            font-weight: 300;
-        }
-                /* top */
-                .top {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 10000;
-        }
+      body {
+        font-family: "NexonLv1Gothic";
+        background-color: #222;
+        color: #fff;
+        font-weight: 300;
+      }
+      /* top */
+      .top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 10000;
+      }
 
-        .top a {
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            background: #000;
-            color: #fff;
-            display: block;
-        }
+      .top a {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        background: #000;
+        color: #fff;
+        display: block;
+      }
 
-        #parallax__title {
-            padding: 20px;
-        }
+      #parallax__title {
+        padding: 2vw 3vw;
+      }
 
+      #parallax__title h1 {
+        font-size: 30px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      #parallax__title p {
+        font-size: 16px;
+      }
+
+      #parallax__nav {
+        position: fixed;
+        right: 20px;
+        top: -200px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 20px;
+        border-radius: 50px;
+        transition: top 0.4s ease-in-out;
+      }
+
+      #parallax__nav.show {
+        top: 1vw;
+      }
+
+      #parallax__nav li {
+        list-style: none;
+        display: inline;
+      }
+
+      #parallax__nav li a {
+        display: inline-block;
+        padding: 5px 20px;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      #parallax__nav li.active a {
+        background: #fff;
+        color: #000;
+        border-radius: 30px;
+      }
+
+      @media (max-width: 600px) {
         #parallax__title h1 {
-            font-size: 30px;
-            border-bottom: 1px dashed #fff;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            font-weight: 500;
-            display: inline-block;
-        }
-
-        #parallax__title p {
-            font-size: 16px;
+          font-size: 20px;
+          border-bottom: 1px dashed #fff;
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          font-weight: 500;
+          display: inline-block;
         }
 
         #parallax__nav {
-            position: fixed;
-            right: 20px;
-            top: -200px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 15px 20px;
-            border-radius: 50px;
-            transition: top 0.4s ease-in-out;
+          width: 90%;
+          font-size: 12px;
+          right: 0;
+          left: 0;
         }
 
-        #parallax__nav.show {
-            top: 20px;
+        #parallax__nav ul {
+          text-align: center;
+          display: flex;
+          justify-content: space-around;
         }
 
         #parallax__nav li {
-            list-style: none;
-            display: inline;
+          text-align: center;
         }
 
         #parallax__nav li a {
-            display: inline-block;
-            padding: 5px 20px;
-            text-align: center;
-            line-height: 30px;
+          display: inline-block;
+          width: 30px;
+          height: 20px;
+          line-height: 2;
+          padding: 5px 5px;
+          text-align: center;
+          white-space: nowrap;
         }
 
         #parallax__nav li.active a {
-            background: #fff;
-            color: #000;
-            border-radius: 30px;
-        }
-
-        @media(max-width:600px) {
-            #parallax__title h1 {
-                font-size: 20px;
-                border-bottom: 1px dashed #fff;
-                margin-bottom: 10px;
-                padding-bottom: 5px;
-                font-weight: 500;
-                display: inline-block;
-            }
-            #parallax__nav {
-                width: 90%;
-                font-size: 12px;
-                right: 0;
-                left: 0;
-            }
-
-            #parallax__nav ul {
-                text-align: center;
-                display: flex;
-                justify-content: space-around;
-            }
-
-            #parallax__nav li {
-                text-align: center;
-            }
-
-            #parallax__nav li a {
-                display: inline-block;
-                width: 30px;
-                height: 20px;
-                line-height: 2;
-                padding: 5px 5px;
-                text-align: center;
-                white-space: nowrap;
-            }
-
-            #parallax__nav li.active a {
-                background: #fff;
-                color: #000;
-                padding: 5px;
-                border-radius: 50%;
-            }
-
-            .scrollInpo {
-                display: none;
-            }
-            .scrollTop {
-                display: none;
-            }
-        }
-
-        #parallax__cont {
-            max-width: 1600px;
-            width: 98%;
-            margin: 0 auto;
-            /* background-color: rgba(255,255,255,0.1); */
-        }
-
-        .content__item {
-            width: 1000px;
-            max-width: 70vw;
-            margin: 30vw auto;
-            /* background-color: rgba(255,255,255,0.3); */
-            text-align: left;
-            margin-right: 0;
-            position: relative;
-            padding-top: 15vw;
-        }
-
-        .content__item:nth-child(even) {
-            margin-left: 0;
-            text-align: right;
-        }
-
-        .content__item:nth-child(even) .content__item__num {
-            left: auto;
-            right: -5vw;
-        }
-
-        .content__item__num {
-            font-size: 25vw;
-            position: absolute;
-            left: -5vw;
-            top: -5vw;
-            /* margin-bottom: -10vw; */
-            opacity: 0.07;
-            font-weight: 100;
-            font-family: 'Lato', sans-serif;
-        }
-
-        .content__item__title {
-            padding-bottom: 5px;
-            font-weight: 400;
-        }
-
-        #parallax__title li {
-            display: inline;
-        }
-
-        #parallax__title ul {
-            margin-top: 10px;
-        }
-
-        #parallax__title li a {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 1px dashed #fff;
-            display: inline-block;
-            text-align: center;
-            line-height: 20px;
-            font-size: 12px;
-        }
-
-        #parallax__title li.active a {
-            background: #fff;
-            color: #000;
-        }
-
-        .content__item__imgWrap {
-            width: 100%;
-            padding-bottom: 56.25%;
-            background-color: #000;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content__item__img {
-            position: absolute;
-            left: -5%;
-            top: -5%;
-            width: 110%;
-            height: 110%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            filter: saturate(0%);
-            transition: all 0.8s;
-        }
-
-        .content__item__img:hover {
-            filter: saturate(100%);
-            transform: scale(1.025);
-
-        }
-
-        .content__item:nth-child(1) .content__item__img {
-            background-image: url(img/img18.jpg);
-        }
-
-        .content__item:nth-child(2) .content__item__img {
-            background-image: url(img/img12.jpg);
-        }
-
-        .content__item:nth-child(3) .content__item__img {
-            background-image: url(img/img3.jpg);
-        }
-
-        .content__item:nth-child(4) .content__item__img {
-            background-image: url(img/img4.jpg);
-        }
-
-        .content__item:nth-child(5) .content__item__img {
-            background-image: url(img/img5.jpg);
-        }
-
-        .content__item:nth-child(6) .content__item__img {
-            background-image: url(img/img15.jpg);
-        }
-
-        .content__item:nth-child(7) .content__item__img {
-            background-image: url(img/img7.jpg);
-        }
-
-        .content__item:nth-child(8) .content__item__img {
-            background-image: url(img/img8.jpg);
-        }
-
-        .content__item:nth-child(9) .content__item__img {
-            background-image: url(img/img17.jpg);
-        }
-
-        .content__item__desc {
-            font-size: 4vw;
-            line-height: 1.4;
-            margin-left: -4vw;
-            margin-top: -5vw;
-            z-index: 100;
-            position: relative;
-            word-break: keep-all;
-        }
-
-        .content__item:nth-child(even) .content__item__desc {
-            margin-right: auto;
-            margin-right: -4vw;
-        }
-
-        /* info */
-        .scrollTop {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 50%;
+          background: #fff;
+          color: #000;
+          padding: 5px;
+          border-radius: 50%;
         }
 
         .scrollInpo {
-            position: fixed;
-            left: 20px;
-            bottom: 70px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 10px;
+          display: none;
         }
+        .scrollTop {
+          display: none;
+        }
+      }
 
-        .scrollInpo li {
-            list-style: none;
-            line-height: 1.6;
-        }
+      #parallax__cont {
+        max-width: 1600px;
+        width: 98%;
+        margin: 0 auto;
+        /* background-color: rgba(255,255,255,0.1); */
+      }
+
+      .content__item {
+        width: 1000px;
+        max-width: 70vw;
+        margin: 5vw auto;
+        /* background-color: rgba(255,255,255,0.3); */
+        text-align: left;
+        margin-right: 0;
+        position: relative;
+        padding-top: 15vw;
+      }
+
+      .content__item:nth-child(even) {
+        margin-left: 0;
+        text-align: right;
+      }
+
+      .content__item:nth-child(even) .content__item__num {
+        left: auto;
+        right: -5vw;
+      }
+
+      .content__item__num {
+        font-size: 25vw;
+        position: absolute;
+        left: -5vw;
+        top: -5vw;
+        /* margin-bottom: -10vw; */
+        opacity: 0.07;
+        font-weight: 100;
+        font-family: "Lato", sans-serif;
+      }
+
+      .content__item__title {
+        padding-bottom: 5px;
+        font-weight: 400;
+      }
+
+      #parallax__title li {
+        display: inline;
+      }
+
+      #parallax__title ul {
+        margin-top: 10px;
+      }
+
+      #parallax__title li a {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px dashed #fff;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+      }
+
+      #parallax__title li.active a {
+        background: #fff;
+        color: #000;
+      }
+
+      .content__item__imgWrap {
+        width: 100%;
+        padding-bottom: 56.25%;
+        background-color: #000;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .content__item__img {
+        position: absolute;
+        left: -5%;
+        top: -5%;
+        width: 110%;
+        height: 110%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: saturate(0%);
+        transition: all 0.8s;
+      }
+
+      .content__item__img:hover {
+        filter: saturate(100%);
+        transform: scale(1.025);
+      }
+
+      .content__item:nth-child(1) .content__item__img {
+        background-image: url(img/img18.jpg);
+      }
+
+      .content__item:nth-child(2) .content__item__img {
+        background-image: url(img/img12.jpg);
+      }
+
+      .content__item:nth-child(3) .content__item__img {
+        background-image: url(img/img3.jpg);
+      }
+
+      .content__item:nth-child(4) .content__item__img {
+        background-image: url(img/img4.jpg);
+      }
+
+      .content__item:nth-child(5) .content__item__img {
+        background-image: url(img/img5.jpg);
+      }
+
+      .content__item:nth-child(6) .content__item__img {
+        background-image: url(img/img15.jpg);
+      }
+
+      .content__item:nth-child(7) .content__item__img {
+        background-image: url(img/img7.jpg);
+      }
+
+      .content__item:nth-child(8) .content__item__img {
+        background-image: url(img/img8.jpg);
+      }
+
+      .content__item:nth-child(9) .content__item__img {
+        background-image: url(img/img17.jpg);
+      }
+
+      .content__item__desc {
+        font-size: 4vw;
+        line-height: 1.4;
+        margin-left: -4vw;
+        margin-top: -5vw;
+        z-index: 100;
+        position: relative;
+        word-break: keep-all;
+      }
+
+      .content__item:nth-child(even) .content__item__desc {
+        margin-right: auto;
+        margin-right: -4vw;
+      }
+
+      /* info */
+      .scrollTop {
+        opacity: 0;
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50%;
+      }
+
+      .scrollInpo {
+        position: fixed;
+        left: 20px;
+        bottom: 70px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .scrollInpo li {
+        list-style: none;
+        line-height: 1.6;
+      }
+
+      /* option */
+
+      /* r개별적으로 나타나기 */
+      #contents > section .content__item__num {
+        opacity: 0;
+        transform: translateY(200px);
+        transition: all 1s 0.1s ease;
+      }
+      #contents > section .content__item__title {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 1s 0.3s ease;
+      }
+      #contents > section .content__item__imgWrap {
+        opacity: 0;
+        transform: translateY(200px) rotate(-30deg) skew(-20deg);
+        transition: all 1s 0.6s ease;
+      }
+      #contents > section .content__item__desc {
+        opacity: 0;
+        transform: translateX(-200px);
+        transition: all 1s 0.9s ease;
+      }
+
+      #contents > section.show .content__item__num {
+        opacity: 0.07;
+        transform: translateY(0);
+      }
+      #contents > section.show .content__item__title {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      #contents > section.show .content__item__imgWrap {
+        opacity: 1;
+        transform: translateY(0px) rotate(0deg) skew(0deg);
+      }
+      #contents > section.show .content__item__desc {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* 짝수는 다르게. */
+      #contents > section.show:nth-child(even) .content__item__title {
+        transform: translateX(100px);
+      }
+      #contents > section.show:nth-child(even).show .content__item__title {
+        transform: translateX(0px);
+      }
+      #contents > section:nth-child(even) .content__item__imgWrap {
+        opacity: 0;
+        transform: translateY(200px) rotate(30deg) skew(-20deg);
+      }
+      #contents > section.show:nth-child(even) .content__item__imgWrap {
+        opacity: 1;
+        transform: translateY(0px) rotate(0deg) skew(0deg);
+      }
+      #contents > section.show:nth-child(even) .content__item__desc {
+        transform: translateX(200px);
+      }
+      #contents > section.show:nth-child(even).show .content__item__desc {
+        transform: translateX(0);
+      }
     </style>
-</head>
+  </head>
 
-<body>
-        <!-- top버튼 -->
-        <div class="top"><a href="#parallax__title">Top</a></div>
+  <body>
+    <!-- top버튼 -->
+    <div class="top"><a href="#parallax__title">Top</a></div>
 
     <!-- parallax__title -->
     <header id="parallax__title">
-        <h1><a href="./parallaxEffext.html">javascript parallaxEffext Effect03</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 숨김 메뉴</p>
-        <ul>
-            <li><a href="parallaxEffext01.html">s1</a></li>
-            <li><a href="parallaxEffext02.html">s2</a></li>
-            <li class="active"><a href="parallaxEffext03.html">s3</a></li>
-            <li><a href="parallaxEffext04.html">s4</a></li>
-            <li><a href="parallaxEffext05.html">s5</a></li>
-            <li><a href="parallaxEffext06.html">s6</a></li>
-            <li><a href="parallaxEffext07.html">s7</a></li>
-            <li><a href="parallaxEffext08.html">s8</a></li>
-            <li><a href="parallaxEffext09.html">s9</a></li>
-        </ul>
+      <ul>
+        <li><a href="parallaxEffext01.html">s1</a></li>
+        <li><a href="parallaxEffext02.html">s2</a></li>
+        <li class="active"><a href="parallaxEffext03.html">s3</a></li>
+        <li><a href="parallaxEffext04.html">s4</a></li>
+        <li><a href="parallaxEffext05.html">s5</a></li>
+        <li><a href="parallaxEffext06.html">s6</a></li>
+        <li><a href="parallaxEffext07.html">s7</a></li>
+        <li><a href="parallaxEffext08.html">s8</a></li>
+      </ul>
     </header>
     <!-- //parallax__title -->
 
-    <!-- parallax__nav -->
-    <nav id="parallax__nav">
-        <ul>
-            <li class="active"><a href="#section1"><span>메뉴1</span></a></li>
-            <li><a href="#section2"><span>메뉴2</span></a></li>
-            <li><a href="#section3"><span>메뉴3</span></a></li>
-            <li><a href="#section4"><span>메뉴4</span></a></li>
-            <li><a href="#section5"><span>메뉴5</span></a></li>
-            <li><a href="#section6"><span>메뉴6</span></a></li>
-            <li><a href="#section7"><span>메뉴7</span></a></li>
-            <li><a href="#section8"><span>메뉴8</span></a></li>
-            <li><a href="#section9"><span>메뉴9</span></a></li>
-        </ul>
-    </nav>
-    <!-- //parallax__dot -->
-
     <!-- main -->
     <main id="parallax__cont">
-        <div id="contents">
-            <section id="section1" class="content__item">
-                <span class="content__item__num">01</span>
-                <h2 class="content__item__title">section1</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.</p>
-            </section>
-            <!-- //section1 -->
+      <div id="contents">
+        <section id="section1" class="content__item">
+          <span class="content__item__num">01</span>
+          <h2 class="content__item__title">section1</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.
+          </p>
+        </section>
+        <!-- //section1 -->
 
-            <section id="section2" class="content__item">
-                <span class="content__item__num">02</span>
-                <h2 class="content__item__title">section2</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">행복은 습관이다, 그것을 몸에 지녀라.</p>
-            </section>
-            <!-- //section2 -->
+        <section id="section2" class="content__item">
+          <span class="content__item__num">02</span>
+          <h2 class="content__item__title">section2</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            행복은 습관이다, 그것을 몸에 지녀라.
+          </p>
+        </section>
+        <!-- //section2 -->
 
-            <section id="section3" class="content__item">
-                <span class="content__item__num">03</span>
-                <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</p>
-            </section>
-            <!-- //section3 -->
+        <section id="section3" class="content__item">
+          <span class="content__item__num">03</span>
+          <h2 class="content__item__title">section4</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.
+          </p>
+        </section>
+        <!-- //section3 -->
 
-            <section id="section4" class="content__item">
-                <span class="content__item__num">04</span>
-                <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기 위해서이다.</p>
-            </section>
-            <!-- //section4 -->
+        <section id="section4" class="content__item">
+          <span class="content__item__num">04</span>
+          <h2 class="content__item__title">section4</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기
+            위해서이다.
+          </p>
+        </section>
+        <!-- //section4 -->
 
-            <section id="section5" class="content__item">
-                <span class="content__item__num">05</span>
-                <h2 class="content__item__title">section5</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.</p>
-            </section>
-            <!-- //section5 -->
+        <section id="section5" class="content__item">
+          <span class="content__item__num">05</span>
+          <h2 class="content__item__title">section5</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.
+          </p>
+        </section>
+        <!-- //section5 -->
 
-            <section id="section6" class="content__item">
-                <span class="content__item__num">06</span>
-                <h2 class="content__item__title">section6</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다.</p>
-            </section>
-            <!-- //section6 -->
+        <section id="section6" class="content__item">
+          <span class="content__item__num">06</span>
+          <h2 class="content__item__title">section6</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다.
+          </p>
+        </section>
+        <!-- //section6 -->
 
-            <section id="section7" class="content__item">
-                <span class="content__item__num">07</span>
-                <h2 class="content__item__title">section7</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc"> 작은 기회로 부터 종종 위대한 업적이 시작된다.</p>
-            </section>
-            <!-- //section7 -->
+        <section id="section7" class="content__item">
+          <span class="content__item__num">07</span>
+          <h2 class="content__item__title">section7</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            작은 기회로 부터 종종 위대한 업적이 시작된다.
+          </p>
+        </section>
+        <!-- //section7 -->
 
-            <section id="section8" class="content__item">
-                <span class="content__item__num">08</span>
-                <h2 class="content__item__title">section8</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.</p>
-            </section>
-            <!-- //section8 -->
+        <section id="section8" class="content__item">
+          <span class="content__item__num">08</span>
+          <h2 class="content__item__title">section8</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.
+          </p>
+        </section>
+        <!-- //section8 -->
 
-            <section id="section9" class="content__item">
-                <span class="content__item__num">09</span>
-                <h2 class="content__item__title">section9</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">최고에 도달하려면 최저에서 시작하라.</p>
-            </section>
-            <!-- //section9 -->
-        </div>
+        <section id="section9" class="content__item">
+          <span class="content__item__num">09</span>
+          <h2 class="content__item__title">section9</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            최고에 도달하려면 최저에서 시작하라.
+          </p>
+        </section>
+        <!-- //section9 -->
+      </div>
     </main>
     <!-- //main -->
 
     <!-- info -->
-    <div class="scrollTop">
-        scrollTop : <span>0</span>px
-    </div>
+    <div class="scrollTop">scrollTop : <span>0</span>px</div>
     <!-- //info -->
 
     <!-- script -->
     <script>
-            //#id 이동하기
-            document.querySelectorAll("a[href^='#']").forEach(el => {
-            el.addEventListener("click", (event) => {
-                event.preventDefault();
-                document.querySelector(el.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        })
+      //#id 이동하기
+      document.querySelectorAll("a[href^='#']").forEach((el) => {
+        el.addEventListener("click", (event) => {
+          event.preventDefault();
+          document.querySelector(el.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+      // window.addEventListener("scroll", () => {
+      //     let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
+      //     document.querySelector(".scrollTop span").innerText = Math.round(scrollTop)
+      // })
 
-        let mowScroll = true
-        let lastScroll = 0
+      function scroll() {
+        let scrollTop =
+          window.pageYOffset ||
+          window.scrollY ||
+          document.documentElement.scrollTop;
+        document.querySelector(".scrollTop span").innerText =
+          Math.round(scrollTop);
 
-        function scrollProgress() {
-            mowScroll = true
-
-            setInterval(() => {        //현재 움직이는 값을 확인
-                if (mowScroll) {
-                    mowScroll = false
-                    hasScroll()
-                }
-            }, 1000)
-            // console.log(mowScroll);
-        }
-
-        function hasScroll() {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
-            if (scrollTop > lastScroll) {
-                document.querySelector("#parallax__nav").classList.add("show")
-            } else {
-                document.querySelector("#parallax__nav").classList.remove("show")
-            }
-            lastScroll = scrollTop
-            
-            // console.log("lastScroll:" + lastScroll);
-            // console.log("scrollTop:" + scrollTop);
-        }
-        window.addEventListener("scroll", scrollProgress)
-
-        
-        // nav
-        document.querySelectorAll("#parallax__nav li a").forEach(li => {
-            li.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        })
-        window.addEventListener("scroll", () => {
-            // let scrollTop = window.pageYOffset;
-            // let scrollTop = window.scrollY
-            // let scrollTop = document.documentElement.scrollTop
-
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop
-
-
-            //forEach
-            document.querySelectorAll(".content__item").forEach((e, i) => {
-                if (scrollTop >= e.offsetTop - 2) {
-                    document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-                        li.classList.remove("active")
-                    })
-                    document.querySelector("#parallax__nav li:nth-child(" + (i + 1) + ")").classList
-                        .add("active")
-                }
-            })
-            })
+        // if(scrollTop > document.getElementById("section1").offsetTop){
+        //     document.getElementById("section1").classList.add("show")
+        // }
+        document.querySelectorAll(".content__item").forEach((el) => {
+          if (scrollTop >= el.offsetTop - window.innerHeight / 2) {
+            el.classList.add("show");
+          }
+        });
+        requestAnimationFrame(scroll);
+      }
+      scroll();
     </script>
-</body>
-
+  </body>
 </html>

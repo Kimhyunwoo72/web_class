@@ -167,10 +167,11 @@
 
 /* about_page */
 .about_page {
-  margin-top: 7vw;
+  padding-top: 7vw;
   width: 100%;
   transform: scale();
   padding-bottom: 7vw;
+  background-color: #000;
 }
 
 .container {
@@ -456,6 +457,7 @@
 }
 .subtitle ul li:nth-child(1) {
   padding-left: 2.5vw;
+  white-space: nowrap;
 }
 .subtitle ul li:nth-child(2) {
   padding-left: 20vw;
@@ -518,7 +520,6 @@
 
 .effect_iframe {
   width: 70%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,6 +538,7 @@
     flex-direction: column;
     justify-content: center;
     border-top: 1px solid var(--white_border);
+    border-bottom: 1px solid var(--white_border);
     align-items: flex-start;
   }
 
@@ -557,20 +559,22 @@
     display: flex;
     flex-direction: column;
     height: 80vw;
-    border-top: 1px solid var(--border_color);
-    border-bottom: 1px solid var(--border_color);
   }
 
   .effect_explanation {
     width: 100%;
-    height: 100%;
+    height: 13vh;
     border-right: none;
+    position: initial;
   }
   .effect_explanation a {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  .effect_explanation div {
+    padding-left: 0;
+    font-size: 15px;
+    position: initial;
   }
   .effect_explanation h3 {
     font-size: 24px;
@@ -581,21 +585,18 @@
   }
 
   .effect_explanation p {
-    padding-left: 0;
-    padding-top: 10.5vw;
-    text-align: center;
-    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    position: initial;
+    padding-left: 6vw;
+    padding-top: 3vw;
+    font-size: 2vw;
+    line-height: 1.48;
+    font-family: var(--desc_font);
   }
 
   .effect_explanation p br {
     display: none;
-  }
-
-  .effect_explanation div {
-    justify-content: center;
-    padding-left: 0;
-    font-size: 15px;
-    position: inherit;
   }
 
   .effect_explanation div img {
@@ -605,11 +606,7 @@
 
   .effect_iframe {
     width: 100%;
-    height: 100vh;
-  }
-
-  .slider_effect {
-    height: 110%;
+    height: 50vh;
   }
 }
 
@@ -645,7 +642,7 @@ padding: 56.25% 0 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 50vw;
+  height: 42vw;
   width: 100%;
   border-bottom: 1px solid var(--white_border);
 }
@@ -654,7 +651,7 @@ padding: 56.25% 0 0 0;
   font-size: 2.5vw;
   font-weight: 300;
   letter-spacing: 7.2px;
-  padding-top: 4.4vw;
+  padding-top: 2.8vw;
 }
 
 .gmae_info p {
@@ -667,6 +664,9 @@ padding: 56.25% 0 0 0;
   .music_effect {
     padding: 0;
     height: 40vw;
+  }
+  .gmae_info {
+    height: 50vw;
   }
 }
 
