@@ -19,93 +19,6 @@
     <link rel="stylesheet" href="assets/css/pre.css" />
 
     <style>
-      a,
-      a:focus,
-      a:hover {
-        color: #fff;
-      }
-
-      .btn-secondary,
-      .btn-secondary:hover,
-      .btn-secondary:focus {
-        color: #333;
-        text-shadow: none;
-        background-color: #fff;
-        border: 0.05rem solid #fff;
-      }
-
-      html,
-      body {
-        height: 100%;
-      }
-
-      body {
-        display: flex;
-        justify-content: center;
-        color: #fff;
-        text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-      }
-
-      .cover-container {
-        max-width: 42em;
-      }
-
-      .masthead {
-        margin-bottom: 2rem;
-      }
-
-      .masthead-brand {
-        margin-bottom: 0;
-      }
-
-      .nav-masthead .nav-link {
-        padding: 0.25rem 0;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.5);
-        background-color: transparent;
-        border-bottom: 0.25rem solid transparent;
-      }
-
-      .nav-masthead .nav-link:hover,
-      .nav-masthead .nav-link:focus {
-        border-bottom-color: rgba(255, 255, 255, 0.25);
-      }
-
-      .nav-masthead .nav-link + .nav-link {
-        margin-left: 1rem;
-      }
-
-      .nav-masthead .active {
-        color: #fff;
-        border-bottom-color: #fff;
-      }
-
-      @media (min-width: 48em) {
-        .masthead-brand {
-          float: left;
-        }
-
-        .nav-masthead {
-          float: right;
-        }
-      }
-
-      .cover {
-        padding: 0 1.5rem;
-      }
-
-      .cover .btn-lg {
-        padding: 0.75rem 1.25rem;
-        font-weight: 700;
-      }
-
-      .mastfoot {
-        color: rgba(255, 255, 255, 0.5);
-      }
-
-      #page {
-        visibility: hidden;
-      }
 
       #reveal-effect {
         position: fixed;
@@ -116,42 +29,75 @@
         opacity: 0;
         /* transition: all 5s; */
       }
-
-      body {
-        background: #fff;
-      }
-
-      body.loaded {
-        background-color: #333333;
-        box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
-      }
-
-      body.loaded #page {
-        visibility: visible;
-      }
-
       body.loaded #reveal-effect {
         opacity: 1;
       }
-
-      body.revealed #reveal-effect {
-        display: none;
+      .about_page {
+        background-color: #fff;
+        color: #000;
       }
+
     </style>
   </head>
 
-  <body>
     <body class="text-center">
       <div id="page">
         <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-          <main role="main" class="inner cover">
-            <h1 class="cover-heading">Simple 3D Reveal Effect</h1>
-            <div class="lead">
-            </div>
-            <p class="lead">
-              <div href="#" id="trigger" class="btn btn-lg btn-secondary"></div>
-            </p>
-          </main>
+          <div role="main" class="inner cover">
+            <section class="about_page">
+              <div class="container">
+                <article class="about_title">
+                  <h2>
+                    FRONTEND <br />
+                    <span>ABOUT ME</span>
+                  </h2>
+                </article>
+              </div>
+              <article class="about_cont">
+                <ul>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span class="about_num about_num1">1.</span>
+                    <p class="about_desc about_desc1">
+                      처음 프론트엔드 개발자를 꿈꿨을 때, 제 주변 사람들이 30대에
+                      IT업계로 이직하는 것은 너무 큰 도전이며, 이미 따라가기엔
+                      늦었다고 다들 걱정 한 것이 기억에 남습니다. 부족하다면 다른
+                      사람보다 더 시간을 투자해서 내것으로 만들면 된다고 생각하며,
+                      내가 하고 싶은 일을 했을 때, 성취감은 물론 업무 성과물도 더
+                      좋다고 생각을 하기 때문에 끊임없이 노력하는 개발자가 되고자
+                      합니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="about_num about_num2">2.</span>
+                    <p class="about_desc about_desc2">
+                      책임감은 자신 있습니다! <br />
+                      지오다노회사에서 점장으로 있으면서 리더의 책임감이 어떤것인지
+                      크게 깨닫고, 최고의 성과를 얻기 위해 항상 고민하고 발전해
+                      갔습니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="about_num about_num3">3.</span>
+                    <p class="about_desc about_desc3">
+                      혼자서는 속도적인 부분에서 한계가 있다고 생각합니다. 그래서
+                      도움이 되는 직원이 되고, 협업할 수 있는 직원이 되기 위해
+                      끊임없이 노력할 것입니다.
+                    </p>
+                  </li>
+                </ul>
+              </article>
+              <!-- //about_page 1-->
+              <article class="aboutImg_box">
+                <div class="about_text">ABOUT</div>
+                <div class="about__img">
+                  <div class="slider__img01"></div>
+                </div>
+              </article>
+            </section>
+          </div>
         </div>
       </div>
 
@@ -171,7 +117,7 @@
       const TMath = THREE.Math;
 
       let conf = {
-        color: 0xffffff,
+        color: 0x00000,
         objectWidth: 12,
         objectThickness: 3,
         ambientColor: 0x808080,
@@ -212,7 +158,6 @@
         );
 
         window.addEventListener("load", initScene);
-        document.getElementById("trigger").addEventListener("click", initScene);
 
         animate();
       }
