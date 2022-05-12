@@ -558,7 +558,7 @@
   .effect_info {
     display: flex;
     flex-direction: column;
-    height: 80vw;
+    height: 79vw;
   }
 
   .effect_explanation {
@@ -636,7 +636,7 @@ padding: 56.25% 0 0 0;
 .music_effect {
   width: 100%;
   padding: 0 17vw;
-  height: 30vw;
+  height: 26vw;
 }
 .gmae_info {
   display: flex;
@@ -679,6 +679,26 @@ padding: 56.25% 0 0 0;
     font-family: var(--desc_font);
     margin-top: 0.5vw;
     padding-bottom: 2vw;
+  }
+}
+@media (max-width: 600px) {
+  .gmae_info {
+    height: 84vw;
+  }
+  .gmae_info h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 7.2px;
+    padding-top: 2.8vw;
+  }
+  .gmae_info p {
+    font-size: 13px;
+    font-family: var(--desc_font);
+    margin-top: 0.5vw;
+    padding-bottom: 2vw;
+  }
+  .source img {
+    height: 30vh;
   }
 }
 
