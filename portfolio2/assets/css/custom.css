@@ -1,14 +1,3 @@
-body::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgb(65 54 54 / 80%);
-  z-index: -1;
-}
-
 /* info */
 .modal__title {
   position: absolute;

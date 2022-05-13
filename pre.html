@@ -6,169 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      *:after,
-      *:before {
-        box-sizing: inherit;
-      }
-
       body {
-        background: #24282a url("https://i.lensdump.com/i/VWR7i.png") repeat;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol";
-        overflow: hidden;
-      }
-
-      .hero {
-        padding-left: 8vw;
-        color: white;
-        font-size: 4.5vw;
-        max-width: 50vw;
-        font-weight: 100;
-        line-height: 1.1;
-      }
-      .hero .char {
-        text-shadow: 2px 7px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      .char,
-      .word {
-        will-change: transform, opacity;
-      }
-
-      .line {
-        padding: 0 0 0.2em 0;
-        margin: 0 0 -0.1em;
-      }
-
-      button {
-        position: absolute;
-        bottom: 2vh;
-        right: 2vw;
-      }
-
-      .green {
-        color: #56c271;
-      }
-
-      .white {
+        font-family: "Dosis", Calibri, Arial, sans-serif;
         color: #fff;
+        background: #000;
+      }
+
+      .os-phrases h2 {
+        font-family: "Dosis", "Lato", sans-serif;
+        font-size: 70px;
+        font-weight: 200;
+        width: 100%;
+        overflow: hidden;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        letter-spacing: 14px;
+        text-align: center;
+        opacity: 0;
+      }
+
+      .os-phrases h2,
+      .os-phrases h2 > span {
+        height: 100%;
+        /* Centering with flexbox */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .os-phrases h2 > span > span > span {
+        display: inline-block;
+        color: #fff;
+        transform-style: preserve-3d;
+        transform: translate3d(0, 0, 0);
+        animation: OpeningSequence 5.2s linear forwards;
+      }
+
+      @keyframes OpeningSequence {
+        0% {
+          letter-spacing: 80px;
+          opacity: 0.2;
+          transform: rotateY(-90deg);
+        }
+        50% {
+          letter-spacing: 14px;
+          opacity: 0.8;
+          transform: rotateY(0deg);
+        }
+        85% {
+          opacity: 0.8;
+          transform: rotateY(0deg) translateZ(100px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateZ(130px);
+        }
+      }
+
+      @keyframes FadeIn {
+        0% {
+          opacity: 0;
+          text-shadow: 0 0 50px #fff;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="hero">What surface are you running on?</div>
-    <button id="animate">animate</button>
+    <div class="container">
+      <div class="os-phrases" id="os-phrases">
+        <h2>DEV PORTFOLIO SITE</h2>
+      </div>
+    </div>
+    <!-- /container -->
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="./gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+
     <script>
-      //kill any animations and set text back to its pre-split state
-
-      var tl = new TimelineLite({
-          onComplete: function () {
-            // this.restart();
-          },
-        }),
-        mySplitText = new SplitText(".hero", {
-          type: "lines, words, chars",
-          linesClass: "line",
-          wordClass: "word",
-          charsClass: "char",
-        }),
-        chars = mySplitText.chars,
-        words = mySplitText.words; //an array of all the divs that wrap each
-
-      function kill() {
-        tl.clear().time(0);
-        mySplitText.revert();
-      }
-
-      tl.set(".hero", { perspective: 800 });
-
-      //cache tween in a variable
-      tl.staggerFromTo(
-        words,
-        3,
-        {
-          autoAlpha: 0,
-          delay: 2,
-          scale: 1,
-          y: "30",
-          z: "0",
-          webkitFilter: "blur(5px)",
-          fitler: "blur(5px)",
-          // cassName: "+=green",
-          transformStyle: "preserve-3d",
-          force3D: true,
-        },
-        {
-          autoAlpha: 1,
-          scale: 1,
-          y: 0,
-          z: 0,
-          webkitFilter: "blur(0px)",
-          fitler: "blur(0px)",
-          ease: Back.easeOut.config(2),
-          force3D: true,
-          // className: "+=white"
-        },
-        0.09,
-        "outro+=2"
-      ).addLabel("intro");
-
-      // tl.staggerFromTo(
-      //   words,
-      //   .1,
-      //   {
-      //     color: "#00ff00",
-      //   },
-      //   {
-      //     color: "#ffffff",
-      //     // className: "+=white"
-      //   },
-      //   0.02,
-      //   "intro-=2.5"
-      // );
-
-      // tl.staggerFromTo(
-      //   words,
-      //   1.3,
-      //   {
-      //     autoAlpha: 1,
-      //     x: "0",
-      //     z: 0,
-      //     webkitFilter:"blur(0px)",
-      //     fitler:"blur(0px)",
-      //     transformStyle: "preserve-3d"
-      //   },
-      //   {
-      //     autoAlpha: 0,
-      //     scale: 1,
-      //     x: "-40",
-      //     z: "-60",
-      //     ease: Power3.easeIn,
-      //     webkitFilter:"blur(2px)",
-      //     fitler:"blur(2px)",
-      //     force3D: true
-      //   },
-      //   0.03,
-      //   "intro+=0.1"
-      // ).addLabel("outro");
-
-      document
-        .querySelector("#animate")
-        .addEventListener("click", function (e) {
-          tl.restart(true, false);
-        });
+      $("#os-phrases > h2")
+        .css("opacity", 1)
+        .lettering("words")
+        .children("span")
+        .lettering()
+        .children("span")
+        .lettering();
     </script>
   </body>
 </html>
