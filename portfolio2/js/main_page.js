@@ -80,6 +80,6 @@ gsap.to(".main_inpo", {
 });
 gsap.to(".main_banner figure img", {
   opacity: 1,
-  duration: 0.5,
+  duration: 2,
   delay: 3,
 });

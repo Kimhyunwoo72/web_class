@@ -50,7 +50,7 @@ gsap.to(".about_cont", {
   },
   opacity: 1,
   width: 100 + "%",
-  duration: 2,
+  duration: 1.5,
 });
 // about_cont
 
@@ -74,7 +74,7 @@ gsap.to(".about_cont ul li:nth-child(1)", {
   height: 100 + "%",
   duration: 0.7,
   ease: "none",
-  delay: 1.5,
+  delay: 1.2,
 });
 
 gsap.from(".about_cont ul li:nth-child(2)", {
@@ -96,7 +96,7 @@ gsap.to(".about_cont ul li:nth-child(2)", {
   height: 100 + "%",
   duration: 0.7,
   ease: "none",
-  delay: 1.5,
+  delay: 1.3,
 });
 
 gsap.from(".about_cont ul li:nth-child(3)", {
@@ -118,7 +118,7 @@ gsap.to(".about_cont ul li:nth-child(3)", {
   height: 100 + "%",
   duration: 0.7,
   ease: "none",
-  delay: 1.7,
+  delay: 1.5,
   paddingTop: 9 + "%",
 });
 
@@ -166,7 +166,7 @@ gsap.to(".about_cont ul li .about_num1", {
   x: 0,
   duration: 0.7,
   ease: "none",
-  delay: 2,
+  delay: 1.8,
 });
 
 gsap.from(".about_cont ul li .about_num2", {
@@ -188,7 +188,7 @@ gsap.to(".about_cont ul li .about_num2", {
   x: 0,
   duration: 0.7,
   ease: "none",
-  delay: 2.4,
+  delay: 2.2,
 });
 
 gsap.from(".about_cont ul li .about_num3", {
@@ -210,7 +210,7 @@ gsap.to(".about_cont ul li .about_num3", {
   x: 0,
   duration: 0.7,
   ease: "none",
-  delay: 2.8,
+  delay: 2.4,
 });
 // about_num
 
