@@ -66,7 +66,6 @@
   width: 25%;
   border-right: 1px solid var(--border_color);
   height: 0;
-  opacity: 0;
 }
 .main_line ul li:last-child {
   border-right: 0;
@@ -79,7 +78,6 @@
 }
 
 .main_page {
-  height: 340px;
   display: flex;
   position: relative;
   top: -20vw;
@@ -93,16 +91,10 @@
   line-height: 1.11;
   font-weight: 400;
   padding-left: 5vw;
-  /* white-space: nowrap; */
-  /* height: 30%; */
-  /* transition: all 1s ease; */
-  /* transform: scale(1.1); */
 }
 
 .main_page h1 span {
-  padding: 5px;
   overflow: hidden;
-  border: 1px solid #fff;
 }
 .main_page h1 span span {
   font-size: 5.3vw;
@@ -111,23 +103,25 @@
   /* font-weight: 400; */
 }
 .main_page > h2 {
-  font-size: 5.3vw;
+  display: flex;
   line-height: 1.11;
   font-weight: 300;
   padding-left: 5vw;
   letter-spacing: 14px;
-  height: 5vw;
-  overflow: hidden;
 }
 
 .main_page > h2 span {
-  font-weight: 300;
+  overflow: hidden;
+}
+.main_page > h2 span span {
+  font-size: 5.3vw;
+  display: block;
 }
 
 .sub_text {
-  margin-left: -2.4vw;
+  margin-left: 50.4vw;
   color: var(--sub_color);
-  opacity: 0.5;
+  opacity: 0;
   width: 10vw;
   border-top: 1px solid #888;
   font-family: "Roboto", sans-serif;
@@ -135,12 +129,11 @@
   font-weight: 100;
   font-size: 0.9vw;
   min-width: 80px;
-  opacity: 0;
 }
 
 .main_inpo {
   position: relative;
-  top: -16.2vw;
+  top: -13.8vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,6 +206,7 @@
   transform: scale();
   padding-bottom: 7vw;
   background-color: #000;
+  opacity: 0;
 }
 
 .container {
@@ -261,7 +255,7 @@
 
 .about_cont ul li:nth-child(1) {
   width: 40%;
-  height: 100%;
+  height: 0%;
   overflow: hidden;
   background-color: #fff;
   background-image: url(../img/about01.jpg);
@@ -271,24 +265,24 @@
 
 .about_cont ul li:nth-child(2) {
   width: 20%;
-  height: 100%;
-  padding-top: 4%;
+  height: 0;
+  padding-top: 0%;
   overflow: hidden;
   border-left: 1px solid var(--border_color);
 }
 
 .about_cont ul li:nth-child(3) {
   width: 20%;
-  height: 100%;
-  padding-top: 9%;
+  height: 0;
+  padding-top: 0;
   overflow: hidden;
   border-left: 1px solid var(--border_color);
 }
 
 .about_cont ul li:nth-child(4) {
-  padding-top: 15%;
+  padding-top: 0%;
   width: 20%;
-  height: 100%;
+  height: 0;
   overflow: hidden;
   border-left: 1px solid var(--border_color);
 }
@@ -374,6 +368,7 @@
   width: 85%;
   margin: 0 auto;
   font-family: "Fabringo";
+  opacity: 0;
 }
 
 .about_cont ul li .about_desc {
@@ -383,6 +378,7 @@
   font-family: "ChosunilboNM";
   font-size: 1vw;
   line-height: 1.5;
+  opacity: 0;
 }
 
 .aboutImg_box {
