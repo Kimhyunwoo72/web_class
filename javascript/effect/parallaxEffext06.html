@@ -1,329 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>패럴랙스 효과06</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@1,900&family=Six+Caps&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Poppins:ital,wght@1,900&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../../assets/face/javascript.png">
-    <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
-    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
+    <link rel="shortcut icon" href="../../assets/face/javascript.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../../assets/face/javascript.png"
+    />
+    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128" />
 
-    <link rel="stylesheet" href="css/NexonLv1Gothic.css">
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="css/NexonLv1Gothic.css" />
+    <link rel="stylesheet" href="./css/common.css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            /* box-sizing: border-box; */
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+      }
 
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
 
-        body {
-            font-family: "NexonLv1Gothic";
-            background-color: #222;
-            color: #fff;
-            font-weight: 300;
-        }
+      body {
+        font-family: "NexonLv1Gothic";
+        background-color: #222;
+        color: #fff;
+        font-weight: 300;
+      }
 
-        #parallax__title {
-            padding: 20px;
-        }
+      #parallax__title {
+        padding: 20px;
+      }
 
+      #parallax__title h1 {
+        font-size: 30px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      #parallax__title p {
+        font-size: 16px;
+      }
+
+      #parallax__nav {
+        position: fixed;
+        right: 20px;
+        top: -200px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 20px;
+        border-radius: 50px;
+        transition: top 0.4s ease-in-out;
+      }
+
+      #parallax__nav.show {
+        top: 20px;
+      }
+
+      #parallax__nav li {
+        list-style: none;
+        display: inline;
+      }
+
+      #parallax__nav li a {
+        display: inline-block;
+        padding: 5px 20px;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      #parallax__nav li.active a {
+        background: #fff;
+        color: #000;
+        border-radius: 30px;
+      }
+
+      @media (max-width: 600px) {
         #parallax__title h1 {
-            font-size: 30px;
-            border-bottom: 1px dashed #fff;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            font-weight: 500;
-            display: inline-block;
-        }
-
-        #parallax__title p {
-            font-size: 16px;
+          font-size: 20px;
+          border-bottom: 1px dashed #fff;
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          font-weight: 500;
+          display: inline-block;
         }
 
         #parallax__nav {
-            position: fixed;
-            right: 20px;
-            top: -200px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 15px 20px;
-            border-radius: 50px;
-            transition: top 0.4s ease-in-out;
+          width: 90%;
+          font-size: 12px;
+          right: 0;
+          left: 0;
         }
 
-        #parallax__nav.show {
-            top: 20px;
+        #parallax__nav ul {
+          text-align: center;
+          display: flex;
+          justify-content: space-around;
         }
 
         #parallax__nav li {
-            list-style: none;
-            display: inline;
+          text-align: center;
         }
 
         #parallax__nav li a {
-            display: inline-block;
-            padding: 5px 20px;
-            text-align: center;
-            line-height: 30px;
+          display: inline-block;
+          width: 30px;
+          height: 20px;
+          line-height: 2;
+          padding: 5px 5px;
+          text-align: center;
+          white-space: nowrap;
         }
 
         #parallax__nav li.active a {
-            background: #fff;
-            color: #000;
-            border-radius: 30px;
-        }
-
-        @media(max-width:600px) {
-            #parallax__title h1 {
-                font-size: 20px;
-                border-bottom: 1px dashed #fff;
-                margin-bottom: 10px;
-                padding-bottom: 5px;
-                font-weight: 500;
-                display: inline-block;
-            }
-
-            #parallax__nav {
-                width: 90%;
-                font-size: 12px;
-                right: 0;
-                left: 0;
-            }
-
-            #parallax__nav ul {
-                text-align: center;
-                display: flex;
-                justify-content: space-around;
-            }
-
-            #parallax__nav li {
-                text-align: center;
-            }
-
-            #parallax__nav li a {
-                display: inline-block;
-                width: 30px;
-                height: 20px;
-                line-height: 2;
-                padding: 5px 5px;
-                text-align: center;
-                white-space: nowrap;
-            }
-
-            #parallax__nav li.active a {
-                background: #fff;
-                color: #000;
-                padding: 5px;
-                border-radius: 50%;
-            }
-
-            .scrollInpo {
-                display: none;
-            }
-            .scrollTop {
-                display: none;
-            }
-        }
-
-        #parallax__cont {
-            max-width: 1600px;
-            width: 98%;
-            margin: 0 auto;
-            /* background-color: rgba(255,255,255,0.1); */
-        }
-
-        .content__item {
-            width: 1000px;
-            max-width: 70vw;
-            margin: 30vw auto;
-            /* background-color: rgba(255,255,255,0.3); */
-            text-align: left;
-            margin-right: 0;
-            position: relative;
-            padding-top: 15vw;
-        }
-
-        .content__item:nth-child(even) {
-            margin-left: 0;
-            text-align: right;
-        }
-
-        .content__item:nth-child(even) .content__item__num {
-            left: auto;
-            right: -5vw;
-        }
-
-        .content__item__num {
-            font-size: 25vw;
-            position: absolute;
-            left: -5vw;
-            top: -5vw;
-            /* margin-bottom: -10vw; */
-            opacity: 0.07;
-            font-weight: 100;
-            font-family: 'Lato', sans-serif;
-        }
-
-        .content__item__title {
-            padding-bottom: 5px;
-            font-weight: 400;
-        }
-
-        #parallax__title li {
-            display: inline;
-        }
-
-        #parallax__title ul {
-            margin-top: 10px;
-        }
-
-        #parallax__title li a {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 1px dashed #fff;
-            display: inline-block;
-            text-align: center;
-            line-height: 20px;
-            font-size: 12px;
-        }
-
-        #parallax__title li.active a {
-            background: #fff;
-            color: #000;
-        }
-
-        .content__item__imgWrap {
-            width: 100%;
-            padding-bottom: 56.25%;
-            background-color: #000;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content__item__img {
-            position: absolute;
-            left: -5%;
-            top: -5%;
-            width: 110%;
-            height: 110%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            filter: saturate(0%);
-            transition: all 0.8s;
-        }
-
-        .content__item__img:hover {
-            filter: saturate(100%);
-            transform: scale(1.025);
-
-        }
-
-        .content__item:nth-child(1) .content__item__img {
-            background-image: url(img/img18.jpg);
-        }
-
-        .content__item:nth-child(2) .content__item__img {
-            background-image: url(img/img12.jpg);
-        }
-
-        .content__item:nth-child(3) .content__item__img {
-            background-image: url(img/img3.jpg);
-        }
-
-        .content__item:nth-child(4) .content__item__img {
-            background-image: url(img/img4.jpg);
-        }
-
-        .content__item:nth-child(5) .content__item__img {
-            background-image: url(img/img5.jpg);
-        }
-
-        .content__item:nth-child(6) .content__item__img {
-            background-image: url(img/img15.jpg);
-        }
-
-        .content__item:nth-child(7) .content__item__img {
-            background-image: url(img/img7.jpg);
-        }
-
-        .content__item:nth-child(8) .content__item__img {
-            background-image: url(img/img8.jpg);
-        }
-
-        .content__item:nth-child(9) .content__item__img {
-            background-image: url(img/img17.jpg);
-        }
-
-        .content__item__desc {
-            font-size: 4vw;
-            line-height: 1.4;
-            margin-left: -4vw;
-            margin-top: -5vw;
-            z-index: 100;
-            position: relative;
-            word-break: keep-all;
-        }
-
-        .content__item:nth-child(even) .content__item__desc {
-            margin-right: auto;
-            margin-right: -4vw;
-        }
-
-        /* info */
-        .scrollTop {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 50%;
+          background: #fff;
+          color: #000;
+          padding: 5px;
+          border-radius: 50%;
         }
 
         .scrollInpo {
-            position: fixed;
-            left: 20px;
-            bottom: 70px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 10px;
+          display: none;
         }
-
-        .scrollInpo li {
-            list-style: none;
-            line-height: 1.6;
+        .scrollTop {
+          display: none;
         }
+      }
 
-        /* option */
+      #parallax__cont {
+        max-width: 1600px;
+        width: 98%;
+        margin: 0 auto;
+        /* background-color: rgba(255,255,255,0.1); */
+      }
 
-        /* 한번에 나타나기 */
-        /* .content__item__desc span {
+      .content__item {
+        width: 1000px;
+        max-width: 70vw;
+        margin: 30vw auto;
+        /* background-color: rgba(255,255,255,0.3); */
+        text-align: left;
+        margin-right: 0;
+        position: relative;
+        padding-top: 15vw;
+      }
+
+      .content__item:nth-child(even) {
+        margin-left: 0;
+        text-align: right;
+      }
+
+      .content__item:nth-child(even) .content__item__num {
+        left: auto;
+        right: -5vw;
+      }
+
+      .content__item__num {
+        font-size: 25vw;
+        position: absolute;
+        left: -5vw;
+        top: -5vw;
+        /* margin-bottom: -10vw; */
+        opacity: 0.07;
+        font-weight: 100;
+        font-family: "Lato", sans-serif;
+      }
+
+      .content__item__title {
+        padding-bottom: 5px;
+        font-weight: 400;
+      }
+
+      #parallax__title li {
+        display: inline;
+      }
+
+      #parallax__title ul {
+        margin-top: 10px;
+      }
+
+      #parallax__title li a {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px dashed #fff;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+      }
+
+      #parallax__title li.active a {
+        background: #fff;
+        color: #000;
+      }
+
+      .content__item__imgWrap {
+        width: 100%;
+        padding-bottom: 56.25%;
+        background-color: #000;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .content__item__img {
+        position: absolute;
+        left: -5%;
+        top: -5%;
+        width: 110%;
+        height: 110%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: saturate(0%);
+        transition: all 0.8s;
+      }
+
+      .content__item__img:hover {
+        filter: saturate(100%);
+        transform: scale(1.025);
+      }
+
+      .content__item:nth-child(1) .content__item__img {
+        background-image: url(img/img18.jpg);
+      }
+
+      .content__item:nth-child(2) .content__item__img {
+        background-image: url(img/img12.jpg);
+      }
+
+      .content__item:nth-child(3) .content__item__img {
+        background-image: url(img/img3.jpg);
+      }
+
+      .content__item:nth-child(4) .content__item__img {
+        background-image: url(img/img4.jpg);
+      }
+
+      .content__item:nth-child(5) .content__item__img {
+        background-image: url(img/img5.jpg);
+      }
+
+      .content__item:nth-child(6) .content__item__img {
+        background-image: url(img/img15.jpg);
+      }
+
+      .content__item:nth-child(7) .content__item__img {
+        background-image: url(img/img7.jpg);
+      }
+
+      .content__item:nth-child(8) .content__item__img {
+        background-image: url(img/img8.jpg);
+      }
+
+      .content__item:nth-child(9) .content__item__img {
+        background-image: url(img/img17.jpg);
+      }
+
+      .content__item__desc {
+        font-size: 4vw;
+        line-height: 1.4;
+        margin-left: -4vw;
+        margin-top: -5vw;
+        z-index: 100;
+        position: relative;
+        word-break: keep-all;
+      }
+
+      .content__item:nth-child(even) .content__item__desc {
+        margin-right: auto;
+        margin-right: -4vw;
+      }
+
+      /* info */
+      .scrollTop {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50%;
+      }
+
+      .scrollInpo {
+        position: fixed;
+        left: 20px;
+        bottom: 70px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .scrollInpo li {
+        list-style: none;
+        line-height: 1.6;
+      }
+
+      /* option */
+
+      /* 한번에 나타나기 */
+      /* .content__item__desc span {
             opacity: 0;
             transition: all 0.33s ease-in-out;
         } */
 
-        /* .content__item__desc.show span:nth-child(1){transition-delay: 0.1s;}
+      /* .content__item__desc.show span:nth-child(1){transition-delay: 0.1s;}
         .content__item__desc.show span:nth-child(2){transition-delay: 0.2s;}
         .content__item__desc.show span:nth-child(3){transition-delay: 0.3s;}
         .content__item__desc.show span:nth-child(4){transition-delay: 0.4s;}
@@ -345,539 +348,629 @@
         .content__item__desc.show span:nth-child(9){opacity: 1;}
         .content__item__desc.show span:nth-child(10){opacity: 1;} */
 
-        /* 순차적으로 나타내기 */
-        #section1 .content__item__desc span {
-            opacity: 0;
-            transition: all 0.33s ease-in-out;
-        }
-        #section1 .content__item__desc span.show {
-            opacity: 1;
-        }
-
-        /* 2 */
-        #section2 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 1vw;
-            transform: translateY(80px) rotate(12deg);
-            transition: all 0.33s ease-in-out;
-        }
-        #section2 .content__item__desc span.show {
-            opacity: 1; 
-            transform: translateY(0) rotate(0);
-        }
-
-        /* 3 */
-        #section3 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 30px;
-            transition: all 0.33s ease-in-out;
-        }
-        #section3 .content__item__desc span.show {
-            opacity: 1; 
-            animation: tada 1s;
-        }
-@-webkit-keyframes tada {
-    0% {transform: scaleX(1); transform: scaleX(1)}
-
-    10%,
-    20% {transform: scale3d(.9, .9, .9) rotate(-3deg); transform: scale3d(.9, .9, .9) rotate(-3deg)}
-
-    30%,
-    50%,
-    70%,
-    90% {transform: scale3d(1.1, 1.1, 1.1) rotate(3deg); transform: scale3d(1.1, 1.1, 1.1) rotate(3deg)}
-
-    40%,
-    60%,
-    80% {transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg); transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg)}
-
-    to {transform: scaleX(1); transform: scaleX(1)}
-}
-
-@keyframes tada {
-    0% {transform: scaleX(1); transform: scaleX(1)}
-
-    10%,
-    20% {transform: scale3d(.9, .9, .9) rotate(-3deg); transform: scale3d(.9, .9, .9) rotate(-3deg)}
-
-    30%,
-    50%,
-    70%,
-    90% {transform: scale3d(1.1, 1.1, 1.1) rotate(3deg); transform: scale3d(1.1, 1.1, 1.1) rotate(3deg)
-    }
-
-    40%,
-    60%,
-    80% {transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg); transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg)}
-
-    to {transform: scaleX(1); transform: scaleX(1)}
-}
-
-.animate__tada {animation-name: tada; animation-name: tada}
-
-        /* 4 */
-        #section4 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 1vw;
-            transition: all 0.33s ease-in-out;
-        }
-        #section4 .content__item__desc span.show {
-            opacity: 1; 
-            animation: fadeInUp 1s;
-        }
-@-webkit-keyframes fadeInUp {
-    0% {opacity: 0; transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0)}
-
-    to {
-        opacity: 1; transform: translateZ(0); transform: translateZ(0)}
-}
-
-@keyframes fadeInUp {
-    0% {opacity: 0; transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0)}
-
-    to {opacity: 1; transform: translateZ(0); transform: translateZ(0)}
-}
-
-        /* 5 */ 
-        #section5 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 1vw;
-            transition: all 0.33s ease-in-out;
-        }
-        #section5 .content__item__desc span.show {
-            opacity: 1; 
-            animation: rotateInUpRight 1s;
-        }
-@-webkit-keyframes rotateInUpRight {
-    0% {transform: rotate(-90deg); transform: rotate(-90deg); opacity: 0}
-
-    to {transform: translateZ(0); transform: translateZ(0); opacity: 1}
-}
-
-@keyframes rotateInUpRight {
-    0% {transform: rotate(-15deg); transform: rotate(-15deg); opacity: 0}
-
-    to {transform: translateZ(0); transform: translateZ(0); opacity: 1}
-}
-
-        /* 6 */ 
-        #section6 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 1vw;
-            transition: all 0.33s ease-in-out;
-        }
-        #section6 .content__item__desc span.show {
-            opacity: 1; 
-            animation: bounce 2s;
-        }
-@-webkit-keyframes bounce {
-
-    0%,
-    20%,
-    53%,
-    to {animation-timing-function: cubic-bezier(.215, .61, .355, 1);
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
-        transform: translateZ(0);
-        transform: translateZ(0)
-    }
-
-    40%,
-    43% {
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        transform: translate3d(0, -30px, 0) scaleY(1.1);
-        transform: translate3d(0, -30px, 0) scaleY(1.1)
-    }
-
-    70% {
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        transform: translate3d(0, -15px, 0) scaleY(1.05);
-        transform: translate3d(0, -15px, 0) scaleY(1.05)
-    }
-
-    80% {
-        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
-        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
-        transform: translateZ(0) scaleY(.95);
-        transform: translateZ(0) scaleY(.95)
-    }
-
-    90% {
-        transform: translate3d(0, -4px, 0) scaleY(1.02);
-        transform: translate3d(0, -4px, 0) scaleY(1.02)
-    }
-    }
-
-    @keyframes bounce {
-
-    0%,
-    20%,
-    53%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
-        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0)
-    }
-
-    40%,
-    43% {
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        transform: translate3d(0, -30px, 0) scaleY(1.1);
-        transform: translate3d(0, -30px, 0) scaleY(1.1)
-    }
-
-    70% {
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        transform: translate3d(0, -15px, 0) scaleY(1.05);
-        transform: translate3d(0, -15px, 0) scaleY(1.05)
-    }
-
-    80% {
-        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
-        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
-        transform: translateZ(0) scaleY(.95);
-        transform: translateZ(0) scaleY(.95)
-    }
-
-    90% {
-        transform: translate3d(0, -4px, 0) scaleY(1.02);
-        transform: translate3d(0, -4px, 0) scaleY(1.02)
-    }
-    }
-
-        /* 7 */ 
-        #section7 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 1vw;
-        }
-        #section7 .content__item__desc span.show {
-            opacity: 1; 
-            animation: fadeInBottomRight 1.2s;
-        }
-@-webkit-keyframes fadeInBottomRight {
-    0% {
+      /* 순차적으로 나타내기 */
+      #section1 .content__item__desc span {
         opacity: 0;
-        transform: translate3d(100%, 100%, 0);
-        transform: translate3d(100%, 100%, 0)
-    }
-
-    to {
+        transition: all 0.33s ease-in-out;
+      }
+      #section1 .content__item__desc span.show {
         opacity: 1;
-        transform: translateZ(0);
-        transform: translateZ(0)
-    }
-}
+      }
 
-@keyframes fadeInBottomRight {
-    0% {
+      /* 2 */
+      #section2 .content__item__desc span {
+        opacity: 1;
+        display: inline-block;
+        min-width: 1vw;
+        transform: translateY(80px) rotate(12deg);
+        transition: all 0.33s ease-in-out;
+      }
+      #section2 .content__item__desc span.show {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+      }
+
+      /* 3 */
+      #section3 .content__item__desc span {
         opacity: 0;
-        transform: translate3d(100%, 100%, 0);
-        transform: translate3d(100%, 100%, 0)
-    }
-
-    to {
+        display: inline-block;
+        min-width: 30px;
+        transition: all 0.33s ease-in-out;
+      }
+      #section3 .content__item__desc span.show {
         opacity: 1;
-        transform: translateZ(0);
-        transform: translateZ(0)
-    }
-}
-        /* 8 */ 
-        #section8 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 1vw;
+        animation: tada 1s;
+      }
+      @-webkit-keyframes tada {
+        0% {
+          transform: scaleX(1);
+          transform: scaleX(1);
         }
-        #section8 .content__item__desc span.show {
-            opacity: 1; 
-            animation: backInLeft 2s;
+
+        10%,
+        20% {
+          transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+          transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
         }
-        @-webkit-keyframes backInLeft {
-    0% {
-        transform: translateX(-2000px) scale(.7);
-        transform: translateX(-2000px) scale(.7);
-        opacity: .7
-    }
 
-    80% {
-        transform: translateX(0) scale(.7);
-        transform: translateX(0) scale(.7);
-        opacity: .7
-    }
-
-    to {
-        transform: scale(1);
-        transform: scale(1);
-        opacity: 1
-    }
-}
-
-@keyframes backInLeft {
-    0% {
-        transform: translateX(-2000px) scale(.7);
-        transform: translateX(-2000px) scale(.7);
-        opacity: .7
-    }
-
-    80% {
-        transform: translateX(0) scale(.7);
-        transform: translateX(0) scale(.7);
-        opacity: .7
-    }
-
-    to {
-        transform: scale(1);
-        transform: scale(1);
-        opacity: 1
-    }
-}
-
-        /* 9 */ 
-        #section9 .content__item__desc span {
-            opacity: 0;
-            display: inline-block;
-            min-width: 1vw;
+        30%,
+        50%,
+        70%,
+        90% {
+          transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+          transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
         }
-        #section9 .content__item__desc span.show {
-            opacity: 1; 
-            animation: rollIn 1.2s;
+
+        40%,
+        60%,
+        80% {
+          transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+          transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
         }
-@-webkit-keyframes rollIn {
-    0% {
+
+        to {
+          transform: scaleX(1);
+          transform: scaleX(1);
+        }
+      }
+
+      @keyframes tada {
+        0% {
+          transform: scaleX(1);
+          transform: scaleX(1);
+        }
+
+        10%,
+        20% {
+          transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+          transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+        }
+
+        30%,
+        50%,
+        70%,
+        90% {
+          transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+          transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+        }
+
+        40%,
+        60%,
+        80% {
+          transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+          transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+        }
+
+        to {
+          transform: scaleX(1);
+          transform: scaleX(1);
+        }
+      }
+
+      .animate__tada {
+        animation-name: tada;
+        animation-name: tada;
+      }
+
+      /* 4 */
+      #section4 .content__item__desc span {
         opacity: 0;
-        transform: translate3d(-100%, 0, 0) rotate(-120deg);
-        transform: translate3d(-100%, 0, 0) rotate(-120deg)
-    }
-
-    to {
+        display: inline-block;
+        min-width: 1vw;
+        /* transition: all 0.33s ease-in-out; */
+      }
+      #section4 .content__item__desc span.show {
         opacity: 1;
-        transform: translateZ(0);
-        transform: translateZ(0)
-    }
-}
+        animation: fadeInUp 1s;
+      }
+      @-webkit-keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 50%, 0);
+          transform: translate3d(0, 50%, 0);
+        }
 
-@keyframes rollIn {
-    0% {
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+          transform: translateZ(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 50%, 0);
+          transform: translate3d(0, 50%, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+          transform: translateZ(0);
+        }
+      }
+
+      /* 5 */
+      #section5 .content__item__desc span {
         opacity: 0;
-        transform: translate3d(-100%, 0, 0) rotate(-60deg);
-        transform: translate3d(-100%, 0, 0) rotate(-60deg)
-    }
-
-    to {
+        display: inline-block;
+        min-width: 1vw;
+        transition: all 0.33s ease-in-out;
+      }
+      #section5 .content__item__desc span.show {
         opacity: 1;
-        transform: translateZ(0);
-        transform: translateZ(0)
-    }
-}
-/* top */
-.top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 10000;
-}
-.top a {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    background: #000;
-    color: #fff;
-    display: block;
-}
-        
+        animation: rotateInUpRight 1s;
+      }
+      @-webkit-keyframes rotateInUpRight {
+        0% {
+          transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateZ(0);
+          transform: translateZ(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes rotateInUpRight {
+        0% {
+          transform: rotate(-15deg);
+          transform: rotate(-15deg);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateZ(0);
+          transform: translateZ(0);
+          opacity: 1;
+        }
+      }
+
+      /* 6 */
+      #section6 .content__item__desc span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+        transition: all 0.33s ease-in-out;
+      }
+      #section6 .content__item__desc span.show {
+        opacity: 1;
+        animation: bounce 2s;
+      }
+      @-webkit-keyframes bounce {
+        0%,
+        20%,
+        53%,
+        to {
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translateZ(0);
+          transform: translateZ(0);
+        }
+
+        40%,
+        43% {
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          transform: translate3d(0, -30px, 0) scaleY(1.1);
+          transform: translate3d(0, -30px, 0) scaleY(1.1);
+        }
+
+        70% {
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          transform: translate3d(0, -15px, 0) scaleY(1.05);
+          transform: translate3d(0, -15px, 0) scaleY(1.05);
+        }
+
+        80% {
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translateZ(0) scaleY(0.95);
+          transform: translateZ(0) scaleY(0.95);
+        }
+
+        90% {
+          transform: translate3d(0, -4px, 0) scaleY(1.02);
+          transform: translate3d(0, -4px, 0) scaleY(1.02);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        53%,
+        to {
+          -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+          );
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+        }
+
+        40%,
+        43% {
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          transform: translate3d(0, -30px, 0) scaleY(1.1);
+          transform: translate3d(0, -30px, 0) scaleY(1.1);
+        }
+
+        70% {
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          transform: translate3d(0, -15px, 0) scaleY(1.05);
+          transform: translate3d(0, -15px, 0) scaleY(1.05);
+        }
+
+        80% {
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translateZ(0) scaleY(0.95);
+          transform: translateZ(0) scaleY(0.95);
+        }
+
+        90% {
+          transform: translate3d(0, -4px, 0) scaleY(1.02);
+          transform: translate3d(0, -4px, 0) scaleY(1.02);
+        }
+      }
+
+      /* 7 */
+      #section7 .content__item__desc span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+      }
+      #section7 .content__item__desc span.show {
+        opacity: 1;
+        animation: fadeInBottomRight 1.2s;
+      }
+      @-webkit-keyframes fadeInBottomRight {
+        0% {
+          opacity: 0;
+          transform: translate3d(100%, 100%, 0);
+          transform: translate3d(100%, 100%, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+          transform: translateZ(0);
+        }
+      }
+
+      @keyframes fadeInBottomRight {
+        0% {
+          opacity: 0;
+          transform: translate3d(100%, 100%, 0);
+          transform: translate3d(100%, 100%, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+          transform: translateZ(0);
+        }
+      }
+      /* 8 */
+      #section8 .content__item__desc span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+      }
+      #section8 .content__item__desc span.show {
+        opacity: 1;
+        animation: backInLeft 2s;
+      }
+      @-webkit-keyframes backInLeft {
+        0% {
+          transform: translateX(-2000px) scale(0.7);
+          transform: translateX(-2000px) scale(0.7);
+          opacity: 0.7;
+        }
+
+        80% {
+          transform: translateX(0) scale(0.7);
+          transform: translateX(0) scale(0.7);
+          opacity: 0.7;
+        }
+
+        to {
+          transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes backInLeft {
+        0% {
+          transform: translateX(-2000px) scale(0.7);
+          transform: translateX(-2000px) scale(0.7);
+          opacity: 0.7;
+        }
+
+        80% {
+          transform: translateX(0) scale(0.7);
+          transform: translateX(0) scale(0.7);
+          opacity: 0.7;
+        }
+
+        to {
+          transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* 9 */
+      #section9 .content__item__desc span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+      }
+      #section9 .content__item__desc span.show {
+        opacity: 1;
+        animation: rollIn 1.2s;
+      }
+      @-webkit-keyframes rollIn {
+        0% {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0) rotate(-120deg);
+          transform: translate3d(-100%, 0, 0) rotate(-120deg);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+          transform: translateZ(0);
+        }
+      }
+
+      @keyframes rollIn {
+        0% {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0) rotate(-60deg);
+          transform: translate3d(-100%, 0, 0) rotate(-60deg);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+          transform: translateZ(0);
+        }
+      }
+      /* top */
+      .top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 10000;
+      }
+      .top a {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        background: #000;
+        color: #fff;
+        display: block;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- top버튼 -->
     <div class="top"><a href="#parallax__title">Top</a></div>
 
     <!-- parallax__title -->
     <header id="parallax__title">
-        <h1><a href="./parallaxEffext.html">javascript parallaxEffext Effect06</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 텍스트 효과</p>
-        <ul>
-            <li><a href="parallaxEffext01.html">s1</a></li>
-            <li><a href="parallaxEffext02.html">s2</a></li>
-            <li><a href="parallaxEffext03.html">s3</a></li>
-            <li><a href="parallaxEffext04.html">s4</a></li>
-            <li><a href="parallaxEffext05.html">s5</a></li>
-            <li class="active"><a href="parallaxEffext06.html">s6</a></li>
-            <li><a href="parallaxEffext07.html">s7</a></li>
-            <li><a href="parallaxEffext08.html">s8</a></li>
-            <li><a href="parallaxEffext09.html">s9</a></li>
-        </ul>
+      <h1>
+        <a href="./parallaxEffext.html">javascript parallaxEffext Effect06</a>
+      </h1>
+      <p>패럴랙스 스크롤링 효과 - 텍스트 효과</p>
+      <ul>
+        <li><a href="parallaxEffext01.html">s1</a></li>
+        <li><a href="parallaxEffext02.html">s2</a></li>
+        <li><a href="parallaxEffext03.html">s3</a></li>
+        <li><a href="parallaxEffext04.html">s4</a></li>
+        <li><a href="parallaxEffext05.html">s5</a></li>
+        <li class="active"><a href="parallaxEffext06.html">s6</a></li>
+        <li><a href="parallaxEffext07.html">s7</a></li>
+        <li><a href="parallaxEffext08.html">s8</a></li>
+        <li><a href="parallaxEffext09.html">s9</a></li>
+      </ul>
     </header>
     <!-- //parallax__title -->
 
     <!-- main -->
     <main id="parallax__cont">
-        <div id="contents">
-            <section id="section1" class="content__item">
-                <span class="content__item__num">01</span>
-                <h2 class="content__item__title">section1</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.</p>
-            </section>
-            <!-- //section1 -->
+      <div id="contents">
+        <section id="section1" class="content__item">
+          <span class="content__item__num">01</span>
+          <h2 class="content__item__title">section1</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.
+          </p>
+        </section>
+        <!-- //section1 -->
 
-            <section id="section2" class="content__item">
-                <span class="content__item__num">02</span>
-                <h2 class="content__item__title">section2</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">행복은 습관이다, 그것을 몸에 지녀라.</p>
-            </section>
-            <!-- //section2 -->
+        <section id="section2" class="content__item">
+          <span class="content__item__num">02</span>
+          <h2 class="content__item__title">section2</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            행복은 습관이다, 그것을 몸에 지녀라.
+          </p>
+        </section>
+        <!-- //section2 -->
 
-            <section id="section3" class="content__item">
-                <span class="content__item__num">03</span>
-                <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</p>
-            </section>
-            <!-- //section3 -->
+        <section id="section3" class="content__item">
+          <span class="content__item__num">03</span>
+          <h2 class="content__item__title">section4</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.
+          </p>
+        </section>
+        <!-- //section3 -->
 
-            <section id="section4" class="content__item">
-                <span class="content__item__num">04</span>
-                <h2 class="content__item__title">section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기 위해서이다.</p>
-            </section>
-            <!-- //section4 -->
+        <section id="section4" class="content__item">
+          <span class="content__item__num">04</span>
+          <h2 class="content__item__title">section4</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            사람이 여행을 하는 것은 도착하기 위해서가 아니라 여행하기
+            위해서이다.
+          </p>
+        </section>
+        <!-- //section4 -->
 
-            <section id="section5" class="content__item">
-                <span class="content__item__num">05</span>
-                <h2 class="content__item__title">section5</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.</p>
-            </section>
-            <!-- //section5 -->
+        <section id="section5" class="content__item">
+          <span class="content__item__num">05</span>
+          <h2 class="content__item__title">section5</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            사막이 아름다운 것은 어딘가에 샘이 숨겨져 있기 때문이다.
+          </p>
+        </section>
+        <!-- //section5 -->
 
-            <section id="section6" class="content__item">
-                <span class="content__item__num">06</span>
-                <h2 class="content__item__title">section6</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다.</p>
-            </section>
-            <!-- //section6 -->
+        <section id="section6" class="content__item">
+          <span class="content__item__num">06</span>
+          <h2 class="content__item__title">section6</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            성공해서 만족하는 것은 아니다. 만족하고 있었기 때문에 성공한 것이다.
+          </p>
+        </section>
+        <!-- //section6 -->
 
-            <section id="section7" class="content__item">
-                <span class="content__item__num">07</span>
-                <h2 class="content__item__title">section7</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc"> 작은 기회로 부터 종종 위대한 업적이 시작된다.</p>
-            </section>
-            <!-- //section7 -->
+        <section id="section7" class="content__item">
+          <span class="content__item__num">07</span>
+          <h2 class="content__item__title">section7</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            작은 기회로 부터 종종 위대한 업적이 시작된다.
+          </p>
+        </section>
+        <!-- //section7 -->
 
-            <section id="section8" class="content__item">
-                <span class="content__item__num">08</span>
-                <h2 class="content__item__title">section8</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.</p>
-            </section>
-            <!-- //section8 -->
+        <section id="section8" class="content__item">
+          <span class="content__item__num">08</span>
+          <h2 class="content__item__title">section8</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.
+          </p>
+        </section>
+        <!-- //section8 -->
 
-            <section id="section9" class="content__item">
-                <span class="content__item__num">09</span>
-                <h2 class="content__item__title">section9</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">최고에 도달하려면 최저에서 시작하라.</p>
-            </section>
-            <!-- //section9 -->
-        </div>
+        <section id="section9" class="content__item">
+          <span class="content__item__num">09</span>
+          <h2 class="content__item__title">section9</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">
+            최고에 도달하려면 최저에서 시작하라.
+          </p>
+        </section>
+        <!-- //section9 -->
+      </div>
     </main>
     <!-- //main -->
 
     <!-- info -->
-    <div class="scrollTop">
-        scrollTop : <span>0</span>px
-    </div>
+    <div class="scrollTop">scrollTop : <span>0</span>px</div>
     <!-- //info -->
 
     <!-- script -->
     <script src="js/gsap.min.js"></script>
     <script>
-                //#id 이동하기
-                document.querySelectorAll("a[href^='#']").forEach(el => {
-            el.addEventListener("click", (event) => {
-                event.preventDefault();
-                document.querySelector(el.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        })
-        
-        //글자 나누기
+      //#id 이동하기
+      document.querySelectorAll("a[href^='#']").forEach((el) => {
+        el.addEventListener("click", (event) => {
+          event.preventDefault();
+          document.querySelector(el.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
 
-        // let text = document.querySelector("#section1 .content__item__desc")
-        // let splitText = text.innerText
-        // let splitWrap = splitText.split(' ').join("</span><span>")
-        //     splitWrap = "<span>" + splitWrap + "</span>"
-        //     text.innerHTML = splitWrap
+      //글자 나누기
 
-        document.querySelectorAll(".content__item__desc").forEach(desc => {
-            let splitText = desc.innerText;
-            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
-                splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-                desc.innerHTML = splitWrap;
-                desc.setAttribute("aria-label", splitText);
-        })
-        function scroll(){
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+      // let text = document.querySelector("#section1 .content__item__desc")
+      // let splitText = text.innerText
+      // let splitWrap = splitText.split(' ').join("</span><span>")
+      //     splitWrap = "<span>" + splitWrap + "</span>"
+      //     text.innerHTML = splitWrap
 
-            //한번에 나타나기
-            // document.querySelectorAll(".content__item").forEach(item => {
-            //     if(scrollTop >= item.offsetTop){
-            //         item.querySelector(".content__item__desc").classList.add("show");
-            //     }
-            // })
+      document.querySelectorAll(".content__item__desc").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
+      });
+      function scroll() {
+        let scrollTop =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          window.scrollY;
+        document.querySelector(".scrollTop span").innerText =
+          Math.round(scrollTop);
 
-            document.querySelectorAll(".content__item").forEach(item => {
-                if(scrollTop > item.offsetTop){
-                    item.querySelectorAll(".content__item__desc span").forEach((span, index) => {
-                        setTimeout(() => {  // 한번만 실행되어져야해서 setTimeout 사용
-                            span.classList.add("show");
-                        }, 50 * (index+1))
-                    })
-                }
-            })
-            requestAnimationFrame(scroll)
-        }
-        scroll();
+        //한번에 나타나기
+        // document.querySelectorAll(".content__item").forEach(item => {
+        //     if(scrollTop >= item.offsetTop){
+        //         item.querySelector(".content__item__desc").classList.add("show");
+        //     }
+        // })
 
-        
+        document.querySelectorAll(".content__item").forEach((item) => {
+          if (scrollTop > item.offsetTop) {
+            item
+              .querySelectorAll(".content__item__desc span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  // 한번만 실행되어져야해서 setTimeout 사용
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
+        });
+        requestAnimationFrame(scroll);
+      }
+      scroll();
     </script>
-</body>
-
+  </body>
 </html>
