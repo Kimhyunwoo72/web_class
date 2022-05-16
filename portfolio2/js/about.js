@@ -278,6 +278,6 @@ gsap.to(".about_cont ul li .about_desc3", {
   x: 0,
   duration: 0.7,
   ease: "none",
-  delay: 3.2,
+  delay: 3,
 });
 //about_desc
