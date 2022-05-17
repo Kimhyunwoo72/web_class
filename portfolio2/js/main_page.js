@@ -83,3 +83,34 @@ gsap.to(".main_banner figure img", {
   duration: 2,
   delay: 3,
 });
+
+ScrollTrigger.name = "ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+const circle = document.querySelector(".cursor").getBoundingClientRect();
+
+document.querySelector(".main_inner").addEventListener("mousemove", (e) => {
+  //커서
+  gsap.to(".cursor", {
+    duration: 2,
+    left: e.pageX - circle.width / 2,
+    top: e.pageY - circle.height / 2,
+  });
+
+  //마우스 좌표값
+  let mousePageX = e.pageX;
+  let mousePageY = e.pageY;
+
+  //마우스 좌표값을 가운데 초기화
+  let centerPageX = window.innerWidth / 2 - mousePageX;
+  let centerPageY = window.innerHeight / 2 - mousePageY;
+
+  //이미지 움직이기
+  gsap.to(".main_inner figure img", {
+    duration: 0.3,
+    x: centerPageX / 30,
+    y: centerPageY / 30,
+  });
+
+  let windowHeight = window.screen.height; //1080 // 화면 크기
+});
