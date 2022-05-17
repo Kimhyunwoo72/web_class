@@ -26,6 +26,7 @@
 </head>
 
 <body>
+  <div class="scrollTop">0</div>
   <header id="header">
     <ul>
       <li><a href="#">DEV</a></li>
@@ -41,13 +42,17 @@
       <div class="cursor"></div>
       <!-- <div class="cursor"></div> -->
       <div class="main_line">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <div class="bg_box">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div id="about_bg">
+          </div>
+        </div>
       </div>
       <article class="main_page">
         <h1>
@@ -88,21 +93,29 @@
       </article>
       <article class="main_banner">
         <div class="main_inner">
-          <figure>
-            <img src="./assets/img/main_banner.jpg" alt="이미지" />
-          </figure>
+          <div class="bg"
+          data-0="background:rgba(0, 0, 0, 0.5)"
+          data-500="background:rgba(0, 0, 0, 0)"
+          data-1000="background:rgba(0, 0, 0, 0.5)"
+          ></div>
+          <!-- <figure>
+            <img src="./assets/img/img01.jpg" alt="이미지" />
+          </figure> -->
         </div>
       </article>
     </section>
     <!--  //main_page -->
 
+    <div></div>
     <!-- about_page 1-->
     <section class="about_page">
       <div class="container">
         <article class="about_title">
           <h2>
-            FRONTEND <br />
-            <span>ABOUT ME</span>
+            <span>
+              FRONTEND
+            </span><br />
+            ABOUT
           </h2>
         </article>
       </div>
@@ -154,8 +167,9 @@
     <section class="effect">
       <article class="text effect_text">
         <h2 class="title effect_title">
-          JAVASCRIPT <br />
-          <span>EFFECT</span>
+          <span>JAVASCRIPT</span>
+          <br />
+          EFFECT
         </h2>
         <p class="desc effect_desc">
           기초가 가장 중요하다고 생각이 들어, JAVASCRIPT에 전념하였습니다.
@@ -238,8 +252,8 @@
     <section class="gmae_wrap">
       <article class="text border">
         <h2 class="title">
-          JAVASCRIPT <br />
-          <span>GAME & MUSIC</span>
+          <span>JAVASCRIPT</span> <br />
+          GAME & MUSIC
         </h2>
         <p class="desc">
           html, css, javascript만으로 게임 및 뮤직 플레이어를 만들며
@@ -329,8 +343,9 @@
     <section class="site_wrap">
       <article class="text beige">
         <h2 class="title border">
-          SITE CODING<br />
-          <span>WEB</span>
+          <span>SITE CODING</span>
+          <br />
+          WEB
         </h2>
         <p class="desc">
           javascript, php, react 를 활용하여 만든 사이트입니다.<br />
@@ -511,12 +526,65 @@
   <script src="./js/custom.js"></script>
   <script src="./js/main_page.js"></script>
   <script src="./js/about.js"></script>
+  <script type="text/javascript" src="js/scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+  <script id="vertexShader" type="x-shader/x-vertex">
+    void main() {
+        gl_Position = vec4( position, 1.0 );
+    }
+  </script>
+  <script id="fragmentShader" type="x-shader/x-fragment">
+    precision highp float;
 
+    uniform vec2 resolution;
+    uniform float time;
+    uniform vec2 mouse;
+    uniform sampler2D backbuffer;
+
+    vec3 wave(vec2 uv,float speed, float thickness, float amplitude, float delay, vec3 color){
+        float shake = mix(0.0, 1.0, amplitude);
+        float wave = sin(delay + mod(uv.x+uv.y/2.0,0.25) * 1.0 - time * speed ) / 5.0 * shake;
+        float colwave = thickness /  abs((1.0-length(uv))+wave); //線の太さ
+        return color * colwave;
+    }
+
+    float random (in vec2 st) {
+        return fract(cos(dot(st.xy,vec2(12.9898,78.233))) * 43758.5453123);
+    }
+
+    void main(void) {
+        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+        vec3 col0 = wave(uv,0.1,0.08,8.0,5., vec3(0.6, 0.6, 0.6));
+        vec3 col1 = wave(uv,0.2,0.08,9.0,6., vec3(0.4, 0.9, 0.9));
+        vec3 col2 = wave(uv,0.2,0.08,10.0,7., vec3(0.6, 0.9, 0.9));
+        vec3 col3 = wave(uv,0.1,0.08,11.0,8., vec3(0.6, 0.6, 0.6));
+
+        //vec3 col = col0+col1+col2+col3;
+        vec3 col = col0+col1;
+
+        gl_FragColor = vec4(vec3(col), 1.0);
+    }
+  </script>
   <script>
     hljs.highlightAll();
     modal();
+    // main banner
+    init();
+    animate();
+    // main banner
 
+    function scroll() {
+        var s = skrollr.init();
+        let scrollTop =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          window.scrollY;
 
+        document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+        requestAnimationFrame(scroll);
+      }
+      scroll();
   </script>
 </body>
 

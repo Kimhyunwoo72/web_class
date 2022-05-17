@@ -1,14 +1,14 @@
 /* 기본 셋팅 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-family: 'GmarketSans';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "GilroyLight";
 }
 
 body {
-    background: #000;
-    color: #fff;
+  background: #000;
+  color: #fff;
 }
 
 /* 여백 초기화 */
@@ -46,23 +46,23 @@ nav,
 section,
 figure,
 figcaption {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /* 시멘틱 태그 초기화 */
 article,
- aside,
- details, 
- figcaption, 
- figure,
-footer, 
-header, 
-hgroup, 
-menu, 
-nav, 
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
 section {
-	display: block;
+  display: block;
 }
 
 /* 폰트 초기화 */
@@ -72,32 +72,35 @@ input,
 select,
 table,
 textarea {
-    color: #fff;
-    font-family: "GmarketSansTTF";
-    font-size: 16px;
-    line-height: 1.53;
+  color: #fff;
+  font-family: "GmarketSansTTF";
+  font-size: 16px;
+  line-height: 1.53;
 }
 
 /* 링크 초기화 */
 a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* 목록 초기화 */
 ol,
-ul, li {
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
 
 /* 스타일 초기화 */
-em, address {
-    font-style: normal;
+em,
+address {
+  font-style: normal;
 }
-img, fieldset, button {
-    border: 0;
+img,
+fieldset,
+button {
+  border: 0;
 }
 i {
-    font-style: normal;
+  font-style: normal;
 }
-

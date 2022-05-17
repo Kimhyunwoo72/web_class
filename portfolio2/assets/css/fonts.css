@@ -22,3 +22,20 @@
 
 /* font-family: 'Chathura', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700;800&display=swap");
+
+/* main font */
+@font-face {
+  font-family: "GilroyLight";
+  src: url(../font/Gilroy-Light.otf);
+}
+/* main font */
+
+/* sub font */
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+/* font-family: 'Abel', sans-serif; */
+
+/* GilroyExtraBold */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url(../font/Gilroy-ExtraBold.otf);
+}

@@ -1,33 +1,33 @@
 // bottom line
-gsap.to(".main_line ul ", {
+gsap.to(".bg_box ul ", {
   duration: 1.5,
   width: 100 + "%",
   ease: "none",
   // delay: 3,
 });
 // right line
-gsap.to(".main_line ul li:nth-child(1)", {
+gsap.to(".bg_box ul li:nth-child(1)", {
   duration: 0.7,
   height: 35 + "vw",
   opacity: "1",
   ease: "none",
   delay: 1.4,
 });
-gsap.to(".main_line ul li:nth-child(2)", {
+gsap.to(".bg_box ul li:nth-child(2)", {
   duration: 0.7,
   height: 35 + "vw",
   opacity: "1",
   ease: "none",
   delay: 1.6,
 });
-gsap.to(".main_line ul li:nth-child(3)", {
+gsap.to(".bg_box ul li:nth-child(3)", {
   duration: 0.7,
   height: 35 + "vw",
   opacity: "1",
   ease: "none",
   delay: 1.8,
 });
-gsap.to(".main_line ul li:nth-child(4)", {
+gsap.to(".bg_box ul li:nth-child(4)", {
   duration: 0.7,
   height: 35 + "vw",
   opacity: "1",
@@ -84,33 +84,67 @@ gsap.to(".main_banner figure img", {
   delay: 3,
 });
 
-ScrollTrigger.name = "ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
-const circle = document.querySelector(".cursor").getBoundingClientRect();
-
-document.querySelector(".main_inner").addEventListener("mousemove", (e) => {
-  //커서
-  gsap.to(".cursor", {
-    duration: 2,
-    left: e.pageX - circle.width / 2,
-    top: e.pageY - circle.height / 2,
-  });
-
-  //마우스 좌표값
-  let mousePageX = e.pageX;
-  let mousePageY = e.pageY;
-
-  //마우스 좌표값을 가운데 초기화
-  let centerPageX = window.innerWidth / 2 - mousePageX;
-  let centerPageY = window.innerHeight / 2 - mousePageY;
-
-  //이미지 움직이기
-  gsap.to(".main_inner figure img", {
-    duration: 0.3,
-    x: centerPageX / 30,
-    y: centerPageY / 30,
-  });
-
-  let windowHeight = window.screen.height; //1080 // 화면 크기
+gsap.to("#about_bg", {
+  opacity: 1,
+  duration: 1,
+  delay: 1,
 });
+
+var container;
+var camera, scene, renderer;
+var uniforms;
+
+function init() {
+  container = document.getElementById("about_bg");
+
+  camera = new THREE.Camera();
+  camera.position.z = 1;
+
+  scene = new THREE.Scene();
+
+  var geometry = new THREE.PlaneBufferGeometry(2, 2);
+
+  uniforms = {
+    time: {
+      type: "f",
+      value: 1.0,
+    },
+    resolution: {
+      type: "v2",
+      value: new THREE.Vector2(),
+    },
+  };
+
+  var material = new THREE.ShaderMaterial({
+    uniforms: uniforms,
+    vertexShader: document.getElementById("vertexShader").textContent,
+    fragmentShader: document.getElementById("fragmentShader").textContent,
+  });
+
+  var mesh = new THREE.Mesh(geometry, material);
+  scene.add(mesh);
+
+  renderer = new THREE.WebGLRenderer();
+  renderer.setPixelRatio(window.devicePixelRatio);
+
+  container.appendChild(renderer.domElement);
+
+  onWindowResize();
+  window.addEventListener("resize", onWindowResize, false);
+}
+
+function onWindowResize(event) {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  uniforms.resolution.value.x = renderer.domElement.width;
+  uniforms.resolution.value.y = renderer.domElement.height;
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  render();
+}
+
+function render() {
+  uniforms.time.value += 0.07;
+  renderer.render(scene, camera);
+}
