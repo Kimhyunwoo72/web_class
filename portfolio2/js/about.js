@@ -74,7 +74,7 @@ gsap.to(".about_cont ul li:nth-child(1)", {
   height: 100 + "%",
   duration: 0.7,
   ease: "none",
-  delay: 1.2,
+  delay: 1.4,
 });
 
 gsap.from(".about_cont ul li:nth-child(2)", {
@@ -165,7 +165,7 @@ gsap.to(".about_cont ul li .about_num1", {
   opacity: 1,
   x: 0,
   duration: 0.7,
-  ease: "none",
+  ease: "sine.out",
   delay: 1.8,
 });
 
@@ -187,7 +187,7 @@ gsap.to(".about_cont ul li .about_num2", {
   opacity: 1,
   x: 0,
   duration: 0.7,
-  ease: "none",
+  ease: "sine.out",
   delay: 2.2,
 });
 
@@ -209,8 +209,8 @@ gsap.to(".about_cont ul li .about_num3", {
   opacity: 1,
   x: 0,
   duration: 0.7,
-  ease: "none",
-  delay: 2.4,
+  ease: "sine.out",
+  delay: 2.5,
 });
 // about_num
 
@@ -221,7 +221,7 @@ gsap.from(".about_cont ul li .about_desc1", {
     markers: true,
     start: "5% center",
   },
-  x: -100,
+  y: 20,
   opacity: 0,
 });
 gsap.to(".about_cont ul li .about_desc1", {
@@ -231,9 +231,9 @@ gsap.to(".about_cont ul li .about_desc1", {
     start: "5% center",
   },
   opacity: 1,
-  x: 0,
-  duration: 0.7,
-  ease: "none",
+  y: 0,
+  duration: 1.5,
+  ease: "power1.out",
   delay: 2.4,
 });
 
@@ -243,7 +243,7 @@ gsap.from(".about_cont ul li .about_desc2", {
     markers: true,
     start: "5% center",
   },
-  x: -100,
+  y: 20,
   opacity: 0,
 });
 gsap.to(".about_cont ul li .about_desc2", {
@@ -253,10 +253,10 @@ gsap.to(".about_cont ul li .about_desc2", {
     start: "5% center",
   },
   opacity: 1,
-  x: 0,
-  duration: 0.7,
-  ease: "none",
-  delay: 2.8,
+  y: 0,
+  duration: 1.5,
+  ease: "power1.out",
+  delay: 2.6,
 });
 
 gsap.from(".about_cont ul li .about_desc3", {
@@ -265,7 +265,7 @@ gsap.from(".about_cont ul li .about_desc3", {
     markers: true,
     start: "5% center",
   },
-  x: -100,
+  y: 20,
   opacity: 0,
 });
 gsap.to(".about_cont ul li .about_desc3", {
@@ -275,9 +275,11 @@ gsap.to(".about_cont ul li .about_desc3", {
     start: "5% center",
   },
   opacity: 1,
-  x: 0,
-  duration: 0.7,
-  ease: "none",
-  delay: 3,
+  y: 0,
+  duration: 1.5,
+  ease: "power1.out",
+  delay: 2.8,
 });
 //about_desc
+
+/////////////////////////////////////////////////////////////////

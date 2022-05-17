@@ -71,12 +71,6 @@
   border-right: 0;
 }
 
-@media (max-width: 450px) {
-  .main_line ul li {
-    min-height: 250px;
-  }
-}
-
 .main_page {
   display: flex;
   position: relative;
@@ -157,7 +151,7 @@
   }
 
   .sub_text {
-    margin-left: -30px;
+    margin-left: 45vw;
   }
 }
 
@@ -169,14 +163,16 @@
   height: 30vw;
 }
 
-.main_banner .main_banner {
-  position: relative;
-}
-
 .main_banner figure {
   position: relative;
-  width: 100%;
   overflow: hidden;
+  width: 110%;
+  height: 110%;
+  transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+
+.main_banner figure:hover {
+  transform: scale(1.025);
 }
 
 .main_banner figure img {
@@ -268,7 +264,7 @@
   height: 0;
   padding-top: 0%;
   overflow: hidden;
-  border-left: 1px solid var(--border_color);
+  /* border-left: 1px solid var(--border_color); */
 }
 
 .about_cont ul li:nth-child(3) {
