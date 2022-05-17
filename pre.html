@@ -6,255 +6,442 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css");
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+      :after,
+      :before,
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 1200px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
       body {
-        font-family: "Dosis", Calibri, Arial, sans-serif;
-        color: #fff;
-        background: #000;
-      }
-
-      .os-phrases h2 {
-        font-family: "Dosis", "Lato", sans-serif;
-        font-size: 70px;
-        font-weight: 200;
-        width: 100%;
-        overflow: hidden;
-        text-transform: uppercase;
-        padding: 0;
         margin: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        letter-spacing: 14px;
-        text-align: center;
-        opacity: 0;
+        font-family: "Rajdhani", sans-serif;
+      }
+      h2 {
+        line-height: 1.1;
+      }
+      .hero-slider {
+        width: 100%;
+        height: 700px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        z-index: 0;
       }
 
-      .os-phrases h2,
-      .os-phrases h2 > span {
+      @media (max-width: 991px) {
+        .hero-slider {
+          height: 600px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hero-slider {
+          height: 500px;
+        }
+      }
+
+      .hero-slider .swiper-slide {
+        overflow: hidden;
+        color: #fff;
+      }
+
+      .hero-slider .swiper-container {
+        width: 100%;
         height: 100%;
-        /* Centering with flexbox */
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .hero-slider .slide-inner {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
+        text-align: left;
       }
 
-      .os-phrases h2 > span > span > span {
+      .hero-slider .swiper-button-prev,
+      .hero-slider .swiper-button-next {
+        background: transparent;
+        width: 55px;
+        height: 55px;
+        line-height: 53px;
+        margin-top: -30px;
+        text-align: center;
+        border: 2px solid #d4d3d3;
+        border-radius: 55px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      .hero-slider:hover .swiper-button-prev,
+      .hero-slider:hover .swiper-button-next {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      @media (max-width: 767px) {
+        .hero-slider .swiper-button-prev,
+        .hero-slider .swiper-button-next {
+          display: none;
+        }
+      }
+
+      .hero-slider .swiper-button-prev {
+        left: 25px;
+        transform: translateX(50px);
+      }
+
+      .hero-slider .swiper-button-prev:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f060";
+        font-size: 15px;
+        color: #d4d3d3;
+        font-style: normal;
         display: inline-block;
+        vertical-align: middle;
+        font-weight: 900;
+      }
+
+      .hero-slider .swiper-button-next {
+        right: 25px;
+        transform: translateX(-50px);
+      }
+
+      .hero-slider .swiper-button-next:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f061";
+        font-size: 15px;
+        color: #d4d3d3;
+        font-style: normal;
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 900;
+      }
+
+      .hero-slider .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        text-align: left;
+        line-height: 12px;
+        font-size: 12px;
+        color: #000;
+        opacity: 0.3;
+        background: #fff;
+        transition: all 0.2s ease;
+      }
+
+      .hero-slider .swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+
+      .hero-slider .swiper-container-horizontal > .swiper-pagination-bullets,
+      .hero-slider .swiper-pagination-custom,
+      .hero-slider .swiper-pagination-fraction {
+        bottom: 30px;
+      }
+
+      @media screen and (min-width: 992px) {
+        .hero-slider .swiper-container-horizontal > .swiper-pagination-bullets,
+        .hero-slider .swiper-pagination-custom,
+        .hero-slider .swiper-pagination-fraction {
+          /* display: none; */
+        }
+      }
+      .swiper-pagination {
+        text-align: left;
+      }
+
+      .hero-slider .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 50px;
+        max-width: 1200px;
+        padding: 0 15px;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      @media (min-width: 767px) {
+        .hero-slider .swiper-container-horizontal > .swiper-pagination-bullets {
+          bottom: 30px;
+        }
+      }
+      /*--------------------------------------------------------------
+      	#hero-style
+      --------------------------------------------------------------*/
+      .hero-style {
+        height: 850px;
+        transition: all 0.4s ease;
+      }
+
+      @media (max-width: 991px) {
+        .hero-style {
+          height: 600px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hero-style {
+          height: 500px;
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        .hero-style .container {
+          padding-top: 95px;
+        }
+      }
+
+      .hero-style .slide-title,
+      .hero-style .slide-text,
+      .hero-style .slide-btns {
+        max-width: 690px;
+      }
+
+      .hero-style .slide-title h2 {
+        font-size: 100px;
+        font-weight: 600;
+        line-height: 1;
+        color: #ffffff;
+        margin: 0 0 40px;
+        text-transform: capitalize;
+        transition: all 0.4s ease;
+      }
+
+      @media (max-width: 1199px) {
+        .hero-style .slide-title h2 {
+          font-size: 75px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .hero-style .slide-title h2 {
+          font-size: 50px;
+          margin: 0 0 35px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hero-style .slide-title h2 {
+          font-size: 35px;
+          margin: 0 0 30px;
+        }
+      }
+
+      .hero-style .slide-text p {
+        opacity: 0.8;
+        font-family: Rajdhani;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin: 0 0 40px;
+        transition: all 0.4s ease;
+      }
+
+      @media (max-width: 767px) {
+        .hero-style .slide-text p {
+          font-size: 16px;
+          font-size: 1rem;
+          font-weight: normal;
+          margin: 0 0 30px;
+        }
+      }
+
+      .hero-style .slide-btns > a:first-child {
+        margin-right: 10px;
+      }
+
+      /*--------------------------------------------------------------
+      	#button-style
+      --------------------------------------------------------------*/
+      .theme-btn,
+      .theme-btn-s2 {
+        background-color: #ffffff;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: center;
+        color: #2b3b95;
+        padding: 9px 32px;
+        border: 0;
+        border-radius: 3px;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: initial;
+        transition: all 0.4s ease;
+      }
+      a {
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .theme-btn-s2 {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #131e4a;
+      }
+      .theme-btn:hover,
+      .theme-btn-s2:hover,
+      .theme-btn:focus,
+      .theme-btn-s2:focus,
+      .theme-btn:active,
+      .theme-btn-s2:active {
+        background-color: #2b3b95;
         color: #fff;
-        transform-style: preserve-3d;
-        transform: translate3d(0, 0, 0);
-        animation: OpeningSequence 5.2s linear forwards;
       }
-
-      @keyframes OpeningSequence {
-        0% {
-          letter-spacing: 80px;
-          opacity: 0.2;
-          transform: rotateY(-90deg);
-        }
-        50% {
-          letter-spacing: 14px;
-          opacity: 0.8;
-          transform: rotateY(0deg);
-        }
-        85% {
-          opacity: 0.8;
-          transform: rotateY(0deg) translateZ(100px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateZ(130px);
+      .theme-btn-s3 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+      i.fa-chevron-circle-right {
+        height: 22px;
+        width: 22px;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      @media (max-width: 991px) {
+        .theme-btn,
+        .theme-btn-s2,
+        .theme-btn-s3 {
+          font-size: 13px;
+          padding: 15px 25px;
         }
       }
-
-      @keyframes FadeIn {
-        0% {
-          opacity: 0;
-          text-shadow: 0 0 50px #fff;
+      @media (max-width: 767px) {
+        .theme-btn,
+        .theme-btn-s2 {
+          padding: 13px 20px;
+          font-size: 13px;
+          background: url(./portfolio2/assets/img/about02.jpg);
         }
-        100% {
-          opacity: 1;
-        }
-      }
-      #container {
-        width: 100%;
-        height: 100%;
       }
     </style>
   </head>
   <body>
-    <section class="main_wrap">
-      <div class="cursor"></div>
-      <!-- <div class="cursor"></div> -->
-      <div class="main_line">
-        <ul id="about_bg">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <article class="main_page">
-        <h1>
-          <span><span>F</span></span>
-          <span><span>R</span></span>
-          <span><span>O</span></span>
-          <span><span>N</span></span>
-          <span><span>T</span></span>
-          <span><span>E</span></span>
-          <span><span>N</span></span>
-          <span><span>D</span></span>
-          <div class="sub_text">SCROLL</div>
-        </h1>
-        <h2>
-          <span><span>D</span></span>
-          <span><span>E</span></span>
-          <span><span>V</span></span>
-          <span><span>P</span></span>
-          <span><span>O</span></span>
-          <span><span>R</span></span>
-          <span><span>T</span></span>
-          <span><span>F</span></span>
-          <span><span>O</span></span>
-          <span><span>L</span></span>
-          <span><span>I</span></span>
-          <span><span>O</span></span>
-          <span><span>S</span></span>
-          <span><span>I</span></span>
-          <span><span>T</span></span>
-          <span><span>E</span></span>
-        </h2>
-        <!-- <h1>FRONTEND</h1>
-          <h2>DEV PORTFOLIO SITE</h2> -->
-      </article>
-      <article class="main_inpo">
-        <p>FRONT-END DEVELOPER 2022</p>
-        <p>KIM HYUN WOO</p>
-      </article>
-      <article class="main_banner">
-        <div class="main_inner">
-          <figure>
-            <img src="./assets/img/main_banner.jpg" alt="이미지" />
-          </figure>
+    <!-- start of hero -->
+    <section class="hero-slider hero-style">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="slide-inner slide-bg-image"
+              data-background="./portfolio2/assets/img/about02.jpg"
+            ></div>
+            <!-- end slide-inner -->
+          </div>
+          <!-- end swiper-slide -->
+
+          <div class="swiper-slide">
+            <div
+              class="slide-inner slide-bg-image"
+              data-background="./portfolio2/assets/img/about01.jpg"
+            ></div>
+            <!-- end slide-inner -->
+          </div>
+          <!-- end swiper-slide -->
         </div>
-      </article>
+        <!-- end swiper-wrapper -->
+
+        <!-- swipper controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </section>
-    <!-- /container -->
+    <!-- end of hero slider -->
 
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/gsap.min.js"></script>
-    <script src="./gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
-    <script id="vertexShader" type="x-shader/x-vertex">
-      void main() {
-          gl_Position = vec4( position, 1.0 );
-      }
-    </script>
-    <script id="fragmentShader" type="x-shader/x-fragment">
-      precision highp float;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
-      uniform vec2 resolution;
-      uniform float time;
-      uniform vec2 mouse;
-      uniform sampler2D backbuffer;
-
-      vec3 wave(vec2 uv,float speed, float thickness, float amplitude, float delay, vec3 color){
-          float shake = mix(0.0, 1.0, amplitude);
-          float wave = sin(delay + mod(uv.x+uv.y/2.0,0.25) * 1.0 - time * speed ) / 5.0 * shake;
-          float colwave = thickness /  abs((1.0-length(uv))+wave); //線の太さ
-          return color * colwave;
-      }
-
-      float random (in vec2 st) {
-          return fract(cos(dot(st.xy,vec2(12.9898,78.233))) * 43758.5453123);
-      }
-
-      void main(void) {
-          vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-          vec3 col0 = wave(uv,0.1,0.08,8.0,5., vec3(0.6, 0.6, 0.6));
-          vec3 col1 = wave(uv,0.2,0.08,9.0,6., vec3(0.4, 0.9, 0.9));
-          vec3 col2 = wave(uv,0.2,0.08,10.0,7., vec3(0.6, 0.9, 0.9));
-          vec3 col3 = wave(uv,0.1,0.08,11.0,8., vec3(0.6, 0.6, 0.6));
-
-          //vec3 col = col0+col1+col2+col3;
-          vec3 col = col0+col1;
-
-          gl_FragColor = vec4(vec3(col), 1.0);
-      }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      $("#os-phrases > h2")
-        .css("opacity", 1)
-        .lettering("words")
-        .children("span")
-        .lettering()
-        .children("span")
-        .lettering();
+      // HERO SLIDER
+      var menu = [];
+      jQuery(".swiper-slide").each(function (index) {
+        menu.push(jQuery(this).find(".slide-inner").attr("data-text"));
+      });
+      var interleaveOffset = 0.5;
+      var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        parallax: true,
+        autoplay: {
+          delay: 6500,
+          disableOnInteraction: false,
+        },
+        watchSlidesProgress: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
 
-      var container;
-      var camera, scene, renderer;
-      var uniforms;
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
 
-      init();
-      animate();
-
-      function init() {
-        container = document.getElementById("container");
-
-        camera = new THREE.Camera();
-        camera.position.z = 1;
-
-        scene = new THREE.Scene();
-
-        var geometry = new THREE.PlaneBufferGeometry(2, 2);
-
-        uniforms = {
-          time: {
-            type: "f",
-            value: 1.0,
+        on: {
+          progress: function () {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              var slideProgress = swiper.slides[i].progress;
+              var innerOffset = swiper.width * interleaveOffset;
+              var innerTranslate = slideProgress * innerOffset;
+              swiper.slides[i].querySelector(".slide-inner").style.transform =
+                "translate3d(" + innerTranslate + "px, 0, 0)";
+            }
           },
-          resolution: {
-            type: "v2",
-            value: new THREE.Vector2(),
+
+          touchStart: function () {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = "";
+            }
           },
-        };
 
-        var material = new THREE.ShaderMaterial({
-          uniforms: uniforms,
-          vertexShader: document.getElementById("vertexShader").textContent,
-          fragmentShader: document.getElementById("fragmentShader").textContent,
-        });
+          setTransition: function (speed) {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = speed + "ms";
+              swiper.slides[i].querySelector(".slide-inner").style.transition =
+                speed + "ms";
+            }
+          },
+        },
+      };
 
-        var mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
+      var swiper = new Swiper(".swiper-container", swiperOptions);
 
-        renderer = new THREE.WebGLRenderer();
-        renderer.setPixelRatio(window.devicePixelRatio);
-
-        container.appendChild(renderer.domElement);
-
-        onWindowResize();
-        window.addEventListener("resize", onWindowResize, false);
-      }
-
-      function onWindowResize(event) {
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        uniforms.resolution.value.x = renderer.domElement.width;
-        uniforms.resolution.value.y = renderer.domElement.height;
-      }
-
-      function animate() {
-        requestAnimationFrame(animate);
-        render();
-      }
-
-      function render() {
-        uniforms.time.value += 0.05;
-        renderer.render(scene, camera);
-      }
+      // DATA BACKGROUND IMAGE
+      var sliderBgSetting = $(".slide-bg-image");
+      sliderBgSetting.each(function (indx) {
+        if ($(this).attr("data-background")) {
+          $(this).css(
+            "background-image",
+            "url(" + $(this).data("background") + ")"
+          );
+        }
+      });
     </script>
   </body>
 </html>

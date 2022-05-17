@@ -8,7 +8,10 @@
   <title>portpolio</title>
 
   <style>
-
+    /* slider */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+    /* //slider */
   </style>
 
   <!-- 폰트 -->
@@ -93,11 +96,8 @@
       </article>
       <article class="main_banner">
         <div class="main_inner">
-          <div class="bg"
-          data-0="background:rgba(0, 0, 0, 0.5)"
-          data-500="background:rgba(0, 0, 0, 0)"
-          data-1000="background:rgba(0, 0, 0, 0.5)"
-          ></div>
+          <div class="bg" data-0="background:rgba(0, 0, 0, 0.7)" data-500="background:rgba(0, 0, 0, 0)"
+            data-1000="background:rgba(0, 0, 0, 0.7)"></div>
           <!-- <figure>
             <img src="./assets/img/img01.jpg" alt="이미지" />
           </figure> -->
@@ -159,7 +159,40 @@
       <article class="aboutImg_box">
         <div class="about_text">ABOUT</div>
         <div class="about__img">
-          <div class="slider__img slider__img01"></div>
+          <div class="slider__img slider__img01">
+            <!-- start of hero -->
+            <section class="hero-slider hero-style">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slide-inner slide-bg-image" data-background="./assets/img/slider01.jpg"></div>
+                    <!-- end slide-inner -->
+                  </div>
+                  <!-- end swiper-slide -->
+
+                  <div class="swiper-slide">
+                    <div class="slide-inner slide-bg-image" data-background="./assets/img/slider03.jpg"></div>
+                    <!-- end slide-inner -->
+                  </div>
+                  <!-- end swiper-slide -->
+                  <!-- end swiper-slide -->
+
+                  <div class="swiper-slide">
+                    <div class="slide-inner slide-bg-image" data-background="./assets/img/slider04.jpg"></div>
+                    <!-- end slide-inner -->
+                  </div>
+                  <!-- end swiper-slide -->
+                </div>
+                <!-- end swiper-wrapper -->
+
+                <!-- swipper controls -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </section>
+            <!-- end of hero slider -->
+
+          </div>
         </div>
       </article>
     </section>
@@ -520,15 +553,30 @@
   </main>
 
   <!-- scrtpt -->
+
+  <!-- 스크롤 임시 -->
+  <script type="text/javascript" src="js/scroll.min.js"></script>
+  
+  <!-- gsap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+  <!-- jquery & ajax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+
+  
+  <!-- page -->
   <script src="./js/highlight.min.js"></script>
   <script src="./js/custom.js"></script>
   <script src="./js/main_page.js"></script>
   <script src="./js/about.js"></script>
-  <script type="text/javascript" src="js/scroll.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+
+
+
+
   <script id="vertexShader" type="x-shader/x-vertex">
     void main() {
         gl_Position = vec4( position, 1.0 );
@@ -569,22 +617,23 @@
   <script>
     hljs.highlightAll();
     modal();
+
     // main banner
     init();
     animate();
     // main banner
 
     function scroll() {
-        var s = skrollr.init();
-        let scrollTop =
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          window.scrollY;
+      var s = skrollr.init();
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        window.scrollY;
 
-        document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
-        requestAnimationFrame(scroll);
-      }
-      scroll();
+      document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+      requestAnimationFrame(scroll);
+    }
+    scroll();
   </script>
 </body>
 

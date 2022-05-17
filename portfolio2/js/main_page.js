@@ -78,7 +78,7 @@ gsap.to(".main_inpo", {
   duration: 1.5,
   delay: 2.9,
 });
-gsap.to(".main_banner figure img", {
+gsap.to(".main_inner", {
   opacity: 1,
   duration: 2,
   delay: 3,
