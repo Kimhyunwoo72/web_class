@@ -244,7 +244,7 @@ if (windowWidth <= 750) {
     },
     opacity: 1,
     height: 100 + "%",
-    duration: 0.7,
+    duration: 1,
     ease: "none",
     delay: 1,
   });
