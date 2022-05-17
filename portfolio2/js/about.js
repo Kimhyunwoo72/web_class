@@ -289,7 +289,7 @@ gsap.from(".aboutImg_box > .about_text", {
   scrollTrigger: {
     trigger: ".aboutImg_box",
     markers: true,
-    start: "5% center",
+    start: "10% center",
   },
   opacity: 0,
   y: 100,
@@ -299,7 +299,7 @@ gsap.to(".aboutImg_box > .about_text", {
   scrollTrigger: {
     trigger: ".aboutImg_box",
     markers: true,
-    start: "5% center",
+    start: "10% center",
   },
   opacity: 1,
   y: 0,
@@ -312,7 +312,7 @@ gsap.from(".slider__img", {
   scrollTrigger: {
     trigger: ".aboutImg_box",
     markers: true,
-    start: "5% center",
+    start: "10% center",
   },
   opacity: 0,
   duration: 1,
@@ -321,7 +321,7 @@ gsap.to(".slider__img", {
   scrollTrigger: {
     trigger: ".aboutImg_box",
     markers: true,
-    start: "5% center",
+    start: "10% center",
   },
   opacity: 1,
   ease: "power2.out",
