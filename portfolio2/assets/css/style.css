@@ -912,9 +912,12 @@ padding: 56.25% 0 0 0;
   padding-top: 15vw;
   padding-bottom: 15vw;
 }
-
+.title {
+  letter-spacing: 0.5vw;
+}
 .site_wrap .title {
   white-space: nowrap;
+  /* letter-spacing: 0.5vw; */
 }
 
 .site_info {
