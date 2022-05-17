@@ -146,7 +146,7 @@
       <article class="aboutImg_box">
         <div class="about_text">ABOUT</div>
         <div class="about__img">
-          <div class="slider__img01"></div>
+          <div class="slider__img slider__img01"></div>
         </div>
       </article>
     </section>
@@ -516,7 +516,50 @@
     hljs.highlightAll();
     modal();
 
+ //about_page 2 title-->
+gsap.from(".aboutImg_box > .about_text", {
+  scrollTrigger: {
+    trigger: ".aboutImg_box",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 0,
+  y: 100,
+  duration: 1,
+});
+gsap.to(".aboutImg_box > .about_text", {
+  scrollTrigger: {
+    trigger: ".aboutImg_box",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  y: 0,
+  duration: 1,
+});
+ //about_page 2 title-->
 
+ //about_page 2 img-->
+gsap.from(".slider__img", {
+  scrollTrigger: {
+    trigger: ".aboutImg_box",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 0,
+  duration: 1,
+});
+gsap.to(".slider__img", {
+  scrollTrigger: {
+    trigger: ".aboutImg_box",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  ease: "power2.out",
+  duration: 1,
+});
+ //about_page 2 img-->
   </script>
 </body>
 

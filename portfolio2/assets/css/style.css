@@ -392,6 +392,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 
 @media (max-width: 1000px) {
@@ -405,13 +406,16 @@
   height: 100%;
   min-height: 20vw;
 }
+.slider__img {
+  width: 100%;
+  height: 25vw;
+  opacity: 0;
+}
 
 .slider__img01 {
   background: url(../img/about02.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 25vw;
 }
 
 @media (max-width: 750px) {
