@@ -248,6 +248,27 @@ if (windowWidth <= 750) {
     ease: "none",
     delay: 1,
   });
+  //about_cont line
+  gsap.from(".about_cont ul li > div", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    scaleX: 1,
+    scaleY: 1,
+  });
+  gsap.to(".about_cont ul li > div", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    delay: 1,
+    duration: 4,
+    scaleX: 1.3,
+    scaleY: 1.3,
+  });
 
   gsap.from(".about_cont ul li:nth-child(2)", {
     scrollTrigger: {
