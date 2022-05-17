@@ -96,7 +96,7 @@
       <article class="main_banner">
         <div class="main_inner">
           <div class="bg" data-0="background:rgba(0, 0, 0, 0.7)" data-500="background:rgba(0, 0, 0, 0)"
-            data-1000="background:rgba(0, 0, 0, 0.7)"></div>
+            data-900="background:rgba(0, 0, 0, 0.8)"></div>
           <!-- <figure>
             <img src="./assets/img/img01.jpg" alt="이미지" />
           </figure> -->
@@ -622,17 +622,17 @@
     animate();
     // main banner
 
-    function scroll() {
-      var s = skrollr.init();
-      let scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        window.scrollY;
+    // function scroll() {
+    //   var s = skrollr.init();
+    //   let scrollTop =
+    //     window.pageYOffset ||
+    //     document.documentElement.scrollTop ||
+    //     window.scrollY;
 
-      document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
-      requestAnimationFrame(scroll);
-    }
-    scroll();
+    //   document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+    //   requestAnimationFrame(scroll);
+    // }
+    // scroll();
   </script>
 </body>
 
