@@ -6,27 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @import url("https://use.typekit.net/skn8ash.css");
+      @import url("https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css");
+      :root {
+        --text-color: #111;
+        --bg-color: #b9b3a9;
+      }
+
+      body {
+        font-family: termina, sans-serif;
+        color: var(--text-color);
+        background: var(--bg-color);
+        transition: 0.3s ease-out;
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
+        overscroll-behavior: none;
+      }
+
+      section:not(#sectionPin) {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 2rem;
+        padding: 50px 10vw;
+        margin: auto;
+        place-items: center;
+      }
+
+      img {
+        height: 80vh;
+        width: auto;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 10vw;
+        left: 10vw;
+        z-index: 4;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 16vw;
+        }
+      }
+      h1 span {
+        display: block;
+      }
+
+      h2 {
+        font-size: 2rem;
+        max-width: 400px;
+      }
+
+      .credit {
+        font-family: Termina, sans-serif;
+      }
+      .credit a {
+        color: var(--text-color);
+      }
+
       * {
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
       }
-      main {
-        width: 100%;
-        height: 100%;
+
+      #sectionPin {
+        height: 100vh;
+        overflow: hidden;
         display: flex;
-        justify-content: center;
+        left: 0;
+        background: var(--text-color);
+        color: var(--bg-color);
+      }
+
+      .pin-wrap {
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
+        padding: 50px 10vw;
       }
-      main > span {
-        width: 100%;
+      .pin-wrap > * {
+        min-width: 60vw;
+        padding: 0 5vw;
       }
-      #webgl {
-        width: 100%;
-      }
-      canvas {
-        width: 100% !important;
-        height: 50vh !important;
+
+      p {
+        position: absolute;
+        bottom: 10vw;
+        right: 10vw;
+        width: 200px;
+        line-height: 1.5;
       }
     </style>
   </head>
@@ -76,80 +155,68 @@
       </section>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r115/three.min.js"></script>
-    <script id="js-vertex-shader" type="x-shader/x-vertex">
-      attribute vec3 position;
-      attribute vec2 uv;
-      uniform float u_wave;
-      uniform float u_time;
-      uniform mat4 modelViewMatrix;
-      uniform mat4 projectionMatrix;
-      varying vec2 vUv;
-
-      void main() {
-          vUv = uv;
-          float power = 1.0;
-          float x = position.x;
-          float y = position.y;
-          float z = position.z + u_wave * cos(-u_time + x * power) * sin(u_time + y * power);
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(x, y, z, 1.0);
-      }
-    </script>
-    <script id="js-fragment-shader" type="x-shader/x-fragment">
-      precision mediump float;
-
-      uniform vec2 u_meshsize;
-      uniform vec2 u_texturesize;
-      uniform float u_texture_switch_01;
-      uniform float u_texture_switch_02;
-      uniform float u_texture_switch_03;
-      uniform float u_texture_switch_04;
-      uniform float u_noise_switch_01;
-      uniform float u_noise_switch_02;
-      uniform float u_noise_switch_03;
-      uniform float u_noise_switch_04;
-      uniform sampler2D u_noise_texture;
-      uniform sampler2D u_texture_01;
-      uniform sampler2D u_texture_02;
-      uniform sampler2D u_texture_03;
-      uniform sampler2D u_texture_04;
-      varying vec2 vUv;
-
-      #define PI 3.14159265359
-
-      mat2 rotate2d(float _angle){
-          return mat2(cos(_angle),-sin(_angle), sin(_angle),cos(_angle));
-      }
-
-      void main() {
-          vec2 uv = vUv;
-
-          vec2 ratio = vec2(
-              min((u_meshsize.x / u_meshsize.y) / (u_texturesize.x / u_texturesize.y), 1.0),
-              min((u_meshsize.y / u_meshsize.x) / (u_texturesize.y / u_texturesize.x), 1.0)
-          );
-
-          uv *= ratio;
-
-          float noisePower = 0.5;
-          mat2 rotate = rotate2d(PI);
-          vec4 noise_texture = texture2D(u_noise_texture, uv);
-          vec2 uv01 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_01 * noisePower;
-          vec2 uv02 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_02 * noisePower;
-          vec2 uv03 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_03 * noisePower;
-          vec2 uv04 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_04 * noisePower;
-
-          vec4 texture01 = texture2D(u_texture_01, uv01);
-          vec4 texture02 = texture2D(u_texture_02, uv02);
-          vec4 texture03 = texture2D(u_texture_03, uv03);
-          vec4 texture04 = texture2D(u_texture_04, uv04);
-
-          vec4 finalPos = texture01 * u_texture_switch_01 + texture02 * u_texture_switch_02 + texture03 * u_texture_switch_03 + texture04 * u_texture_switch_04;
-          gl_FragColor = vec4(finalPos);
-      }
-    </script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const pageContainer = document.querySelector(".container");
+
+      /* SMOOTH SCROLL */
+      const scroller = new LocomotiveScroll({
+        el: pageContainer,
+        smooth: true,
+      });
+
+      scroller.on("scroll", ScrollTrigger.update);
+
+      ScrollTrigger.scrollerProxy(pageContainer, {
+        scrollTop(value) {
+          return arguments.length
+            ? scroller.scrollTo(value, 0, 0)
+            : scroller.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+          return {
+            left: 0,
+            top: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+        },
+        pinType: pageContainer.style.transform ? "transform" : "fixed",
+      });
+
+      ////////////////////////////////////
+      ////////////////////////////////////
+      window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+        // Pinning and horizontal scrolling
+
+        gsap.to(".pin-wrap", {
+          scrollTrigger: {
+            scroller: pageContainer, //locomotive-scroll
+            scrub: true,
+            trigger: "#sectionPin",
+            pin: true,
+            // anticipatePin: 1,
+            start: "top top",
+            end: pinWrapWidth,
+          },
+          x: -horizontalScrollLength,
+          ease: "none",
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+      });
+
       class Stage {
         constructor() {
           this.renderParam = {
@@ -161,7 +228,6 @@
             fov: 45,
             near: 0.1,
             far: 100,
-            lookAt: new THREE.Vector3(0, 0, 0),
             x: 0,
             y: 0,
             z: 10,
@@ -174,74 +240,6 @@
           this.material = null;
           this.mesh = null;
           this.isInitialized = false;
-        }
-
-        init() {
-          this._setScene();
-          this._setRender();
-          this._setCamera();
-          this.isInitialized = true;
-        }
-
-        _setScene() {
-          this.scene = new THREE.Scene();
-        }
-
-        _setRender() {
-          this.renderer = new THREE.WebGLRenderer({ alpha: true });
-          this.renderer.setPixelRatio(window.devicePixelRatio);
-          this.renderer.setClearColor(
-            new THREE.Color(this.renderParam.clearColor)
-          );
-          this.renderer.setSize(
-            this.renderParam.width,
-            this.renderParam.height
-          );
-          const wrapper = document.querySelector("#webgl");
-          wrapper.appendChild(this.renderer.domElement);
-        }
-
-        _setCamera() {
-          if (!this.isInitialized) {
-            this.camera = new THREE.PerspectiveCamera(
-              0,
-              0,
-              this.cameraParam.near,
-              this.cameraParam.far
-            );
-
-            this.camera.position.set(
-              this.cameraParam.x,
-              this.cameraParam.y,
-              this.cameraParam.z
-            );
-            this.camera.lookAt(this.cameraParam.lookAt);
-          }
-
-          const width = window.innerWidth;
-          const height = window.innerHeight;
-          this.camera.aspect = width / height;
-
-          this.camera.fov =
-            THREE.MathUtils.radToDeg(
-              Math.atan(
-                width / this.camera.aspect / (2 * this.camera.position.z)
-              )
-            ) * 2;
-          this.camera.updateProjectionMatrix();
-          this.renderer.setSize(width, height);
-        }
-
-        _render() {
-          this.renderer.render(this.scene, this.camera);
-        }
-
-        onResize() {
-          this._setCamera();
-        }
-
-        onRaf() {
-          this._render();
         }
       }
 
@@ -281,23 +279,18 @@
           this.uniforms = {
             u_noise_texture: {
               type: "t",
-              value: new THREE.TextureLoader().load(this.noiseImage),
             },
             u_texture_01: {
               type: "t",
-              value: new THREE.TextureLoader().load(this.images[0]),
             },
             u_texture_02: {
               type: "t",
-              value: new THREE.TextureLoader().load(this.images[1]),
             },
             u_texture_03: {
               type: "t",
-              value: new THREE.TextureLoader().load(this.images[2]),
             },
             u_texture_04: {
               type: "t",
-              value: new THREE.TextureLoader().load(this.images[3]),
             },
             u_noise_switch_01: {
               type: "f",
@@ -359,33 +352,6 @@
           this.mesh = null;
           this.duration = 0.9;
           this.ease = "power1.out";
-        }
-
-        init() {
-          this._setMesh();
-          this._setMeshScale();
-        }
-
-        _setMesh() {
-          const geometry = new THREE.PlaneBufferGeometry(
-            this.geometryParm.width,
-            this.geometryParm.height,
-            this.geometryParm.widthSegments,
-            this.geometryParm.heightSegments
-          );
-
-          const material = new THREE.RawShaderMaterial({
-            vertexShader:
-              document.querySelector("#js-vertex-shader").textContent,
-            fragmentShader: document.querySelector("#js-fragment-shader")
-              .textContent,
-            wireframe: this.materialParam.useWireframe,
-            transparent: true,
-            uniforms: this.uniforms,
-          });
-
-          this.mesh = new THREE.Mesh(geometry, material);
-          this.stage.scene.add(this.mesh);
         }
 
         _setMeshScale() {
@@ -597,7 +563,6 @@
       class Slider {
         constructor() {
           const stage = new Stage();
-          stage.init();
 
           const mesh = new Mesh(stage);
           mesh.init();
