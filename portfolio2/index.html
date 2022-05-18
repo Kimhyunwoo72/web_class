@@ -8,46 +8,7 @@
   <title>portpolio</title>
 
   <style>
-      .loader {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #000;
-        z-index: 2;
-        overflow: hidden;
-      }
 
-      .loader marquee {
-        opacity: 0.2;
-        text-transform: uppercase;
-        line-height: 180px;
-        margin: 0;
-        padding: 0;
-        color: #646464;
-        font-size: 200px;
-        font-family: "Cinzel";
-      }
-
-      .loader .intro {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      .loader .intro h1 {
-        font-size: 124px;
-        text-transform: uppercase;
-        font-weight: 200;
-        color: #fff;
-        font-family: "Cinzel";
-      }
-
-      .intro-title .letter {
-        display: inline-block;
-        line-height: 1em;
-      }
   </style>
 
   <!-- 폰트 -->
@@ -89,43 +50,18 @@
             <li></li>
             <li></li>
           </ul>
-          <div id="about_bg">
+          <div class="main_box">
+            <div class="main_bg"></div>
+            <div id="about_bg">
+            </div>
           </div>
         </div>
       </div>
       <article class="main_page">
         <div class="loader">
-            <h1 class="intro-title">FRONTEND</h1>
+          <div class="intro-title intro-title1">FRONTEND</div>
+          <div class="intro-title intro-title2">DEVELOPER SITE</div>
         </div>
-        <!-- <h1>
-          <div class="mainPage_text">
-            <span><span>F</span></span>
-            <span><span>R</span></span>
-            <span><span>O</span></span>
-            <span><span>N</span></span>
-            <span><span>T</span></span>
-            <span><span>E</span></span>
-            <span><span>N</span></span>
-            <span><span>D</span></span>
-          </div>
-        </h1> -->
-        <h2>
-          <span><span>D</span></span>
-          <span><span>E</span></span>
-          <span><span>V</span></span>
-          <span><span>E</span></span>
-          <span><span>L</span></span>
-          <span><span>O</span></span>
-          <span><span>P</span></span>
-          <span><span>E</span></span>
-          <span><span>R</span></span>
-          <span><span>S</span></span>
-          <span><span>I</span></span>
-          <span><span>T</span></span>
-          <span><span>E</span></span>
-        </h2>
-        <!-- <h1>FRONTEND</h1>
-          <h2>DEV PORTFOLIO SITE</h2> -->
       </article>
       <article class="main_inpo">
         <p>FRONT-END DEVELOPER 2022</p>
@@ -133,7 +69,7 @@
       </article>
       <article class="main_banner">
         <div class="main_inner">
-          <div class="bg" data-0="background:rgba(0, 0, 0, 0.7)" data-500="background:rgba(0, 0, 0, 0)"
+          <div class="bg" data-0="background:rgba(0, 0, 0, 0.5)" data-500="background:rgba(0, 0, 0, 0)"
             data-900="background:rgba(0, 0, 0, 0.8)"></div>
           <!-- <figure>
             <img src="./assets/img/img01.jpg" alt="이미지" />
@@ -196,42 +132,16 @@
       <article class="aboutImg_box">
         <div class="about_text">ABOUT</div>
         <div class="about__img">
-          <div class="slider__img slider__img01">
-            <!-- start of hero -->
-            <section class="hero-slider hero-style">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="slide-inner slide-bg-image" data-background="./assets/img/slider01.jpg"></div>
-                    <!-- end slide-inner -->
-                  </div>
-                  <!-- end swiper-slide -->
-
-                  <div class="swiper-slide">
-                    <div class="slide-inner slide-bg-image" data-background="./assets/img/slider03.jpg"></div>
-                    <!-- end slide-inner -->
-                  </div>
-                  <!-- end swiper-slide -->
-                  <!-- end swiper-slide -->
-
-                  <div class="swiper-slide">
-                    <div class="slide-inner slide-bg-image" data-background="./assets/img/slider04.jpg"></div>
-                    <!-- end slide-inner -->
-                  </div>
-                  <!-- end swiper-slide -->
-                </div>
-                <!-- end swiper-wrapper -->
-
-                <!-- swipper controls -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-            </section>
-            <!-- end of hero slider -->
-
+          <div class="slider__img">
+            <div id="webgl"></div>
           </div>
         </div>
-      </article>
+    </section>
+    <!-- end of hero slider -->
+
+    </div>
+    </div>
+    </article>
     </section>
 
     <section class="effect">
@@ -343,274 +253,274 @@
       </article>
       <!-- //4 -->
 
-    <section class="gmae_wrap">
-      <article class="text border">
-        <h2 class="title">
-          <span>JAVASCRIPT</span> <br />
-          GAME & MUSIC
-        </h2>
-        <p class="desc">
-          html, css, javascript만으로 게임 및 뮤직 플레이어를 만들며
-          매개변수의<br />
-          원리를 이해했으며, 응용하는 기술을 익혔습니다.
-        </p>
-      </article>
+      <section class="gmae_wrap">
+        <article class="text border">
+          <h2 class="title">
+            <span>JAVASCRIPT</span> <br />
+            GAME & MUSIC
+          </h2>
+          <p class="desc">
+            html, css, javascript만으로 게임 및 뮤직 플레이어를 만들며
+            매개변수의<br />
+            원리를 이해했으며, 응용하는 기술을 익혔습니다.
+          </p>
+        </article>
 
-      <article class="gmae_info">
-        <h3>GAME EFFECT01</h3>
-        <p>JAVASCRIPT를 이용한 테트리스게임</p>
-        <!-- info -->
-        <div class="source source01" overscroll-behavior: none>
-          <img src="./assets/img/game01.jpg" alt="이미지" />
-          <button class="source-btn source-btn01">게임하기</button>
-          <div id="modal01">
-            <div class="modal-wrap">
-              <div class="modal-cont">
-                <div class="code-view">
-                  <div class="view-cont">
-                    <iframe class="gmae_effect" src="../game/tetris/index.html" frameborder="0"></iframe>
+        <article class="gmae_info">
+          <h3>GAME EFFECT01</h3>
+          <p>JAVASCRIPT를 이용한 테트리스게임</p>
+          <!-- info -->
+          <div class="source source01" overscroll-behavior: none>
+            <img src="./assets/img/game01.jpg" alt="이미지" />
+            <button class="source-btn source-btn01">게임하기</button>
+            <div id="modal01">
+              <div class="modal-wrap">
+                <div class="modal-cont">
+                  <div class="code-view">
+                    <div class="view-cont">
+                      <iframe class="gmae_effect" src="../game/tetris/index.html" frameborder="0"></iframe>
+                    </div>
                   </div>
                 </div>
+                <button class="modal-close modal-close01">닫기</button>
               </div>
-              <button class="modal-close modal-close01">닫기</button>
             </div>
           </div>
-        </div>
-        <!-- //info -->
-      </article>
+          <!-- //info -->
+        </article>
 
-      <article class="gmae_info">
-        <h3>GAME EFFECT02</h3>
-        <p>JAVASCRIPT를 이용한 카드게임</p>
+        <article class="gmae_info">
+          <h3>GAME EFFECT02</h3>
+          <p>JAVASCRIPT를 이용한 카드게임</p>
 
-        <!-- info -->
-        <div class="source source02">
-          <img src="./assets/img/game02.jpg" alt="이미지" />
-          <button class="source-btn source-btn02">게임하기</button>
-          <div id="modal02">
-            <div class="modal-wrap">
-              <div class="modal-cont">
-                <div class="code-view">
-                  <div class="view-cont" ">
+          <!-- info -->
+          <div class="source source02">
+            <img src="./assets/img/game02.jpg" alt="이미지" />
+            <button class="source-btn source-btn02">게임하기</button>
+            <div id="modal02">
+              <div class="modal-wrap">
+                <div class="modal-cont">
+                  <div class="code-view">
+                    <div class="view-cont" ">
                       <iframe
                         class=" gmae_effect" src="../game/index2.html" frameborder="0"></iframe>
+                    </div>
                   </div>
                 </div>
+                <button class="modal-close modal-close02">닫기</button>
               </div>
-              <button class="modal-close modal-close02">닫기</button>
             </div>
           </div>
-        </div>
-        <!-- //info -->
-      </article>
+          <!-- //info -->
+        </article>
 
-      <article class="gmae_info">
-        <h3>GAME EFFECT03</h3>
-        <p>JAVASCRIPT를 이용한 타자게임</p>
-        <!-- info -->
-        <div class="source source03">
-          <img src="./assets/img/game03.jpg" alt="이미지" />
-          <button class="source-btn source-btn03">게임하기</button>
-          <div id="modal03">
-            <div class="modal-wrap">
-              <div class="modal-cont">
-                <div class="code-view">
-                  <div class="view-cont">
-                    <iframe class="gmae_effect" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
+        <article class="gmae_info">
+          <h3>GAME EFFECT03</h3>
+          <p>JAVASCRIPT를 이용한 타자게임</p>
+          <!-- info -->
+          <div class="source source03">
+            <img src="./assets/img/game03.jpg" alt="이미지" />
+            <button class="source-btn source-btn03">게임하기</button>
+            <div id="modal03">
+              <div class="modal-wrap">
+                <div class="modal-cont">
+                  <div class="code-view">
+                    <div class="view-cont">
+                      <iframe class="gmae_effect" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
+                    </div>
                   </div>
                 </div>
+                <button class="modal-close modal-close03">닫기</button>
               </div>
-              <button class="modal-close modal-close03">닫기</button>
             </div>
           </div>
-        </div>
-        <!-- //info -->
-      </article>
+          <!-- //info -->
+        </article>
 
-      <article class="gmae_info">
-        <h3>MUSIC EFFECT</h3>
-        <p>JAVASCRIPT를 이용한 뮤직플레이어</p>
-        <iframe class="music_effect" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
-      </article>
-    </section>
+        <article class="gmae_info">
+          <h3>MUSIC EFFECT</h3>
+          <p>JAVASCRIPT를 이용한 뮤직플레이어</p>
+          <iframe class="music_effect" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
+        </article>
+      </section>
 
-    <section class="site_wrap">
-      <article class="text beige">
-        <h2 class="title border">
-          <span>SITE CODING</span>
-          <br />
-          WEB
-        </h2>
-        <p class="desc">
-          javascript, php, react 를 활용하여 만든 사이트입니다.<br />
-          이미지를 클릭하면 사이트로 이동됩니다.
-        </p>
-      </article>
-
-      <article class="subtitle">
-        <ul>
-          <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
-          <li>PROJECT</li>
-        </ul>
-      </article>
-
-      <article class="site_info">
-        <div class="site_img">
-          <a href="https://kimhyunwoo72.github.io/webs_class/site/webClass/js/project.html" target="_blank">
-            <img src="./assets/img/site01.jpg" alt="이미지" />
-          </a>
-        </div>
-        <div class="site_explanation">
-          <h3>WEBSTANDARD</h3>
-          <p>
-            전기차 사이트 제작 전, UI/UX 요구 분석 및 기획, UI 설계 및 구현을
-            통해 소개사이트를 제작하였습니다. Affinity Diagram 및 Flow Chart를
-            만들었으며, 소개영상 등을 제작하였습니다.
+      <section class="site_wrap">
+        <article class="text beige">
+          <h2 class="title border">
+            <span>SITE CODING</span>
+            <br />
+            WEB
+          </h2>
+          <p class="desc">
+            javascript, php, react 를 활용하여 만든 사이트입니다.<br />
+            이미지를 클릭하면 사이트로 이동됩니다.
           </p>
-          <a href="https://kimhyunwoo72.github.io/webs_class/site/webClass/js/project.html" target="_blank">
-            <div>VIEW SITE</div>
-          </a>
-        </div>
-      </article>
+        </article>
 
-      <article class="subtitle">
-        <ul>
-          <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
-          <li>PROJECT</li>
-        </ul>
-      </article>
+        <article class="subtitle">
+          <ul>
+            <li>FRONTEND DEVELOPER 2022</li>
+            <li>site</li>
+            <li>TYPE</li>
+            <li>PROJECT</li>
+          </ul>
+        </article>
 
-      <article class="site_info">
-        <div class="site_img">
-          <a href="http://ekfvoddl0321.dothome.co.kr/project/include/main.php" target="_blank">
-            <img src="./assets/img/site02.jpg" alt="이미지" />
-          </a>
-        </div>
-        <div class="site_explanation">
-          <h3>PHP WEB SITE</h3>
+        <article class="site_info">
+          <div class="site_img">
+            <a href="https://kimhyunwoo72.github.io/webs_class/site/webClass/js/project.html" target="_blank">
+              <img src="./assets/img/site01.jpg" alt="이미지" />
+            </a>
+          </div>
+          <div class="site_explanation">
+            <h3>WEBSTANDARD</h3>
+            <p>
+              전기차 사이트 제작 전, UI/UX 요구 분석 및 기획, UI 설계 및 구현을
+              통해 소개사이트를 제작하였습니다. Affinity Diagram 및 Flow Chart를
+              만들었으며, 소개영상 등을 제작하였습니다.
+            </p>
+            <a href="https://kimhyunwoo72.github.io/webs_class/site/webClass/js/project.html" target="_blank">
+              <div>VIEW SITE</div>
+            </a>
+          </div>
+        </article>
+
+        <article class="subtitle">
+          <ul>
+            <li>FRONTEND DEVELOPER 2022</li>
+            <li>site</li>
+            <li>TYPE</li>
+            <li>PROJECT</li>
+          </ul>
+        </article>
+
+        <article class="site_info">
+          <div class="site_img">
+            <a href="http://ekfvoddl0321.dothome.co.kr/project/include/main.php" target="_blank">
+              <img src="./assets/img/site02.jpg" alt="이미지" />
+            </a>
+          </div>
+          <div class="site_explanation">
+            <h3>PHP WEB SITE</h3>
+            <p>
+              PHP를 이용하여 만든 사이트입니다. 로그인, 회원가입, 마이페이지
+              같은 기능들이 구동되고 게시판 과 블로그 이용가능 컨텐츠까지
+              가능하도록 제작되었습니다.
+            </p>
+            <a href="http://ekfvoddl0321.dothome.co.kr/project/include/main.php" target="_blank">
+              <div>VIEW SITE</div>
+            </a>
+          </div>
+        </article>
+
+        <article class="subtitle">
+          <ul>
+            <li>FRONTEND DEVELOPER 2022</li>
+            <li>site</li>
+            <li>TYPE</li>
+            <li>PROJECT</li>
+          </ul>
+        </article>
+
+        <article class="site_info">
+          <div class="site_img">
+            <a href="http://ekfvoddl0321.dothome.co.kr/php/pages/main.php" target="_blank">
+              <img src="./assets/img/site03.jpg" alt="이미지" />
+            </a>
+          </div>
+          <div class="site_explanation">
+            <h3>PHP WEB SITE</h3>
+            <p>
+              PHP를 이용하여 만든 두번째 사이트입니다. 블로그, 검색기능, 퀴즈
+              페이지 등을 업그레이드하여 만든 사이트 입니다. 메인페이지에서 모두
+              확인 할 수 있도록 만들었습니다.
+            </p>
+            <a href="http://ekfvoddl0321.dothome.co.kr/php/pages/main.php" target="_blank">
+              <div>VIEW SITE</div>
+            </a>
+          </div>
+        </article>
+
+        <article class="subtitle">
+          <ul>
+            <li>FRONTEND DEVELOPER 2022</li>
+            <li>site</li>
+            <li>TYPE</li>
+            <li>PROJECT</li>
+          </ul>
+        </article>
+
+        <article class="site_info">
+          <div class="site_img">
+            <a href="https://hyunwoo9.netlify.app/" target="_blank">
+              <img src="./assets/img/site04.jpg" alt="이미지" />
+            </a>
+          </div>
+          <div class="site_explanation">
+            <h3>REACT WEB SITE</h3>
+            <p>
+              react를 이용하여 만든 사이트입니다. react컴포넌트를 적극 활용
+              했으며,reference 및 유튜브 API 같은 기능들이 구현하였습니다.
+            </p>
+            <a href="https://hyunwoo9.netlify.app/" target="_blank">
+              <div>VIEW SITE</div>
+            </a>
+          </div>
+        </article>
+
+        <article class="subtitle">
+          <ul>
+            <li>FRONTEND DEVELOPER 2022</li>
+            <li>site</li>
+            <li>TYPE</li>
+            <li>PROJECT</li>
+          </ul>
+        </article>
+
+        <article class="site_info">
+          <div class="site_img">
+            <a href="https://hyunwoo10.netlify.app/" target="_blank">
+              <img src="./assets/img/site05.jpg" alt="이미지" />
+            </a>
+          </div>
+          <div class="site_explanation">
+            <h3>REACT WEB SITE</h3>
+            <p>
+              react를 이용하여 만든 사이트입니다. react컴포넌트를 적극 활용
+              했으며,reference 및 유튜브 API 같은 기능들이 구현하였습니다.
+            </p>
+            <a href="https://hyunwoo10.netlify.app/" target="_blank">
+              <div>VIEW SITE</div>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="contact">
+        <article class="contact_desc">
+          <h2>CONTACT</h2>
           <p>
-            PHP를 이용하여 만든 사이트입니다. 로그인, 회원가입, 마이페이지
-            같은 기능들이 구동되고 게시판 과 블로그 이용가능 컨텐츠까지
-            가능하도록 제작되었습니다.
+            처음 프론트엔드 개발자를 꿈꿨을 때, 제 주변 사람들이 30대에 IT업계로
+            이직하는 것은 너무 큰 도전이며, 이미 따라가기엔 늦었다고 다들 걱정
+            한 것이 기억에 남습니다. <br />
+            부족하다면 다른 사람보다 더 시간을 투자해서 내것으로 만들면 된다고
+            생각합니다. 내가 하고 싶은 일을 했을 때, 성취감은 물론 업무 성과물도
+            더 좋다고 생각을 하기 때문에 끊임없이 노력하는 개발자가 되고자
+            합니다.
           </p>
-          <a href="http://ekfvoddl0321.dothome.co.kr/project/include/main.php" target="_blank">
-            <div>VIEW SITE</div>
-          </a>
-        </div>
-      </article>
-
-      <article class="subtitle">
-        <ul>
-          <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
-          <li>PROJECT</li>
-        </ul>
-      </article>
-
-      <article class="site_info">
-        <div class="site_img">
-          <a href="http://ekfvoddl0321.dothome.co.kr/php/pages/main.php" target="_blank">
-            <img src="./assets/img/site03.jpg" alt="이미지" />
-          </a>
-        </div>
-        <div class="site_explanation">
-          <h3>PHP WEB SITE</h3>
-          <p>
-            PHP를 이용하여 만든 두번째 사이트입니다. 블로그, 검색기능, 퀴즈
-            페이지 등을 업그레이드하여 만든 사이트 입니다. 메인페이지에서 모두
-            확인 할 수 있도록 만들었습니다.
-          </p>
-          <a href="http://ekfvoddl0321.dothome.co.kr/php/pages/main.php" target="_blank">
-            <div>VIEW SITE</div>
-          </a>
-        </div>
-      </article>
-
-      <article class="subtitle">
-        <ul>
-          <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
-          <li>PROJECT</li>
-        </ul>
-      </article>
-
-      <article class="site_info">
-        <div class="site_img">
-          <a href="https://hyunwoo9.netlify.app/" target="_blank">
-            <img src="./assets/img/site04.jpg" alt="이미지" />
-          </a>
-        </div>
-        <div class="site_explanation">
-          <h3>REACT WEB SITE</h3>
-          <p>
-            react를 이용하여 만든 사이트입니다. react컴포넌트를 적극 활용
-            했으며,reference 및 유튜브 API 같은 기능들이 구현하였습니다.
-          </p>
-          <a href="https://hyunwoo9.netlify.app/" target="_blank">
-            <div>VIEW SITE</div>
-          </a>
-        </div>
-      </article>
-
-      <article class="subtitle">
-        <ul>
-          <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
-          <li>PROJECT</li>
-        </ul>
-      </article>
-
-      <article class="site_info">
-        <div class="site_img">
-          <a href="https://hyunwoo10.netlify.app/" target="_blank">
-            <img src="./assets/img/site05.jpg" alt="이미지" />
-          </a>
-        </div>
-        <div class="site_explanation">
-          <h3>REACT WEB SITE</h3>
-          <p>
-            react를 이용하여 만든 사이트입니다. react컴포넌트를 적극 활용
-            했으며,reference 및 유튜브 API 같은 기능들이 구현하였습니다.
-          </p>
-          <a href="https://hyunwoo10.netlify.app/" target="_blank">
-            <div>VIEW SITE</div>
-          </a>
-        </div>
-      </article>
-    </section>
-
-    <section class="contact">
-      <article class="contact_desc">
-        <h2>CONTACT</h2>
-        <p>
-          처음 프론트엔드 개발자를 꿈꿨을 때, 제 주변 사람들이 30대에 IT업계로
-          이직하는 것은 너무 큰 도전이며, 이미 따라가기엔 늦었다고 다들 걱정
-          한 것이 기억에 남습니다. <br />
-          부족하다면 다른 사람보다 더 시간을 투자해서 내것으로 만들면 된다고
-          생각합니다. 내가 하고 싶은 일을 했을 때, 성취감은 물론 업무 성과물도
-          더 좋다고 생각을 하기 때문에 끊임없이 노력하는 개발자가 되고자
-          합니다.
-        </p>
-      </article>
-      <article class="contact_form">
-        <h2>CONTACT FORM</h2>
-        <form>
-          <fieldset>
-            <label><input type="text" class="name" placeholder="Name" /></label>
-            <label><input type="email" class="email" placeholder="Email" /></label>
-            <label><input type="text" class="input_desc" placeholder="Massage" /></label>
-            <button type="submit">SEND</button>
-          </fieldset>
-        </form>
-      </article>
-    </section>
+        </article>
+        <article class="contact_form">
+          <h2>CONTACT FORM</h2>
+          <form>
+            <fieldset>
+              <label><input type="text" class="name" placeholder="Name" /></label>
+              <label><input type="email" class="email" placeholder="Email" /></label>
+              <label><input type="text" class="input_desc" placeholder="Massage" /></label>
+              <button type="submit">SEND</button>
+            </fieldset>
+          </form>
+        </article>
+      </section>
   </main>
 
   <!-- scrtpt -->
@@ -627,8 +537,121 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r115/three.min.js"></script>
 
+  <!-- about slider -->
+  <script id="js-vertex-shader" type="x-shader/x-vertex">
+    attribute vec3 position;
+  attribute vec2 uv;
+  uniform float u_wave;
+  uniform float u_time;
+  uniform mat4 modelViewMatrix;
+  uniform mat4 projectionMatrix;
+  varying vec2 vUv;
+
+  void main() {
+      vUv = uv;
+      float power = 1.0;
+      float x = position.x;
+      float y = position.y;
+      float z = position.z + u_wave * cos(-u_time + x * power) * sin(u_time + y * power);
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(x, y, z, 1.0);
+  }
+</script>
+  <script id="js-fragment-shader" type="x-shader/x-fragment">
+    precision mediump float;
+
+  uniform vec2 u_meshsize;
+  uniform vec2 u_texturesize;
+  uniform float u_texture_switch_01;
+  uniform float u_texture_switch_02;
+  uniform float u_texture_switch_03;
+  uniform float u_texture_switch_04;
+  uniform float u_noise_switch_01;
+  uniform float u_noise_switch_02;
+  uniform float u_noise_switch_03;
+  uniform float u_noise_switch_04;
+  uniform sampler2D u_noise_texture;
+  uniform sampler2D u_texture_01;
+  uniform sampler2D u_texture_02;
+  uniform sampler2D u_texture_03;
+  uniform sampler2D u_texture_04;
+  varying vec2 vUv;
+
+  #define PI 3.14159265359
+
+  mat2 rotate2d(float _angle){
+      return mat2(cos(_angle),-sin(_angle), sin(_angle),cos(_angle));
+  }
+
+  void main() {
+      vec2 uv = vUv;
+
+      vec2 ratio = vec2(
+          min((u_meshsize.x / u_meshsize.y) / (u_texturesize.x / u_texturesize.y), 1.0),
+          min((u_meshsize.y / u_meshsize.x) / (u_texturesize.y / u_texturesize.x), 1.0)
+      );
+
+      uv *= ratio;
+
+      float noisePower = 0.5;
+      mat2 rotate = rotate2d(PI);
+      vec4 noise_texture = texture2D(u_noise_texture, uv);
+      vec2 uv01 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_01 * noisePower;
+      vec2 uv02 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_02 * noisePower;
+      vec2 uv03 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_03 * noisePower;
+      vec2 uv04 = uv + rotate * vec2(noise_texture.r, noise_texture.g) * u_noise_switch_04 * noisePower;
+
+      vec4 texture01 = texture2D(u_texture_01, uv01);
+      vec4 texture02 = texture2D(u_texture_02, uv02);
+      vec4 texture03 = texture2D(u_texture_03, uv03);
+      vec4 texture04 = texture2D(u_texture_04, uv04);
+
+      vec4 finalPos = texture01 * u_texture_switch_01 + texture02 * u_texture_switch_02 + texture03 * u_texture_switch_03 + texture04 * u_texture_switch_04;
+      gl_FragColor = vec4(finalPos);
+  }
+</script>
+<!-- about slider -->
+<!-- main font -->
+<script id="vertexShader" type="x-shader/x-vertex">
+  void main() {
+      gl_Position = vec4( position, 1.0 );
+  }
+</script>
+<script id="fragmentShader" type="x-shader/x-fragment">
+  precision highp float;
+
+  uniform vec2 resolution;
+  uniform float time;
+  uniform vec2 mouse;
+  uniform sampler2D backbuffer;
+
+  vec3 wave(vec2 uv,float speed, float thickness, float amplitude, float delay, vec3 color){
+      float shake = mix(0.0, 1.0, amplitude);
+      float wave = sin(delay + mod(uv.x+uv.y/2.0,0.25) * 1.0 - time * speed ) / 5.0 * shake;
+      float colwave = thickness /  abs((1.0-length(uv))+wave); //線の太さ
+      return color * colwave;
+  }
+
+  float random (in vec2 st) {
+      return fract(cos(dot(st.xy,vec2(12.9898,78.233))) * 43758.5453123);
+  }
+
+  void main(void) {
+      vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+      vec3 col0 = wave(uv,0.1,0.08,8.0,5., vec3(0.6, 0.6, 0.6));
+      vec3 col1 = wave(uv,0.2,0.08,9.0,6., vec3(0.4, 0.9, 0.9));
+      vec3 col2 = wave(uv,0.2,0.08,10.0,7., vec3(0.6, 0.9, 0.9));
+      vec3 col3 = wave(uv,0.1,0.08,11.0,8., vec3(0.6, 0.6, 0.6));
+
+      //vec3 col = col0+col1+col2+col3;
+      vec3 col = col0+col1;
+
+      gl_FragColor = vec4(vec3(col), 1.0);
+  }
+</script>
+<!-- //main font -->
 
   <!-- page -->
   <script src="./js/highlight.min.js"></script>
@@ -638,45 +661,6 @@
   <script src="./js/effect.js"></script>
 
 
-
-
-  <script id="vertexShader" type="x-shader/x-vertex">
-    void main() {
-        gl_Position = vec4( position, 1.0 );
-    }
-  </script>
-  <script id="fragmentShader" type="x-shader/x-fragment">
-    precision highp float;
-
-    uniform vec2 resolution;
-    uniform float time;
-    uniform vec2 mouse;
-    uniform sampler2D backbuffer;
-
-    vec3 wave(vec2 uv,float speed, float thickness, float amplitude, float delay, vec3 color){
-        float shake = mix(0.0, 1.0, amplitude);
-        float wave = sin(delay + mod(uv.x+uv.y/2.0,0.25) * 1.0 - time * speed ) / 5.0 * shake;
-        float colwave = thickness /  abs((1.0-length(uv))+wave); //線の太さ
-        return color * colwave;
-    }
-
-    float random (in vec2 st) {
-        return fract(cos(dot(st.xy,vec2(12.9898,78.233))) * 43758.5453123);
-    }
-
-    void main(void) {
-        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-        vec3 col0 = wave(uv,0.1,0.08,8.0,5., vec3(0.6, 0.6, 0.6));
-        vec3 col1 = wave(uv,0.2,0.08,9.0,6., vec3(0.4, 0.9, 0.9));
-        vec3 col2 = wave(uv,0.2,0.08,10.0,7., vec3(0.6, 0.9, 0.9));
-        vec3 col3 = wave(uv,0.1,0.08,11.0,8., vec3(0.6, 0.6, 0.6));
-
-        //vec3 col = col0+col1+col2+col3;
-        vec3 col = col0+col1;
-
-        gl_FragColor = vec4(vec3(col), 1.0);
-    }
-  </script>
   <script>
     hljs.highlightAll();
     modal();
@@ -698,24 +682,7 @@
     }
     scroll();
 
-    var textWrapper = document.querySelector(".intro-title");
-      textWrapper.innerHTML = textWrapper.textContent.replace(
-        /([^\x00-\x80]|\w)/g,
-        "<span class='letter'>$&</span>"
-      );
 
-      anime.timeline({ loop: false }).add({
-        targets: ".intro-title .letter",
-        translateX: [170, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutExpo",
-        duration: 2000,
-        // delay: 2,
-        delay: function (el, i) {
-          return 2000 + 50 * i;
-        },
-      });
   </script>
 </body>
 
