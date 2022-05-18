@@ -1,22 +1,47 @@
 @font-face {
-    font-family: "Palatino Linotype";
-    src: url(../font/Palatino\ Linotype.ttf);
+  font-family: "Palatino Linotype";
+  src: url(../font/Palatino\ Linotype.ttf);
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
 @font-face {
-    font-family: "Fabringo";
-    src: url(../font/FontsFree-Net-Fabringo.ttf);
+  font-family: "Fabringo";
+  src: url(../font/FontsFree-Net-Fabringo.ttf);
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
 @font-face {
-    font-family: "ChosunilboNM";
-    src: url(../font/ChosunilboNM\ Regular.ttf);
+  font-family: "ChosunilboNM";
+  src: url(../font/ChosunilboNM\ Regular.ttf);
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
 /* Playfair Display */
 /* font-family: 'Playfair Display', serif; */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap");
+
+/* font-family: 'Chathura', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700;800&display=swap");
+
+/* main font */
+@font-face {
+  font-family: "GilroyLight";
+  src: url(../font/Gilroy-Light.otf);
+}
+/* Gilroy-Bold
+Gilroy-Heavy
+Gilroy-Light
+Gilroy-Medium
+Gilroy-Regular
+Gilroy-Extra Bold */
+/* main font */
+
+/* sub font */
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+/* font-family: 'Abel', sans-serif; */
+
+/* GilroyExtraBold */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url(../font/Gilroy-ExtraBold.otf);
+}

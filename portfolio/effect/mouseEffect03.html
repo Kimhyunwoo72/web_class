@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+   <!-- 파비콘 -->
+   <link rel="shortcut icon" href="../../assets/face/javascript.png">
+   <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
+   <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
+
+    <link rel="stylesheet" href="css/NexonLv1Gothic.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/cdnjs.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        body::before {
+            /* background: rgba(70, 61, 56, 1); */
+            background: #222;
+        }
+
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        .mouse__wrap p:last-child {
+            font-size: 3vw;
+            font-weight: 400;
+        }
+
+        .mouse__wrap p span {
+            border-bottom: 0.15vw solid tomato;
+            color: tomato;
+
+        }
+
+        .cursor {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            background-image: url(./img/img11.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body class="img07">
+    <main>
+        <section id="mouseType01">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+            <div class="mouse__wrap">
+                <p><span> Mistakes</span> are the beginning of discovery.</p>
+                <p><span>실수는</span> 발견의 시작이다. </p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- info  -->
+    <div class="info">
+        <div class="number">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li class="active"><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+            </ul>
+        </div>
+
+        <div class="source">
+            <button class="source-btn">소스보기</button>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="modal-cont">
+                        <div class="code-view">
+                            <div class="view-header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view-cont">
+                                <div>
+                                    <pre><code class="language-html">
+
+
+
+    &lt;main&gt;
+        &lt;section id="mouseType01"&gt;
+            &lt;div class="cursor"&gt;&lt;/div&gt;
+            &lt;div class="mouse__wrap"&gt;
+
+                &lt;p&gt;&gt;&lt;span&gt; Mistakes&lt;/span&gt; are the beginning of discovery.&lt;/p&gt;
+                &lt;p&gt;&gt;&lt;span&gt;실수는&lt;/span&gt; 발견의 시작이다. &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+</code></pre>
+                                </div>
+                                <div>
+                                    <pre><code class="language-css">
+
+
+
+    body::before {
+        background: rgba(70, 61, 56, 1);
+    }
+
+    .mouse__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        cursor: none;
+    }
+
+    .mouse__wrap p {
+        font-size: 2.5vw;
+        line-height: 2;
+        font-weight: 300;
+    }
+
+    .mouse__wrap p:last-child {
+        font-size: 3vw;
+        font-weight: 400;
+    }
+
+    .mouse__wrap p span {
+        border-bottom: 0.15vw solid tomato;
+        color: tomato;
+
+    }
+
+    .cursor {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 200px;
+        height: 200px;
+        z-index: -1;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        background-image: url(./img/img11.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    </code></pre>
+                                </div>
+                                <div>
+                                    <pre><code class="language-javascript">
+
+
+                                        
+    const circle = document.querySelector(".cursor").getBoundingClientRect(); //요소의 정보값(bottom,height,left, right, top, width, x, y)
+
+    function follow (e){
+        gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
+
+        //출력용
+        document.querySelector(".pageX").innerText = e.pageX
+        document.querySelector(".pageY").innerText = e.pageY
+    }
+
+    window.addEventListener("mousemove", follow)
+    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+        <!-- //info -->
+
+        <!-- script -->
+        <script src="js/highlight.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/gsap.min.js"></script>
+        <script>
+            hljs.highlightAll();
+            modal()
+            tabMenu()
+            
+            // const circle1 = document.querySelector(".cursor").clientWidth //190 : border 값이 빠진상태
+            // const circle2 = document.querySelector(".cursor").offsetWidth //200: border 값이 들어간 상태
+            const circle = document.querySelector(".cursor").getBoundingClientRect(); //요소의 정보값(bottom,height,left, right, top, width, x, y)
+            // console.log(circle);
+            // const cursor = document.querySelector(".cursor")
+            // const span = document.querySelectorAll(".mouse__wrap span")
+            // const info = document.querySelectorAll(".number ul li")
+            // const title = document.querySelectorAll(".title")
+
+            function follow (e){
+                gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
+
+            }
+
+            window.addEventListener("mousemove", follow)
+        </script>
+</body>
+
+</html>
