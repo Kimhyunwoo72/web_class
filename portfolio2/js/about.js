@@ -19,7 +19,7 @@ if (windowWidth <= 750) {
       start: "5% center",
     },
     opacity: 0,
-    y: 100,
+    y: 150,
     duration: 1,
   });
   gsap.to(".about_title h2", {
@@ -30,7 +30,7 @@ if (windowWidth <= 750) {
     },
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 1.5,
   });
   // about_title
 

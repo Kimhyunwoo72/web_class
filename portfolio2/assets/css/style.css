@@ -527,7 +527,7 @@ h2 {
   line-height: 51px;
   margin-top: -30px;
   text-align: center;
-  border: 2px solid #d4d3d3;
+  border: 1px solid #d4d3d3;
   border-radius: 55px;
   opacity: 0;
   visibility: hidden;
@@ -603,6 +603,51 @@ h2 {
   color: #000;
   padding-bottom: 15vw;
 }
+.effect_text {
+  width: 100%;
+  height: 19vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.effect_text > .effect_line1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white_border);
+  opacity: 0;
+}
+.effect_text > .effect_line2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white_border);
+  opacity: 0;
+}
+
+.effect_text h2 {
+  font-size: 6vw;
+  line-height: 1.03;
+  font-weight: 500;
+  padding-left: 5vw;
+}
+.effect_text h2 span {
+  font-weight: bold;
+}
+
+.effect_desc {
+  font-size: 1vw;
+  line-height: 1.6;
+  font-family: var(--desc_font);
+  padding-top: 6vw;
+  padding-right: 5vw;
+  opacity: 0;
+}
 
 .text {
   width: 100%;
@@ -674,13 +719,34 @@ h2 {
 .effect_info {
   display: flex;
   height: 41vw;
-  border-bottom: 1px solid var(--white_border);
+  /* border-bottom: 1px solid var(--white_border); */
+}
+.effect_info1,
+.effect_info2 {
+  position: relative;
+}
+.effect_info1 > .effectInfo_line1,
+.effect_info2 > .effectInfo_line1 {
+  width: 1px;
+  height: 100%;
+  background-color: var(--white_border);
+  opacity: 0;
+}
+.effect_info1 > .effectInfo_line2,
+.effect_info2 > .effectInfo_line2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white_border);
+  opacity: 0;
 }
 
 .effect_explanation {
   width: 30%;
   height: 100%;
-  border-right: 1px solid var(--white_border);
+  /* border-right: 1px solid var(--white_border); */
   position: relative;
 }
 
@@ -718,17 +784,30 @@ h2 {
   display: inline-block;
   margin-left: 6vw;
 }
-
+.iframe {
+  width: 85%;
+  height: 74%;
+  overflow: hidden;
+}
 .effect_iframe {
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
-
+.iframe_bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 99%;
+  background-color: #fff;
+  z-index: 1000;
+}
 .slider_effect {
-  width: 85%;
-  height: 74%;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 750px) {
