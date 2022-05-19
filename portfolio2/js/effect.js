@@ -1,4 +1,3 @@
-var windowWidth = window.innerWidth;
 gsap.from(".effect_text1 .effect_desc", {
   scrollTrigger: {
     trigger: ".effect_text",
