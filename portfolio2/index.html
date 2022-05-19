@@ -8,7 +8,9 @@
   <title>portpolio</title>
 
   <style>
-
+body {
+  /* height: auto !important; */
+}
   </style>
 
   <!-- 폰트 -->
@@ -253,7 +255,13 @@
       </article>
       <!-- //4 -->
 
-      <section class="gmae_wrap">
+      <!-- game -->
+      <section class="gmae_wrap fixed"
+      data-7300="top: 200%"
+      data-7441="top: 20%"
+      data-13000="top: 20%"
+      data-14000="top: -100%"
+      >
         <article class="row_mode">
           <h2 class="row">
             <span>JAVASCRIPT</span> <br />
@@ -266,11 +274,16 @@
           </p>
         </article>
 
-        <article class="gmae_info">
-          <h3>GAME EFFECT01</h3>
+        <!-- 가로모드 -->
+        <div class="game_row"
+        data-7828="transform: translateX(0%)"
+        data-13000="transform: translateX(-75%)"
+        >
+          <article class="gmae_info">
+            <h3>GAME EFFECT01</h3>
           <p>JAVASCRIPT를 이용한 테트리스게임</p>
           <!-- info -->
-          <div class="source source01" overscroll-behavior: none>
+          <div class="source source01">
             <img src="./assets/img/game01.jpg" alt="이미지" />
             <button class="source-btn source-btn01">게임하기</button>
             <div id="modal01">
@@ -342,6 +355,8 @@
           <p>JAVASCRIPT를 이용한 뮤직플레이어</p>
           <iframe class="music_effect" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
         </article>
+      </div>
+        <!-- //가로모드 -->
       </section>
 
       <section class="site_wrap">

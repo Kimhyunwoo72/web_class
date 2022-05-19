@@ -490,8 +490,13 @@
     height: 60vh !important;
   }
 }
-/* .slider__img01 {
 
+.fixed {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 /* //slider */
 @media (max-width: 750px) {
   .slider__img01 {
@@ -510,7 +515,7 @@
   padding-top: 15vw;
   background-color: #fff;
   color: #000;
-  padding-bottom: 15vw;
+  /* padding-bottom: 15vw; */
 }
 .effect_text {
   width: 100%;
@@ -586,10 +591,10 @@
   padding-top: 6vw;
   padding-right: 5vw;
 }
-.source img {
+/* .source img {
   width: 100%;
   padding: 0px 10vw;
-}
+} */
 /* 가로모드 */
 
 .text {
@@ -852,7 +857,7 @@ padding: 56.25% 0 0 0;
   background-color: #fff;
   color: #000;
   padding-top: 15vw;
-  padding-bottom: 15vw;
+  /* padding-bottom: 15vw; */
 }
 .gmae_effect {
   width: 100%;
@@ -863,6 +868,13 @@ padding: 56.25% 0 0 0;
   padding: 0 17vw;
   height: 26vw;
 }
+/* 가로모드 */
+.game_row {
+  display: flex;
+  position: relative;
+  width: 400%;
+}
+/* //가로모드 */
 .gmae_info {
   display: flex;
   align-items: center;
@@ -870,6 +882,7 @@ padding: 56.25% 0 0 0;
   height: 36vw;
   width: 100%;
   border-bottom: 1px solid var(--white_border);
+  overflow-y: hidden;
 }
 
 .gmae_info h3 {
