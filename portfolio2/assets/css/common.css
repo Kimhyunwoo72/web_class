@@ -5,7 +5,12 @@
   --sub_font: "Palatino Linotype";
   --desc_font: "ChosunilboNM";
 }
-
+.fixed {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 /* 간격 셋팅 */
 .mt0 {
   margin-top: 0 !important;
