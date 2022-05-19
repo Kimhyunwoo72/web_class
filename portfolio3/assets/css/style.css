@@ -618,12 +618,41 @@
   font-family: var(--desc_font);
   padding-top: 6vw;
   padding-right: 5vw;
+  opacity: 0;
 }
 /* subtitle */
 .subtitle {
   height: 3vw;
-  border-top: 1px solid #cda89f;
-  background-color: #2a1a16;
+  position: relative;
+  /* border-top: 1px solid #cda89f; */
+}
+.site_line2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #cda89f;
+  opacity: 0;
+}
+.site_line3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #cda89f;
+  opacity: 0;
+}
+.site_line4,
+.site_line5,
+.site_line6,
+.site_line7,
+.site_line8 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #cda89f;
+  opacity: 1;
 }
 .subtitle ul {
   height: 100%;
@@ -852,7 +881,7 @@ padding: 56.25% 0 0 0;
   background-color: #fff;
   color: #000;
   padding-top: 15vw;
-  /* padding-bottom: 15vw; */
+  margin-bottom: 15vw;
 }
 .gmae_effect {
   width: 100%;
@@ -938,8 +967,40 @@ padding: 56.25% 0 0 0;
 /* //gmae */
 
 /* site */
-.text.beige {
-  border-top: 1px solid #cda89f;
+
+.site_text {
+  width: 100%;
+  height: 19vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.site_line1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #cda89f;
+  opacity: 0;
+}
+.site_text h2 {
+  font-size: 6vw;
+  line-height: 1.03;
+  font-weight: 500;
+  padding-left: 5vw;
+}
+.site_text h2 span {
+  font-weight: bold;
+}
+.site_text .desc {
+  font-size: 1vw;
+  line-height: 1.6;
+  font-family: var(--desc_font);
+  padding-top: 6vw;
+  padding-right: 5vw;
+  opacity: 0;
 }
 
 .site_wrap {
@@ -958,16 +1019,22 @@ padding: 56.25% 0 0 0;
 .site_info {
   display: flex;
   height: 28vw;
-  /* margin-bottom: 5vw; */
-  border-bottom: 1px solid #cda89f;
-  border-top: 1px solid #cda89f;
+  margin-bottom: 5vw;
+  /* border-bottom: 1px solid #cda89f; */
+  /* border-top: 1px solid #cda89f; */
   background-color: #2a1a16;
+  position: relative;
+}
+.siteH_line {
+  width: 1px;
+  height: 0%;
+  background-color: #cda89f;
 }
 
 .site_explanation {
   width: 40%;
   height: 100%;
-  border-left: 1px solid #cda89f;
+  /* border-left: 1px solid #cda89f; */
   position: relative;
 }
 
