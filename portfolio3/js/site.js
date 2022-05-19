@@ -175,6 +175,19 @@ gsap.to(".site_info2 .siteH_line", {
   delay: 0.2,
   height: 100 + "%",
 });
+
+// img
+gsap.to(".site_info2 .siteImg_bg", {
+  scrollTrigger: {
+    trigger: ".site_wrap",
+    markers: true,
+    start: "top center",
+  },
+  ease: "power2.out",
+  duration: 2,
+  delay: 0.3,
+  height: 0,
+});
 // 2
 
 // 3
@@ -241,6 +254,19 @@ gsap.to(".site_info3 .siteH_line", {
   duration: 2,
   delay: 0.2,
   height: 100 + "%",
+});
+
+// img
+gsap.to(".site_info3 .siteImg_bg", {
+  scrollTrigger: {
+    trigger: ".site_wrap",
+    markers: true,
+    start: "top center",
+  },
+  ease: "power2.out",
+  duration: 2,
+  delay: 0.3,
+  height: 0,
 });
 // 3
 
@@ -309,6 +335,19 @@ gsap.to(".site_info4 .siteH_line", {
   delay: 0.2,
   height: 100 + "%",
 });
+
+// img
+gsap.to(".site_info4 .siteImg_bg", {
+  scrollTrigger: {
+    trigger: ".site_wrap",
+    markers: true,
+    start: "top center",
+  },
+  ease: "power2.out",
+  duration: 2,
+  delay: 0.3,
+  height: 0,
+});
 // 4
 
 // 5
@@ -375,5 +414,18 @@ gsap.to(".site_info5 .siteH_line", {
   duration: 2,
   delay: 0.2,
   height: 100 + "%",
+});
+
+// img
+gsap.to(".site_info5 .siteImg_bg", {
+  scrollTrigger: {
+    trigger: ".site_wrap",
+    markers: true,
+    start: "top center",
+  },
+  ease: "power2.out",
+  duration: 2,
+  delay: 0.3,
+  height: 0,
 });
 // 5
