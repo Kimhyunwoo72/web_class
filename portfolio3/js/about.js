@@ -237,17 +237,17 @@ window.addEventListener("load", function () {
 
     // 반응형 끝
   } else {
-    gsap.to(".about_title", {
-      scrollTrigger: {
-        scroller: pageContents,
-        trigger: ".about_page",
-        toggleActions: "resume pause reset pause",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      duration: 1,
-    });
+    // gsap.to(".about_title", {
+    //   scrollTrigger: {
+    //     scroller: pageContents,
+    //     trigger: ".about_page",
+    //     toggleActions: "resume pause reset pause",
+    //     markers: true,
+    //     start: "5% center",
+    //   },
+    //   opacity: 1,
+    //   duration: 1,
+    // });
 
     // about_title
     // gsap.from(".about_title h2", {
