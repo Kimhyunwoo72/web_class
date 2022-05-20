@@ -8,24 +8,30 @@
   <title>portpolio</title>
 
   <style>
-    #reveal-effect {
-      position: fixed;
-      top: 0%;
-      left: 0%;
+    .nim {
       width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: all 2s;
+      height: 50vh;
+      background-color: #ccc;
     }
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-    body.loaded #reveal-effect {
-      opacity: 1;
-    }
-
-    #page {
-      height: 100vh;
-      width: 100%;
-    }
+      .wrapper .line {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+      .wrapper .line span {
+        position: absolute;
+        font-size: 2rem;
+        color: #000;
+      }
   </style>
 
   <!-- 폰트 -->
@@ -100,7 +106,8 @@
     </section>
     <!--  //main_page -->
 
-    <!-- about_page 1-->
+
+    <!-- about_page-->
     <section class="about_page">
       <div class="container">
         <article class="about_title">
@@ -159,6 +166,27 @@
       </article>
 
     </section>
+        <!-- about_page-->
+
+      <div class="wrapper">
+        <div class="line">
+          <span>처음 프론트엔드 개발자를 꿈꿨을 때, 제</span>
+        </div>
+        <div class="line">
+          <span> 주변 사람들이 30대에 IT업계로 이직하는</span>
+        </div>
+        <div class="line">
+          <span>것은 너무 큰 도전이며, 이미 따라가기엔</span>
+        </div>
+        <div class="line">
+          <span>늦었다고 다들 걱정 한 것이 기억에 남습</span>
+        </div>
+        <div class="line">
+          <span>니다. 부족하다면 다른 사람보다 더 시간</span>
+        </div>
+      </div>
+
+
     <!-- end of hero slider -->
     <div class="gradient"></div>
     <!-- game -->
@@ -639,7 +667,7 @@
       </article>
     </section>
 
-    <div class="gradient3"></div>
+    <div class="gradient"></div>
 
     <section class="contact">
       <div class="contact_wrap">
@@ -834,6 +862,24 @@
       requestAnimationFrame(scroll);
     }
     scroll();
+
+    const textrev = gsap.timeline();
+
+textrev.from(".line span", 1.8, {
+
+  y: 200,
+  ease: "power4.out",
+  delay: 1,
+  skewY: 10,
+  stagger: {
+    amount: 0.7,
+  },
+  scrollTrigger: {
+      trigger: ".wrapper",
+      markers: true,
+      start: "5% center",
+    },
+});
 
     /* 사이트 모션*/
     $(".hover").mouseleave(function () {
