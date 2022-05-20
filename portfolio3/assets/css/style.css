@@ -1,7 +1,7 @@
 .scrollTop {
   position: fixed;
   right: 40px;
-  top: 40px;
+  bottom: 40px;
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
   width: 60px;
@@ -176,6 +176,7 @@
   overflow: hidden;
   padding-left: 5vw;
   line-height: 1;
+  z-index: 100;
 }
 .intro-title .letter {
   display: inline-block;
