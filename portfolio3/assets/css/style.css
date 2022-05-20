@@ -185,8 +185,12 @@
 .intro-title1 {
   font-weight: bold;
 }
+.loader .intro-title1 {
+  font-family: var(--main_font2);
+}
 .loader .intro-title2 {
   font-weight: 100;
+  font-family: var(--main_font);
 }
 .loader .intro-title1,
 .loader .intro-title2 {
@@ -478,6 +482,7 @@
   align-items: center;
   opacity: 0;
   letter-spacing: 0.2vw;
+  font-family: var(--main_font);
 }
 
 @media (max-width: 1000px) {
@@ -564,9 +569,11 @@
   line-height: 1.03;
   font-weight: 500;
   padding-left: 5vw;
+  font-family: var(--main_font);
 }
 .effect_text h2 span {
   font-weight: bold;
+  font-family: var(--main_font2);
 }
 
 .effect_desc {
@@ -761,6 +768,7 @@
   height: 100%;
   /* border-right: 1px solid var(--white_border); */
   position: relative;
+  font-family: var(--main_font);
 }
 
 .effect_explanation h3 {
@@ -925,21 +933,36 @@
   left: 25%;
   font-size: 5vw;
   color: #000;
+  font-family: var(--main_font);
 }
-.play_effect {
+/* .play_effect {
   width: 100%;
   margin: 0 15vw 0 16vw;
   color: #000;
+} */
+.play_effect {
+  width: 70vw;
+  height: 45vw;
+  overflow: hidden;
+  margin: 0 15vw 0 16vw;
+  color: #000;
+}
+.play_effect img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .play_effect h3 {
   padding-top: 10vw;
   font-size: 3vw;
   text-align: center;
+  font-family: var(--main_font);
 }
 .play_effect p {
   font-size: 1vw;
   text-align: center;
   padding-bottom: 2vw;
+  font-family: var(--desc_font);
 }
 .gameIframe {
   width: 70vw;
@@ -972,9 +995,11 @@
   line-height: 1.03;
   font-weight: 500;
   padding-left: 5vw;
+  font-family: var(--main_font);
 }
 .site_text h2 span {
   font-weight: bold;
+  font-family: var(--main_font2);
 }
 .site_text .desc {
   font-size: 1vw;
@@ -1075,6 +1100,7 @@
   font-size: 3vw;
   font-weight: 300;
   padding: 2vw 0 0 2.2vw;
+  font-family: var(--main_font);
 }
 
 .site_explanation p {
@@ -1165,10 +1191,9 @@ figure.snipText {
   position: relative;
   overflow: hidden;
   width: 92%;
-  color: #ffffff;
+  color: #cda89f;
   text-align: center;
   font-size: 16px;
-  background-color: #000000;
 }
 
 figure.snipText *,
@@ -1198,12 +1223,12 @@ figure.snipText .hidText:after {
   width: 40vw;
   position: absolute;
   content: "";
-  background-color: #ffffff;
+  background-color: #cda89f;
 }
 
 figure.snipText .hidText:before {
   top: 0;
-  left: 1vw;
+  left: 0.5vw;
   transform: translateX(200%);
 }
 
@@ -1216,10 +1241,10 @@ figure.snipText .hidText:after {
 figure.snipText .hidText div:before,
 figure.snipText .hidText div:after {
   width: 2px;
-  height: 300px;
+  height: 20vw;
   position: absolute;
   content: "";
-  background-color: #ffffff;
+  background-color: #cda89f;
 }
 
 figure.snipText .hidText div:before {
@@ -1248,9 +1273,9 @@ figure.snipText h2 {
 figure.snipText h4 {
   display: block;
   font-weight: 700;
-  background-color: #ffffff;
+  background-color: rgb(205, 168, 159);
   padding: 5px 10px;
-  color: #000000;
+  color: #fff;
 }
 
 figure.snipText figcaption {
@@ -1326,6 +1351,7 @@ figure.snipText:hover figcaption {
 .contact_desc h2 {
   font-size: 3.5vw;
   font-weight: 200;
+  font-family: var(--main_font);
 }
 
 .contact_desc p {
@@ -1344,6 +1370,7 @@ figure.snipText:hover figcaption {
   padding-bottom: 5vw;
   font-size: 3.5vw;
   font-weight: 200;
+  font-family: var(--main_font);
 }
 
 .contact_form fieldset {
