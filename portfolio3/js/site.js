@@ -92,7 +92,6 @@ gsap.to(".site_info1 .siteH_line", {
   ease: "power2.out",
   opacity: 1,
   duration: 2,
-  delay: 0.3,
   height: 100 + "%",
 });
 
@@ -105,8 +104,33 @@ gsap.to(".site_info1 .siteImg_bg", {
   },
   ease: "power2.out",
   duration: 2,
-  delay: 0.3,
   height: 0,
+});
+// 축소
+gsap.from(".siteImg1", {
+  scrollTrigger: {
+    trigger: ".site_wrap",
+    markers: true,
+    start: "5% center",
+  },
+  duration: 3,
+  ease: "power1.out",
+  scaleX: 1.3,
+  scaleY: 1.3,
+});
+
+gsap.to(".siteImg1", {
+  scrollTrigger: {
+    trigger: ".site_wrap",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  duration: 1.2,
+  ease: "power1.out",
+  delay: 1.2,
+  scleX: 1,
+  scleY: 1,
 });
 // 1
 
@@ -179,14 +203,40 @@ gsap.to(".site_info2 .siteH_line", {
 // img
 gsap.to(".site_info2 .siteImg_bg", {
   scrollTrigger: {
-    trigger: ".site_wrap",
+    trigger: ".subtitle2",
     markers: true,
     start: "top center",
   },
   ease: "power2.out",
   duration: 2,
-  delay: 0.3,
   height: 0,
+});
+
+// 축소
+gsap.from(".siteImg2", {
+  scrollTrigger: {
+    trigger: ".subtitle2",
+    markers: true,
+    start: "5% center",
+  },
+  duration: 3,
+  ease: "power1.out",
+  scaleX: 1.3,
+  scaleY: 1.3,
+});
+
+gsap.to(".siteImg2", {
+  scrollTrigger: {
+    trigger: ".subtitle2",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  duration: 1.2,
+  ease: "power1.out",
+  delay: 1.2,
+  scleX: 1,
+  scleY: 1,
 });
 // 2
 
@@ -259,14 +309,40 @@ gsap.to(".site_info3 .siteH_line", {
 // img
 gsap.to(".site_info3 .siteImg_bg", {
   scrollTrigger: {
-    trigger: ".site_wrap",
+    trigger: ".subtitle3",
     markers: true,
     start: "top center",
   },
   ease: "power2.out",
   duration: 2,
-  delay: 0.3,
   height: 0,
+});
+
+// 축소
+gsap.from(".siteImg3", {
+  scrollTrigger: {
+    trigger: ".subtitle3",
+    markers: true,
+    start: "5% center",
+  },
+  duration: 3,
+  ease: "power1.out",
+  scaleX: 1.3,
+  scaleY: 1.3,
+});
+
+gsap.to(".siteImg3", {
+  scrollTrigger: {
+    trigger: ".subtitle3",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  duration: 1.2,
+  ease: "power1.out",
+  delay: 1.2,
+  scleX: 1,
+  scleY: 1,
 });
 // 3
 
@@ -339,14 +415,40 @@ gsap.to(".site_info4 .siteH_line", {
 // img
 gsap.to(".site_info4 .siteImg_bg", {
   scrollTrigger: {
-    trigger: ".site_wrap",
+    trigger: ".subtitle4",
     markers: true,
     start: "top center",
   },
   ease: "power2.out",
   duration: 2,
-  delay: 0.3,
   height: 0,
+});
+
+// 축소
+gsap.from(".siteImg4", {
+  scrollTrigger: {
+    trigger: ".subtitle4",
+    markers: true,
+    start: "5% center",
+  },
+  duration: 3,
+  ease: "power1.out",
+  scaleX: 1.3,
+  scaleY: 1.3,
+});
+
+gsap.to(".siteImg4", {
+  scrollTrigger: {
+    trigger: ".subtitle4",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  duration: 1.2,
+  ease: "power1.out",
+  delay: 1.2,
+  scleX: 1,
+  scleY: 1,
 });
 // 4
 
@@ -419,13 +521,39 @@ gsap.to(".site_info5 .siteH_line", {
 // img
 gsap.to(".site_info5 .siteImg_bg", {
   scrollTrigger: {
-    trigger: ".site_wrap",
+    trigger: ".subtitle5",
     markers: true,
     start: "top center",
   },
   ease: "power2.out",
   duration: 2,
-  delay: 0.3,
   height: 0,
+});
+
+// 축소
+gsap.from(".siteImg5", {
+  scrollTrigger: {
+    trigger: ".subtitle5",
+    markers: true,
+    start: "5% center",
+  },
+  duration: 3,
+  ease: "power1.out",
+  scaleX: 1.3,
+  scaleY: 1.3,
+});
+
+gsap.to(".siteImg5", {
+  scrollTrigger: {
+    trigger: ".subtitle5",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  duration: 1.2,
+  ease: "power1.out",
+  delay: 1.2,
+  scleX: 1,
+  scleY: 1,
 });
 // 5

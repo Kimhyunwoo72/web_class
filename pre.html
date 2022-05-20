@@ -6,165 +6,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      @import url("https://use.typekit.net/skn8ash.css");
-      @import url("https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css");
-
-      /* body {
-        font-family: termina, sans-serif;
-        color: var(--text-color);
-        background: var(--bg-color);
-        transition: 0.3s ease-out;
-        overflow-x: hidden;
-        max-width: 100%;
-        width: 100%;
-        overscroll-behavior: none;
-      } */
-
-      /* section:not(#sectionPin) {
-        min-height: 100vh;
-        width: 100%;
+      figure.snipText {
+        font-family: "Raleway", Arial, sans-serif;
         position: relative;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 2rem;
-        padding: 50px 10vw;
-        margin: auto;
-        place-items: center;
-      } */
-
-      /* img {
-        height: 80vh;
-        width: auto;
-        object-fit: cover;
-      } */
-
-      #sectionPin {
-        height: 100vh;
         overflow: hidden;
-        display: flex;
-        left: 0;
-        background: var(--text-color);
-        color: var(--bg-color);
+        margin: 10px;
+        min-width: 230px;
+        max-width: 315px;
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+        font-size: 16px;
+        background-color: #000000;
       }
 
-      .pin-wrap {
-        height: 100vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 50px 10vw;
+      figure.snipText *,
+      figure.snipText *:before,
+      figure.snipText *:after {
+        box-sizing: border-box;
+        transition: all 0.55s ease;
       }
-      .pin-wrap > * {
-        min-width: 60vw;
-        padding: 0 5vw;
+
+      figure.snipText img {
+        max-width: 100%;
+        backface-visibility: hidden;
+        vertical-align: top;
+        opacity: 0.9;
+      }
+
+      figure.snipText .hidText {
+        position: absolute;
+        top: 58%;
+        left: 25px;
+        padding: 5px 10px 10px;
+      }
+
+      figure.snipText .hidText:before,
+      figure.snipText .hidText:after {
+        height: 2px;
+        width: 400px;
+        position: absolute;
+        content: "";
+        background-color: #ffffff;
+      }
+
+      figure.snipText .hidText:before {
+        top: 0;
+        left: 10px;
+        transform: translateX(100%);
+      }
+
+      figure.snipText .hidText:after {
+        bottom: 0;
+        right: 10px;
+        transform: translateX(-100%);
+      }
+
+      figure.snipText .hidText div:before,
+      figure.snipText .hidText div:after {
+        width: 2px;
+        height: 300px;
+        position: absolute;
+        content: "";
+        background-color: #ffffff;
+      }
+
+      figure.snipText .hidText div:before {
+        top: 10px;
+        right: 0;
+        transform: translateY(100%);
+      }
+
+      figure.snipText .hidText div:after {
+        bottom: 10px;
+        left: 0;
+        transform: translateY(-100%);
+      }
+
+      figure.snipText h2,
+      figure.snipText h4 {
+        margin: 0;
+        text-transform: uppercase;
+        opacity: 0;
+      }
+
+      figure.snipText h2 {
+        font-weight: 400;
+      }
+
+      figure.snipText h4 {
+        display: block;
+        font-weight: 700;
+        background-color: #ffffff;
+        padding: 5px 10px;
+        color: #000000;
+      }
+
+      figure.snipText figcaption {
+        position: absolute;
+        bottom: 42%;
+        left: 25px;
+        text-align: left;
+        opacity: 0;
+        padding: 5px 60px 5px 10px;
+        font-size: 0.8em;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+      }
+
+      figure.snipText figcaption p {
+        margin: 0;
+      }
+
+      figure.snipText a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      figure.snipText:hover img {
+        zoom: 1;
+        filter: alpha(opacity=35);
+        opacity: 0.35;
+      }
+
+      figure.snipText:hover h2,
+      figure.snipText:hover h4 {
+        opacity: 1;
+      }
+
+      figure.snipText:hover .hidText:before,
+      figure.snipText:hover .hidText:after,
+      figure.snipText:hover .hidText div:before,
+      figure.snipText:hover .hidText div:after {
+        transform: translate(0, 0);
+      }
+
+      figure.snipText:hover .hidText:before,
+      figure.snipText:hover .hidText:after {
+        transition-delay: 0.15s;
+        opacity: 1;
+      }
+
+      figure.snipText:hover figcaption {
+        opacity: 1;
+        transition-delay: 0.2s;
       }
     </style>
   </head>
+
   <body>
-    <div class="container">
-      <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+    <figure class="snipText">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample38.jpg"
+        alt="sample38"
+      />
+      <div class="hidText">
         <div>
-          <h1 data-scroll data-scroll-speed="1">
-            <span>Horizontal</span> <span>scroll</span> <span>section</span>
-          </h1>
-          <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
-            with GSAP ScrollTrigger & Locomotive Scroll
-          </p>
+          <h2>CLICK</h2>
+          <h4>VIEW SITE</h4>
         </div>
-      </section>
-
-      <section id="sectionPin">
-        <div class="pin-wrap">
-          <img
-            src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
-          <img
-            src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt=""
-          />
-        </div>
-      </section>
-      <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
-        <img
-          src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt=""
-        />
-        <h2 data-scroll data-scroll-speed="1" class="credit">
-          <a href="https://thisisadvantage.com" target="_blank"
-            >Made by Advantage</a
-          >
-        </h2>
-      </section>
-    </div>
-
+      </div>
+      <figcaption>
+        <p>
+          Which is worse, that everyone has his price, or that the price is
+          always so low.
+        </p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+    `
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      const pageContainer = document.querySelector(".container");
-
-      /* SMOOTH SCROLL */
-      const scroller = new LocomotiveScroll({
-        el: pageContainer,
-        smooth: true,
+      /* Demo purposes only */
+      $(".hover").mouseleave(function () {
+        $(this).removeClass("hover");
       });
-
-      scroller.on("scroll", ScrollTrigger.update);
-
-      ScrollTrigger.scrollerProxy(pageContainer, {
-        scrollTop(value) {
-          return arguments.length
-            ? scroller.scrollTo(value, 0, 0)
-            : scroller.scroll.instance.scroll.y;
-        },
-        getBoundingClientRect() {
-          return {
-            left: 0,
-            top: 0,
-            width: window.innerWidth,
-            height: window.innerHeight,
-          };
-        },
-        pinType: pageContainer.style.transform ? "transform" : "fixed",
-      });
-
-      ////////////////////////////////////
-      ////////////////////////////////////
-      window.addEventListener("load", function () {
-        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-        let pinWrap = document.querySelector(".pin-wrap");
-        let pinWrapWidth = pinWrap.offsetWidth;
-        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-
-        // Pinning and horizontal scrolling
-
-        gsap.to(".pin-wrap", {
-          scrollTrigger: {
-            scroller: pageContainer, //locomotive-scroll
-            scrub: true,
-            trigger: "#sectionPin",
-            pin: true,
-            // anticipatePin: 1,
-            start: "top top",
-            end: pinWrapWidth,
-          },
-
-          x: -horizontalScrollLength,
-          ease: "none",
-        });
-
-        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-
-        ScrollTrigger.refresh();
-      });
-      //# sourceURL=pen.js
     </script>
   </body>
 </html>

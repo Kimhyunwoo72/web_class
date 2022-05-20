@@ -8,9 +8,7 @@
   <title>portpolio</title>
 
   <style>
-    body {
-      /* height: auto !important; */
-    }
+   
   </style>
 
   <!-- 폰트 -->
@@ -25,9 +23,12 @@
   <link rel="stylesheet" href="assets/css/common.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/locomotive-scroll.css" />
 </head>
 
 <body>
+
+
   <div class="scrollTop">0</div>
   <header id="header">
     <ul>
@@ -39,6 +40,7 @@
   </header>
 
   <main id="main">
+
     <!--  main_page -->
     <section class="main_wrap">
       <div class="cursor"></div>
@@ -62,14 +64,14 @@
       <article class="main_page">
         <div class="loader">
           <div class="intro-title intro-title1">FRONTEND</div>
-          <div class="intro-title intro-title2">DEVELOPER SITE</div>
+          <div class="intro-title intro-title2">2022 DEVELOPER SITE</div>
         </div>
       </article>
       <article class="main_inpo">
         <p>FRONT-END DEVELOPER 2022</p>
         <p>KIM HYUN WOO</p>
       </article>
-      <article class="main_banner">
+      <article class="main_banner" data-0="filter: blur(5px)" data-699="flter: blur(0px)" data-1500="filter: blur(5px)">
         <div class="main_inner">
           <div class="bg" data-0="background:rgba(0, 0, 0, 0.5)" data-700="background:rgba(0, 0, 0, 0)"
             data-1500="background:rgba(0, 0, 0, 0.8)"></div>
@@ -82,7 +84,7 @@
     <!--  //main_page -->
 
     <!-- about_page 1-->
-    <section class="about_page">
+    <section class="about_page" data-scroll-section>
       <div class="container">
         <article class="about_title">
           <h2>
@@ -141,6 +143,117 @@
 
     </section>
     <!-- end of hero slider -->
+
+    <!-- game -->
+    <section class="gmae_wrap">
+      <article class="row_mode">
+        <span class="rowMode_line1"></span>
+        <span class="rowMode_line2"></span>
+        <h2 class="row">
+          <span>JAVASCRIPT</span> <br />
+          GAME & MUSIC
+        </h2>
+        <p class="desc">
+          html, css, javascript만으로 게임 및 뮤직 플레이어를 만들며
+          매개변수의<br />
+          원리를 이해했으며, 응용하는 기술을 익혔습니다.
+        </p>
+      </article>
+
+      <!-- 가로모드 -->
+      <div class="game_row">
+        <article class="gmae_info gmae_info1">
+          <h3>GAME EFFECT01</h3>
+          <p>JAVASCRIPT를 이용한 테트리스게임</p>
+          <!-- info -->
+          <div class="source source01">
+            <img src="./assets/img/game01.jpg" alt="이미지" />
+            <button class="source-btn source-btn01">게임하기</button>
+            <div id="modal01">
+              <div class="modal-wrap">
+                <div class="modal-cont">
+                  <div class="code-view">
+                    <div class="view-cont">
+                      <iframe class="gmae_effect" src="../game/tetris/index.html" frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <button class="modal-close modal-close01">닫기</button>
+              </div>
+            </div>
+          </div>
+          <!-- //info -->
+        </article>
+
+        <article class="gmae_info gmae_info2">
+          <h3>GAME EFFECT02</h3>
+          <p>JAVASCRIPT를 이용한 카드게임</p>
+
+          <!-- info -->
+          <div class="source source02">
+            <img src="./assets/img/game02.jpg" alt="이미지" />
+            <button class="source-btn source-btn02">게임하기</button>
+            <div id="modal02">
+              <div class="modal-wrap">
+                <div class="modal-cont">
+                  <div class="code-view">
+                    <div class="view-cont" ">
+                      <iframe
+                        class=" gmae_effect" src="../game/index2.html" frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <button class="modal-close modal-close02">닫기</button>
+              </div>
+            </div>
+          </div>
+          <!-- //info -->
+        </article>
+
+        <article class="gmae_info gmae_info3">
+          <h3>GAME EFFECT03</h3>
+          <p>JAVASCRIPT를 이용한 타자게임</p>
+          <!-- info -->
+          <div class="source source03">
+            <img src="./assets/img/game03.jpg" alt="이미지" />
+            <button class="source-btn source-btn03">게임하기</button>
+            <div id="modal03">
+              <div class="modal-wrap">
+                <div class="modal-cont">
+                  <div class="code-view">
+                    <div class="view-cont">
+                      <iframe class="gmae_effect" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <button class="modal-close modal-close03">닫기</button>
+              </div>
+            </div>
+          </div>
+          <!-- //info -->
+        </article>
+
+        <article class="gmae_info">
+          <h3>MUSIC EFFECT</h3>
+          <p>JAVASCRIPT를 이용한 뮤직플레이어</p>
+          <iframe class="music_effect" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
+        </article>
+
+        <article class="gmae_info">
+          <h3>FLEX CLASS</h3>
+          <p>JAVASCRIPT를 이용한 INFO SITE</p>
+          <iframe class="music_effect" src="../flex/index.html" frameborder="0"></iframe>
+        </article>
+
+        <article class="gmae_info">
+          <h3>GRID CLASS</h3>
+          <p>JAVASCRIPT를 이용한 INFO SITE</p>
+          <iframe class="music_effect" src="../grid/index.html" frameborder="0"></iframe>
+        </article>
+      </div>
+      <!-- //가로모드 -->
+
+    </section>
 
     <section class="effect">
       <article class="effect_text effect_text1">
@@ -249,102 +362,10 @@
         <span class="effectInfo_line2"></span>
       </article>
       <!-- //4 -->
+
+
     </section>
-    <!-- game -->
-    <section class="gmae_wrap">
-      <article class="row_mode">
-        <h2 class="row">
-          <span>JAVASCRIPT</span> <br />
-          GAME & MUSIC
-        </h2>
-        <p class="desc">
-          html, css, javascript만으로 게임 및 뮤직 플레이어를 만들며
-          매개변수의<br />
-          원리를 이해했으며, 응용하는 기술을 익혔습니다.
-        </p>
-      </article>
 
-      <!-- 가로모드 -->
-      <div class="game_row">
-        <article class="gmae_info gmae_info1">
-          <h3>GAME EFFECT01</h3>
-          <p>JAVASCRIPT를 이용한 테트리스게임</p>
-          <!-- info -->
-          <div class="source source01">
-            <img src="./assets/img/game01.jpg" alt="이미지" />
-            <button class="source-btn source-btn01">게임하기</button>
-            <div id="modal01">
-              <div class="modal-wrap">
-                <div class="modal-cont">
-                  <div class="code-view">
-                    <div class="view-cont">
-                      <iframe class="gmae_effect" src="../game/tetris/index.html" frameborder="0"></iframe>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-close modal-close01">닫기</button>
-              </div>
-            </div>
-          </div>
-          <!-- //info -->
-        </article>
-
-        <article class="gmae_info gmae_info2">
-          <h3>GAME EFFECT02</h3>
-          <p>JAVASCRIPT를 이용한 카드게임</p>
-
-          <!-- info -->
-          <div class="source source02">
-            <img src="./assets/img/game02.jpg" alt="이미지" />
-            <button class="source-btn source-btn02">게임하기</button>
-            <div id="modal02">
-              <div class="modal-wrap">
-                <div class="modal-cont">
-                  <div class="code-view">
-                    <div class="view-cont" ">
-                      <iframe
-                        class=" gmae_effect" src="../game/index2.html" frameborder="0"></iframe>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-close modal-close02">닫기</button>
-              </div>
-            </div>
-          </div>
-          <!-- //info -->
-        </article>
-
-        <article class="gmae_info gmae_info3">
-          <h3>GAME EFFECT03</h3>
-          <p>JAVASCRIPT를 이용한 타자게임</p>
-          <!-- info -->
-          <div class="source source03">
-            <img src="./assets/img/game03.jpg" alt="이미지" />
-            <button class="source-btn source-btn03">게임하기</button>
-            <div id="modal03">
-              <div class="modal-wrap">
-                <div class="modal-cont">
-                  <div class="code-view">
-                    <div class="view-cont">
-                      <iframe class="gmae_effect" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-close modal-close03">닫기</button>
-              </div>
-            </div>
-          </div>
-          <!-- //info -->
-        </article>
-
-        <article class="gmae_info">
-          <h3>MUSIC EFFECT</h3>
-          <p>JAVASCRIPT를 이용한 뮤직플레이어</p>
-          <iframe class="music_effect" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
-        </article>
-      </div>
-      <!-- //가로모드 -->
-    </section>
 
     <section class="site_wrap">
       <article class="site_text">
@@ -375,9 +396,22 @@
         <div class="site_line4"></div>
         <div class="site_img">
           <div class="siteImg_bg"></div>
-          <a href="https://kimhyunwoo72.github.io/webs_class/site/webClass/js/project.html" target="_blank">
-            <img src="./assets/img/site01.jpg" alt="이미지" />
-          </a>
+          <figure class="snipText">
+            <img src="./assets/img/site01.jpg" alt="sample38" />
+            <div class="hidText">
+              <div>
+                <h2>CLICK</h2>
+                <h4>VIEW SITE</h4>
+              </div>
+            </div>
+            <figcaption>
+              <p>
+                Which is worse, that everyone has his price, or that the price is
+                always so low.
+              </p>
+            </figcaption>
+            <a href="https://kimhyunwoo72.github.io/webs_class/site/webClass/js/project.html" target="_blank"></a>
+          </figure>
         </div>
         <div class="siteH_line"></div>
         <div class="site_explanation">
@@ -408,9 +442,22 @@
         <div class="site_line5"></div>
         <div class="site_img">
           <div class="siteImg_bg"></div>
-          <a href="http://ekfvoddl0321.dothome.co.kr/project/include/main.php" target="_blank">
-            <img src="./assets/img/site02.jpg" alt="이미지" />
-          </a>
+          <figure class="snipText">
+            <img src="./assets/img/site02.jpg" alt="sample38" />
+            <div class="hidText">
+              <div>
+                <h2>CLICK</h2>
+                <h4>VIEW SITE</h4>
+              </div>
+            </div>
+            <figcaption>
+              <p>
+                Which is worse, that everyone has his price, or that the price is
+                always so low.
+              </p>
+            </figcaption>
+            <a href="http://ekfvoddl0321.dothome.co.kr/project/include/main.php" target="_blank"></a>
+          </figure>
         </div>
         <div class="siteH_line"></div>
         <div class="site_explanation">
@@ -441,9 +488,22 @@
         <div class="site_line6"></div>
         <div class="site_img">
           <div class="siteImg_bg"></div>
-          <a href="http://ekfvoddl0321.dothome.co.kr/php/pages/main.php" target="_blank">
-            <img src="./assets/img/site03.jpg" alt="이미지" />
-          </a>
+          <figure class="snipText">
+            <img src="./assets/img/site03.jpg" alt="sample38" />
+            <div class="hidText">
+              <div>
+                <h2>CLICK</h2>
+                <h4>VIEW SITE</h4>
+              </div>
+            </div>
+            <figcaption>
+              <p>
+                Which is worse, that everyone has his price, or that the price is
+                always so low.
+              </p>
+            </figcaption>
+            <a href="http://ekfvoddl0321.dothome.co.kr/php/pages/main.php" target="_blank"></a>
+          </figure>
         </div>
         <div class="siteH_line"></div>
         <div class="site_explanation">
@@ -474,9 +534,22 @@
         <div class="site_line7"></div>
         <div class="site_img">
           <div class="siteImg_bg"></div>
-          <a href="https://hyunwoo9.netlify.app/" target="_blank">
-            <img src="./assets/img/site04.jpg" alt="이미지" />
-          </a>
+          <figure class="snipText">
+            <img src="./assets/img/site04.jpg" alt="sample38" />
+            <div class="hidText">
+              <div>
+                <h2>CLICK</h2>
+                <h4>VIEW SITE</h4>
+              </div>
+            </div>
+            <figcaption>
+              <p>
+                Which is worse, that everyone has his price, or that the price is
+                always so low.
+              </p>
+            </figcaption>
+            <a href="https://hyunwoo9.netlify.app/" target="_blank"></a>
+          </figure>
         </div>
         <div class="siteH_line"></div>
         <div class="site_explanation">
@@ -506,9 +579,22 @@
         <div class="site_line8"></div>
         <div class="site_img">
           <div class="siteImg_bg"></div>
-          <a href="https://hyunwoo10.netlify.app/" target="_blank">
-            <img src="./assets/img/site05.jpg" alt="이미지" />
-          </a>
+          <figure class="snipText">
+            <img src="./assets/img/site05.jpg" alt="sample38" />
+            <div class="hidText">
+              <div>
+                <h2>CLICK</h2>
+                <h4>VIEW SITE</h4>
+              </div>
+            </div>
+            <figcaption>
+              <p>
+                Which is worse, that everyone has his price, or that the price is
+                always so low.
+              </p>
+            </figcaption>
+            <a href="https://hyunwoo10.netlify.app/" target="_blank"></a>
+          </figure>
         </div>
         <div class="siteH_line"></div>
         <div class="site_explanation">
@@ -526,30 +612,30 @@
 
     <section class="contact">
       <div class="contact_wrap">
-      <article class="contact_desc">
-        <h2>CONTACT</h2>
-        <p>
-          처음 프론트엔드 개발자를 꿈꿨을 때, 제 주변 사람들이 30대에 IT업계로
-          이직하는 것은 너무 큰 도전이며, 이미 따라가기엔 늦었다고 다들 걱정
-          한 것이 기억에 남습니다. <br />
-          부족하다면 다른 사람보다 더 시간을 투자해서 내것으로 만들면 된다고
-          생각합니다. 내가 하고 싶은 일을 했을 때, 성취감은 물론 업무 성과물도
-          더 좋다고 생각을 하기 때문에 끊임없이 노력하는 개발자가 되고자
-          합니다.
-        </p>
-      </article>
-      <article class="contact_form">
-        <h2>CONTACT FORM</h2>
-        <form>
-          <fieldset>
-            <label><input type="text" class="name" placeholder="Name" /></label>
-            <label><input type="email" class="email" placeholder="Email" /></label>
-            <label><input type="text" class="input_desc" placeholder="Massage" /></label>
-            <button type="submit">SEND</button>
-          </fieldset>
-        </form>
-      </article>
-    </div>
+        <article class="contact_desc">
+          <h2>CONTACT</h2>
+          <p>
+            처음 프론트엔드 개발자를 꿈꿨을 때, 제 주변 사람들이 30대에 IT업계로
+            이직하는 것은 너무 큰 도전이며, 이미 따라가기엔 늦었다고 다들 걱정
+            한 것이 기억에 남습니다. <br />
+            부족하다면 다른 사람보다 더 시간을 투자해서 내것으로 만들면 된다고
+            생각합니다. 내가 하고 싶은 일을 했을 때, 성취감은 물론 업무 성과물도
+            더 좋다고 생각을 하기 때문에 끊임없이 노력하는 개발자가 되고자
+            합니다.
+          </p>
+        </article>
+        <article class="contact_form">
+          <h2>CONTACT FORM</h2>
+          <form>
+            <fieldset>
+              <label><input type="text" class="name" placeholder="Name" /></label>
+              <label><input type="email" class="email" placeholder="Email" /></label>
+              <label><input type="text" class="input_desc" placeholder="Massage" /></label>
+              <button type="submit">SEND</button>
+            </fieldset>
+          </form>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -561,7 +647,7 @@
   <!-- gsap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
 
   <!-- jquery & ajax -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
@@ -569,6 +655,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r115/three.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
   <!-- about slider -->
   <script id="js-vertex-shader" type="x-shader/x-vertex">
@@ -688,8 +776,8 @@
   <script src="./js/custom.js"></script>
   <script src="./js/main_page.js"></script>
   <script src="./js/about.js"></script>
-  <script src="./js/effect.js"></script>
   <script src="./js/game.js"></script>
+  <script src="./js/effect.js"></script>
   <script src="./js/site.js"></script>
 
 
@@ -712,8 +800,15 @@
       document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
       requestAnimationFrame(scroll);
       // console.log(scrollTop)
+
+
     }
     scroll();
+
+    /* 사이트 모션*/
+    $(".hover").mouseleave(function () {
+      $(this).removeClass("hover");
+    });
   </script>
 </body>
 

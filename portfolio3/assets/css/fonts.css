@@ -25,23 +25,10 @@
 
 /* main font */
 @font-face {
-  font-family: "GilroyLight";
-  src: url(../font/Gilroy-Light.otf);
+  src: url("https://assets.codepen.io/2479807/gilroy-regular.ttf");
+  font-family: "Gilroy";
 }
-/* Gilroy-Bold
-Gilroy-Heavy
-Gilroy-Light
-Gilroy-Medium
-Gilroy-Regular
-Gilroy-Extra Bold */
-/* main font */
-
-/* sub font */
-@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
-/* font-family: 'Abel', sans-serif; */
-
-/* GilroyExtraBold */
 @font-face {
-  font-family: "GilroyExtraBold";
-  src: url(../font/Gilroy-ExtraBold.otf);
+  src: url("https://assets.codepen.io/2479807/gilroy-semibold.woff2");
+  font-family: "Gilroy Semi-Bold";
 }

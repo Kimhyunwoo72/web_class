@@ -1,4 +1,3 @@
-var windowWidth = window.innerWidth;
 gsap.from(".effect_text1 .effect_desc", {
   scrollTrigger: {
     trigger: ".effect_text",
@@ -16,6 +15,25 @@ gsap.to(".effect_text1 .effect_desc", {
   opacity: 1,
   y: 0,
   duration: 1.5,
+});
+
+gsap.from(" .effect_text .effect_line1", {
+  scrollTrigger: {
+    trigger: ".effect_text",
+    markers: true,
+    start: "5% center",
+  },
+  scaleX: 0,
+});
+gsap.to(".effect_text .effect_line1", {
+  scrollTrigger: {
+    trigger: ".effect_text",
+    markers: true,
+    start: "5% center",
+  },
+  scaleX: 1,
+  duration: 2,
+  opacity: 1,
 });
 
 // 1
@@ -175,8 +193,7 @@ gsap.to(".effect_info2 .effectInfo_line1", {
   },
   opacity: 1,
   scaleX: 1,
-  duration: 3,
-  delay: 0.5,
+  duration: 2,
 });
 
 gsap.from(".effect_info2 .effectInfo_line2", {
@@ -194,8 +211,7 @@ gsap.to(".effect_info2 .effectInfo_line2", {
   },
   opacity: 1,
   scaleX: 1,
-  duration: 3,
-  delay: 1,
+  duration: 2,
 });
 
 // slider_effect
@@ -274,8 +290,7 @@ gsap.to(".effect_info3 .effectInfo_line1", {
   },
   opacity: 1,
   scaleX: 1,
-  duration: 3,
-  delay: 0.5,
+  duration: 2,
 });
 
 gsap.from(".effect_info3 .effectInfo_line2", {
@@ -293,8 +308,7 @@ gsap.to(".effect_info3 .effectInfo_line2", {
   },
   opacity: 1,
   scaleX: 1,
-  duration: 3,
-  delay: 1,
+  duration: 2,
 });
 
 // slider_effect
@@ -373,8 +387,7 @@ gsap.to(".effect_info4 .effectInfo_line1", {
   },
   opacity: 1,
   scaleX: 1,
-  duration: 3,
-  delay: 0.5,
+  duration: 2,
 });
 
 gsap.from(".effect_info4 .effectInfo_line2", {
@@ -392,8 +405,7 @@ gsap.to(".effect_info4 .effectInfo_line2", {
   },
   opacity: 1,
   scaleX: 1,
-  duration: 3,
-  delay: 1,
+  duration: 2,
 });
 
 // slider_effect

@@ -61,18 +61,7 @@ gsap.from(".main_page h2 span span ", {
     // from: "center",
   },
 });
-setTimeout(() => {
-  gsap.to(".main_page h2 span span ", {
-    y: 0,
-    delay: 2.7,
-  });
-}, 4100);
 
-gsap.to(".sub_text", {
-  opacity: 1,
-  duration: 1,
-  delay: 2.9,
-});
 gsap.to(".main_inpo", {
   opacity: 1,
   duration: 1.5,
@@ -81,13 +70,13 @@ gsap.to(".main_inpo", {
 gsap.to(".main_inner", {
   opacity: 1,
   duration: 2,
-  delay: 3,
+  delay: 3.7,
 });
 
 gsap.to("#about_bg", {
   opacity: 1,
   duration: 1,
-  delay: 1,
+  delay: 3,
 });
 
 var container;
@@ -148,3 +137,50 @@ function render() {
   uniforms.time.value += 0.07;
   renderer.render(scene, camera);
 }
+
+// main font
+var textWrapper = document.querySelector(".intro-title1");
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /([^\x00-\x80]|\w)/g,
+  "<span class='letter'>$&</span>"
+);
+
+anime
+  .timeline({
+    loop: false,
+  })
+  .add({
+    targets: ".intro-title1 .letter",
+    translateX: [170, 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    duration: 2500,
+    // delay: 2,
+    delay: function (el, i) {
+      return 2800 + 50 * i;
+    },
+  });
+
+var textWrapper = document.querySelector(".intro-title2");
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /([^\x00-\x80]|\w)/g,
+  "<span class='letter'>$&</span>"
+);
+
+anime
+  .timeline({
+    loop: false,
+  })
+  .add({
+    targets: ".intro-title2 .letter",
+    translateX: [170, 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    duration: 2500,
+    // delay: 2,
+    delay: function (el, i) {
+      return 3000 + 70 * i;
+    },
+  });

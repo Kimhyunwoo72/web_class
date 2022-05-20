@@ -1,3 +1,50 @@
+gsap.from(".rowMode_line1", {
+  scaleX: 0,
+});
+gsap.to(".rowMode_line1", {
+  scrollTrigger: {
+    trigger: ".gmae_wrap",
+    markers: true,
+    start: "top center",
+  },
+  ease: "power1.out",
+  opacity: 1,
+  scaleX: 1,
+  duration: 2,
+});
+gsap.from(".rowMode_line2", {
+  scaleX: 0,
+});
+gsap.to(".rowMode_line2", {
+  scrollTrigger: {
+    trigger: ".gmae_wrap",
+    markers: true,
+    start: "top center",
+  },
+  ease: "power1.out",
+  opacity: 1,
+  scaleX: 1,
+  duration: 2,
+  delay: 0.5,
+});
+
+gsap.from(".row_mode > .desc", {
+  y: 100,
+});
+gsap.to(".row_mode > .desc", {
+  scrollTrigger: {
+    trigger: ".gmae_wrap",
+    markers: true,
+    start: "top center",
+  },
+  ease: "power1.out",
+  opacity: 1,
+  y: 0,
+  duration: 1.5,
+  delay: 0.5,
+});
+//  rkfh
+
 gsap.from(".effect_text1 .effect_desc", {
   scrollTrigger: {
     trigger: ".effect_text",
