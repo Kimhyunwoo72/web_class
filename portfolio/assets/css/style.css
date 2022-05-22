@@ -231,7 +231,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 30vw;
+  height: 20vw;
 }
 .bg {
   width: 100%;
@@ -240,7 +240,7 @@
 .main_inner {
   width: 100%;
   height: 100%;
-  background: url(../img/main_banner2.jpg) center center;
+  background: url(../img/banner/banner11.jpg) center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -923,40 +923,68 @@
 }
 .section2_line {
   position: absolute;
-  top: 8vw;
+  top: 9vw;
   width: 100%;
   height: 1px;
   background-color: var(--white_border);
 }
-#section2 h2 {
+.section2_text {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  width: 100%;
+  padding: 1.2vw 2.5vw;
+  align-items: center;
+}
+.section2_text .desc {
+  font-size: 1vw;
+  padding-top: 1.1vw;
+}
+#section2 h2 {
   left: 25%;
-  font-size: 5vw;
+  font-size: 4vw;
   color: #000;
   font-family: var(--main_font);
+  letter-spacing: 4.2px;
+}
+.sec2__wrap {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 /* .play_effect {
   width: 100%;
   margin: 0 15vw 0 16vw;
   color: #000;
 } */
+.playImg_wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 80%;
+  margin: 0 auto;
+}
 .play_effect {
-  width: 70vw;
-  height: 45vw;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  margin: 0 15vw 0 16vw;
+  padding: 0 15vw 0 16vw;
   color: #000;
 }
 .play_effect img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .play_effect h3 {
-  padding-top: 10vw;
-  font-size: 3vw;
+  font-size: 2.8vw;
+  letter-spacing: 4.2px;
   text-align: center;
   font-family: var(--main_font);
+  padding-top: 12vw;
 }
 .play_effect p {
   font-size: 1vw;
@@ -965,8 +993,10 @@
   font-family: var(--desc_font);
 }
 .gameIframe {
-  width: 70vw;
-  height: 27vw;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
 }
 
 /* //gmae */

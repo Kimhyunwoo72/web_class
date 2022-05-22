@@ -731,6 +731,7 @@ class Mesh {
     };
 
     this.images = [
+      "./assets/img/slider05.jpg",
       "./assets/img/slider01.jpg",
       "./assets/img/slider02.jpg",
       "./assets/img/slider03.jpg",
