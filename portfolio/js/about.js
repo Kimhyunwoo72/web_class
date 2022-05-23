@@ -458,18 +458,7 @@ window.addEventListener("load", function () {
   /////////////////////////////////////////////////////////////////
 
   //about_page 2 title-->
-  gsap.from(".aboutImg_box > .about_text", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".aboutImg_box",
-      markers: true,
-      start: "10% center",
-    },
-    opacity: 0,
-    y: 100,
-    duration: 1,
-  });
-  gsap.to(".aboutImg_box > .about_text", {
+  gsap.to(".aboutImg_wrap .about_text", {
     scrollTrigger: {
       scroller: pageContents,
       trigger: ".aboutImg_box",
