@@ -1,93 +1,68 @@
-function main() {
+  
   // bottom line
-  gsap.to(".bg_box ul ", {
+  gsap.to(".bottomLine ", {
     duration: 1.5,
     width: 100 + "%",
     ease: "none",
     // delay: 3,
   });
   // right line
-  gsap.to(".bg_box ul li:nth-child(1)", {
+  gsap.to(".mainLine1", {
     duration: 0.7,
     height: 35 + "vw",
     opacity: "1",
     ease: "none",
-    delay: 1.4,
   });
-  gsap.to(".bg_box ul li:nth-child(2)", {
+  gsap.to(".mainLine2", {
     duration: 0.7,
     height: 35 + "vw",
     opacity: "1",
     ease: "none",
-    delay: 1.6,
+    delay: 0.5,
   });
-  gsap.to(".bg_box ul li:nth-child(3)", {
+  gsap.to(".mainLine3", {
     duration: 0.7,
     height: 35 + "vw",
     opacity: "1",
     ease: "none",
-    delay: 1.8,
+    delay: 0.7,
   });
-  gsap.to(".bg_box ul li:nth-child(4)", {
+  gsap.to(".mainLine4", {
     duration: 0.7,
     height: 35 + "vw",
     opacity: "1",
     ease: "none",
-    delay: 2,
+    delay: 1,
   });
   //라인
-
-  // h1
-  gsap.from(".main_page h1 span span ", {
-    delay: 2,
-    y: 200,
-    stagger: {
-      amount: 0.6,
-      // from: "end",
-    },
-  });
-  setTimeout(() => {
-    gsap.to(".main_page h1 span span ", {
-      y: 0,
-      delay: 2.5,
-    });
-  }, 4100);
-
-  // h2
-  gsap.from(".main_page h2 span span ", {
-    delay: 2.2,
-    y: 200,
-    stagger: {
-      amount: 0.6,
-      // from: "center",
-    },
-  });
 
   gsap.to(".main_inpo", {
     opacity: 1,
     duration: 1.5,
     delay: 2.9,
+    y:0
   });
   gsap.to(".main_inner", {
     opacity: 1,
     duration: 2,
-    delay: 3.7,
+    delay: 2.7,
+    ease: "power2.out",
+    y:0
   });
 
-  gsap.to("#about_bg", {
+  gsap.to("#banner_bg", {
     opacity: 1,
     duration: 1,
-    delay: 3,
+    delay: 1,
   });
-}
-// 함수끝
+
 
 var container;
 var camera, scene, renderer;
 var uniforms;
 
 function init() {
-  container = document.getElementById("about_bg");
+  container = document.getElementById("banner_bg");
 
   camera = new THREE.Camera();
   camera.position.z = 1;
@@ -158,7 +133,7 @@ anime
     translateZ: 0,
     opacity: [0, 1],
     easing: "easeOutExpo",
-    duration: 2500,
+    duration: 2000,
     // delay: 2,
     delay: function (el, i) {
       return 2800 + 50 * i;

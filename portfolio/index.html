@@ -1,14 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <title>PORTFOLIO</title>
   <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
-  <style>
-
-  </style>
 
   <!-- 폰트 -->
   <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
@@ -25,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/locomotive-scroll.css" />
 </head>
 
-<body id="skrollr-body">
+<body>
 
   <!-- game1 -->
   <div id="modal01">
@@ -57,6 +54,7 @@
     </div>
   </div>
   <!-- //game2 -->
+
   <!-- gmae3 -->
   <div id="modal03">
     <div class="modal-wrap">
@@ -71,9 +69,7 @@
     </div>
   </div>
   <!-- //gmae3 -->
-  <!--로딩-->
-  <div class="progress"><span class="progress-text">0</span></div>
-
+ 
   <header id="header">
     <ul>
       <li><a href="#">DEV</a></li>
@@ -126,6 +122,7 @@
         </article>
       </section>
       <!--  //main_page -->
+
       <!-- about_page-->
       <section class="about_page">
         <div class="container">
@@ -689,8 +686,6 @@
       </div>
     </section>
   </div>
-  <!-- loding -->
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <!-- anime -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <!-- ScrollTrigger -->
@@ -835,81 +830,6 @@
 
 
   <script>
-    // 로딩 페이지
-    function loading(callback) {
-      // console.log('loading')
-
-      let progress = $(".progress"),
-        progressText = progress.find(".progress-text"),
-        imgLoad = imagesLoaded("body"),
-        imgTotal = imgLoad.images.length,
-        imgLoaded = 0,
-        imgCurrent = 0,
-        progressTimer = setInterval(updateProgress, 1000 / 60);
-
-
-      imgLoad.on("progress", function () {
-        imgLoaded++;
-      });
-
-      function updateProgress() {
-
-        let target = (imgLoaded / imgTotal) * 100;
-
-        imgCurrent += (target - imgCurrent) * 0.1;
-        progressText.text(Math.floor(imgCurrent) + "%");
-
-        if (imgCurrent >= 100) {
-          clearInterval(progressTimer);
-          progress.delay(1000).animate({
-            top: "-130%"
-          }, 400);
-
-          $("body").addClass("show");
-
-          let tl = new TimelineMax();
-          let navtl = new TimelineMax();
-
-          tl.staggerFromTo(".main-text span", 0.8, {
-            ease: Back.easeOut.config(1.7),
-            delay: 2,
-            opacity: 0,
-            y: 80
-          }, {
-            ease: Back.easeOut.config(1.7),
-            delay: 2,
-            opacity: 1,
-            y: 0
-          }, 0.05);
-
-          navtl.staggerFromTo("#nav ul li", 0.6, {
-            ease: Back.easeOut.config(1.7),
-            delay: 3.5,
-            opacity: 0,
-            x: 40
-          }, {
-            ease: Back.easeOut.config(1.7),
-            delay: 3.5,
-            opacity: 1,
-            x: 0
-          }, 0.05);
-        }
-
-        if (imgCurrent > 99) {
-          imgCurrent = 100;
-
-        }
-      }
-      setTimeout(() => {
-        callback()
-      }, 1000);
-
-    }
-    loading(function () {
-      main()
-    });
-
-
     // 팝업창
     hljs.highlightAll();
     modal();

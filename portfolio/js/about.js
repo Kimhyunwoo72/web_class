@@ -1,6 +1,4 @@
 window.addEventListener("load", function () {
-  let sec2WrapWidth = document.querySelector(".sec2__wrap").offsetWidth;
-  let horizontal2 = sec2WrapWidth - window.innerWidth;
 
   var windowWidth = window.innerWidth;
   if (windowWidth <= 750) {
@@ -15,29 +13,6 @@ window.addEventListener("load", function () {
       opacity: 1,
       duration: 1,
     });
-
-    // about_title
-    // gsap.from(".about_title h2", {
-    //   scrollTrigger: {
-    //     trigger: ".about_page",
-    //     markers: true,
-    //     start: "5% center",
-    //   },
-    //   opacity: 0,
-    //   y: 150,
-    //   duration: 1,
-    // });
-    // gsap.to(".about_title h2", {
-    //   scrollTrigger: {
-    //     trigger: ".about_page",
-    //     markers: true,
-    //     start: "5% center",
-    //   },
-    //   opacity: 1,
-    //   y: 0,
-    //   duration: 1.5,
-    // });
-    // about_title
 
     // about_num
     gsap.from(".about_cont ul li .about_num1", {
@@ -237,62 +212,6 @@ window.addEventListener("load", function () {
 
     // 반응형 끝
   } else {
-    // gsap.to(".about_title", {
-    //   scrollTrigger: {
-    //     scroller: pageContents,
-    //     trigger: ".about_page",
-    //     toggleActions: "resume pause reset pause",
-    //     markers: true,
-    //     start: "5% center",
-    //   },
-    //   opacity: 1,
-    //   duration: 1,
-    // });
-
-    // about_title
-    // gsap.from(".about_title h2", {
-    //   scrollTrigger: {
-    //     trigger: ".about_page",
-    //     markers: true,
-    //     start: "5% center",
-    //   },
-    //   opacity: 0,
-    //   y: 100,
-    //   duration: 1,
-    // });
-    // gsap.to(".about_title h2", {
-    //   scrollTrigger: {
-    //     trigger: ".about_page",
-    //     markers: true,
-    //     start: "5% center",
-    //   },
-    //   opacity: 1,
-    //   y: 0,
-    //   duration: 1,
-    // });
-    // about_title
-
-    // about_cont
-    // gsap.from(".about_cont", {
-    //   scrollTrigger: {
-    //     trigger: ".about_page",
-    //     markers: true,
-    //     start: "5% center",
-    //   },
-    //   opacity: 0,
-    //   width: 0,
-    // });
-    // gsap.to(".about_cont", {
-    //   scrollTrigger: {
-    //     trigger: ".about_page",
-    //     markers: true,
-    //     start: "5% center",
-    //   },
-    //   opacity: 1,
-    //   width: 100 + "%",
-    //   duration: 1,
-    // });
-    // about_cont
 
     //about_cont line
     gsap.from(".about_cont ul li:nth-child(1)", {

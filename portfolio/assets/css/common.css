@@ -3,7 +3,7 @@
   --white_border: rgba(160, 160, 160, 0.3);
   --sub_color: #a8a8a8;
   --sub_font: "Palatino Linotype";
-  --desc_font: "ChosunilboNM";
+  --desc_font: "ChosunNm";
   --main_font: "Gilroy";
   --main_font2: "Gilroy Semi-Bold";
 }
@@ -49,23 +49,4 @@
 }
 .mb50 {
   margin-bottom: 50px !important;
-}
-/*로딩*/
-.progress {
-  position: fixed;
-  z-index: 99999;
-  width: 100%;
-  height: 100vh;
-  background: #1c1c1c;
-}
-
-.progress .progress-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 3vw;
-  color: #fff;
-  font-family: var(--sub_font);
 }
