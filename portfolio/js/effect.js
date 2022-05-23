@@ -49,25 +49,18 @@ window.addEventListener("load", function () {
   });
   //  rkfh
 
-  gsap.from(".effect_text1 .effect_desc", {
+  gsap.to(".effectText_desc", {
     scrollTrigger: {
       scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
     },
-    y: 100,
-  });
-  gsap.to(".effect_text1 .effect_desc", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_text",
-      markers: true,
-      start: "5% center",
-    },
+    stagger: 0.3,
     opacity: 1,
     y: 0,
     duration: 1.5,
+    ease: "power2.out",
   });
 
   gsap.from(" .effect_text .effect_line1", {
@@ -202,7 +195,6 @@ window.addEventListener("load", function () {
     },
     duration: 3,
     ease: "power1.out",
-    delay: 0.5,
     scaleX: 1.3,
     scaleY: 1.3,
   });
@@ -217,7 +209,7 @@ window.addEventListener("load", function () {
     opacity: 1,
     duration: 1.2,
     ease: "power1.out",
-    delay: 1.2,
+    delay: 0.5,
     scleX: 1,
     scleY: 1,
   });

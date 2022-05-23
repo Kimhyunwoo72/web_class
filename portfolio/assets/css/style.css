@@ -10,6 +10,14 @@
   line-height: 30px;
   z-index: 10000;
 }
+/* soomth 버그*/
+.has-scroll-smooth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 .gradient {
   width: 100%;
@@ -374,6 +382,12 @@
   border-left: 1px solid var(--border_color);
 }
 
+.desc1_text {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50%);
+}
+
 @media (max-width: 750px) {
   .about_cont {
     width: 100%;
@@ -464,7 +478,7 @@
   font-family: "ChosunilboNM";
   font-size: 1vw;
   line-height: 1.5;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .aboutImg_box {
@@ -582,7 +596,12 @@
   font-family: var(--desc_font);
   padding-top: 6vw;
   padding-right: 5vw;
+  /* opacity: 0; */
+}
+.effectText_desc {
   opacity: 0;
+  display: inline-block;
+  transform: translateY(100%);
 }
 /* 가로모드 */
 .row_mode {
@@ -948,6 +967,11 @@
   font-family: var(--main_font);
   letter-spacing: 4.2px;
 }
+.section2Title_desc {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+}
 .sec2__wrap {
   height: 100%;
   display: flex;
@@ -1011,6 +1035,11 @@
   align-items: center;
   position: relative;
 }
+.site_desc {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(100%);
+}
 .site_line1 {
   position: absolute;
   top: 0;
@@ -1037,7 +1066,6 @@
   font-family: var(--desc_font);
   padding-top: 6vw;
   padding-right: 5vw;
-  opacity: 0;
 }
 
 .site_wrap {
@@ -1136,8 +1164,14 @@
 .site_explanation p {
   font-size: 0.9vw;
   font-family: var(--desc_font);
-  padding: 0.5vw 12.2vw 0 2.2vw;
-  line-height: 1.6;
+  padding: 0 12.2vw 0 2.2vw;
+  background-color: transparent;
+  overflow: hidden;
+}
+.site_explanation p span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
 }
 
 .site_explanation a {

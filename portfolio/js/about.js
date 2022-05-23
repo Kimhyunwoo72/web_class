@@ -492,65 +492,37 @@ window.addEventListener("load", function () {
     // about_num
 
     //about_desc
-    gsap.from(".about_cont ul li .about_desc1", {
+    gsap.to(".desc1_text", {
       scrollTrigger: {
         scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
       },
-      y: 20,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_desc1", {
-      scrollTrigger: {
-        scroller: pageContents,
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
+      stagger: 0.2,
       opacity: 1,
       y: 0,
       duration: 1.5,
-      ease: "power1.out",
+      ease: "power2.out",
       delay: 2.4,
     });
 
-    gsap.from(".about_cont ul li .about_desc2", {
+    gsap.to(".about_desc2 > .desc1_text", {
       scrollTrigger: {
         scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
       },
-      y: 20,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_desc2", {
-      scrollTrigger: {
-        scroller: pageContents,
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
+      stagger: 0.2,
       opacity: 1,
       y: 0,
       duration: 1.5,
-      ease: "power1.out",
+      ease: "power2.out",
       delay: 2.6,
     });
 
-    gsap.from(".about_cont ul li .about_desc3", {
-      scrollTrigger: {
-        scroller: pageContents,
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      y: 20,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_desc3", {
+    gsap.to(".about_desc3 .desc1_text", {
       scrollTrigger: {
         scroller: pageContents,
         trigger: ".about_page",
@@ -558,9 +530,10 @@ window.addEventListener("load", function () {
         start: "5% center",
       },
       opacity: 1,
+      stagger: 0.2,
       y: 0,
       duration: 1.5,
-      ease: "power1.out",
+      ease: "power2.out",
       delay: 2.8,
     });
     //about_desc
@@ -733,7 +706,6 @@ class Mesh {
     this.images = [
       "./assets/img/slider05.jpg",
       "./assets/img/slider01.jpg",
-      "./assets/img/slider02.jpg",
       "./assets/img/slider03.jpg",
       "./assets/img/slider04.jpg",
     ];

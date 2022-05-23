@@ -1,7 +1,4 @@
 window.addEventListener("load", function () {
-  gsap.from(".site_desc", {
-    y: 100,
-  });
   gsap.to(".site_desc", {
     scrollTrigger: {
       scroller: pageContents,
@@ -10,7 +7,8 @@ window.addEventListener("load", function () {
       start: "top center",
     },
     y: 0,
-    ease: "sine.out",
+    stagger: 0.3,
+    ease: "power2.out",
     opacity: 1,
     duration: 1.5,
   });
@@ -593,6 +591,105 @@ window.addEventListener("load", function () {
     delay: 1.2,
     scleX: 1,
     scleY: 1,
+  });
+  // 5
+
+  // desc
+
+  // 1
+  // gsap.to(".site_explanation p span", {
+  //   scrollTrigger: {
+  //     scroller: pageContents,
+  //     trigger: ".site_text",
+  //     markers: true,
+  //     start: "5% center",
+  //   },
+  //   opacity: 1,
+  //   y: 0,
+  //   stagger: 0.2,
+  //   duration: 0.8,
+  //   ease: "power1.out",
+  //   delay: 1.2,
+  // });
+  // 1
+
+  // 1
+  gsap.to(".site_explanation1 p span", {
+    scrollTrigger: {
+      scroller: pageContents,
+      trigger: ".site_text",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    y: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power1.out",
+    delay: 1.2,
+  });
+  1;
+  // 2
+  gsap.to(".site_explanation2 > p > span", {
+    scrollTrigger: {
+      scroller: pageContents,
+      trigger: ".subtitle2",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    y: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power1.out",
+  });
+  // 2
+
+  // 3
+  gsap.to(".site_explanation3 > p > span", {
+    scrollTrigger: {
+      scroller: pageContents,
+      trigger: ".subtitle3",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    y: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power1.out",
+  });
+  // 3
+
+  // 4
+  gsap.to(".site_explanation4 > p > span", {
+    scrollTrigger: {
+      scroller: pageContents,
+      trigger: ".subtitle4",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    y: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power1.out",
+  });
+  // 4
+
+  // 5
+  gsap.to(".site_explanation5 > p > span", {
+    scrollTrigger: {
+      scroller: pageContents,
+      trigger: ".subtitle5",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    y: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power1.out",
   });
   // 5
 });
