@@ -1,8 +1,6 @@
-window.addEventListener("load", function () {
 
   gsap.to(".effectText_desc", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -16,7 +14,6 @@ window.addEventListener("load", function () {
 
   gsap.from(" .effect_text .effect_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -25,7 +22,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_text .effect_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -39,7 +35,6 @@ window.addEventListener("load", function () {
 
   gsap.from(".effect_info1 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -48,7 +43,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info1 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -62,7 +56,6 @@ window.addEventListener("load", function () {
 
   gsap.to(".effect_info1 .effectInfo_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -76,7 +69,6 @@ window.addEventListener("load", function () {
   // slider_effect
   gsap.to(".effect_info1 .iframe_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -90,7 +82,6 @@ window.addEventListener("load", function () {
 
   gsap.to(".effect_info1 .slider_effect", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_text",
       markers: true,
       start: "5% center",
@@ -108,7 +99,6 @@ window.addEventListener("load", function () {
 
   gsap.from(".effect_info2 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info2",
       markers: true,
       start: "5% center",
@@ -117,7 +107,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info2 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info2",
       markers: true,
       start: "5% center",
@@ -129,7 +118,6 @@ window.addEventListener("load", function () {
 
   gsap.from(".effect_info2 .effectInfo_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info2",
       markers: true,
       start: "5% center",
@@ -137,7 +125,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info2 .effectInfo_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info2",
       markers: true,
       start: "5% center",
@@ -150,7 +137,6 @@ window.addEventListener("load", function () {
   // slider_effect
   gsap.to(".effect_info2 .iframe_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info2",
       markers: true,
       start: "5% center",
@@ -163,7 +149,6 @@ window.addEventListener("load", function () {
 
   gsap.to(".effect_info2 .slider_effect", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info2",
       markers: true,
       start: "5% center",
@@ -181,7 +166,6 @@ window.addEventListener("load", function () {
 
   gsap.from(".effect_info3 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info3",
       markers: true,
       start: "5% center",
@@ -190,7 +174,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info3 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info3",
       markers: true,
       start: "5% center",
@@ -202,7 +185,6 @@ window.addEventListener("load", function () {
 
   gsap.from(".effect_info3 .effectInfo_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info3",
       markers: true,
       start: "5% center",
@@ -211,7 +193,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info3 .effectInfo_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info3",
       markers: true,
       start: "5% center",
@@ -224,7 +205,6 @@ window.addEventListener("load", function () {
   // slider_effect
   gsap.to(".effect_info3 .iframe_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info3",
       markers: true,
       start: "5% center",
@@ -237,7 +217,6 @@ window.addEventListener("load", function () {
 
   gsap.to(".effect_info3 .slider_effect", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info3",
       markers: true,
       start: "5% center",
@@ -255,7 +234,6 @@ window.addEventListener("load", function () {
 
   gsap.from(".effect_info4 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info4",
       markers: true,
       start: "5% center",
@@ -264,7 +242,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info4 .effectInfo_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info4",
       markers: true,
       start: "5% center",
@@ -276,7 +253,6 @@ window.addEventListener("load", function () {
 
   gsap.from(".effect_info4 .effectInfo_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info4",
       markers: true,
       start: "5% center",
@@ -284,7 +260,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info4 .effectInfo_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info4",
       markers: true,
       start: "5% center",
@@ -297,7 +272,6 @@ window.addEventListener("load", function () {
   // slider_effect
   gsap.to(".effect_info4 .iframe_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info4",
       markers: true,
       start: "5% center",
@@ -309,7 +283,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".effect_info4 .slider_effect", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".effect_info4",
       markers: true,
       start: "5% center",
@@ -321,4 +294,3 @@ window.addEventListener("load", function () {
     scaleY: 1,
   });
   // 4
-});

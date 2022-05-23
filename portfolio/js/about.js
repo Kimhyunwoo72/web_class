@@ -1,12 +1,11 @@
-window.addEventListener("load", function () {
+
 
   var windowWidth = window.innerWidth;
+
   if (windowWidth <= 750) {
     gsap.to(".about_title", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
-        toggleActions: "resume pause reset pause",
         markers: true,
         start: "5% center",
       },
@@ -17,7 +16,6 @@ window.addEventListener("load", function () {
     // about_num
     gsap.from(".about_cont ul li .about_num1", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -27,7 +25,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_num1", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -41,7 +38,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li .about_num2", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -51,7 +47,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_num2", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -65,7 +60,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li .about_num3", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -75,7 +69,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_num3", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -91,7 +84,6 @@ window.addEventListener("load", function () {
     //about_desc
     gsap.from(".about_cont ul li .about_desc1", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -101,7 +93,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_desc1", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -115,7 +106,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li .about_desc2", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -125,7 +115,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_desc2", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -139,7 +128,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li .about_desc3", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -149,7 +137,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_desc3", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -165,7 +152,6 @@ window.addEventListener("load", function () {
     //about_cont line
     gsap.from(".about_cont ul li:nth-child(1)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -175,7 +161,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li:nth-child(1)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -189,7 +174,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li > div", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -199,7 +183,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li > div", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -217,7 +200,6 @@ window.addEventListener("load", function () {
     gsap.from(".about_cont ul li:nth-child(1)", {
       scrollTrigger: {
         trigger: ".about_page",
-        scroller: pageContents,
         markers: true,
         start: "5% center",
       },
@@ -227,7 +209,6 @@ window.addEventListener("load", function () {
     gsap.to(".about_cont ul li:nth-child(1)", {
       scrollTrigger: {
         trigger: ".about_page",
-        scroller: pageContents,
         markers: true,
         start: "5% center",
       },
@@ -240,7 +221,6 @@ window.addEventListener("load", function () {
     //about_cont line
     gsap.from(".about_cont ul li > div", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -250,7 +230,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li > div", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -263,7 +242,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li:nth-child(2)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -273,7 +251,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li:nth-child(2)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -286,7 +263,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li:nth-child(3)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -296,7 +272,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li:nth-child(3)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -310,7 +285,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li:nth-child(4)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -320,7 +294,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li:nth-child(4)", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -336,7 +309,6 @@ window.addEventListener("load", function () {
     // about_num
     gsap.from(".about_cont ul li .about_num1", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -346,7 +318,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_num1", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -360,7 +331,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li .about_num2", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -370,7 +340,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_num2", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -384,7 +353,6 @@ window.addEventListener("load", function () {
 
     gsap.from(".about_cont ul li .about_num3", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -394,7 +362,6 @@ window.addEventListener("load", function () {
     });
     gsap.to(".about_cont ul li .about_num3", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -410,7 +377,6 @@ window.addEventListener("load", function () {
     //about_desc
     gsap.to(".desc1_text", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -425,7 +391,6 @@ window.addEventListener("load", function () {
 
     gsap.to(".about_desc2 > .desc1_text", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -440,7 +405,6 @@ window.addEventListener("load", function () {
 
     gsap.to(".about_desc3 .desc1_text", {
       scrollTrigger: {
-        scroller: pageContents,
         trigger: ".about_page",
         markers: true,
         start: "5% center",
@@ -460,7 +424,6 @@ window.addEventListener("load", function () {
   //about_page 2 title-->
   gsap.to(".aboutImg_wrap .about_text", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".aboutImg_box",
       markers: true,
       start: "10% center",
@@ -474,7 +437,6 @@ window.addEventListener("load", function () {
   //about_page 2 img-->
   gsap.from(".slider__img", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".aboutImg_box",
       markers: true,
       start: "10% center",
@@ -484,7 +446,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".slider__img", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".aboutImg_box",
       markers: true,
       start: "10% center",
@@ -494,7 +455,6 @@ window.addEventListener("load", function () {
     duration: 2,
   });
   //about_page 2 img-->
-});
 
 // slider
 class Stage {

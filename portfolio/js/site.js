@@ -1,7 +1,5 @@
-window.addEventListener("load", function () {
   gsap.to(".site_desc", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "top center",
@@ -20,7 +18,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".site_line1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "top center",
@@ -38,7 +35,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle1 > .site_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "top center",
@@ -56,7 +52,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle1 > .site_line3", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "top center",
@@ -74,7 +69,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".site_info1 > .site_line4", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "top center",
@@ -89,7 +83,6 @@ window.addEventListener("load", function () {
   // Height line
   gsap.to(".site_info1 .siteH_line", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "top center",
@@ -103,7 +96,6 @@ window.addEventListener("load", function () {
   // img
   gsap.to(".site_info1 .siteImg_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "top center",
@@ -116,15 +108,13 @@ window.addEventListener("load", function () {
 
   gsap.to(".siteImg1", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_wrap",
       markers: true,
       start: "5% center",
     },
     opacity: 1,
-    duration: 3,
+    duration: 5,
     ease: "none",
-    delay: 1,
     scaleX: 1,
     scaleY: 1,
   });
@@ -137,7 +127,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle2 > .site_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle2",
       markers: true,
       start: "top center",
@@ -155,7 +144,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle2 > .site_line3", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle2",
       markers: true,
       start: "top center",
@@ -173,7 +161,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".site_line5", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle2",
       markers: true,
       start: "top center",
@@ -188,7 +175,6 @@ window.addEventListener("load", function () {
   // Height line
   gsap.to(".site_info2 .siteH_line", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle2",
       markers: true,
       start: "top center",
@@ -203,7 +189,6 @@ window.addEventListener("load", function () {
   // img
   gsap.to(".site_info2 .siteImg_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle2",
       markers: true,
       start: "top center",
@@ -218,15 +203,13 @@ window.addEventListener("load", function () {
 
   gsap.to(".siteImg2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle2",
       markers: true,
       start: "5% center",
     },
     opacity: 1,
-    duration: 3,
+    duration: 5,
     ease: "none",
-    delay: 1,
     scaleX: 1,
     scaleY: 1,
   });
@@ -239,7 +222,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle3 > .site_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle3",
       markers: true,
       start: "top center",
@@ -257,7 +239,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle3 > .site_line3", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle3",
       markers: true,
       start: "top center",
@@ -275,7 +256,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".site_line6", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle3",
       markers: true,
       start: "top center",
@@ -290,7 +270,6 @@ window.addEventListener("load", function () {
   // Height line
   gsap.to(".site_info3 .siteH_line", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle3",
       markers: true,
       start: "top center",
@@ -305,7 +284,6 @@ window.addEventListener("load", function () {
   // img
   gsap.to(".site_info3 .siteImg_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle3",
       markers: true,
       start: "top center",
@@ -319,15 +297,13 @@ window.addEventListener("load", function () {
 
   gsap.to(".siteImg3", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle3",
       markers: true,
       start: "5% center",
     },
     opacity: 1,
-    duration: 3,
+    duration: 5,
     ease: "none",
-    delay: 1,
     scaleX: 1,
     scaleY: 1,
   });
@@ -340,7 +316,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle4 > .site_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle4",
       markers: true,
       start: "top center",
@@ -358,7 +333,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle4 > .site_line3", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle4",
       markers: true,
       start: "top center",
@@ -376,7 +350,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".site_line7", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle4",
       markers: true,
       start: "top center",
@@ -391,7 +364,6 @@ window.addEventListener("load", function () {
   // Height line
   gsap.to(".site_info4 .siteH_line", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle4",
       markers: true,
       start: "top center",
@@ -406,7 +378,6 @@ window.addEventListener("load", function () {
   // img
   gsap.to(".site_info4 .siteImg_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle4",
       markers: true,
       start: "top center",
@@ -420,15 +391,13 @@ window.addEventListener("load", function () {
 
   gsap.to(".siteImg4", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle4",
       markers: true,
       start: "5% center",
     },
     opacity: 1,
-    duration: 3,
+    duration: 5,
     ease: "none",
-    delay: 1,
     scaleX: 1,
     scaleY: 1,
   });
@@ -441,7 +410,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle5 > .site_line2", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle5",
       markers: true,
       start: "top center",
@@ -459,7 +427,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".subtitle5 > .site_line3", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle5",
       markers: true,
       start: "top center",
@@ -477,7 +444,6 @@ window.addEventListener("load", function () {
   });
   gsap.to(".site_line8", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle5",
       markers: true,
       start: "top center",
@@ -492,7 +458,6 @@ window.addEventListener("load", function () {
   // Height line
   gsap.to(".site_info5 .siteH_line", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle5",
       markers: true,
       start: "top center",
@@ -507,7 +472,6 @@ window.addEventListener("load", function () {
   // img
   gsap.to(".site_info5 .siteImg_bg", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle5",
       markers: true,
       start: "top center",
@@ -521,15 +485,13 @@ window.addEventListener("load", function () {
 
   gsap.to(".siteImg5", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle5",
       markers: true,
       start: "5% center",
     },
     opacity: 1,
-    duration: 3,
+    duration: 5,
     ease: "none",
-    delay: 1,
     scaleX: 1,
     scaleY: 1,
   });
@@ -540,7 +502,6 @@ window.addEventListener("load", function () {
   // 1
   gsap.to(".site_explanation1 p span", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".site_text",
       markers: true,
       start: "5% center",
@@ -556,7 +517,6 @@ window.addEventListener("load", function () {
   // 2
   gsap.to(".site_explanation2 > p > span", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle2",
       markers: true,
       start: "5% center",
@@ -572,7 +532,6 @@ window.addEventListener("load", function () {
   // 3
   gsap.to(".site_explanation3 > p > span", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle3",
       markers: true,
       start: "5% center",
@@ -588,7 +547,6 @@ window.addEventListener("load", function () {
   // 4
   gsap.to(".site_explanation4 > p > span", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle4",
       markers: true,
       start: "5% center",
@@ -604,7 +562,6 @@ window.addEventListener("load", function () {
   // 5
   gsap.to(".site_explanation5 > p > span", {
     scrollTrigger: {
-      scroller: pageContents,
       trigger: ".subtitle5",
       markers: true,
       start: "5% center",
@@ -616,4 +573,3 @@ window.addEventListener("load", function () {
     ease: "power1.out",
   });
   // 5
-});

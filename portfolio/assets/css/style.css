@@ -596,7 +596,7 @@
 /* 가로모드 */
 .row_mode {
   width: 100%;
-  height: 12vw;
+  height: 7vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -637,13 +637,19 @@
   font-size: 1vw;
   line-height: 1.6;
   font-family: var(--desc_font);
-  padding-top: 6vw;
   padding-right: 5vw;
+  overflow: hidden;
+  padding-top: 2.5vw;
 }
-/* .source img {
+
+.section2Title_desc {
+  display: inline-block;
+  transform: translateY(200%);
+}
+.source img {
   width: 100%;
-  padding: 0px 10vw;
-} */
+  height: 100%;
+}
 /* 가로모드 */
 
 .text {
@@ -655,6 +661,49 @@
   border-top: 1px solid var(--white_border);
   border-bottom: 1px solid var(--white_border);
 }
+
+/* 임시 */
+.playImg_wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 56%;
+  margin: 0 auto;
+}
+.play_effect {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 15vw 0 16vw;
+  color: #000;
+}
+.playImg_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.play_effect h3 {
+  font-size: 2.8vw;
+  letter-spacing: 4.2px;
+  text-align: center;
+  font-family: var(--main_font);
+  padding-top: 12vw;
+}
+.play_effect p {
+  font-size: 1vw;
+  text-align: center;
+  padding-bottom: 2vw;
+  font-family: var(--desc_font);
+}
+.gameIframe {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+/* 임시 */
+
 
 .text h2 {
   font-size: 6vw;
@@ -922,96 +971,102 @@
 }
 
 /* //effect */
-/* 스무스 게임이펙트 */
-
-#section2 {
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  left: 0;
-  position: relative;
+/* gmae */
+/* .gmae_wrap {
+padding: 56.25% 0 0 0;
 }
-.section2_line {
-  position: absolute;
-  top: 9vw;
-  width: 100%;
-  height: 1px;
-  background-color: var(--white_border);
-}
-.section2_text {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  color: #000;
-  width: 100%;
-  padding: 1.2vw 2.5vw;
-  align-items: center;
-}
-.section2_text .desc {
-  font-size: 1vw;
-  padding-top: 1.1vw;
-}
-#section2 h2 {
-  left: 25%;
-  font-size: 4vw;
-  color: #000;
-  font-family: var(--main_font);
-  letter-spacing: 4.2px;
-}
-.section2Title_desc {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(100%);
-}
-.sec2__wrap {
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-/* .play_effect {
-  width: 100%;
-  margin: 0 15vw 0 16vw;
-  color: #000;
-} */
-.playImg_wrap {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 50vh;
+.gmae_effect {
   width: 80%;
-  margin: 0 auto;
-}
-.play_effect {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  padding: 0 15vw 0 16vw;
-  color: #000;
-}
-.play_effect img {
-  width: 100%;
+  height: 1300px;
+  border: 0;
+} */
+.gmae_wrap {
   height: 100%;
-  object-fit: cover;
-}
-.play_effect h3 {
-  font-size: 2.8vw;
-  letter-spacing: 4.2px;
-  text-align: center;
-  font-family: var(--main_font);
-  padding-top: 12vw;
-}
-.play_effect p {
-  font-size: 1vw;
-  text-align: center;
-  padding-bottom: 2vw;
-  font-family: var(--desc_font);
-}
-.gameIframe {
   width: 100%;
-  height: 50vh;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 15vw;
+  overflow-x: hidden;
+}
+.gmae_effect {
+  width: 100%;
+  height: 300%;
+}
+.music_effect {
+  width: 100%;
+  padding: 0 17vw;
+  height: 21vw;
+}
+/* 가로모드 */
+.game_row {
   display: flex;
-  justify-content: center;
+  position: relative;
+  width: 600%;
+}
+/* //가로모드 */
+.gmae_info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50vw;
+  width: 100%;
+  border-bottom: 1px solid var(--white_border);
+  overflow-y: hidden;
+}
+
+.gmae_info h3 {
+  font-size: 2.5vw;
+  font-weight: 300;
+  letter-spacing: 7.2px;
+  padding-top: 2.8vw;
+}
+
+.gmae_info p {
+  font-size: 1.3vw;
+  font-family: var(--desc_font);
+  margin-top: 0.5vw;
+  padding-bottom: 2vw;
+}
+@media (max-width: 750px) {
+  .music_effect {
+    padding: 0;
+    height: 40vw;
+  }
+  .gmae_info {
+    height: 55vw;
+  }
+  .gmae_info h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 7.2px;
+    padding-top: 2.8vw;
+  }
+  .gmae_info p {
+    font-size: 13px;
+    font-family: var(--desc_font);
+    margin-top: 0.5vw;
+    padding-bottom: 2vw;
+  }
+}
+@media (max-width: 600px) {
+  .gmae_info {
+    height: 84vw;
+  }
+  .gmae_info h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 7.2px;
+    padding-top: 2.8vw;
+  }
+  .gmae_info p {
+    font-size: 13px;
+    font-family: var(--desc_font);
+    margin-top: 0.5vw;
+    padding-bottom: 2vw;
+  }
+  .source img {
+    height: 30vh;
+  }
 }
 
 /* //gmae */
@@ -1195,6 +1250,7 @@
 .siteImg4,
 .siteImg5 {
   transform: scale(130%);
+  transition: none !important;
 }
 
 @media (max-width: 750px) {
