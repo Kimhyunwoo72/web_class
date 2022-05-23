@@ -106,26 +106,6 @@
   height: 100%;
   z-index: 1;
 }
-.main_bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 200;
-  /* background: rgba(0, 0, 0, 0.9); */
-  width: 100%;
-  height: 100%;
-  animation-name: dark_bg;
-  animation-duration: 20s;
-  animation-fill-mode: forwards;
-}
-@keyframes dark_bg {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  to {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-}
 
 .bg_box ul {
   position: absolute;
@@ -147,15 +127,9 @@
   animation-duration: 10s;
   animation-fill-mode: forwards;
   z-index: 1000;
+  background-color: #fff;
 }
-@keyframes border {
-  from {
-    background-color: #fff;
-  }
-  to {
-    background-color: var(--border_color);
-  }
-}
+
 .bg_box ul li {
   width: 25%;
   position: relative;
@@ -171,9 +145,7 @@
   right: 0;
   width: 1px;
   height: 0%;
-  animation-name: border;
-  animation-duration: 10s;
-  animation-fill-mode: forwards;
+  background-color: #fff;
 }
 
 .main_page {
@@ -208,7 +180,7 @@
 }
 .loader .intro-title1,
 .loader .intro-title2 {
-  font-size: 7.5vw;
+  font-size: 5.8vw;
   text-transform: uppercase;
   color: #fff;
   z-index: 1000;
@@ -260,7 +232,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   opacity: 0;
-  transform: translateY(100%);
 }
 
 
@@ -299,10 +270,11 @@
 }
 
 .container .about_title h2 {
-  font-size: 5.5vw;
+  font-size: 4vw;
   line-height: 1.11;
   font-weight: 400;
   text-align: right;
+  font-family: var(--main_font);
 }
 
 @media (max-width: 750px) {
@@ -313,7 +285,9 @@
 
 .container .about_title span {
   font-weight: 300;
+  font-size: 5.2vw;
   font-weight: bold;
+  font-family: var(--main_font2);
 }
 
 .about_cont {
@@ -627,6 +601,7 @@
   line-height: 1.03;
   font-weight: 500;
   padding-left: 5vw;
+  font-family: var(--main_font);
 }
 
 .row_mode h2 span {
@@ -963,10 +938,13 @@
     width: 4vw;
     padding-left: 1.4%;
   }
-
-  .effect_iframe {
+.effect_iframe {
+  width: 100%;
+  height: 100%;
+} 
+  .iframe {
     width: 100%;
-    height: 50vh;
+    height: 100%;
   }
 }
 
@@ -1019,6 +997,7 @@ padding: 56.25% 0 0 0;
   font-weight: 300;
   letter-spacing: 7.2px;
   padding-top: 2.8vw;
+  font-family: var(--main_font);
 }
 
 .gmae_info p {

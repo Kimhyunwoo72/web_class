@@ -1,60 +1,23 @@
-  
-  // bottom line
-  gsap.to(".bottomLine ", {
-    duration: 1.5,
-    width: 100 + "%",
-    ease: "none",
-    // delay: 3,
-  });
-  // right line
-  gsap.to(".mainLine1", {
-    duration: 0.7,
-    height: 35 + "vw",
-    opacity: "1",
-    ease: "none",
-  });
-  gsap.to(".mainLine2", {
-    duration: 0.7,
-    height: 35 + "vw",
-    opacity: "1",
-    ease: "none",
-    delay: 0.5,
-  });
-  gsap.to(".mainLine3", {
-    duration: 0.7,
-    height: 35 + "vw",
-    opacity: "1",
-    ease: "none",
-    delay: 0.7,
-  });
-  gsap.to(".mainLine4", {
-    duration: 0.7,
-    height: 35 + "vw",
-    opacity: "1",
-    ease: "none",
-    delay: 1,
-  });
-  //라인
+  let tl = gsap.timeline();
+  tl.to(".bottomLine", {duration: .5, width:100 + "%",opacity:1, ease: "power1.out"})
+  tl.to(".mainLine1", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
+  tl.to(".mainLine2", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
+  tl.to(".mainLine3", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
+  tl.to(".mainLine4", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
+  tl.to("#banner_bg", {opacity: 1,duration: 1,});
+  tl.to(".main_inpo", {opacity: 1,duration: 1.5, y:0},"-=.5");
+  tl.to(".main_inner", { opacity: 1,duration: 1.5},"-=.8");
 
-  gsap.to(".main_inpo", {
-    opacity: 1,
-    duration: 1.5,
-    delay: 2.9,
-    y:0
-  });
-  gsap.to(".main_inner", {
-    opacity: 1,
-    duration: 2,
-    delay: 2.7,
-    ease: "power2.out",
-    y:0
-  });
+  tl.to(".bottomLine", {duration: .5, width:100 + "%",opacity:.2, ease: "power1.out"},"-=1")
+  tl.to(".mainLine1", {duration: .5, height:100 + "%",opacity:.2, ease: "power1.out"},"-=1")
+  tl.to(".mainLine2", {duration: .5, height:100 + "%",opacity:.2, ease: "power1.out"},"-=1")
+  tl.to(".mainLine3", {duration: .5, height:100 + "%",opacity:.2, ease: "power1.out"},"-=1")
+  tl.to(".mainLine4", {duration: .5, height:100 + "%",opacity:.2, ease: "power1.out"},"-=1")
 
-  gsap.to("#banner_bg", {
-    opacity: 1,
-    duration: 1,
-    delay: 1,
-  });
+
+  // tl.to("#banner_bg", {duration: .5, opacity:1, ease: "power1.out"})
+
+
 
 
 var container;
@@ -136,7 +99,7 @@ anime
     duration: 2000,
     // delay: 2,
     delay: function (el, i) {
-      return 1700 + 50 * i;
+      return 2300 + 50 * i;
     },
   });
 
@@ -159,6 +122,6 @@ anime
     duration: 2500,
     // delay: 2,
     delay: function (el, i) {
-      return 1800 + 70 * i;
+      return 2500 + 70 * i;
     },
   });
