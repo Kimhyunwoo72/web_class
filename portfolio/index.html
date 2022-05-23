@@ -826,7 +826,7 @@
 
   <script>
     // 로딩 페이지
-    function loading() {
+    function loading(callback) {
       console.log('loading')
       let progress = $(".progress"),
         progressText = progress.find(".progress-text"),
@@ -842,6 +842,7 @@
       });
 
       function updateProgress() {
+
         let target = (imgLoaded / imgTotal) * 100;
 
         imgCurrent += (target - imgCurrent) * 0.1;
@@ -888,8 +889,11 @@
 
         }
       }
+      callback()
     }
-    loading();
+    loading(function() {
+      main()
+    });
 
 
     // 팝업창
