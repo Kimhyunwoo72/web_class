@@ -113,18 +113,6 @@ window.addEventListener("load", function () {
     height: 0,
   });
   // 축소
-  gsap.from(".siteImg1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".site_wrap",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
 
   gsap.to(".siteImg1", {
     scrollTrigger: {
@@ -134,11 +122,11 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
-    ease: "power1.out",
-    delay: 1.2,
-    scleX: 1,
-    scleY: 1,
+    duration: 3,
+    ease: "none",
+    delay: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 1
 
@@ -226,18 +214,7 @@ window.addEventListener("load", function () {
   });
 
   // 축소
-  gsap.from(".siteImg2", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".subtitle2",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
+
 
   gsap.to(".siteImg2", {
     scrollTrigger: {
@@ -247,11 +224,11 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
-    ease: "power1.out",
-    delay: 1.2,
-    scleX: 1,
-    scleY: 1,
+    duration: 3,
+    ease: "none",
+    delay: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 2
 
@@ -339,18 +316,6 @@ window.addEventListener("load", function () {
   });
 
   // 축소
-  gsap.from(".siteImg3", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".subtitle3",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
 
   gsap.to(".siteImg3", {
     scrollTrigger: {
@@ -360,11 +325,11 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
-    ease: "power1.out",
-    delay: 1.2,
-    scleX: 1,
-    scleY: 1,
+    duration: 3,
+    ease: "none",
+    delay: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 3
 
@@ -452,18 +417,6 @@ window.addEventListener("load", function () {
   });
 
   // 축소
-  gsap.from(".siteImg4", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".subtitle4",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
 
   gsap.to(".siteImg4", {
     scrollTrigger: {
@@ -473,11 +426,11 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
-    ease: "power1.out",
-    delay: 1.2,
-    scleX: 1,
-    scleY: 1,
+    duration: 3,
+    ease: "none",
+    delay: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 4
 
@@ -565,18 +518,6 @@ window.addEventListener("load", function () {
   });
 
   // 축소
-  gsap.from(".siteImg5", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".subtitle5",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
 
   gsap.to(".siteImg5", {
     scrollTrigger: {
@@ -586,11 +527,11 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
-    ease: "power1.out",
-    delay: 1.2,
-    scleX: 1,
-    scleY: 1,
+    duration: 3,
+    ease: "none",
+    delay: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 5
 

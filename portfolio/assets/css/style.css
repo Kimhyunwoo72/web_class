@@ -835,6 +835,7 @@
 .slider_effect {
   width: 100%;
   height: 100%;
+  transform: scale(130%);
 }
 
 @media (max-width: 750px) {
@@ -1184,6 +1185,13 @@
   width: 2vw;
   height: 2vw;
   padding-left: 2%;
+}
+.siteImg1,
+.siteImg2,
+.siteImg3,
+.siteImg4,
+.siteImg5 {
+  transform: scale(130%);
 }
 
 @media (max-width: 750px) {

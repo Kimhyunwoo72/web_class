@@ -33,26 +33,4 @@ const modal = function () {
 };
 modal();
 
-const tabMenu = function () {
-  const viewBtn = document.querySelectorAll(".view-title > ul > li");
-  const viewCont = document.querySelectorAll(".view-cont > div");
 
-  viewBtn.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      // 모든 클래스 클릭하지 않은건 active 삭제
-      for (let i of viewBtn) {
-        i.classList.remove("active");
-      }
-      //내가 클릭한건 active 추가
-      btn.classList.add("active");
-
-      //모든 컨텐츠 박스 안보이게
-      viewCont.forEach((el) => {
-        el.style.display = "none";
-      });
-      viewCont[index].style.display = "block";
-
-      //내가 클릭한 콘텐츠 박스를 보이게
-    });
-  });
-};

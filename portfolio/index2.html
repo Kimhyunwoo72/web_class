@@ -2,221 +2,265 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <meta charset="UTF-8" />
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
 
-    <!-- 폰트 -->
-    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" />
-
-    <!-- icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/common.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-    <link rel="stylesheet" href="assets/css/locomotive-scroll.css" />
+  <!-- icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/locomotive-scroll.css" />
 </head>
 
 <body>
+  <!-- game1 -->
+  <div id="modal01">
+    <div class="modal-wrap">
+      <div class="modal-cont">
+        <div class="code-view">
+          <div class="view-cont">
+            <iframe class="gmae_effect" src="../game/tetris/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close modal-close01">닫기</button>
+    </div>
+  </div>
+  <!-- //game1 -->
 
-    <header id="header">
-        <ul>
-            <li><a href="#">DEV</a></li>
-            <li>
-                <a href="#"><img src="assets/img/menu.svg" alt="이미지" /></a>
-            </li>
-        </ul>
-    </header>
+  <!-- game2 -->
+  <div id="modal02">
+    <div class="modal-wrap">
+      <div class="modal-cont">
+        <div class="code-view">
+          <div class="view-cont" ">
+            <iframe
+              class=" gmae_effect" src="../game/index2.html" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close modal-close02">닫기</button>
+    </div>
+  </div>
+  <!-- //game2 -->
 
-    <div id="contents">
-        <section id="section1">
-            <!--  main_page -->
-            <section class="main_wrap">
-                <div class="cursor"></div>
-                <!-- <div class="cursor"></div> -->
-                <div class="main_line">
-                    <div class="bg_box">
-                        <ul>
-                            <li><span class="mainLine1"></span></li>
-                            <li><span class="mainLine2"></span></li>
-                            <li><span class="mainLine3"></span></li>
-                            <li><span class="mainLine4"></span></li>
-                            <li><span class="mainLine5"></span></li>
-                        </ul>
-                        <div class="main_box">
-                            <span class="bottomLine"></span>
-                            <div class="main_bg"></div>
-                            <div id="banner_bg"></div>
-                        </div>
-                    </div>
-                </div>
-                <article class="main_page">
-                    <div class="loader">
-                        <div class="intro-title intro-title1">FRONTEND</div>
-                        <div class="intro-title intro-title2">2022 DEVELOPER SITE</div>
-                    </div>
-                </article>
-                <article class="main_inpo">
-                    <p>FRONT-END DEVELOPER 2022</p>
-                    <p>KIM HYUN WOO</p>
-                </article>
-                <article class="main_banner" data-0="filter: blur(5px)" data-699="flter: blur(0px)"
-                    data-1500="filter: blur(5px)">
-                    <div class="main_inner">
-                        <div class="bg" data-0="background:rgba(0, 0, 0, 0.5)" data-700="background:rgba(0, 0, 0, 0)"
-                            data-1500="background:rgba(0, 0, 0, 0.8)"></div>
-                        <!-- <figure>
+  <!-- gmae3 -->
+  <div id="modal03">
+    <div class="modal-wrap">
+      <div class="modal-cont">
+        <div class="code-view">
+          <div class="view-cont">
+            <iframe class="gmae_effect" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close modal-close03">닫기</button>
+    </div>
+  </div>
+  <!-- //gmae3 -->
+  <div class="scrollTop">0</div>
+  <header id="header">
+    <ul>
+      <li><a href="#">DEV</a></li>
+      <li>
+        <a href="#"><img src="assets/img/menu.svg" alt="이미지" /></a>
+      </li>
+    </ul>
+  </header>
+
+  <div id="contents">
+    <section id="section1">
+      <!--  main_page -->
+      <section class="main_wrap">
+        <div class="cursor"></div>
+        <!-- <div class="cursor"></div> -->
+        <div class="main_line">
+          <div class="bg_box">
+            <ul>
+              <li><span class="mainLine1"></span></li>
+              <li><span class="mainLine2"></span></li>
+              <li><span class="mainLine3"></span></li>
+              <li><span class="mainLine4"></span></li>
+              <li><span class="mainLine5"></span></li>
+            </ul>
+            <div class="main_box">
+              <span class="bottomLine"></span>
+              <div class="main_bg"></div>
+              <div id="banner_bg"></div>
+            </div>
+          </div>
+        </div>
+        <article class="main_page">
+          <div class="loader">
+            <div class="intro-title intro-title1">FRONTEND</div>
+            <div class="intro-title intro-title2">2022 DEVELOPER SITE</div>
+          </div>
+        </article>
+        <article class="main_inpo">
+          <p>FRONT-END DEVELOPER 2022</p>
+          <p>KIM HYUN WOO</p>
+        </article>
+        <article class="main_banner" data-0="filter: blur(5px)" data-699="flter: blur(0px)"
+          data-1500="filter: blur(5px)">
+          <div class="main_inner">
+            <div class="bg" data-0="background:rgba(0, 0, 0, 0.5)" data-700="background:rgba(0, 0, 0, 0)"
+              data-1500="background:rgba(0, 0, 0, 0.8)"></div>
+            <!-- <figure>
             <img src="./assets/img/img01.jpg" alt="이미지" />
           </figure> -->
-                    </div>
-                </article>
-            </section>
-            <!--  //main_page -->
+          </div>
+        </article>
+      </section>
+      <!--  //main_page -->
 
-            <!-- about_page-->
-            <section class="about_page">
-                <div class="container">
-                    <article class="about_title">
-                        <h2>
-                            <span> FRONTEND </span><br />
-                            ABOUT
-                        </h2>
-                    </article>
-                </div>
-                <article class="about_cont">
-                    <ul>
-                        <li>
-                            <div></div>
-                        </li>
-                        <li>
-                            <span class="about_num about_num1">1.</span>
-                            <p class="about_desc about_desc1">
-                                <span class="desc1_text">처음 프론트엔드 개발자를 꿈꿨을 때, 제</span>
-                                <span class="desc1_text">주변 사람들이 30대에 IT업계로 이직하는</span>
-                                <span class="desc1_text">것은 너무 큰 도전이며, 이미 따라가기엔</span>
-                                <span class="desc1_text">늦었다고 다들 걱정 한 것이 기억에 남습</span>
-                                <span class="desc1_text">니다. 부족하다면 다른 사람보다 더 시간</span>
-                                <span class="desc1_text">을 투자해서 내것으로 만들면 된다고 생</span>
-                                <span class="desc1_text">각하며, 내가 하고 싶은 일을 했을 때, 성</span>
-                                <span class="desc1_text">취감은 물론 업무 성과물도 더 좋다고 생</span>
-                                <span class="desc1_text">각을 하기 때문에 끊임없이 노력하는 개</span>
-                                <span class="desc1_text">발자가 되고자 합니다.</span>
+      <!-- about_page-->
+      <section class="about_page">
+        <div class="container">
+          <article class="about_title">
+            <h2>
+              <span> FRONTEND </span><br />
+              ABOUT
+            </h2>
+          </article>
+        </div>
+        <article class="about_cont">
+          <ul>
+            <li>
+              <div></div>
+            </li>
+            <li>
+              <span class="about_num about_num1">1.</span>
+              <p class="about_desc about_desc1">
+                <span class="desc1_text">처음 프론트엔드 개발자를 꿈꿨을 때, 제</span>
+                <span class="desc1_text">주변 사람들이 30대에 IT업계로 이직하는</span>
+                <span class="desc1_text">것은 너무 큰 도전이며, 이미 따라가기엔</span>
+                <span class="desc1_text">늦었다고 다들 걱정 한 것이 기억에 남습</span>
+                <span class="desc1_text">니다. 부족하다면 다른 사람보다 더 시간</span>
+                <span class="desc1_text">을 투자해서 내것으로 만들면 된다고 생</span>
+                <span class="desc1_text">각하며, 내가 하고 싶은 일을 했을 때, 성</span>
+                <span class="desc1_text">취감은 물론 업무 성과물도 더 좋다고 생</span>
+                <span class="desc1_text">각을 하기 때문에 끊임없이 노력하는 개</span>
+                <span class="desc1_text">발자가 되고자 합니다.</span>
 
-                            </p>
-                        </li>
-                        <li>
-                            <span class="about_num about_num2">2.</span>
-                            <p class="about_desc about_desc2">
-                                <span class="desc1_text">책임감은 자신 있습니다!</span>
-                                <span class="desc1_text">지오다노회사에서 점장으로 있으면서 리</span>
-                                <span class="desc1_text">더의 책임감이 어떤것인지 크게 깨닫고,</span>
-                                <span class="desc1_text">최고의 성과를 얻기 위해 항상 고민하고</span>
-                                <span class="desc1_text">발전해 갔습니다.</span>
-                            </p>
-                        </li>
-                        <li>
-                            <span class="about_num about_num3">3.</span>
-                            <p class="about_desc about_desc3">
-                                <span class="desc1_text">혼자서는 속도적인 부분에서 한계가 있다</span>
-                                <span class="desc1_text">고 생각합니다. 그래서 도움이 되는 직원</span>
-                                <span class="desc1_text">이 되고, 협업할 수 있는 직원이 되기 위</span>
-                                <span class="desc1_text">해 끊임없이 노력할 것입니다.</span>
-                            </p>
-                        </li>
-                    </ul>
-                </article>
-                <!-- //about_page 1-->
-                <article class="aboutImg_box">
-                    <div class="about_text">ABOUT</div>
-                    <div class="about__img">
-                        <div class="slider__img">
-                            <div id="webgl"></div>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <!-- about_page-->
-        </section>
-
-        <section id="section2">
-            <div class="section2_text">
-              <h2>JAVASCRIPT
-              </h2>
-              <p class="desc">
-                <span class="section2Title_desc">html, css, javascript만으로 게임 및 뮤직 플레이어를 만들며
-                  매개변수의</span><br>
-                <span class="section2Title_desc">원리를 이해했으며, 응용하는 기술을 익혔습니다.</span>
               </p>
+            </li>
+            <li>
+              <span class="about_num about_num2">2.</span>
+              <p class="about_desc about_desc2">
+                <span class="desc1_text">책임감은 자신 있습니다!</span>
+                <span class="desc1_text">지오다노회사에서 점장으로 있으면서 리</span>
+                <span class="desc1_text">더의 책임감이 어떤것인지 크게 깨닫고,</span>
+                <span class="desc1_text">최고의 성과를 얻기 위해 항상 고민하고</span>
+                <span class="desc1_text">발전해 갔습니다.</span>
+              </p>
+            </li>
+            <li>
+              <span class="about_num about_num3">3.</span>
+              <p class="about_desc about_desc3">
+                <span class="desc1_text">혼자서는 속도적인 부분에서 한계가 있다</span>
+                <span class="desc1_text">고 생각합니다. 그래서 도움이 되는 직원</span>
+                <span class="desc1_text">이 되고, 협업할 수 있는 직원이 되기 위</span>
+                <span class="desc1_text">해 끊임없이 노력할 것입니다.</span>
+              </p>
+            </li>
+          </ul>
+        </article>
+        <!-- //about_page 1-->
+        <article class="aboutImg_box">
+          <div class="about_text">ABOUT</div>
+          <div class="about__img">
+            <div class="slider__img">
+              <div id="webgl"></div>
             </div>
-            <span class="section2_line"></span>
-            <div class="sec2__wrap">
-              <div class="play_effect">
-                <h3>GAME EFFECT01</h3>
-                <p>JAVASCRIPT를 이용한 테트리스게임</p>
-                <div class="playImg_wrap source source01">
-                  <img src="./assets/img/game01.jpg" alt="이미지" />
-                  <button class="source-btn source-btn01">게임하기</button>
-                </div>
-              </div>
-              <div class="play_effect">
-                <h3>GAME EFFECT02</h3>
-                <p>JAVASCRIPT를 이용한 카드게임</p>
-                <div class="playImg_wrap source source02">
-                  <img src="./assets/img/game02.jpg" alt="이미지" />
-                  <button class="source-btn source-btn02">게임하기</button>
-                </div>
-              </div>
-              <div class="play_effect source source03">
-                <h3>GAME EFFECT03</h3>
-                <p>JAVASCRIPT를 이용한 타자게임</p>
-                <div class="playImg_wrap">
-                  <img src="./assets/img/game03.jpg" alt="이미지" />
-                  <button class="source-btn source-btn03">게임하기</button>
-                </div>
-              </div>
-              <div class="play_effect">
-                <h3>MUSIC EFFECT</h3>
-                <p>JAVASCRIPT를 이용한 뮤직플레이어</p>
-                <div class="playImg_wrap">
-                  <iframe class="gameIframe" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
-                </div>
-              </div>
-              <div class="play_effect">
-                <h3>FLEX CLASS</h3>
-                <p>JAVASCRIPT를 이용한 INFO SITE</p>
-                <div class="playImg_wrap">
-                  <iframe class="gameIframe" src="../flex/index.html" frameborder="0"></iframe>
-                </div>
-              </div>
-              <div class="play_effect">
-                <h3>GRID CLASS</h3>
-                <p>JAVASCRIPT를 이용한 INFO SITE</p>
-                <div class="playImg_wrap">
-                  <iframe class="gameIframe" src="../grid/index.html" frameborder="0"></iframe>
-                </div>
-              </div>
-          </section>
+          </div>
+        </article>
+      </section>
+      <!-- about_page-->
+    </section>
 
-    </div>
+    <section id="section2">
+      <div class="section2_text">
+        <h2>JAVASCRIPT
+        </h2>
+        <p class="desc">
+          <span class="section2Title_desc">html, css, javascript만으로 게임 및 뮤직 플레이어를 만들며
+            매개변수의</span><br>
+          <span class="section2Title_desc">원리를 이해했으며, 응용하는 기술을 익혔습니다.</span>
+        </p>
+      </div>
+      <span class="section2_line"></span>
+      <div class="sec2__wrap">
+        <div class="play_effect">
+          <h3>GAME EFFECT01</h3>
+          <p>JAVASCRIPT를 이용한 테트리스게임</p>
+          <div class="playImg_wrap source source01">
+            <img src="./assets/img/game01.jpg" alt="이미지" />
+            <button class="source-btn source-btn01">게임하기</button>
+          </div>
+        </div>
+        <div class="play_effect">
+          <h3>GAME EFFECT02</h3>
+          <p>JAVASCRIPT를 이용한 카드게임</p>
+          <div class="playImg_wrap source source02">
+            <img src="./assets/img/game02.jpg" alt="이미지" />
+            <button class="source-btn source-btn02">게임하기</button>
+          </div>
+        </div>
+        <div class="play_effect source source03">
+          <h3>GAME EFFECT03</h3>
+          <p>JAVASCRIPT를 이용한 타자게임</p>
+          <div class="playImg_wrap">
+            <img src="./assets/img/game03.jpg" alt="이미지" />
+            <button class="source-btn source-btn03">게임하기</button>
+          </div>
+        </div>
+        <div class="play_effect">
+          <h3>MUSIC EFFECT</h3>
+          <p>JAVASCRIPT를 이용한 뮤직플레이어</p>
+          <div class="playImg_wrap">
+            <iframe class="gameIframe" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
+        <div class="play_effect">
+          <h3>FLEX CLASS</h3>
+          <p>JAVASCRIPT를 이용한 INFO SITE</p>
+          <div class="playImg_wrap">
+            <iframe class="gameIframe" src="../flex/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
+        <div class="play_effect">
+          <h3>GRID CLASS</h3>
+          <p>JAVASCRIPT를 이용한 INFO SITE</p>
+          <div class="playImg_wrap">
+            <iframe class="gameIframe" src="../grid/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
+    </section>
 
-    <!-- anime(main) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <!-- three(main) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r115/three.min.js"></script>
-    <!-- ScrollTrigger -->
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <!-- locomotive -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
-    <!-- about slider -->
-    <script id="js-vertex-shader" type="x-shader/x-vertex">
-        attribute vec3 position;
+
+  </div>
+
+  <!-- anime(main) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!-- three(main) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r115/three.min.js"></script>
+  <!-- ScrollTrigger -->
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <!-- locomotive -->
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+  <!-- about slider -->
+  <script id="js-vertex-shader" type="x-shader/x-vertex">
+    attribute vec3 position;
       attribute vec2 uv;
       uniform float u_wave;
       uniform float u_time;
@@ -233,8 +277,8 @@
           gl_Position = projectionMatrix * modelViewMatrix * vec4(x, y, z, 1.0);
       }
     </script>
-    <script id="js-fragment-shader" type="x-shader/x-fragment">
-        precision mediump float;
+  <script id="js-fragment-shader" type="x-shader/x-fragment">
+    precision mediump float;
 
       uniform vec2 u_meshsize;
       uniform vec2 u_texturesize;
@@ -286,16 +330,16 @@
           gl_FragColor = vec4(finalPos);
       }
     </script>
-    <!-- about slider -->
+  <!-- about slider -->
 
-    <!-- main font -->
-    <script id="vertexShader" type="x-shader/x-vertex">
-        void main() {
+  <!-- main font -->
+  <script id="vertexShader" type="x-shader/x-vertex">
+    void main() {
           gl_Position = vec4( position, 1.0 );
       }
     </script>
-    <script id="fragmentShader" type="x-shader/x-fragment">
-        precision highp float;
+  <script id="fragmentShader" type="x-shader/x-fragment">
+    precision highp float;
 
       uniform vec2 resolution;
       uniform float time;
@@ -326,75 +370,77 @@
           gl_FragColor = vec4(vec3(col), 1.0);
       }
     </script>
-    <!-- //main font -->
+  <!-- //main font -->
 
-    <!-- 게임 팝업창 -->
-    <!-- <script src="./js/highlight.min.js"></script> -->
-    <!-- <script src="./js/custom.js"></script> -->
+  <!-- 게임 팝업창 -->
+  <script src="./js/highlight.min.js"></script>
+  <script src="./js/custom.js"></script>
 
-    <!-- page -->
-    <script src="./js/main_page.js"></script>
-    <script src="./js/about.js"></script>
-    <!-- <script src="./js/game.js"></script> -->
-
-
-    <script>
-        // 팝업창
-        // hljs.highlightAll();
-        // modal();
-
-        // main banner
-        init();
-        animate();
-        // main banner
+  <!-- page -->
+  <script src="./js/main_page.js"></script>
+  <script src="./js/about.js"></script>
 
 
-        gsap.registerPlugin(ScrollTrigger);
-        const pageContents = document.querySelector("#contents");
-        const scroller = new LocomotiveScroll({
-            el: pageContents,
-            smooth: true,
-        });
-        scroller.on("scroll", ScrollTrigger.update);
-        ScrollTrigger.scrollerProxy(pageContents, {
-            scrollTop(value) {
-                return arguments.length ?
-                    scroller.scrollTo(value, 0, 0) :
-                    scroller.scroll.instance.scroll.y;
-            },
-            getBoundingClientRect() {
-                return {
-                    left: 0,
-                    top: 0,
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                };
-            },
-            pinType: pageContents.style.transform ? "transform" : "fixed",
-        });
-        window.addEventListener("load", function () {
-            let sec2WrapWidth = document.querySelector(".sec2__wrap").offsetWidth;
-            let horizontal2 = sec2WrapWidth - window.innerWidth;
-            gsap.to("#section2 .sec2__wrap", {
-                scrollTrigger: {
-                    scroller: pageContents,
-                    scrub: true,
-                    trigger: "#section2",
-                    pin: true,
-                    anticipatePin: 1,
-                    start: "top top",
-                    end: sec2WrapWidth,
-                    end: () => `+=${sec2WrapWidth}`,
-                    markers: true,
-                },
-                x: -horizontal2,
-                ease: "none",
-            });
+  <script>
+    // 팝업창
+    hljs.highlightAll();
+    modal();
 
-            ScrollTrigger.addEventListener("refresh", () => scroller.update());
-            ScrollTrigger.refresh();
-        });
-    </script>
+    // main banner
+    init();
+    animate();
+    // main banner
+
+
+    gsap.registerPlugin(ScrollTrigger);
+    const pageContents = document.querySelector("#contents");
+    const scroller = new LocomotiveScroll({
+      el: pageContents,
+      smooth: true,
+    });
+    scroller.on("scroll", ScrollTrigger.update);
+    ScrollTrigger.scrollerProxy(pageContents, {
+      scrollTop(value) {
+        return arguments.length ?
+          scroller.scrollTo(value, 0, 0) :
+          scroller.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return {
+          left: 0,
+          top: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+      pinType: pageContents.style.transform ? "transform" : "fixed",
+    });
+    window.addEventListener("load", function () {
+      let sec2WrapWidth = document.querySelector(".sec2__wrap").offsetWidth;
+      let horizontal2 = sec2WrapWidth - window.innerWidth;
+      gsap.to("#section2 .sec2__wrap", {
+        scrollTrigger: {
+          scroller: pageContents,
+          scrub: true,
+          trigger: "#section2",
+          pin: true,
+          anticipatePin: 1,
+          start: "top top",
+          end: sec2WrapWidth,
+          end: () => `+=${sec2WrapWidth}`,
+          markers: true,
+        },
+        x: -horizontal2,
+        ease: "none",
+      });
+
+      ScrollTrigger.addEventListener("refresh", () => scroller.update());
+      ScrollTrigger.refresh();
+    });
+  </script>
+  <!-- page -->
+  <!-- <script src="./js/effect.js"></script> -->
+  <!-- <script src="./js/site.js"></script> -->
 </body>
 
 </html>

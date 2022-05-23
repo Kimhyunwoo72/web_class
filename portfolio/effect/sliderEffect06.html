@@ -409,8 +409,8 @@
     }
     //닷 버튼
     function dotInit(){
-        for(let i=0; i<sliderLength; i++){
-            dotIndex += "<a href='#' class='dot'></a>";
+        for(let i=0; i&lt;sliderLength; i++){
+            dotIndex += "&lt;a href='#' class='dot'&gt;&lt;/a&gt;";
         }
         sliderDot.innerHTML = dotIndex;
         sliderDot.firstElementChild.classList.add("active");
@@ -468,9 +468,9 @@
         </div>
         <!-- //info -->
         <!-- script -->
-        <script src="js/gsap.min.js"></script>
         <script src="js/highlight.min.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/gsap.min.js"></script>
         <!-- script -->
         <script>
             hljs.highlightAll();
@@ -498,7 +498,6 @@
             let sliderTimer = "";
             let interval = 2000;
 
-            // console.log(sliderWidth);
 
             //이미지 복사
             sliderInner.appendChild(cloneFirst);
@@ -520,7 +519,6 @@
                 sliderInner.classList.add("transition");
                 sliderInner.style.left = -sliderWidth * (index + 1) + "px";
 
-                console.log(currentIndex);
                 currentIndex = index;
             }
 

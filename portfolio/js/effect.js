@@ -1,53 +1,4 @@
 window.addEventListener("load", function () {
-  gsap.from(".rowMode_line1", {
-    scaleX: 0,
-  });
-  gsap.to(".rowMode_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".gmae_wrap",
-      markers: true,
-      start: "top center",
-    },
-    ease: "power1.out",
-    opacity: 1,
-    scaleX: 1,
-    duration: 2,
-  });
-  gsap.from(".rowMode_line2", {
-    scaleX: 0,
-  });
-  gsap.to(".rowMode_line2", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".gmae_wrap",
-      markers: true,
-      start: "top center",
-    },
-    ease: "power1.out",
-    opacity: 1,
-    scaleX: 1,
-    duration: 2,
-    delay: 0.5,
-  });
-
-  gsap.from(".row_mode > .desc", {
-    y: 100,
-  });
-  gsap.to(".row_mode > .desc", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".gmae_wrap",
-      markers: true,
-      start: "top center",
-    },
-    ease: "power1.out",
-    opacity: 1,
-    y: 0,
-    duration: 1.5,
-    delay: 0.5,
-  });
-  //  rkfh
 
   gsap.to(".effectText_desc", {
     scrollTrigger: {
@@ -85,48 +36,6 @@ window.addEventListener("load", function () {
   });
 
   // 1
-  gsap.from(" .effect_info2 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_text",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 0,
-  });
-  gsap.to(".effect_info2 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_text",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 1,
-    duration: 2,
-    opacity: 1,
-  });
-
-  gsap.from(".effect_text1 .effect_line2", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_text",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 0,
-  });
-  gsap.to(".effect_text1 .effect_line2", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_text",
-      markers: true,
-      start: "5% center",
-    },
-    opacity: 1,
-    scaleX: 1,
-    duration: 2,
-    delay: 0.5,
-  });
 
   gsap.from(".effect_info1 .effectInfo_line1", {
     scrollTrigger: {
@@ -150,14 +59,7 @@ window.addEventListener("load", function () {
     delay: 0.5,
   });
 
-  gsap.from(".effect_info1 .effectInfo_line2", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_text",
-      markers: true,
-      start: "5% center",
-    },
-  });
+
   gsap.to(".effect_info1 .effectInfo_line2", {
     scrollTrigger: {
       scroller: pageContents,
@@ -186,19 +88,6 @@ window.addEventListener("load", function () {
     delay: 0.7,
   });
 
-  gsap.from(".effect_info1 .slider_effect", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_text",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
-
   gsap.to(".effect_info1 .slider_effect", {
     scrollTrigger: {
       scroller: pageContents,
@@ -207,35 +96,15 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
+    duration: 3,
     ease: "power1.out",
     delay: 0.5,
-    scleX: 1,
-    scleY: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 1
 
   // 2
-  gsap.from(" .effect_info2 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info2",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 0,
-  });
-  gsap.to(".effect_info2 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info2",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 1,
-    duration: 2,
-    opacity: 1,
-  });
 
   gsap.from(".effect_info2 .effectInfo_line1", {
     scrollTrigger: {
@@ -292,19 +161,6 @@ window.addEventListener("load", function () {
     ease: "power1.out",
   });
 
-  gsap.from(".effect_info2 .slider_effect", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info2",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
-
   gsap.to(".effect_info2 .slider_effect", {
     scrollTrigger: {
       scroller: pageContents,
@@ -313,35 +169,15 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
+    duration: 3,
     ease: "power1.out",
     delay: 0.5,
-    scleX: 1,
-    scleY: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 2
 
   // 3
-  gsap.from(" .effect_info3 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info3",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 0,
-  });
-  gsap.to(".effect_info3 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info3",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 1,
-    duration: 2,
-    opacity: 1,
-  });
 
   gsap.from(".effect_info3 .effectInfo_line1", {
     scrollTrigger: {
@@ -371,6 +207,7 @@ window.addEventListener("load", function () {
       markers: true,
       start: "5% center",
     },
+    scaleX: 0,
   });
   gsap.to(".effect_info3 .effectInfo_line2", {
     scrollTrigger: {
@@ -398,19 +235,6 @@ window.addEventListener("load", function () {
     ease: "power1.out",
   });
 
-  gsap.from(".effect_info3 .slider_effect", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info3",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
-
   gsap.to(".effect_info3 .slider_effect", {
     scrollTrigger: {
       scroller: pageContents,
@@ -419,35 +243,15 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
+    duration: 3,
     ease: "power1.out",
     delay: 1.2,
-    scleX: 1,
-    scleY: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 3
 
   // 4
-  gsap.from(" .effect_info4 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info4",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 0,
-  });
-  gsap.to(".effect_info4 .effect_line1", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info4",
-      markers: true,
-      start: "5% center",
-    },
-    scaleX: 1,
-    duration: 2,
-    opacity: 1,
-  });
 
   gsap.from(".effect_info4 .effectInfo_line1", {
     scrollTrigger: {
@@ -503,20 +307,6 @@ window.addEventListener("load", function () {
     duration: 1.2,
     ease: "power1.out",
   });
-
-  gsap.from(".effect_info4 .slider_effect", {
-    scrollTrigger: {
-      scroller: pageContents,
-      trigger: ".effect_info4",
-      markers: true,
-      start: "5% center",
-    },
-    duration: 3,
-    ease: "power1.out",
-    scaleX: 1.3,
-    scaleY: 1.3,
-  });
-
   gsap.to(".effect_info4 .slider_effect", {
     scrollTrigger: {
       scroller: pageContents,
@@ -525,10 +315,10 @@ window.addEventListener("load", function () {
       start: "5% center",
     },
     opacity: 1,
-    duration: 1.2,
+    duration: 3,
     ease: "power1.out",
-    scleX: 1,
-    scleY: 1,
+    scaleX: 1,
+    scaleY: 1,
   });
   // 4
 });
