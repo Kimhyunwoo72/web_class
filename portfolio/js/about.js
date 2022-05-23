@@ -235,7 +235,7 @@ window.addEventListener("load", function () {
       height: 100 + "%",
       duration: 1,
       ease: "none",
-      delay: 1,
+      delay: 0.5,
     });
     //about_cont line
     gsap.from(".about_cont ul li > div", {
@@ -255,7 +255,7 @@ window.addEventListener("load", function () {
         markers: true,
         start: "5% center",
       },
-      delay: 1,
+      delay: 0.5,
       duration: 4,
       scaleX: 1.3,
       scaleY: 1.3,
@@ -280,9 +280,8 @@ window.addEventListener("load", function () {
       },
       opacity: 1,
       height: 100 + "%",
-      duration: 0.7,
+      duration: 1,
       ease: "none",
-      delay: 1.1,
     });
 
     gsap.from(".about_cont ul li:nth-child(3)", {
@@ -304,9 +303,8 @@ window.addEventListener("load", function () {
       },
       opacity: 1,
       height: 100 + "%",
-      duration: 0.7,
+      duration: 1.3,
       ease: "none",
-      delay: 1.2,
       paddingTop: 9 + "%",
     });
 
@@ -329,9 +327,8 @@ window.addEventListener("load", function () {
       },
       opacity: 1,
       height: 100 + "%",
-      duration: 0.7,
+      duration: 1.6,
       ease: "none",
-      delay: 1.4,
       paddingTop: 15 + "%",
     });
     //about_cont line
@@ -358,7 +355,7 @@ window.addEventListener("load", function () {
       x: 0,
       duration: 0.7,
       ease: "sine.out",
-      delay: 1.8,
+      delay: 1.2,
     });
 
     gsap.from(".about_cont ul li .about_num2", {
@@ -382,7 +379,7 @@ window.addEventListener("load", function () {
       x: 0,
       duration: 0.7,
       ease: "sine.out",
-      delay: 2.2,
+      delay: 1.4,
     });
 
     gsap.from(".about_cont ul li .about_num3", {
@@ -406,7 +403,7 @@ window.addEventListener("load", function () {
       x: 0,
       duration: 0.7,
       ease: "sine.out",
-      delay: 2.5,
+      delay: 1.6,
     });
     // about_num
 
@@ -423,7 +420,7 @@ window.addEventListener("load", function () {
       y: 0,
       duration: 1.5,
       ease: "power2.out",
-      delay: 2.4,
+      delay: 1.5,
     });
 
     gsap.to(".about_desc2 > .desc1_text", {
@@ -438,7 +435,7 @@ window.addEventListener("load", function () {
       y: 0,
       duration: 1.5,
       ease: "power2.out",
-      delay: 2.6,
+      delay: 1.7,
     });
 
     gsap.to(".about_desc3 .desc1_text", {
@@ -453,7 +450,7 @@ window.addEventListener("load", function () {
       y: 0,
       duration: 1.5,
       ease: "power2.out",
-      delay: 2.8,
+      delay: 1.8,
     });
     //about_desc
   }
