@@ -827,7 +827,8 @@
   <script>
     // 로딩 페이지
     function loading(callback) {
-      console.log('loading')
+      // console.log('loading')
+        
       let progress = $(".progress"),
         progressText = progress.find(".progress-text"),
         imgLoad = imagesLoaded("body"),
@@ -889,7 +890,10 @@
 
         }
       }
+      setTimeout(() => {
       callback()
+    }, 1000);
+
     }
     loading(function() {
       main()

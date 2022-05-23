@@ -597,23 +597,6 @@ window.addEventListener("load", function () {
   // desc
 
   // 1
-  // gsap.to(".site_explanation p span", {
-  //   scrollTrigger: {
-  //     scroller: pageContents,
-  //     trigger: ".site_text",
-  //     markers: true,
-  //     start: "5% center",
-  //   },
-  //   opacity: 1,
-  //   y: 0,
-  //   stagger: 0.2,
-  //   duration: 0.8,
-  //   ease: "power1.out",
-  //   delay: 1.2,
-  // });
-  // 1
-
-  // 1
   gsap.to(".site_explanation1 p span", {
     scrollTrigger: {
       scroller: pageContents,
@@ -626,7 +609,7 @@ window.addEventListener("load", function () {
     stagger: 0.2,
     duration: 0.8,
     ease: "power1.out",
-    delay: 1.2,
+    delay: 0.8,
   });
   1;
   // 2
