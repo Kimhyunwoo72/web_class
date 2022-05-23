@@ -1,460 +1,458 @@
+var windowWidth = window.innerWidth;
 
-
-  var windowWidth = window.innerWidth;
-
-  if (windowWidth <= 750) {
-    gsap.to(".about_title", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      duration: 1,
-    });
-
-    // about_num
-    gsap.from(".about_cont ul li .about_num1", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      x: -100,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_num1", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      x: 0,
-      duration: 0.7,
-      ease: "sine.out",
-      delay: 0.8,
-    });
-
-    gsap.from(".about_cont ul li .about_num2", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      x: -100,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_num2", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      x: 0,
-      duration: 0.7,
-      ease: "sine.out",
-      delay: 1.2,
-    });
-
-    gsap.from(".about_cont ul li .about_num3", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      x: -100,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_num3", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      x: 0,
-      duration: 0.7,
-      ease: "sine.out",
-      delay: 1.5,
-    });
-    // about_num
-
-    //about_desc
-    gsap.from(".about_cont ul li .about_desc1", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      y: 20,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_desc1", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      ease: "power1.out",
-      delay: 1.4,
-    });
-
-    gsap.from(".about_cont ul li .about_desc2", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      y: 20,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_desc2", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      ease: "power1.out",
-      delay: 1.6,
-    });
-
-    gsap.from(".about_cont ul li .about_desc3", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      y: 20,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_desc3", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      ease: "power1.out",
-      delay: 1.8,
-    });
-    //about_desc
-
-    //about_cont line
-    gsap.from(".about_cont ul li:nth-child(1)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 0,
-      height: 0,
-    });
-    gsap.to(".about_cont ul li:nth-child(1)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      height: 100 + "%",
-      duration: 1,
-      ease: "none",
-      delay: 1,
-    });
-
-    gsap.from(".about_cont ul li > div", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      scaleX: 1,
-      scaleY: 1,
-    });
-    gsap.to(".about_cont ul li > div", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      delay: 1,
-      duration: 4,
-      scaleX: 1.3,
-      scaleY: 1.3,
-    });
-
-    // 반응형 끝
-  } else {
-
-    //about_cont line
-    gsap.from(".about_cont ul li:nth-child(1)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 0,
-      height: 0,
-    });
-    gsap.to(".about_cont ul li:nth-child(1)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      height: 100 + "%",
-      duration: 1,
-      ease: "none",
-      delay: 0.5,
-    });
-    //about_cont line
-    gsap.from(".about_cont ul li > div", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      scaleX: 1,
-      scaleY: 1,
-    });
-    gsap.to(".about_cont ul li > div", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      delay: 0.5,
-      duration: 4,
-      scaleX: 1.3,
-      scaleY: 1.3,
-    });
-
-    gsap.from(".about_cont ul li:nth-child(2)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 0,
-      height: 0,
-    });
-    gsap.to(".about_cont ul li:nth-child(2)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      height: 100 + "%",
-      duration: 1,
-      ease: "none",
-    });
-
-    gsap.from(".about_cont ul li:nth-child(3)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 0,
-      height: 0,
-    });
-    gsap.to(".about_cont ul li:nth-child(3)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      height: 100 + "%",
-      duration: 1.3,
-      ease: "none",
-      paddingTop: 9 + "%",
-    });
-
-    gsap.from(".about_cont ul li:nth-child(4)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 0,
-      height: 0,
-    });
-    gsap.to(".about_cont ul li:nth-child(4)", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      height: 100 + "%",
-      duration: 1.6,
-      ease: "none",
-      paddingTop: 15 + "%",
-    });
-    //about_cont line
-
-    // about_num
-    gsap.from(".about_cont ul li .about_num1", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      x: -100,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_num1", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      x: 0,
-      duration: 0.7,
-      ease: "sine.out",
-      delay: 1.2,
-    });
-
-    gsap.from(".about_cont ul li .about_num2", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      x: -100,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_num2", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      x: 0,
-      duration: 0.7,
-      ease: "sine.out",
-      delay: 1.4,
-    });
-
-    gsap.from(".about_cont ul li .about_num3", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      x: -100,
-      opacity: 0,
-    });
-    gsap.to(".about_cont ul li .about_num3", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      x: 0,
-      duration: 0.7,
-      ease: "sine.out",
-      delay: 1.6,
-    });
-    // about_num
-
-    //about_desc
-    gsap.to(".desc1_text", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      stagger: 0.2,
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      ease: "power2.out",
-      delay: 1.5,
-    });
-
-    gsap.to(".about_desc2 > .desc1_text", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      stagger: 0.2,
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      ease: "power2.out",
-      delay: 1.7,
-    });
-
-    gsap.to(".about_desc3 .desc1_text", {
-      scrollTrigger: {
-        trigger: ".about_page",
-        markers: true,
-        start: "5% center",
-      },
-      opacity: 1,
-      stagger: 0.2,
-      y: 0,
-      duration: 1.5,
-      ease: "power2.out",
-      delay: 1.8,
-    });
-    //about_desc
-  }
-
-  /////////////////////////////////////////////////////////////////
-
-  //about_page 2 title-->
-  gsap.to(".aboutImg_wrap .about_text", {
+if (windowWidth <= 750) {
+  gsap.to(".about_title", {
     scrollTrigger: {
-      trigger: ".aboutImg_box",
+      trigger: ".about_page",
       markers: true,
-      start: "10% center",
+      start: "5% center",
+    },
+    opacity: 1,
+    duration: 1,
+  });
+
+  // about_num
+  gsap.from(".about_cont ul li .about_num1", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    x: -100,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_num1", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    x: 0,
+    duration: 0.7,
+    ease: "sine.out",
+    delay: 0.8,
+  });
+
+  gsap.from(".about_cont ul li .about_num2", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    x: -100,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_num2", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    x: 0,
+    duration: 0.7,
+    ease: "sine.out",
+    delay: 1.2,
+  });
+
+  gsap.from(".about_cont ul li .about_num3", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    x: -100,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_num3", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    x: 0,
+    duration: 0.7,
+    ease: "sine.out",
+    delay: 1.5,
+  });
+  // about_num
+
+  //about_desc
+  gsap.from(".about_cont ul li .about_desc1", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    y: 20,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_desc1", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
     },
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 1.5,
+    ease: "power1.out",
+    delay: 1.4,
   });
-  //about_page 2 title-->
 
-  //about_page 2 img-->
-  gsap.from(".slider__img", {
+  gsap.from(".about_cont ul li .about_desc2", {
     scrollTrigger: {
-      trigger: ".aboutImg_box",
+      trigger: ".about_page",
       markers: true,
-      start: "10% center",
+      start: "5% center",
     },
+    y: 20,
     opacity: 0,
-    duration: 1,
   });
-  gsap.to(".slider__img", {
+  gsap.to(".about_cont ul li .about_desc2", {
     scrollTrigger: {
-      trigger: ".aboutImg_box",
+      trigger: ".about_page",
       markers: true,
-      start: "10% center",
+      start: "5% center",
     },
     opacity: 1,
-    ease: "power2.out",
-    duration: 2,
+    y: 0,
+    duration: 1.5,
+    ease: "power1.out",
+    delay: 1.6,
   });
-  //about_page 2 img-->
+
+  gsap.from(".about_cont ul li .about_desc3", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    y: 20,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_desc3", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    y: 0,
+    duration: 1.5,
+    ease: "power1.out",
+    delay: 1.8,
+  });
+  //about_desc
+
+  //about_cont line
+  gsap.from(".about_cont ul li:nth-child(1)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 0,
+    height: 0,
+  });
+  gsap.to(".about_cont ul li:nth-child(1)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    height: 100 + "%",
+    duration: 1,
+    ease: "none",
+    delay: 1,
+  });
+
+  gsap.from(".about_cont ul li > div", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    scaleX: 1,
+    scaleY: 1,
+  });
+  gsap.to(".about_cont ul li > div", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    delay: 1,
+    duration: 4,
+    scaleX: 1.3,
+    scaleY: 1.3,
+  });
+
+  // 반응형 끝
+} else {
+
+  //about_cont line
+  gsap.from(".about_cont ul li:nth-child(1)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 0,
+    height: 0,
+  });
+  gsap.to(".about_cont ul li:nth-child(1)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    height: 100 + "%",
+    duration: 1,
+    ease: "none",
+    delay: 0.5,
+  });
+  //about_cont line
+  gsap.from(".about_cont ul li > div", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    scaleX: 1,
+    scaleY: 1,
+  });
+  gsap.to(".about_cont ul li > div", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    delay: 0.5,
+    duration: 4,
+    scaleX: 1.3,
+    scaleY: 1.3,
+  });
+
+  gsap.from(".about_cont ul li:nth-child(2)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 0,
+    height: 0,
+  });
+  gsap.to(".about_cont ul li:nth-child(2)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    height: 100 + "%",
+    duration: 1,
+    ease: "none",
+  });
+
+  gsap.from(".about_cont ul li:nth-child(3)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 0,
+    height: 0,
+  });
+  gsap.to(".about_cont ul li:nth-child(3)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    height: 100 + "%",
+    duration: 1.3,
+    ease: "none",
+    paddingTop: 9 + "%",
+  });
+
+  gsap.from(".about_cont ul li:nth-child(4)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 0,
+    height: 0,
+  });
+  gsap.to(".about_cont ul li:nth-child(4)", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    height: 100 + "%",
+    duration: 1.6,
+    ease: "none",
+    paddingTop: 15 + "%",
+  });
+  //about_cont line
+
+  // about_num
+  gsap.from(".about_cont ul li .about_num1", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    x: -100,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_num1", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    x: 0,
+    duration: 0.7,
+    ease: "sine.out",
+    delay: 1.2,
+  });
+
+  gsap.from(".about_cont ul li .about_num2", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    x: -100,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_num2", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    x: 0,
+    duration: 0.7,
+    ease: "sine.out",
+    delay: 1.4,
+  });
+
+  gsap.from(".about_cont ul li .about_num3", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    x: -100,
+    opacity: 0,
+  });
+  gsap.to(".about_cont ul li .about_num3", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    x: 0,
+    duration: 0.7,
+    ease: "sine.out",
+    delay: 1.6,
+  });
+  // about_num
+
+  //about_desc
+  gsap.to(".desc1_text", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    stagger: 0.2,
+    opacity: 1,
+    y: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 1.5,
+  });
+
+  gsap.to(".about_desc2 > .desc1_text", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    stagger: 0.2,
+    opacity: 1,
+    y: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 1.7,
+  });
+
+  gsap.to(".about_desc3 .desc1_text", {
+    scrollTrigger: {
+      trigger: ".about_page",
+      markers: true,
+      start: "5% center",
+    },
+    opacity: 1,
+    stagger: 0.2,
+    y: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 1.8,
+  });
+  //about_desc
+}
+
+/////////////////////////////////////////////////////////////////
+
+//about_page 2 title-->
+gsap.to(".aboutImg_wrap .about_text", {
+  scrollTrigger: {
+    trigger: ".aboutImg_box",
+    markers: true,
+    start: "10% center",
+  },
+  opacity: 1,
+  y: 0,
+  duration: 1,
+});
+//about_page 2 title-->
+
+//about_page 2 img-->
+gsap.from(".slider__img", {
+  scrollTrigger: {
+    trigger: ".aboutImg_box",
+    markers: true,
+    start: "10% center",
+  },
+  opacity: 0,
+  duration: 1,
+});
+gsap.to(".slider__img", {
+  scrollTrigger: {
+    trigger: ".aboutImg_box",
+    markers: true,
+    start: "10% center",
+  },
+  opacity: 1,
+  ease: "power2.out",
+  duration: 2,
+});
+//about_page 2 img-->
 
 // slider
 class Stage {
@@ -495,7 +493,9 @@ class Stage {
   }
 
   _setRender() {
-    this.renderer = new THREE.WebGLRenderer({ alpha: true });
+    this.renderer = new THREE.WebGLRenderer({
+      alpha: true
+    });
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setClearColor(new THREE.Color(this.renderParam.clearColor));
     this.renderer.setSize(this.renderParam.width, this.renderParam.height);
@@ -705,11 +705,9 @@ class Mesh {
 
   _setWave() {
     gsap.fromTo(
-      this.mesh.material.uniforms.u_wave,
-      {
+      this.mesh.material.uniforms.u_wave, {
         value: 0.0,
-      },
-      {
+      }, {
         duration: this.duration / 2,
         ease: this.ease,
         value: 1.0,
@@ -728,22 +726,18 @@ class Mesh {
     switch (number) {
       case 0:
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_01,
-          {
+          this.mesh.material.uniforms.u_noise_switch_01, {
             value: 0.0,
-          },
-          {
+          }, {
             duration: this.duration,
             ease: this.ease,
             value: 1.0,
           }
         );
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_02,
-          {
+          this.mesh.material.uniforms.u_noise_switch_02, {
             value: -1.0,
-          },
-          {
+          }, {
             duration: this.duration * 1.3,
             ease: this.ease,
             value: 0.0,
@@ -752,22 +746,18 @@ class Mesh {
         break;
       case 1:
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_02,
-          {
+          this.mesh.material.uniforms.u_noise_switch_02, {
             value: 0.0,
-          },
-          {
+          }, {
             duration: this.duration,
             ease: this.ease,
             value: 1.0,
           }
         );
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_03,
-          {
+          this.mesh.material.uniforms.u_noise_switch_03, {
             value: -1.0,
-          },
-          {
+          }, {
             duration: this.duration * 1.3,
             ease: this.ease,
             value: 0.0,
@@ -776,22 +766,18 @@ class Mesh {
         break;
       case 2:
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_03,
-          {
+          this.mesh.material.uniforms.u_noise_switch_03, {
             value: 0.0,
-          },
-          {
+          }, {
             duration: this.duration,
             ease: this.ease,
             value: 1.0,
           }
         );
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_04,
-          {
+          this.mesh.material.uniforms.u_noise_switch_04, {
             value: -1.0,
-          },
-          {
+          }, {
             duration: this.duration * 1.3,
             ease: this.ease,
             value: 0.0,
@@ -800,22 +786,18 @@ class Mesh {
         break;
       case 3:
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_04,
-          {
+          this.mesh.material.uniforms.u_noise_switch_04, {
             value: 0.0,
-          },
-          {
+          }, {
             duration: this.duration,
             ease: this.ease,
             value: 1.0,
           }
         );
         gsap.fromTo(
-          this.mesh.material.uniforms.u_noise_switch_01,
-          {
+          this.mesh.material.uniforms.u_noise_switch_01, {
             value: -1.0,
-          },
-          {
+          }, {
             duration: this.duration * 1.3,
             ease: this.ease,
             value: 0.0,
@@ -926,14 +908,11 @@ class Slider {
 
     const _autoChangeSlide = () => {
       gsap
-        .to(
-          {},
-          {
-            ease: "none",
-            duration: 3.0,
-            repeat: -1.0,
-          }
-        )
+        .to({}, {
+          ease: "none",
+          duration: 3.0,
+          repeat: -1.0,
+        })
         .eventCallback("onRepeat", () => {
           mesh._changeSlide(this.currentNum);
           _moveChangeSlide();
