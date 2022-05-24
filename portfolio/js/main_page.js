@@ -1,5 +1,5 @@
   let tl = gsap.timeline();
-  tl.to(".loader", {opacity:1, delay:0.4, ease: "power1.out"})
+  tl.to(".loader", {opacity:1, delay:0.6, ease: "power1.out"})
   tl.to(".bottomLine", {duration: .5, width:100 + "%",opacity:1, ease: "power1.out"})
   tl.to(".mainLine1", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
   tl.to(".mainLine2", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
