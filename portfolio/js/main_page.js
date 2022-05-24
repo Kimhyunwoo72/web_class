@@ -1,4 +1,5 @@
   let tl = gsap.timeline();
+  tl.to(".loader", {opacity:1, delay:0.4, ease: "power1.out"})
   tl.to(".bottomLine", {duration: .5, width:100 + "%",opacity:1, ease: "power1.out"})
   tl.to(".mainLine1", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
   tl.to(".mainLine2", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
@@ -99,7 +100,7 @@ anime
     duration: 2000,
     // delay: 2,
     delay: function (el, i) {
-      return 2300 + 50 * i;
+      return 3800 + 50 * i;
     },
   });
 
@@ -119,9 +120,9 @@ anime
     translateZ: 0,
     opacity: [0, 1],
     easing: "easeOutExpo",
-    duration: 2500,
+    duration: 3000,
     // delay: 2,
     delay: function (el, i) {
-      return 2500 + 70 * i;
+      return 4000 + 70 * i;
     },
   });
