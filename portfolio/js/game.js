@@ -29,3 +29,26 @@ gsap.to(".section2Title_desc", {
   duration: 1,
   ease: "power2.out",
 });
+
+
+gsap.to("body", {
+  scrollTrigger: {
+    trigger: ".gmae_wrap",
+    markers: true,
+    start: "5% center",
+  },
+  backgroundColor: "#fff",
+  duration: 3,
+  ease: "power2.out",
+});
+
+gsap.to(".gmae_wrap", {
+  scrollTrigger: {
+    trigger: ".gmae_wrap",
+    markers: true,
+    start: "5% center",
+  },
+  backgroundColor: "#fff",
+  duration: 3,
+  ease: "power2.out",
+});

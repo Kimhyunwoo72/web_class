@@ -77,7 +77,7 @@
     height: 0 + "%",
     duration: 1.2,
     ease: "power1.out",
-    delay: 0.7,
+    delay: 0.3,
   });
 
   gsap.to(".effect_info1 .slider_effect", {

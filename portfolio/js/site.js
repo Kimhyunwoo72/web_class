@@ -1,3 +1,35 @@
+// gsap.to("body", {
+//   scrollTrigger: {
+//     trigger: ".site_wrap",
+//     markers: true,
+//     start: "5% center",
+//   },
+//   backgroundColor: "#000",
+//   duration: 15,
+//   ease: "power2.out",
+// });
+
+gsap.to(".site_wrap", {
+  scrollTrigger: {
+    trigger: ".gradient2",
+    markers: true,
+    start: "5% center",
+  },
+  backgroundColor: "#2a1a16",
+  duration: 3,
+  ease: "power2.out",
+});
+gsap.to(".gradient2", {
+  scrollTrigger: {
+    trigger: ".gradient2",
+    markers: true,
+    start: "5% center",
+  },
+  opacity: 1,
+  duration: 3,
+  ease: "power2.out",
+});
+
   gsap.to(".site_desc", {
     scrollTrigger: {
       trigger: ".site_wrap",
