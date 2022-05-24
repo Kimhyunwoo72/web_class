@@ -1,5 +1,17 @@
 var windowWidth = window.innerWidth;
 
+gsap.to(".about_liine1", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,width: 100 + "%",duration: 0.5,ease: "none"});
+gsap.to(".about_liine2", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,width: 100 + "%",duration: 0.5,ease: "none",delay: 0.5,});
+gsap.to(".about_liine3", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 0.8,});
+gsap.to(".about_liine4", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 1,});
+gsap.to(".about_liine5", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 1.3,});
+
+gsap.to(".about_liine1", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine2", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine3", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine4", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine5", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+
 if (windowWidth <= 750) {
   gsap.to(".about_title", {
     scrollTrigger: {
@@ -216,6 +228,7 @@ if (windowWidth <= 750) {
     ease: "none",
     delay: 0.5,
   });
+
   //about_cont line
   gsap.from(".about_cont ul li > div", {
     scrollTrigger: {
@@ -238,70 +251,70 @@ if (windowWidth <= 750) {
     scaleY: 1.3,
   });
 
-  gsap.from(".about_cont ul li:nth-child(2)", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      markers: true,
-      start: "5% center",
-    },
-    opacity: 0,
-    height: 0,
-  });
-  gsap.to(".about_cont ul li:nth-child(2)", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      markers: true,
-      start: "5% center",
-    },
-    opacity: 1,
-    height: 100 + "%",
-    duration: 1,
-    ease: "none",
-  });
+  // gsap.from(".about_cont ul li:nth-child(2)", {
+  //   scrollTrigger: {
+  //     trigger: ".about_page",
+  //     markers: true,
+  //     start: "5% center",
+  //   },
+  //   opacity: 0,
+  //   height: 0,
+  // });
+  // gsap.to(".about_cont ul li:nth-child(2)", {
+  //   scrollTrigger: {
+  //     trigger: ".about_page",
+  //     markers: true,
+  //     start: "5% center",
+  //   },
+  //   opacity: 1,
+  //   height: 100 + "%",
+  //   duration: 1,
+  //   ease: "none",
+  // });
 
-  gsap.from(".about_cont ul li:nth-child(3)", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      markers: true,
-      start: "5% center",
-    },
-    opacity: 0,
-    height: 0,
-  });
-  gsap.to(".about_cont ul li:nth-child(3)", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      markers: true,
-      start: "5% center",
-    },
-    opacity: 1,
-    height: 100 + "%",
-    duration: 1.3,
-    ease: "none",
-    paddingTop: 9 + "%",
-  });
+  // gsap.from(".about_cont ul li:nth-child(3)", {
+  //   scrollTrigger: {
+  //     trigger: ".about_page",
+  //     markers: true,
+  //     start: "5% center",
+  //   },
+  //   opacity: 0,
+  //   height: 0,
+  // });
+  // gsap.to(".about_cont ul li:nth-child(3)", {
+  //   scrollTrigger: {
+  //     trigger: ".about_page",
+  //     markers: true,
+  //     start: "5% center",
+  //   },
+  //   opacity: 1,
+  //   height: 100 + "%",
+  //   duration: 1.3,
+  //   ease: "none",
+  //   paddingTop: 9 + "%",
+  // });
 
-  gsap.from(".about_cont ul li:nth-child(4)", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      markers: true,
-      start: "5% center",
-    },
-    opacity: 0,
-    height: 0,
-  });
-  gsap.to(".about_cont ul li:nth-child(4)", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      markers: true,
-      start: "5% center",
-    },
-    opacity: 1,
-    height: 100 + "%",
-    duration: 1.6,
-    ease: "none",
-    paddingTop: 15 + "%",
-  });
+  // gsap.from(".about_cont ul li:nth-child(4)", {
+  //   scrollTrigger: {
+  //     trigger: ".about_page",
+  //     markers: true,
+  //     start: "5% center",
+  //   },
+  //   opacity: 0,
+  //   height: 0,
+  // });
+  // gsap.to(".about_cont ul li:nth-child(4)", {
+  //   scrollTrigger: {
+  //     trigger: ".about_page",
+  //     markers: true,
+  //     start: "5% center",
+  //   },
+  //   opacity: 1,
+  //   height: 100 + "%",
+  //   duration: 1.6,
+  //   ease: "none",
+  //   paddingTop: 15 + "%",
+  // });
   //about_cont line
 
   // about_num

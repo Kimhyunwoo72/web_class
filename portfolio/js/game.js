@@ -1,5 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// line
+gsap.to(".rowMode_line1", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: 1,duration: 1,ease: "power2.out"});
+gsap.to(".rowMode_line2", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: 1,duration: 2,ease: "power2.out"});
+
+gsap.to(".rowMode_line1", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: .2,duration: 2,ease: "power2.out"});
+gsap.to(".rowMode_line2", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: .2,duration: 2.1,ease: "power2.out"});
+
+// header
+gsap.to("#header ul li a", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},color: "#000"});
+gsap.to(".line", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},backgroundColor: "#000"});
+
+
 let SECTIONS = gsap.utils.toArray(".gmae_info");
 
 gsap.to(SECTIONS, {

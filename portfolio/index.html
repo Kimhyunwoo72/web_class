@@ -8,9 +8,6 @@
   <title>portpolio</title>
 
   <style>
-body {
-  background-color: #000;
-}
   </style>
 
   <!-- 폰트 -->
@@ -25,10 +22,10 @@ body {
   <link rel="stylesheet" href="assets/css/common.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/custom.css" />
-  <link rel="stylesheet" href="assets/css/locomotive-scroll.css" />
 </head>
 
 <body>
+
   <!-- game1 -->
   <div id="modal01">
     <div class="modal-wrap">
@@ -79,11 +76,43 @@ body {
   <header id="header">
     <ul>
       <li><a href="#">DEV</a></li>
-      <li>
-        <a href="#"><img src="assets/img/menu.svg" alt="이미지" /></a>
-      </li>
     </ul>
   </header>
+  <nav>
+    <div class="menu-btn">
+      <div class="line line__1"></div>
+      <div class="line line__2"></div>
+      <div class="line line__3"></div>
+    </div>
+
+    <div class="sub-menu-btn">
+      <div class="line line__1"></div>
+      <div class="line line__2"></div>
+    </div>
+
+    <ul class="nav-links">
+      <li class="link">
+        <a href="#main">main</a>
+      </li>
+      <a href="#about"></a>
+      <li class="link">
+        <a href="#about">About</a>
+      </li>
+      <li class="link">
+        <a href="#game">game</a>
+      </li>
+      <li class="link">
+        <a href="#effect">effect</a>
+      </li>
+      <li class="link">
+        <a href="#site">site</a>
+      </li>
+      <li class="link">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
 
   <main id="main">
     <!--  main_page -->
@@ -125,7 +154,7 @@ body {
     <!--  //main_page -->
 
     <!-- about_page-->
-    <section class="about_page">
+    <section class="about_page" id="about">
       <div class="container">
         <article class="about_title">
           <h2>
@@ -135,11 +164,14 @@ body {
         </article>
       </div>
       <article class="about_cont">
+        <div class="about_liine1"></div>
+        <div class="about_liine2"></div>
         <ul>
           <li>
             <div></div>
           </li>
           <li>
+            <div class="about_liine3"></div>
             <span class="about_num about_num1">1.</span>
             <p class="about_desc about_desc1">
               <span class="desc1_text">저의 도전은 이제 시작입니다!</span>
@@ -154,6 +186,7 @@ body {
             </p>
           </li>
           <li>
+            <div class="about_liine4"></div>
             <span class="about_num about_num2">2.</span>
             <p class="about_desc about_desc2">
               <span class="desc1_text">책임감은 자신 있습니다!</span>
@@ -164,6 +197,7 @@ body {
             </p>
           </li>
           <li>
+            <div class="about_liine5"></div>
             <span class="about_num about_num3">3.</span>
             <p class="about_desc about_desc3">
               <span class="desc1_text">업무는 속도!</span>
@@ -188,11 +222,8 @@ body {
       </article>
     </section>
     <!-- about_page-->
-
-
-
     <!-- game -->
-    <section class="gmae_wrap">
+    <section class="gmae_wrap" id="game">
       <article class="row_mode">
         <span class="rowMode_line1"></span>
         <span class="rowMode_line2"></span>
@@ -268,7 +299,7 @@ body {
       <!-- //가로모드 -->
     </section>
 
-    <section class="effect">
+    <section class="effect" id="effect">
       <article class="effect_text effect_text1">
         <span class="effect_line1"></span>
         <h2 class="title effect_title">
@@ -381,7 +412,7 @@ body {
 
     <div class="gradient2"></div>
 
-    <section class="site_wrap">
+    <section class="site_wrap" id="site">
       <article class="site_text">
         <div class="site_line1"></div>
         <h2 class="title border">
@@ -400,8 +431,6 @@ body {
         <div class="site_line3"></div>
         <ul>
           <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
           <li>PROJECT</li>
         </ul>
       </article>
@@ -456,8 +485,6 @@ body {
         <div class="site_line3"></div>
         <ul>
           <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
           <li>PROJECT</li>
         </ul>
       </article>
@@ -512,8 +539,6 @@ body {
         <div class="site_line3"></div>
         <ul>
           <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
           <li>PROJECT</li>
         </ul>
       </article>
@@ -568,8 +593,6 @@ body {
         <div class="site_line3"></div>
         <ul>
           <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
           <li>PROJECT</li>
         </ul>
       </article>
@@ -624,8 +647,6 @@ body {
         <div class="site_line3"></div>
         <ul>
           <li>FRONTEND DEVELOPER 2022</li>
-          <li>site</li>
-          <li>TYPE</li>
           <li>PROJECT</li>
         </ul>
       </article>
@@ -678,7 +699,7 @@ body {
 
     <div class="gradient3"></div>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="contact_wrap">
         <article class="contact_desc">
           <h2>CONTACT</h2>
@@ -860,6 +881,8 @@ body {
     init();
     animate();
     // main banner
+
+    // 스크롤
     function scroll() {
       var s = skrollr.init();
       let scrollTop =
@@ -872,13 +895,116 @@ body {
     }
     scroll();
 
-    const textrev = gsap.timeline();
-
 
     /* 사이트 모션*/
     $(".hover").mouseleave(function () {
       $(this).removeClass("hover");
     });
+
+
+    //#id 이동하기
+    document.querySelectorAll("a[href^='#']").forEach(el => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        document.querySelector(el.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        })
+      })
+    })
+
+    // menu
+    console.clear();
+
+    const nav = document.querySelector("nav");
+    const navLinksContainer = document.querySelector(".nav-links");
+    const navLinks = [...document.querySelectorAll(".link")];
+    const menuBtn = document.querySelector(".menu-btn");
+    const subMenuBtn = document.querySelector(".sub-menu-btn");
+
+    function createHoverEl() {
+      let hoverEl = document.createElement("div");
+      hoverEl.className = "hover-el";
+      hoverEl.style.setProperty("--y", "0px");
+      hoverEl.style.setProperty("--mousex", "0px");
+      hoverEl.style.setProperty("--mousey", "0px");
+      navLinksContainer.appendChild(hoverEl);
+    }
+    createHoverEl();
+
+    navLinks.forEach((link, index) => {
+      let hoverEl = navLinksContainer.querySelector(".hover-el");
+      link.style.setProperty("--delay", `${index * 50}ms`);
+      link.addEventListener("mousemove", function (e) {
+        hoverEl.style.setProperty("--y", `${index * 60}px`);
+        hoverEl.style.setProperty("opacity", "1");
+        hoverEl.style.setProperty("--mousex", `${e.pageX - hoverEl.offsetLeft}px`);
+        hoverEl.style.setProperty("--mousey", `${e.pageY - hoverEl.offsetTop}px`);
+      });
+      navLinksContainer.addEventListener("mouseout", function () {
+        hoverEl.style.setProperty("opacity", "0");
+      });
+      link.addEventListener("click", function () {
+        let hoverEl = navLinksContainer.querySelector(".hover-el");
+        hoverEl.style.opacity = '0';
+        toggleSubmenu(link);
+      });
+    });
+
+    menuBtn.addEventListener("click", function () {
+      nav.classList.toggle("nav-open");
+      menuBtn.classList.toggle("close");
+    });
+    subMenuBtn.addEventListener("click", function () {
+      nav.classList.toggle("sub-menu-open");
+      removeSubmenu();
+    });
+
+    function toggleSubmenu(el) {
+      let subMenu = nav.querySelector(".sub-menu");
+      if (el.children[1]) {
+        createSubmenu(el);
+      } else if (nav.contains(subMenu)) {
+        removeSubmenu();
+      } else {
+        return;
+      }
+    }
+
+    function createSubmenu(el) {
+      let subMenuContainer = document.createElement("div");
+      subMenuContainer.className = "sub-menu";
+      let subMenuItem = el.children[1].cloneNode(true);
+      let subMenuItemList = [...subMenuItem.children];
+      subMenuItemList.forEach((item, index) => {
+        item.classList.add("off-menu");
+        item.style.setProperty("--delay", `${index * 40}ms`);
+      });
+      nav.classList.toggle("sub-menu-open");
+      nav.appendChild(subMenuContainer);
+      subMenuContainer.appendChild(subMenuItem);
+      setTimeout(function () {
+        subMenuItemList.forEach(item => {
+          item.classList.remove("off-menu");
+          item.classList.add("on-menu");
+        });
+      }, 200);
+    }
+
+    function removeSubmenu() {
+      let subMenu = nav.querySelector(".sub-menu");
+      let subMenuItemList = [...subMenu.children[0].children];
+      if (nav.contains(subMenu)) {
+        subMenuItemList.forEach(item => {
+          item.classList.add("off-menu");
+          item.classList.remove("on-menu");
+        });
+        setTimeout(function () {
+          nav.removeChild(subMenu);
+        }, 500);
+      }
+    }
+    // menu
+
   </script>
 </body>
 
