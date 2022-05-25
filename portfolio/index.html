@@ -771,6 +771,7 @@
     <div class="gradient3"></div>
 
     <section class="contact" id="contact">
+      <!-- https://script.google.com/macros/s/AKfycbz-1_iIU4PNdm3Sc9Yx_DZJko9gusCU6mQujD00/exec -->
       <div class="contact_wrap">
         <article class="contact_desc">
           <h2>CONTACT</h2>
@@ -784,21 +785,38 @@
             합니다.
           </p>
         </article>
-        <article class="contact_form">
-          <h2>CONTACT FORM</h2>
-          <form>
+
+  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+
+        <article class="contact_form email-me">
+          <h2 class="title-section">CONTACT FORM</h2>
+          <form class="gform" action="https://script.google.com/macros/s/AKfycbz-1_iIU4PNdm3Sc9Yx_DZJko9gusCU6mQujD00/exec">
             <fieldset>
-              <label><input type="text" class="name" placeholder="Name" /></label>
-              <label><input type="email" class="email" placeholder="Email" /></label>
-              <label><input type="text" class="input_desc" placeholder="Massage" /></label>
-              <button type="submit">SEND</button>
+              <div class="box-input">
+                <label for="userName"></label>
+                <input type="text" id="userName" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="box-input">
+                <label for="userEmail"></label>
+                <input type="email" id="userEmail" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="box-input">
+                <label for="userMessage"></label>
+                <textarea name="message" id="userMessage" class="input_desc " placeholder="Message" required></textarea>
+              </div>
+              <div class="box-input">
+                <button type="submit">SEND</button>
+              </div>
+              <div style="display:none" class="thankyou_message">
+                <p>연락 주셔서 감사합니다!<br>
+                  빠른시일내에 연락 드리겠습니다!
+                </p>
+                </div>
             </fieldset>
           </form>
         </article>
       </div>
     </section>
-
-
 
   </main>
 
@@ -818,6 +836,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r115/three.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
 
   <!-- about slider -->
   <script id="js-vertex-shader" type="x-shader/x-vertex">
