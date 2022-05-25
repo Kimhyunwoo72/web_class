@@ -41,7 +41,7 @@ if (windowWidth <= 750) {
     x: 0,
     duration: 0.7,
     ease: "sine.out",
-    delay: 0.8,
+    delay: 2,
   });
 
   gsap.from(".about_cont ul li .about_num2", {
@@ -63,7 +63,7 @@ if (windowWidth <= 750) {
     x: 0,
     duration: 0.7,
     ease: "sine.out",
-    delay: 1.2,
+    delay: 2.3,
   });
 
   gsap.from(".about_cont ul li .about_num3", {
@@ -85,75 +85,53 @@ if (windowWidth <= 750) {
     x: 0,
     duration: 0.7,
     ease: "sine.out",
-    delay: 1.5,
+    delay: 2.6,
   });
   // about_num
 
+  
   //about_desc
-  gsap.from(".about_cont ul li .about_desc1", {
+   //about_desc
+  gsap.to(".about_desc1 .desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
       
       start: "5% center",
     },
-    y: 20,
-    opacity: 0,
-  });
-  gsap.to(".about_cont ul li .about_desc1", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      
-      start: "5% center",
-    },
+    stagger: 0.2,
     opacity: 1,
     y: 0,
     duration: 1.5,
-    ease: "power1.out",
-    delay: 1.4,
+    ease: "power2.out",
+    delay: 2.3,
   });
 
-  gsap.from(".about_cont ul li .about_desc2", {
+  gsap.to(".about_desc2 > .desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
       
       start: "5% center",
     },
-    y: 20,
-    opacity: 0,
-  });
-  gsap.to(".about_cont ul li .about_desc2", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      
-      start: "5% center",
-    },
+    stagger: 0.2,
     opacity: 1,
     y: 0,
     duration: 1.5,
-    ease: "power1.out",
-    delay: 1.6,
+    ease: "power2.out",
+    delay: 2.6,
   });
 
-  gsap.from(".about_cont ul li .about_desc3", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      
-      start: "5% center",
-    },
-    y: 20,
-    opacity: 0,
-  });
-  gsap.to(".about_cont ul li .about_desc3", {
+  gsap.to(".about_desc3 .desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
       
       start: "5% center",
     },
     opacity: 1,
+    stagger: 0.2,
     y: 0,
     duration: 1.5,
-    ease: "power1.out",
-    delay: 1.8,
+    ease: "power2.out",
+    delay: 2.9,
   });
   //about_desc
 
@@ -248,72 +226,6 @@ if (windowWidth <= 750) {
     scaleX: 1.3,
     scaleY: 1.3,
   });
-
-  // gsap.from(".about_cont ul li:nth-child(2)", {
-  //   scrollTrigger: {
-  //     trigger: ".about_page",
-  //     
-  //     start: "5% center",
-  //   },
-  //   opacity: 0,
-  //   height: 0,
-  // });
-  // gsap.to(".about_cont ul li:nth-child(2)", {
-  //   scrollTrigger: {
-  //     trigger: ".about_page",
-  //     
-  //     start: "5% center",
-  //   },
-  //   opacity: 1,
-  //   height: 100 + "%",
-  //   duration: 1,
-  //   ease: "none",
-  // });
-
-  // gsap.from(".about_cont ul li:nth-child(3)", {
-  //   scrollTrigger: {
-  //     trigger: ".about_page",
-  //     
-  //     start: "5% center",
-  //   },
-  //   opacity: 0,
-  //   height: 0,
-  // });
-  // gsap.to(".about_cont ul li:nth-child(3)", {
-  //   scrollTrigger: {
-  //     trigger: ".about_page",
-  //     
-  //     start: "5% center",
-  //   },
-  //   opacity: 1,
-  //   height: 100 + "%",
-  //   duration: 1.3,
-  //   ease: "none",
-  //   paddingTop: 9 + "%",
-  // });
-
-  // gsap.from(".about_cont ul li:nth-child(4)", {
-  //   scrollTrigger: {
-  //     trigger: ".about_page",
-  //     
-  //     start: "5% center",
-  //   },
-  //   opacity: 0,
-  //   height: 0,
-  // });
-  // gsap.to(".about_cont ul li:nth-child(4)", {
-  //   scrollTrigger: {
-  //     trigger: ".about_page",
-  //     
-  //     start: "5% center",
-  //   },
-  //   opacity: 1,
-  //   height: 100 + "%",
-  //   duration: 1.6,
-  //   ease: "none",
-  //   paddingTop: 15 + "%",
-  // });
-  //about_cont line
 
   // about_num
   gsap.from(".about_cont ul li .about_num1", {
