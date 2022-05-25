@@ -1,15 +1,15 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // line
-gsap.to(".rowMode_line1", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: 1,duration: 1,ease: "power2.out"});
-gsap.to(".rowMode_line2", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: 1,duration: 2,ease: "power2.out"});
+gsap.to(".rowMode_line1", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},scaleX: 1,opacity: 1,duration: 1,ease: "power2.out"});
+gsap.to(".rowMode_line2", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},scaleX: 1,opacity: 1,duration: 2,ease: "power2.out"});
 
-gsap.to(".rowMode_line1", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: .2,duration: 2,ease: "power2.out"});
-gsap.to(".rowMode_line2", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},scaleX: 1,opacity: .2,duration: 2.1,ease: "power2.out"});
+gsap.to(".rowMode_line1", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},scaleX: 1,opacity: .2,duration: 2,ease: "power2.out"});
+gsap.to(".rowMode_line2", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},scaleX: 1,opacity: .2,duration: 2.1,ease: "power2.out"});
 
 // header
-gsap.to("#header ul li a", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},color: "#000"});
-gsap.to(".line", { scrollTrigger: {trigger: ".gmae_info",markers: true,start: "5% center",},backgroundColor: "#000"});
+gsap.to("#header ul li a", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},color: "#000"});
+gsap.to(".line", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},backgroundColor: "#000"});
 
 
 let SECTIONS = gsap.utils.toArray(".gmae_info");
@@ -19,7 +19,7 @@ gsap.to(SECTIONS, {
   ease: "none",
   scrollTrigger: {
     trigger: ".gmae_wrap",
-    markers: true,
+    
     start: "center 60%",
     end: () => "+=" + document.querySelector(".game_row").offsetWidth,
     pin: true,
@@ -32,7 +32,7 @@ gsap.to(SECTIONS, {
 gsap.to(".section2Title_desc", {
   scrollTrigger: {
     trigger: ".gmae_wrap",
-    markers: true,
+    
     start: "5% center",
   },
   stagger: 0.3,
@@ -46,7 +46,7 @@ gsap.to(".section2Title_desc", {
 gsap.to("body", {
   scrollTrigger: {
     trigger: ".gmae_wrap",
-    markers: true,
+    
     start: "5% center",
   },
   backgroundColor: "#fff",
@@ -57,7 +57,7 @@ gsap.to("body", {
 gsap.to(".gmae_wrap", {
   scrollTrigger: {
     trigger: ".gmae_wrap",
-    markers: true,
+    
     start: "5% center",
   },
   backgroundColor: "#fff",

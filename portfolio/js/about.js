@@ -1,22 +1,22 @@
 var windowWidth = window.innerWidth;
 
-gsap.to(".about_liine1", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,width: 100 + "%",duration: 0.5,ease: "none"});
-gsap.to(".about_liine2", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,width: 100 + "%",duration: 0.5,ease: "none",delay: 0.5,});
-gsap.to(".about_liine3", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 0.8,});
-gsap.to(".about_liine4", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 1,});
-gsap.to(".about_liine5", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 1.3,});
+gsap.to(".about_liine1", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: 1,width: 100 + "%",duration: 0.5,ease: "none"});
+gsap.to(".about_liine2", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: 1,width: 100 + "%",duration: 0.5,ease: "none",delay: 0.5,});
+gsap.to(".about_liine3", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 0.8,});
+gsap.to(".about_liine4", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 1,});
+gsap.to(".about_liine5", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: 1,height: 100 + "%",duration: 0.5,ease: "none",delay: 1.3,});
 
-gsap.to(".about_liine1", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
-gsap.to(".about_liine2", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
-gsap.to(".about_liine3", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
-gsap.to(".about_liine4", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
-gsap.to(".about_liine5", { scrollTrigger: {trigger: ".about_title",markers: true,start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine1", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine2", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine3", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine4", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
+gsap.to(".about_liine5", { scrollTrigger: {trigger: ".about_title",start: "5% center",},opacity: .2,duration: 2,ease: "none",delay: 2,});
 
 if (windowWidth <= 750) {
   gsap.to(".about_title", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -27,7 +27,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num1", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     x: -100,
@@ -36,7 +36,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_num1", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -49,7 +49,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num2", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     x: -100,
@@ -58,7 +58,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_num2", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -71,7 +71,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num3", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     x: -100,
@@ -80,7 +80,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_num3", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -95,7 +95,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_desc1", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     y: 20,
@@ -104,7 +104,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_desc1", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -117,7 +117,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_desc2", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     y: 20,
@@ -126,7 +126,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_desc2", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -139,7 +139,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_desc3", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     y: 20,
@@ -148,7 +148,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_desc3", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -163,7 +163,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li:nth-child(1)", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 0,
@@ -172,7 +172,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li:nth-child(1)", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -185,7 +185,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li > div", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     scaleX: 1,
@@ -194,7 +194,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li > div", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     delay: 1,
@@ -210,7 +210,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li:nth-child(1)", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 0,
@@ -219,7 +219,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li:nth-child(1)", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -233,7 +233,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li > div", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     scaleX: 1,
@@ -242,7 +242,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li > div", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     delay: 0.5,
@@ -254,7 +254,7 @@ if (windowWidth <= 750) {
   // gsap.from(".about_cont ul li:nth-child(2)", {
   //   scrollTrigger: {
   //     trigger: ".about_page",
-  //     markers: true,
+  //     
   //     start: "5% center",
   //   },
   //   opacity: 0,
@@ -263,7 +263,7 @@ if (windowWidth <= 750) {
   // gsap.to(".about_cont ul li:nth-child(2)", {
   //   scrollTrigger: {
   //     trigger: ".about_page",
-  //     markers: true,
+  //     
   //     start: "5% center",
   //   },
   //   opacity: 1,
@@ -275,7 +275,7 @@ if (windowWidth <= 750) {
   // gsap.from(".about_cont ul li:nth-child(3)", {
   //   scrollTrigger: {
   //     trigger: ".about_page",
-  //     markers: true,
+  //     
   //     start: "5% center",
   //   },
   //   opacity: 0,
@@ -284,7 +284,7 @@ if (windowWidth <= 750) {
   // gsap.to(".about_cont ul li:nth-child(3)", {
   //   scrollTrigger: {
   //     trigger: ".about_page",
-  //     markers: true,
+  //     
   //     start: "5% center",
   //   },
   //   opacity: 1,
@@ -297,7 +297,7 @@ if (windowWidth <= 750) {
   // gsap.from(".about_cont ul li:nth-child(4)", {
   //   scrollTrigger: {
   //     trigger: ".about_page",
-  //     markers: true,
+  //     
   //     start: "5% center",
   //   },
   //   opacity: 0,
@@ -306,7 +306,7 @@ if (windowWidth <= 750) {
   // gsap.to(".about_cont ul li:nth-child(4)", {
   //   scrollTrigger: {
   //     trigger: ".about_page",
-  //     markers: true,
+  //     
   //     start: "5% center",
   //   },
   //   opacity: 1,
@@ -321,7 +321,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num1", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     x: -100,
@@ -330,7 +330,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_num1", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -343,7 +343,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num2", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     x: -100,
@@ -352,7 +352,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_num2", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -365,7 +365,7 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num3", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     x: -100,
@@ -374,7 +374,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_cont ul li .about_num3", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -389,7 +389,7 @@ if (windowWidth <= 750) {
   gsap.to(".desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     stagger: 0.2,
@@ -403,7 +403,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_desc2 > .desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     stagger: 0.2,
@@ -417,7 +417,7 @@ if (windowWidth <= 750) {
   gsap.to(".about_desc3 .desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
-      markers: true,
+      
       start: "5% center",
     },
     opacity: 1,
@@ -436,7 +436,7 @@ if (windowWidth <= 750) {
 gsap.to(".aboutImg_wrap .about_text", {
   scrollTrigger: {
     trigger: ".aboutImg_box",
-    markers: true,
+    
     start: "10% center",
   },
   opacity: 1,
@@ -449,7 +449,7 @@ gsap.to(".aboutImg_wrap .about_text", {
 gsap.from(".slider__img", {
   scrollTrigger: {
     trigger: ".aboutImg_box",
-    markers: true,
+    
     start: "10% center",
   },
   opacity: 0,
@@ -458,7 +458,7 @@ gsap.from(".slider__img", {
 gsap.to(".slider__img", {
   scrollTrigger: {
     trigger: ".aboutImg_box",
-    markers: true,
+    
     start: "10% center",
   },
   opacity: 1,
