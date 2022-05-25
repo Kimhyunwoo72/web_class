@@ -16,7 +16,6 @@ if (windowWidth <= 750) {
   gsap.to(".about_title", {
     scrollTrigger: {
       trigger: ".about_page",
-      
       start: "5% center",
     },
     opacity: 1,
@@ -27,7 +26,6 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num1", {
     scrollTrigger: {
       trigger: ".about_page",
-      
       start: "5% center",
     },
     x: -100,

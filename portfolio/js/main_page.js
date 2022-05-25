@@ -1,7 +1,7 @@
   function mainEffect() {
 
+    gsap.to(".loader", {opacity:1, ease: "power1.out"})
   let tl = gsap.timeline();
-  tl.to(".loader", {opacity:1, ease: "power1.out"})
   tl.to(".bottomLine", {duration: .5, width:100 + "%",opacity:1, ease: "power1.out"})
   tl.to(".mainLine1", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
   tl.to(".mainLine2", {duration: .5, height:100 + "%",opacity:1, ease: "power1.out"},"-=.2")
@@ -95,7 +95,7 @@ anime
     targets: ".intro-title1 .letter",
     translateX: [170, 0],
     translateZ: 0,
-    opacity: [0, 1],
+    opacity: 1,
     easing: "easeOutExpo",
     duration: 2000,
     // delay: 2,
@@ -118,7 +118,7 @@ anime
     targets: ".intro-title2 .letter",
     translateX: [170, 0],
     translateZ: 0,
-    opacity: [0, 1],
+    opacity: 1,
     easing: "easeOutExpo",
     duration: 3000,
     // delay: 2,

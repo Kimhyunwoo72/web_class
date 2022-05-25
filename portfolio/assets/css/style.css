@@ -398,6 +398,7 @@ nav.sub-menu-open .nav-links .hover-el {
 .intro-title .letter {
   display: inline-block;
   line-height: 1em;
+  opacity: 0;
 }
 .intro-title1 {
   font-weight: bold;
@@ -1755,3 +1756,5 @@ figure.snipText:hover figcaption {
 }
 
 /* //contact */
+
+
