@@ -100,7 +100,7 @@ anime
     duration: 2000,
     // delay: 2,
     delay: function (el, i) {
-      return 3800 + 50 * i;
+      return 2800 + 50 * i;
     },
   });
 
@@ -123,7 +123,7 @@ anime
     duration: 3000,
     // delay: 2,
     delay: function (el, i) {
-      return 4000 + 70 * i;
+      return 3000 + 70 * i;
     },
   });
 }
