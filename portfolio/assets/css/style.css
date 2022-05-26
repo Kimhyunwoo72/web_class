@@ -731,6 +731,11 @@ nav.sub-menu-open .nav-links .hover-el {
     font-size: 30px;
   }
 }
+@media (max-width: 600px) {
+  .about_text {
+    height: 10vw;
+  }
+}
 
 .about__img {
   width: 100%;
@@ -1228,6 +1233,11 @@ nav.sub-menu-open .nav-links .hover-el {
   margin-bottom: 15vw;
   overflow-x: hidden;
   background-color: #000;
+}
+@media (max-width: 1200px){
+  .gmae_wrap {
+    overflow-x:visible;
+  }
 }
 .gmae_effect {
   width: 100%;
