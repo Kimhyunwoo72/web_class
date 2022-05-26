@@ -1301,17 +1301,23 @@ display: none;
   .row_mode {
     margin-top: 120px;
     flex-direction: column;
-    height: 21vw;
+    height: 30vw;
 
   }
   .row_mode .desc {
     padding-top: 3vw;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
     padding-right: 0;
-}
+  }
+  .row_mode .desc br {
+    display: none;
+  }
+  .section2Title_desc {
+    display: inline;
+  }
   .row_mode h2 {
-    font-size: 80px;
+    font-size: 48px;
     padding-left: 0;
   }
 
