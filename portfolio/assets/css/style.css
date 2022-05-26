@@ -744,6 +744,11 @@ display: none;
     font-size: 30px;
   }
 }
+@media (max-width: 750px) {
+  .aboutImg_box {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .about_text {
     height: 10vw;

@@ -5,6 +5,9 @@
   box-sizing: border-box;
   text-transform: uppercase;
 }
+body {
+  background-color: #000;
+}
 
 /* 여백 초기화 */
 body,
