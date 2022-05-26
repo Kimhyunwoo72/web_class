@@ -571,11 +571,11 @@ nav.sub-menu-open .nav-links .hover-el {
 
 @media (max-width: 750px) {
   .container .about_title span {
-    font-size: 8.2vw;
+    font-size: 9vw;
   }
 
   .container .about_title h2 {
-    font-size: 6.2vw;
+    font-size: 7.5vw;
   }
 }
 
@@ -2045,6 +2045,7 @@ textarea:focus {
   .contact_desc h2 {
     font-size: 50px;
     padding-bottom: 40px;
+    line-height: 1.2;
   }
 
   .contact_desc p {
