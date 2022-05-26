@@ -23,37 +23,13 @@ gsap.to(".site_info3 .siteImg_bg", {scrollTrigger: {trigger: ".subtitle3",start:
 gsap.to(".site_info4 .siteImg_bg", {scrollTrigger: {trigger: ".subtitle4",start: "top center"},ease: "power2.out",duration: 2, height: 0, delay:1});
 gsap.to(".site_info5 .siteImg_bg", {scrollTrigger: {trigger: ".subtitle5",start: "top center"},ease: "power2.out",duration: 2, height: 0, delay:1});
 
-  // desc
-
+// desc
   // 1
   gsap.to(".site_explanation1 p span", {scrollTrigger: {trigger: ".site_text",start: "5% center",},    opacity: 1,y: 0,stagger: 0.2,duration: 0.8,ease: "power1.out",delay: 1.6});
   gsap.to(".site_explanation2 > p > span", {scrollTrigger: {trigger: ".subtitle2",start: "5% center",},opacity: 1,y: 0,stagger: 0.2,duration: 0.8,ease: "power1.out",delay: 1.6});
   gsap.to(".site_explanation3 > p > span", {scrollTrigger: {trigger: ".subtitle3",start: "5% center",},opacity: 1,y: 0,stagger: 0.2,duration: 0.8,ease: "power1.out",delay: 1.6});
   gsap.to(".site_explanation4 > p > span", {scrollTrigger: {trigger: ".subtitle4",start: "5% center",},opacity: 1,y: 0,stagger: 0.2,duration: 0.8,ease: "power1.out",delay: 1.6});
   gsap.to(".site_explanation5 > p > span", {scrollTrigger: {trigger: ".subtitle5",start: "5% center",},opacity: 1,y: 0,stagger: 0.2,duration: 0.8,ease: "power1.out",delay: 1.6});
-
-
-// // 배경
-// gsap.to(".site_wrap", {
-//   scrollTrigger: {
-//     trigger: ".gradient2",
-//     
-//     start: "5% center",
-//   },
-//   backgroundColor: "#2a1a16",
-//   duration: 3,
-//   ease: "power2.out",
-// });
-// gsap.to(".gradient2", {
-//   scrollTrigger: {
-//     trigger: ".gradient2",
-//     
-//     start: "5% center",
-//   },
-//   opacity: 1,
-//   duration: 3,
-//   ease: "power2.out",
-// });
 
   gsap.to(".site_desc", {
     scrollTrigger: {
@@ -67,6 +43,13 @@ gsap.to(".site_info5 .siteImg_bg", {scrollTrigger: {trigger: ".subtitle5",start:
     opacity: 1,
     duration: 1.5,
   });
+
+  // view site
+  gsap.to(".site_explanation1 a div", {scrollTrigger: {trigger: ".site_wrap",start: "5% center",},opacity:1,y: "0",duration:1,delay:1.4,ease:"power2.out"})
+  gsap.to(".site_explanation2 a div", {scrollTrigger: {trigger: ".subtitle2",start: "5% center",},opacity:1,y: "0",duration:1,delay:1.4,ease:"power2.out"})
+  gsap.to(".site_explanation3 a div", {scrollTrigger: {trigger: ".subtitle3",start: "5% center",},opacity:1,y: "0",duration:1,delay:1.4,ease:"power2.out"})
+  gsap.to(".site_explanation4 a div", {scrollTrigger: {trigger: ".subtitle4",start: "5% center",},opacity:1,y: "0",duration:1,delay:1.4,ease:"power2.out"})
+  gsap.to(".site_explanation5 a div", {scrollTrigger: {trigger: ".subtitle5",start: "5% center",},opacity:1,y: "0",duration:1,delay:1.4,ease:"power2.out"})
 
   ///////////////////////
   // line1
