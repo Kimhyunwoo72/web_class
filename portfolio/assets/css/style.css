@@ -1057,7 +1057,6 @@ nav.sub-menu-open .nav-links .hover-el {
   font-family: var(--desc_font);
   padding-top: 6vw;
   padding-right: 5vw;
-  opacity: 0;
 }
 
 @media (max-width:750px) {
@@ -1075,6 +1074,9 @@ nav.sub-menu-open .nav-links .hover-el {
 
   .effect_text h2 span {
     font-size: 48px;
+  }
+  .effect_desc {
+    display: none;
   }
 }
 
