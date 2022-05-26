@@ -141,7 +141,6 @@
   </div>
   <!-- //gmae3 -->
 
-  <div class="scrollTop">0</div>
   <header id="header">
     <ul>
       <li><a href="#">DEV</a></li>
@@ -769,7 +768,6 @@
     <div class="gradient3"></div>
 
     <section class="contact" id="contact">
-      <!-- https://script.google.com/macros/s/AKfycbz-1_iIU4PNdm3Sc9Yx_DZJko9gusCU6mQujD00/exec -->
       <div class="contact_wrap">
         <article class="contact_desc">
           <h2>CONTACT</h2>
@@ -1043,21 +1041,22 @@
     hljs.highlightAll();
     modal();
 
-
-
-    
+    let width_scroll = window.innerWidth;
     // 스크롤
-    function scroll() {
+    if(width_scroll >= 600){
+
+      function scroll() {
       var s = skrollr.init();
       let scrollTop =
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         window.scrollY;
 
-      document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
       requestAnimationFrame(scroll);
     }
     scroll();
+    }
+  
 
 
     /* 사이트 모션*/
