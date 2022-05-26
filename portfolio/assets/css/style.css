@@ -1733,13 +1733,9 @@ nav.sub-menu-open .nav-links .hover-el {
     display: block;
     padding-top: 4vw;
   }
-
-  figure.snipText .hidText div:after {
-    transform: translateY(-200%) !important;
-  }
-
-  figure.snipText:hover .hidText div:after {
-    transform: translate(0, 2%) !important;
+  .siteH_line,
+  .hidText {
+    display: none;
   }
 
   figure.snipText {
