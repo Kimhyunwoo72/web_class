@@ -1066,8 +1066,9 @@
     modal();
 
     let width_scroll = window.innerWidth;
+    let main_wrap = main_wrap.innerWidth
     // 스크롤
-    if (width_scroll >= 650) {
+    if (main_wrap >= 650) {
 
       function scroll() {
         var s = skrollr.init();
