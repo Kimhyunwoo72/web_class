@@ -1238,6 +1238,9 @@ nav.sub-menu-open .nav-links .hover-el {
   .gmae_wrap {
     overflow-x:visible;
   }
+  .playImg_wrap {
+    width: 85%;
+  }
 }
 .gmae_effect {
   width: 100%;
