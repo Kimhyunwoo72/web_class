@@ -11,41 +11,43 @@ gsap.to(".rowMode_line2", { scrollTrigger: {trigger: ".gmae_info",start: "5% cen
 gsap.to("#header ul li a", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},color: "#000"});
 gsap.to(".line", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},backgroundColor: "#000"});
 
-var windowWidth = window.innerWidth;
-if(windowWidth <= 750){
-  let SECTIONS = gsap.utils.toArray(".gmae_info");
 
-gsap.to(SECTIONS, {
-  xPercent: -100 * (SECTIONS.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".gmae_wrap",
+// let SECTIONS = gsap.utils.toArray(".gmae_info");
+
+// gsap.to(SECTIONS, {
+//   xPercent: -100 * (SECTIONS.length - 1),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".gmae_wrap",
     
-    start: "center 40%",
-    end: () => "+=" + document.querySelector(".game_row").offsetWidth,
-    pin: true,
-    scrub: 1,
-    snap: 1 / (SECTIONS.length - 1),
-  },
-});
-} else {
+//     start: "center 60%",
+//     end: () => "+=" + document.querySelector(".game_row").offsetWidth,
+//     pin: true,
+//     scrub: 1,
+//     snap: 1 / (SECTIONS.length - 1),
+//   },
+// });
+let main_wrap2 = window.innerWidth
+alert(main_wrap2)
+
+if(main_wrap2 >=750){
+
   let SECTIONS = gsap.utils.toArray(".gmae_info");
 
-  gsap.to(SECTIONS, {
-    xPercent: -100 * (SECTIONS.length - 1),
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".gmae_wrap",
-      
-      start: "center 60%",
-      end: () => "+=" + document.querySelector(".game_row").offsetWidth,
-      pin: true,
-      scrub: 1,
-      snap: 1 / (SECTIONS.length - 1),
-    },
-  });
-}
-
+   gsap.to(SECTIONS, {
+     xPercent: -100 * (SECTIONS.length - 1),
+     ease: "none",
+     scrollTrigger: {
+       trigger: ".gmae_wrap",
+  
+       start: "center 60%",
+       end: () => "+=" + document.querySelector(".game_row").offsetWidth,
+       pin: true,
+       scrub: 1,
+       snap: 1 / (SECTIONS.length - 1),
+     },
+   });
+  }
 
 
 gsap.to(".section2Title_desc", {

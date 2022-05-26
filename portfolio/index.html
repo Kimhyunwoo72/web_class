@@ -1056,17 +1056,12 @@
     });
     // loding
 
-    setTimeout(() => {
-
-    }, 1000);
-    // main banner
-    // main banner
-
     hljs.highlightAll();
     modal();
 
-    let width_scroll = window.innerWidth;
-    let main_wrap = main_wrap.innerWidth
+
+    let main_con = document.querySelector(".main_wrap")
+    let main_wrap = main_con.innerWidth
     // 스크롤
     if (main_wrap >= 650) {
 
