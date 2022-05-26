@@ -8,58 +8,83 @@
   <title>portpolio</title>
 
   <style>
-.loading {
-  width: 100%; height: 100%;
-  background: #000 ;
-  z-index: 9999;
-}
+    .loading {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 9999;
+    }
 
-.loading_text {
-  height: 100vh;
-  line-height: 100vh;
-  text-align: center;
-}
+    .loading_text {
+      height: 100vh;
+      line-height: 100vh;
+      text-align: center;
+    }
 
-.loading_text_words  {
-  display: inline-block;
-  margin: 0 5px;
-  color:#fff;
-  animation: blur 1.5s infinite linear alternate;
-}
+    .loading_text_words {
+      display: inline-block;
+      margin: 0 5px;
+      color: #fff;
+      animation: blur 1.5s infinite linear alternate;
+    }
 
-.loading_text_words:nth-child(1) {animation-delay:100ms;}
-.loading_text_words:nth-child(2) {animation-delay:300ms;}
-.loading_text_words:nth-child(3) {animation-delay:500ms;}
-.loading_text_words:nth-child(4) {animation-delay:700ms;}
-.loading_text_words:nth-child(5) {animation-delay:900ms;}
-.loading_text_words:nth-child(6) {animation-delay:1100ms;}
-.loading_text_words:nth-child(7) {animation-delay:1300ms;}
+    .loading_text_words:nth-child(1) {
+      animation-delay: 100ms;
+    }
 
-@keyframes blur {
-  0%{filter: blur(0px);}
-  100% {filter: blur(4px);}
-}
+    .loading_text_words:nth-child(2) {
+      animation-delay: 300ms;
+    }
 
-.progress {
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 99999;
-  width: 100%;
-  height: 100vh;
-  background: #1c1c1c;
-}
+    .loading_text_words:nth-child(3) {
+      animation-delay: 500ms;
+    }
 
-.progress .progress-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 6vw;
-  color: #fff;
-}
+    .loading_text_words:nth-child(4) {
+      animation-delay: 700ms;
+    }
 
+    .loading_text_words:nth-child(5) {
+      animation-delay: 900ms;
+    }
+
+    .loading_text_words:nth-child(6) {
+      animation-delay: 1100ms;
+    }
+
+    .loading_text_words:nth-child(7) {
+      animation-delay: 1300ms;
+    }
+
+    @keyframes blur {
+      0% {
+        filter: blur(0px);
+      }
+
+      100% {
+        filter: blur(4px);
+      }
+    }
+
+    .progress {
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      z-index: 99999;
+      width: 100%;
+      height: 100vh;
+      background: #1c1c1c;
+    }
+
+    .progress .progress-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 6vw;
+      color: #fff;
+    }
   </style>
 
   <!-- 폰트 -->
@@ -781,11 +806,12 @@
           </p>
         </article>
 
-  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+        <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 
         <article class="contact_form email-me">
           <h2 class="title-section">CONTACT FORM</h2>
-          <form class="gform" action="https://script.google.com/macros/s/AKfycbz-1_iIU4PNdm3Sc9Yx_DZJko9gusCU6mQujD00/exec">
+          <form class="gform"
+            action="https://script.google.com/macros/s/AKfycbz-1_iIU4PNdm3Sc9Yx_DZJko9gusCU6mQujD00/exec">
             <fieldset>
               <div class="box-input">
                 <label for="userName"></label>
@@ -806,7 +832,7 @@
                 <p>연락 주셔서 감사합니다!<br>
                   빠른시일내에 연락 드리겠습니다!
                 </p>
-                </div>
+              </div>
             </fieldset>
           </form>
         </article>
@@ -958,83 +984,82 @@
 
 
   <script>
+    // 로딩 페이지
+    function loading(main) {
+      console.log('loading')
+      let progress = $(".progress"),
+        progressText = progress.find(".progress-text"),
+        imgLoad = imagesLoaded("body"),
+        imgTotal = imgLoad.images.length,
+        imgLoaded = 0,
+        imgCurrent = 0,
+        progressTimer = setInterval(updateProgress, 1000 / 60);
 
- // 로딩 페이지
- function loading(main) {
-            console.log('loading')
-            let progress = $(".progress"),
-                progressText = progress.find(".progress-text"),
-                imgLoad = imagesLoaded("body"),
-                imgTotal = imgLoad.images.length,
-                imgLoaded = 0,
-                imgCurrent = 0,
-                progressTimer = setInterval(updateProgress, 1000 / 60);
-              
 
-            imgLoad.on("progress", function () {
-                imgLoaded++;
-            });
+      imgLoad.on("progress", function () {
+        imgLoaded++;
+      });
 
-            function updateProgress() {
-                let target = (imgLoaded / imgTotal) * 100;
+      function updateProgress() {
+        let target = (imgLoaded / imgTotal) * 100;
 
-                imgCurrent += (target - imgCurrent) * 0.1;
-                progressText.text(Math.floor(imgCurrent) + "%");
+        imgCurrent += (target - imgCurrent) * 0.1;
+        progressText.text(Math.floor(imgCurrent) + "%");
 
-                if (imgCurrent >= 100) {
-                    clearInterval(progressTimer);
-                    progress.delay(1000).animate({
-                        top: "-130%"
-                    }, 400);
+        if (imgCurrent >= 100) {
+          clearInterval(progressTimer);
+          progress.delay(1000).animate({
+            top: "-130%"
+          }, 400);
 
-                    $("body").addClass("show");
+          $("body").addClass("show");
 
-                    let tl = new TimelineMax();
-                    let navtl = new TimelineMax();
+          let tl = new TimelineMax();
+          let navtl = new TimelineMax();
 
-                    tl.staggerFromTo(".main-text span", 0.8, {
-                        ease: Back.easeOut.config(1.7),
-                        delay: 2,
-                        opacity: 0,
-                        y: 80
-                    }, {
-                        ease: Back.easeOut.config(1.7),
-                        delay: 2,
-                        opacity: 1,
-                        y: 0
-                    }, 0.05);
+          tl.staggerFromTo(".main-text span", 0.8, {
+            ease: Back.easeOut.config(1.7),
+            delay: 2,
+            opacity: 0,
+            y: 80
+          }, {
+            ease: Back.easeOut.config(1.7),
+            delay: 2,
+            opacity: 1,
+            y: 0
+          }, 0.05);
 
-                    navtl.staggerFromTo("#nav ul li", 0.6, {
-                        ease: Back.easeOut.config(1.7),
-                        delay: 3.5,
-                        opacity: 0,
-                        x: 40
-                    }, {
-                        ease: Back.easeOut.config(1.7),
-                        delay: 3.5,
-                        opacity: 1,
-                        x: 0
-                    }, 0.05);
-                }
+          navtl.staggerFromTo("#nav ul li", 0.6, {
+            ease: Back.easeOut.config(1.7),
+            delay: 3.5,
+            opacity: 0,
+            x: 40
+          }, {
+            ease: Back.easeOut.config(1.7),
+            delay: 3.5,
+            opacity: 1,
+            x: 0
+          }, 0.05);
+        }
 
-                if (imgCurrent > 99) {
-                    imgCurrent = 100;
-                    
-                }
-              }
-              setTimeout(() => {
-                main()
-              }, 3500);
-            }
-        loading(function() {
-            mainEffect()
-        });
+        if (imgCurrent > 99) {
+          imgCurrent = 100;
+
+        }
+      }
+      setTimeout(() => {
+        main()
+      }, 3500);
+    }
+    loading(function () {
+      mainEffect()
+    });
     // loding
 
     setTimeout(() => {
 
     }, 1000);
-        // main banner
+    // main banner
     // main banner
 
     hljs.highlightAll();
@@ -1042,20 +1067,20 @@
 
     let width_scroll = window.innerWidth;
     // 스크롤
-    if(width_scroll >= 650){
+    if (width_scroll >= 650) {
 
       function scroll() {
-      var s = skrollr.init();
-      let scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        window.scrollY;
+        var s = skrollr.init();
+        let scrollTop =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          window.scrollY;
 
-      requestAnimationFrame(scroll);
+        requestAnimationFrame(scroll);
+      }
+      scroll();
     }
-    scroll();
-    }
-  
+
 
 
     /* 사이트 모션*/
@@ -1166,7 +1191,6 @@
       }
     }
     // menu
-
   </script>
 </body>
 
