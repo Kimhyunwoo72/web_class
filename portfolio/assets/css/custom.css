@@ -270,6 +270,7 @@
   }
 }
 
+
 .code-view {
   height: 94vh;
   background: #fff;
@@ -277,6 +278,16 @@
   border-radius: 5px;
   overflow: scroll;
   overflow-x: hidden;
+}
+@media (max-width: 700px) {
+  .code-view {
+    height: 83vh;
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
 }
 
 .code-view::-webkit-scrollbar {
