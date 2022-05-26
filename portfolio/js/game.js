@@ -28,7 +28,6 @@ gsap.to(".line", { scrollTrigger: {trigger: ".gmae_info",start: "5% center",},ba
 //   },
 // });
 let main_wrap2 = window.innerWidth
-alert(main_wrap2)
 
 if(main_wrap2 >=750){
 
