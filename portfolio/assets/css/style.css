@@ -506,12 +506,15 @@ nav.sub-menu-open .nav-links .hover-el {
 
 
 @media (max-width: 750px) {
+  .main_page {
+    top: -29vw;
+  } 
   .bg_box {
-    height: 50vw;
+    height: 60vw;
   }
 
   .bg_box ul {
-    height: 50vw;
+    height: 60vw;
   }
 
   .main_banner {
@@ -520,6 +523,10 @@ nav.sub-menu-open .nav-links .hover-el {
 
   .main_banner figure img {
     object-fit: cover;
+  }
+  .loader .intro-title1,
+  .loader .intro-title2 {
+    font-size: 9vw;
   }
 }
 
