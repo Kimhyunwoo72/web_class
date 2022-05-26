@@ -248,7 +248,21 @@ nav .menu-btn {
   cursor: pointer;
   z-index: 10;
 }
-
+@media (max-width:750px) {
+  nav .menu-btn {
+    top: 2%;
+    left: -9vw;
+    width: calc(var(--icon-width) + 1vw);
+    height: calc(var(--icon-width) + 1vw);
+    flex-direction: column;
+    transition: all calc(100ms + var(--transition-time)) cubic-bezier(0.8, 0, 0.33, 1.25);
+    cursor: pointer;
+    z-index: 10;
+}
+nav {
+  width: 300px;
+}
+}
 nav .menu-btn.close .line__1 {
   transform: rotate(45deg) translate(2px, -3px);
 }
@@ -1875,11 +1889,17 @@ textarea:focus {outline:none;}
   .contact_desc h2 {
     font-size: 7vw;
   }
-  .contact_desc p {
-    font-size: 1.7vw;
-  }
+
 }
 @media (max-width: 750px) {
+  .contact_form h2,
+  .contact_desc h2 {
+    font-size: 50px;
+    padding-bottom: 40px;
+  }
+  .contact_desc p {
+    font-size: 15px;
+  }
   .contact_desc p br{
     display: none;
   }

@@ -573,16 +573,16 @@
             })
 
             //이미지에 마우스가 가면 플레이 멈추기
-            sliderInner.addEventListener("mouseenter", () => {
-                stopPlay()
-            })
-            sliderInner.addEventListener("mouseleave", () => {
-                if (document.querySelector(".play").classList.contains("show")) {
-                    stopPlay()
-                } else {
-                    autoplay()
-                }
-            })
+            // sliderInner.addEventListener("mouseenter", () => {
+            //     stopPlay()
+            // })
+            // sliderInner.addEventListener("mouseleave", () => {
+            //     if (document.querySelector(".play").classList.contains("show")) {
+            //         stopPlay()
+            //     } else {
+            //         autoplay()
+            //     }
+            // })
 
             document.querySelector(".play").addEventListener("click", () => {
                 document.querySelector(".play").classList.remove("show")
