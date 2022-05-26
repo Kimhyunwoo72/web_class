@@ -468,6 +468,12 @@ nav.sub-menu-open .nav-links .hover-el {
 
 
 @media (max-width: 750px) {
+  .bg_box {
+    height: 50vw;
+  }
+  .bg_box ul {
+    height: 50vw;
+  }
   .main_banner {
     height: 25vh;
   }
