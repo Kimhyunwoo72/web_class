@@ -6,10 +6,6 @@
   text-transform: uppercase;
 }
 
-body {
-  overflow-x: hidden;
-  }
-
 /* 여백 초기화 */
 body,
 div,
