@@ -192,7 +192,7 @@
       bottom: 0;
       z-index: 10;
       border-radius: 15px;
-      padding: 15px 30px;
+      padding: 1vw 2vw;
       box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
       transition: all 0.15s ease-in-out;
       bottom: -400px;
@@ -204,6 +204,7 @@
       bottom: 0;
       opacity: 1;
       pointer-events: auto;
+      height: 100%;
     }
 
     .music__list .title {
@@ -212,6 +213,9 @@
       justify-content: space-between;
       color: var(--lightblack);
       margin-bottom: 10px;
+    }
+    .music__list .title > div > span {
+      font-size: 1.5vw;
     }
 
     .music__list .title .queue {
@@ -247,10 +251,15 @@
 
     .music__list .list>ul>li>div em {
       font-style: normal;
+      font-size: 1vw;
     }
 
     .music__list .list>ul>li>div p {
       opacity: 0.8;
+      font-size: 1vw;
+    }
+    .audio-duration {
+      font-size: 1vw;
     }
 
     @media (max-width: 800px) {

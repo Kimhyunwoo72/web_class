@@ -100,7 +100,7 @@ if (windowWidth <= 750) {
     },
     stagger: 0.2,
     opacity: 1,
-    y: 0,
+    top: 0,
     duration: 1.5,
     ease: "power2.out",
     delay: 2.3,
@@ -109,12 +109,11 @@ if (windowWidth <= 750) {
   gsap.to(".about_desc2 > .desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
-      
       start: "5% center",
     },
     stagger: 0.2,
     opacity: 1,
-    y: 0,
+    top: 0,
     duration: 1.5,
     ease: "power2.out",
     delay: 2.6,
@@ -128,7 +127,7 @@ if (windowWidth <= 750) {
     },
     opacity: 1,
     stagger: 0.2,
-    y: 0,
+    top: 0,
     duration: 1.5,
     ease: "power2.out",
     delay: 2.9,
@@ -145,6 +144,7 @@ if (windowWidth <= 750) {
     opacity: 0,
     height: 0,
   });
+  // 11
   gsap.to(".about_cont ul li:nth-child(1)", {
     scrollTrigger: {
       trigger: ".about_page",
@@ -182,39 +182,28 @@ if (windowWidth <= 750) {
   // 반응형 끝
 } else {
 
-  //about_cont line
-  gsap.from(".about_cont ul li:nth-child(1)", {
-    scrollTrigger: {
-      trigger: ".about_page",
-      
-      start: "5% center",
-    },
-    opacity: 0,
-    height: 0,
-  });
+  // about_cont line 11
   gsap.to(".about_cont ul li:nth-child(1)", {
     scrollTrigger: {
       trigger: ".about_page",
-      
       start: "5% center",
     },
     opacity: 1,
     height: 100 + "%",
     duration: 1,
-    ease: "none",
     delay: 0.5,
   });
 
   //about_cont line
-  gsap.from(".about_cont ul li > div", {
-    scrollTrigger: {
-      trigger: ".about_page",
+  // gsap.from(".about_cont ul li > div", {
+  //   scrollTrigger: {
+  //     trigger: ".about_page",
       
-      start: "5% center",
-    },
-    scaleX: 1,
-    scaleY: 1,
-  });
+  //     start: "5% center",
+  //   },
+  //   scaleX: 1,
+  //   scaleY: 1,
+  // });
   gsap.to(".about_cont ul li > div", {
     scrollTrigger: {
       trigger: ".about_page",
@@ -231,7 +220,6 @@ if (windowWidth <= 750) {
   gsap.from(".about_cont ul li .about_num1", {
     scrollTrigger: {
       trigger: ".about_page",
-      
       start: "5% center",
     },
     x: -100,
@@ -296,7 +284,7 @@ if (windowWidth <= 750) {
   // about_num
 
   //about_desc
-  gsap.to(".desc1_text", {
+  gsap.to(".about_desc1 .desc1_text", {
     scrollTrigger: {
       trigger: ".about_page",
       
@@ -304,8 +292,8 @@ if (windowWidth <= 750) {
     },
     stagger: 0.2,
     opacity: 1,
-    y: 0,
-    duration: 1.5,
+    top: 0,
+    duration: 2,
     ease: "power2.out",
     delay: 1.5,
   });
@@ -318,8 +306,8 @@ if (windowWidth <= 750) {
     },
     stagger: 0.2,
     opacity: 1,
-    y: 0,
-    duration: 1.5,
+    top: 0,
+    duration: 2,
     ease: "power2.out",
     delay: 1.7,
   });
@@ -332,8 +320,8 @@ if (windowWidth <= 750) {
     },
     opacity: 1,
     stagger: 0.2,
-    y: 0,
-    duration: 1.5,
+    top: 0,
+    duration: 2,
     ease: "power2.out",
     delay: 1.8,
   });
