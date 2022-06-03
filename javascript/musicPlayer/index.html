@@ -318,14 +318,7 @@
           </div>
           <div class="list">
             <ul>
-              <!-- 자바스크립트 -->
-              <!-- <li>
-                            <div>
-                                <em>지난여름</em>
-                                <p>악동뮤지션</p>
-                            </div>
-                            <span>3:36</span>
-                        </li> -->
+               <!-- list -->
             </ul>
           </div>
         </div>
@@ -508,8 +501,9 @@
                         <p>${allMusic[i].artist}</p>
                     </div>
                     <audio class="${allMusic[i].audio}" src="songs/${
-          allMusic[i].audio
-        }.mp3"></audio>
+                                    allMusic[i].audio
+                                  }.mp3">
+                    </audio>
                     <span id="${
                       allMusic[i].audio
                     }" class="audio-duration">3:36</span>
