@@ -59,7 +59,9 @@ gsap.to('.ony-about__history-item1', {
   scrollTrigger: {
     trigger: '.ony-about__history',
     markers: true,
-    start: '-15% center'
+    start: '-15% center',
+    scrub: 2,
+    end: '-25%'
   },
   y: 0,
   opacity: 1,
@@ -71,7 +73,9 @@ gsap.to('.ony-about__history-item2', {
   scrollTrigger: {
     trigger: '.ony-about__history',
     markers: true,
-    start: '15% center'
+    start: '15% center',
+    scrub: 2,
+    end: '-15%'
   },
   y: 0,
   opacity: 1,
@@ -82,7 +86,9 @@ gsap.to('.ony-about__history-item3', {
   scrollTrigger: {
     trigger: '.ony-about__history',
     markers: true,
-    start: '50% center'
+    start: '50% center',
+    scrub: 2,
+    end: 'top'
   },
   y: 0,
   opacity: 1,

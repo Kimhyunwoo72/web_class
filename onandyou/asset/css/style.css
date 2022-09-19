@@ -31,7 +31,7 @@
   width: 100%;
   background-color: #888;
   animation-name: kv-background;
-  animation-duration: 1.6s;
+  animation-duration: 1.5s;
   animation-timing-function: cubic-bezier(0.42, 0, 0, 1.08);
 }
 

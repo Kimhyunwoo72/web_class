@@ -1,0 +1,83 @@
+.ony-location {
+  padding: 10vw 20vw;
+}
+.ony-location-title {
+  overflow-y: hidden;
+  margin-bottom: 5vw;
+}
+.ony-location-title > h2 {
+  font-size: 2vw;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateY(100%);
+}
+
+.ony-location-map {
+  position: relative;
+  width: 100%;
+  height: 30vw;
+}
+
+.ony-location-map-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-color: #f1f2ed;
+}
+
+.ony-location-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.ony-location-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ony-location-item {
+  width: 30%;
+  opacity: 0;
+  transform: translateY(50%);
+}
+.ony-location-box {
+  margin: 3vw 0 1.5vw;
+}
+.ony-location-sub-title {
+  padding: 1vw;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 1vw;
+}
+.ony-location-address {
+  padding: 0 1vw;
+}
+
+.ony-location-desc {
+  display: flex;
+  margin-bottom: 1vw;
+  font-size: 0.8vw;
+  line-height: 1.5;
+}
+
+.ony-location-address-title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 30%;
+  margin-right: 1vw;
+}
+.ony-location-address-link,
+.ony-location-desc > span {
+  width: 70%;
+}
+.ony-location-address-time {
+  display: inline-block;
+  margin-bottom: 1vw;
+  font-size: 0.8vw;
+  line-height: 1.5;
+}
