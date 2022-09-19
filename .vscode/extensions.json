@@ -1,6 +1,6 @@
 {
-    "recommendations": [
-        "equinusocio.vsc-community-material-theme",
-        "Equinusocio.vsc-community-material-theme"
-    ]
+  "recommendations": [
+    "equinusocio.vsc-community-material-theme",
+    "oderwat.indent-rainbow"
+  ]
 }

@@ -1,0 +1,162 @@
+.ony-about {
+  padding: 10vw 20vw;
+}
+
+.ony-about__introduce {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ony-about__introduce-profile {
+  position: relative;
+  width: 50%;
+  height: 40vw;
+  overflow: hidden;
+}
+
+.ony-about__introduce-profile-background {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-color: #f1f2ed;
+}
+
+.ony-about__introduce-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ony-about__introduce-text {
+  width: 40%;
+}
+
+.ony-about__introduce-title {
+  position: relative;
+  padding: 3vw 0;
+  overflow: hidden;
+}
+.ony-about__introduce-title::after,
+.ony-about__introduce-title::before {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: scale(0);
+  animation-name: introduce-lineTop;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  content: '';
+}
+.ony-about__introduce-title::before {
+  top: 0;
+}
+.ony-about__introduce-title::after {
+  bottom: 0;
+}
+
+@keyframes introduce-lineTop {
+  to {
+    transform: scale(1);
+  }
+}
+
+.ony-about__introduce-name {
+  overflow: hidden;
+}
+.ony-about__introduce-name > h2 {
+  font-size: 1.7vw;
+  text-transform: uppercase;
+  transform: translateY(100%);
+}
+
+.ony-about__introduce-sub-title {
+  overflow: hidden;
+}
+
+.ony-about__introduce-sub-title > p {
+  margin-top: 1vw;
+  font-size: 1vw;
+  color: #727171;
+  transform: translateY(100%);
+}
+
+.ony-about__introduce-desc {
+  margin-top: 3vw;
+  font-size: 0.8vw;
+  line-height: 2;
+  word-break: keep-all;
+  opacity: 0;
+}
+
+.ony-about__introduce-desc--business-name {
+  text-align: right;
+}
+
+.ony-about__introduce-desc--business-name > em {
+  margin-left: 3px;
+}
+
+/* ony-about__history */
+.ony-about__history {
+  margin: 15vw 0;
+}
+
+.ony-about__history-title {
+  font-size: 1.7vw;
+  font-weight: 400;
+}
+.ony-about__history-list {
+  margin-top: 4vw;
+}
+.ony-about__history-item {
+  display: flex;
+}
+
+.ony-about__history-name {
+  display: flex;
+  position: relative;
+  width: 250px;
+  border-right: 1px solid #000;
+  text-transform: uppercase;
+}
+
+.ony-about__history-name > span {
+  position: relative;
+  width: 100%;
+  display: block;
+  height: fit-content;
+  min-height: 60px;
+  padding: 20px 0;
+  font-size: 1vw;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+.ony-about__history-name > span::after {
+  position: absolute;
+  top: 0;
+  right: -2.8px;
+  width: 5px;
+  height: 100%;
+  background-color: #000;
+  border-radius: 20px;
+  content: '';
+}
+
+.ony-about__history-box {
+  width: 80%;
+  margin-top: 40px;
+  padding: 4vw 0 4vw 110px;
+}
+
+.ony-about__history-desc {
+  display: block;
+  margin: 20px 0;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+}
