@@ -36,9 +36,56 @@ gsap.to('.ony-about__introduce-sub-title > p ', {
   delay: 1.3,
   ease: 'power2.out'
 });
+
 gsap.to('.ony-about__introduce-desc', {
   opacity: 1,
   duration: 2,
   delay: 1.9,
+  ease: 'power2.out'
+});
+
+gsap.to('.ony-about__history-title > h2', {
+  scrollTrigger: {
+    trigger: '.ony-about__history',
+    markers: true,
+    start: '-15% center'
+  },
+  y: 0,
+  duration: 1,
+  ease: 'power2.out'
+});
+
+gsap.to('.ony-about__history-item1', {
+  scrollTrigger: {
+    trigger: '.ony-about__history',
+    markers: true,
+    start: '-15% center'
+  },
+  y: 0,
+  opacity: 1,
+  duration: 1,
+  ease: 'power2.out'
+});
+
+gsap.to('.ony-about__history-item2', {
+  scrollTrigger: {
+    trigger: '.ony-about__history',
+    markers: true,
+    start: '15% center'
+  },
+  y: 0,
+  opacity: 1,
+  duration: 1,
+  ease: 'power2.out'
+});
+gsap.to('.ony-about__history-item3', {
+  scrollTrigger: {
+    trigger: '.ony-about__history',
+    markers: true,
+    start: '50% center'
+  },
+  y: 0,
+  opacity: 1,
+  duration: 1,
   ease: 'power2.out'
 });
