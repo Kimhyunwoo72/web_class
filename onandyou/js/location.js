@@ -15,7 +15,7 @@ tl.to('.ony-location-map-background', {
 gsap.to('.ony-location-item', {
   scrollTrigger: {
     trigger: '.ony-location-list',
-    start: '-30% center'
+    start: '-40% center'
   },
   stagger: 0.3,
   opacity: 1,

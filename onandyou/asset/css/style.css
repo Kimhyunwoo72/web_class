@@ -78,7 +78,7 @@
 .ony__header-list {
   display: flex;
 }
-
+.ony__header-item.active .ony__header-link::after,
 .ony__header-item:hover .ony__header-link::after {
   width: 80%;
 }
@@ -105,14 +105,10 @@
   transition: width 0.5s;
   content: '';
 }
-
+.ony__header-item.active .ony__header-link,
 .ony__header-link:hover {
   color: #000;
 }
-/* 
-.ony__header-link:hover .ony__header-link::after {
-  background-color: red;
-} */
 
 .ony__header-menu-btn {
   padding: 1vw;
