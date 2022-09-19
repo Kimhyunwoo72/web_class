@@ -18,10 +18,8 @@
   top: 0;
   z-index: 4;
   width: 100%;
+  height: 100vh;
   background-color: #555;
-  animation-name: background;
-  animation-duration: 1.3s;
-  animation-timing-function: cubic-bezier(0.42, 0, 0, 1.08);
 }
 
 .ony__kv-background {
@@ -29,28 +27,8 @@
   top: 0;
   z-index: 3;
   width: 100%;
+  height: 100vh;
   background-color: #888;
-  animation-name: kv-background;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.42, 0, 0, 1.08);
-}
-
-@keyframes background {
-  from {
-    height: 100vh;
-  }
-  to {
-    height: 0;
-  }
-}
-
-@keyframes kv-background {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
 }
 
 .ony__header {

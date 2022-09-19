@@ -15,7 +15,6 @@ gsap.to('.ony-about__introduce-img', {
 gsap.to('.ony-about__introduce-img', {
   scrollTrigger: {
     trigger: '.ony-about__introduce',
-    markers: true,
     start: 'top center',
     scrub: 1
   },
@@ -47,7 +46,6 @@ gsap.to('.ony-about__introduce-desc', {
 gsap.to('.ony-about__history-title > h2', {
   scrollTrigger: {
     trigger: '.ony-about__history',
-    markers: true,
     start: '-15% center'
   },
   y: 0,
@@ -58,7 +56,6 @@ gsap.to('.ony-about__history-title > h2', {
 gsap.to('.ony-about__history-item1', {
   scrollTrigger: {
     trigger: '.ony-about__history',
-    markers: true,
     start: '-15% center',
     scrub: 2,
     end: '-25%'
@@ -72,7 +69,6 @@ gsap.to('.ony-about__history-item1', {
 gsap.to('.ony-about__history-item2', {
   scrollTrigger: {
     trigger: '.ony-about__history',
-    markers: true,
     start: '15% center',
     scrub: 2,
     end: '-15%'
@@ -85,7 +81,6 @@ gsap.to('.ony-about__history-item2', {
 gsap.to('.ony-about__history-item3', {
   scrollTrigger: {
     trigger: '.ony-about__history',
-    markers: true,
     start: '50% center',
     scrub: 2,
     end: 'top'

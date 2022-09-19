@@ -9,6 +9,18 @@ var swiper = new Swiper('.ony__swiper', {
   }
 });
 
+gsap.to('.ony__background', {
+  height: 0,
+  duration: 1,
+  ease: 'power2.inOut'
+});
+
+gsap.to('.ony__kv-background', {
+  height: 0,
+  duration: 1.2,
+  ease: 'power2.inOut'
+});
+
 // kv
 gsap.to('.ony__kv', {
   scrollTrigger: {
@@ -16,10 +28,12 @@ gsap.to('.ony__kv', {
     markers: true,
     start: 'center center',
     end: '+3000',
-    scrub: 0.5,
+    scrub: 1,
     pin: true
   },
-  backgroundPositionY: 90 + '%'
+  scale: 1.1,
+  backgroundPositionY: 90 + '%',
+  ease: 'none'
 });
 // kv
 
