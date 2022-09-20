@@ -22,11 +22,11 @@ gsap.to('.ony__kv-background', {
 });
 
 // kv
-gsap.to('.ony__kv', {
+gsap.to('.ony__kv-wrap', {
   scrollTrigger: {
     trigger: '.ony__kv',
     markers: true,
-    start: 'center center',
+    start: '40% center',
     end: '+3000',
     scrub: 1,
     pin: true
@@ -38,6 +38,20 @@ gsap.to('.ony__kv', {
 // kv
 
 // main-about
+
+// parallax-effext
+gsap.to('.ony__about', {
+  scrollTrigger: {
+    trigger: '.ony__about',
+    markers: true,
+    start: 'top center',
+    end: '+2000',
+    scrub: 1
+  },
+  y: -40 + '%',
+  ease: 'none'
+});
+
 gsap.to('.ony__about-text-show > span', {
   scrollTrigger: {
     trigger: '.ony__about',
@@ -50,7 +64,50 @@ gsap.to('.ony__about-text-show > span', {
 });
 // main-about
 
-// main-link
+// ony__slider
+// parallax-effext
+gsap.to('.ony__slider', {
+  scrollTrigger: {
+    trigger: '.ony__about',
+    markers: true,
+    start: 'bottom center',
+    end: '+2000',
+    scrub: 1
+  },
+  y: -40 + '%',
+  ease: 'none'
+});
+// ony__slider
+
+// ony__collection
+// parallax-effext
+gsap.to('.ony__collection', {
+  scrollTrigger: {
+    trigger: '.ony__slider',
+    markers: true,
+    start: 'bottom center',
+    end: '+2000',
+    scrub: 1
+  },
+  y: -40 + '%',
+  ease: 'none'
+});
+// ony__collection
+
+// ony__link
+// parallax-effext
+gsap.to('.ony__link', {
+  scrollTrigger: {
+    trigger: '.ony__link',
+    markers: true,
+    start: '-70% center',
+    end: '+1000',
+    scrub: 1
+  },
+  y: -100 + '%',
+  ease: 'none'
+});
+
 gsap.to('.ony__link-sub-title > div', {
   scrollTrigger: {
     trigger: '.ony__link',
@@ -83,43 +140,59 @@ gsap.to('.ony__link-arrow', {
   duration: 3,
   ease: 'power2.out'
 });
-
-// main-link
+// ony__link
 
 // ony__shop
 gsap.to('.ony__shop-prev', {
   scrollTrigger: {
     trigger: '.ony__shop',
     markers: true,
-    start: 'top center',
+    start: '-40% center',
+    end: '+2000',
     scrub: 1
   },
-  backgroundPositionY: 70 + '%',
-  duration: 0.1
+  y: -80 + '%',
+  duration: 1
 });
 
 gsap.to('.ony__shop-main', {
   scrollTrigger: {
     trigger: '.ony__shop',
     markers: true,
-    start: 'top center',
+    start: '-40% center',
+    end: '+2000',
     scrub: 1
   },
-  backgroundPositionY: 70 + '%',
-  duration: 0.1
+  y: -30 + '%',
+  duration: 1
 });
 
 gsap.to('.ony__shop-next > span', {
   scrollTrigger: {
     trigger: '.ony__shop',
     markers: true,
-    start: 'top center',
+    start: '-40% center',
+    end: '+2000',
     scrub: 1
   },
-  backgroundPositionY: 70 + '%',
-  duration: 0.1
+  y: -140 + '%',
+  duration: 1
 });
 // ony__shop
+
+//  ony__news
+// parallax-effext
+gsap.to('.ony__news', {
+  scrollTrigger: {
+    trigger: '.ony__shop',
+    markers: true,
+    start: 'bottom center',
+    end: '+2000',
+    scrub: 1
+  },
+  y: -40 + '%',
+  ease: 'none'
+});
 
 // ony__shop-next
 gsap.to('.ony__collection-slider--up > .ony__collection-slider-box', {
@@ -129,7 +202,7 @@ gsap.to('.ony__collection-slider--up > .ony__collection-slider-box', {
     start: '-30% center',
     scrub: 1
   },
-  y: -30 + '%',
+  y: -40 + '%',
   duration: 0.1
 });
 

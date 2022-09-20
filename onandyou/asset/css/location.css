@@ -1,5 +1,6 @@
 .ony-location {
   padding: 10vw 20vw;
+  transform: translateY(15%);
 }
 .ony-location-title {
   overflow-y: hidden;

@@ -1,5 +1,5 @@
 .ony-about {
-  padding: 10vw 20vw;
+  padding: 15vw 20vw 0;
 }
 
 .ony-about__introduce {
@@ -38,7 +38,6 @@
 .ony-about__introduce-title {
   position: relative;
   padding: 3vw 0;
-  overflow: hidden;
 }
 
 .ony-about__introduce-title::after,

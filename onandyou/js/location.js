@@ -1,5 +1,19 @@
 var tl = gsap.timeline();
 
+// parallax-effext
+gsap.to('.ony-location', {
+  scrollTrigger: {
+    trigger: '.body',
+    markers: true,
+    start: 'top center',
+    scrub: 1
+  },
+  // y: -30 + '%',
+  y: -15 + '%',
+  ease: 'none'
+});
+// parallax-effext
+
 tl.to('.ony-location-title > h2', {
   y: 0,
   duration: 1,
@@ -15,7 +29,7 @@ tl.to('.ony-location-map-background', {
 gsap.to('.ony-location-item', {
   scrollTrigger: {
     trigger: '.ony-location-list',
-    start: '-40% center'
+    start: '-100% center'
   },
   stagger: 0.3,
   opacity: 1,
