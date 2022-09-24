@@ -11,3 +11,8 @@
 * {
   font-family: 'GmarketSans';
 }
+
+.important {
+  color: red;
+  font-size: 0.8vw !important;
+}

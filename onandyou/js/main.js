@@ -100,7 +100,7 @@ gsap.to('.ony__link', {
   scrollTrigger: {
     trigger: '.ony__link',
     markers: true,
-    start: '-70% center',
+    start: '-100% center',
     end: '+1000',
     scrub: 1
   },
@@ -186,8 +186,7 @@ gsap.to('.ony__news', {
   scrollTrigger: {
     trigger: '.ony__shop',
     markers: true,
-    start: 'bottom center',
-    end: '+2000',
+    start: '-20% center',
     scrub: 1
   },
   y: -40 + '%',

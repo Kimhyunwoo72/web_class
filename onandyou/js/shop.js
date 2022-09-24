@@ -2,7 +2,6 @@
 gsap.to('.ony-shop', {
   scrollTrigger: {
     trigger: '.body',
-    markers: true,
     start: 'top center',
     scrub: 1
   },
@@ -47,7 +46,7 @@ gsap.to('.ony-shop__box2', {
 gsap.to('.ony-shop__bundle-title > h3', {
   scrollTrigger: {
     trigger: '.ony-shop__bundle',
-    start: '-20% center'
+    start: '-40% center'
   },
   y: 0,
   duration: 1
@@ -56,7 +55,7 @@ gsap.to('.ony-shop__bundle-title > h3', {
 gsap.to('.ony-shop__bundle-desc > p', {
   scrollTrigger: {
     trigger: '.ony-shop__bundle',
-    start: '-20% center'
+    start: '-40% center'
   },
   y: 0,
   duration: 1,
@@ -66,7 +65,7 @@ gsap.to('.ony-shop__bundle-desc > p', {
 gsap.to('.ony-shop__shop__bundle-wrap', {
   scrollTrigger: {
     trigger: '.ony-shop__bundle',
-    start: '-20% center'
+    start: '-40% center'
   },
   y: 0,
   duration: 1,

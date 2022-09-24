@@ -4,7 +4,6 @@ var tl = gsap.timeline();
 gsap.to('.ony-about', {
   scrollTrigger: {
     trigger: '.body',
-    markers: true,
     start: 'top center',
     scrub: 1
   },
