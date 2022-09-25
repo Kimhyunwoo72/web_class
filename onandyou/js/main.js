@@ -1,3 +1,5 @@
+const kvWidth = document.querySelector('.ony__kv').clientWidth;
+
 // Initialize Swiper
 var swiper = new Swiper('.ony__swiper', {
   centeredSlides: true,
@@ -22,35 +24,41 @@ gsap.to('.ony__kv-background', {
 });
 
 // kv
-gsap.to('.ony__kv-wrap', {
-  scrollTrigger: {
-    trigger: '.ony__kv',
-    markers: true,
-    start: '40% center',
-    end: '+3000',
-    scrub: 1,
-    pin: true
-  },
-  scale: 1.1,
-  backgroundPositionY: 90 + '%',
-  ease: 'none'
-});
+if (kvWidth > 768) {
+  gsap.to('.ony__kv-wrap', {
+    scrollTrigger: {
+      trigger: '.ony__kv',
+      markers: true,
+      start: '30% center',
+      end: 200 + '%',
+      scrub: 1,
+      pin: true
+    },
+    scale: 1.1,
+    backgroundPositionY: 90 + '%',
+    ease: 'none',
+    duration: 1
+  });
+}
+
 // kv
 
 // main-about
 
 // parallax-effext
-gsap.to('.ony__about', {
-  scrollTrigger: {
-    trigger: '.ony__about',
-    markers: true,
-    start: 'top center',
-    end: '+2000',
-    scrub: 1
-  },
-  y: -40 + '%',
-  ease: 'none'
-});
+if (kvWidth > 768) {
+  gsap.to('.ony__about', {
+    scrollTrigger: {
+      trigger: '.ony__about',
+      markers: true,
+      start: 'top center',
+      end: '+2000',
+      scrub: 1
+    },
+    y: -40 + '%',
+    ease: 'none'
+  });
+}
 
 gsap.to('.ony__about-text-show > span', {
   scrollTrigger: {
@@ -66,52 +74,57 @@ gsap.to('.ony__about-text-show > span', {
 
 // ony__slider
 // parallax-effext
-gsap.to('.ony__slider', {
-  scrollTrigger: {
-    trigger: '.ony__about',
-    markers: true,
-    start: 'bottom center',
-    end: '+2000',
-    scrub: 1
-  },
-  y: -40 + '%',
-  ease: 'none'
-});
+if (kvWidth > 768) {
+  gsap.to('.ony__slider', {
+    scrollTrigger: {
+      trigger: '.ony__about',
+      markers: true,
+      start: 'bottom center',
+      end: '+2000',
+      scrub: 1
+    },
+    y: -40 + '%',
+    ease: 'none'
+  });
+}
 // ony__slider
 
 // ony__collection
 // parallax-effext
-gsap.to('.ony__collection', {
-  scrollTrigger: {
-    trigger: '.ony__slider',
-    markers: true,
-    start: 'bottom center',
-    end: '+2000',
-    scrub: 1
-  },
-  y: -40 + '%',
-  ease: 'none'
-});
+if (kvWidth > 768) {
+  gsap.to('.ony__collection', {
+    scrollTrigger: {
+      trigger: '.ony__slider',
+      markers: true,
+      start: 'bottom center',
+      end: '+2000',
+      scrub: 1
+    },
+    y: -40 + '%',
+    ease: 'none'
+  });
+}
 // ony__collection
 
 // ony__link
 // parallax-effext
-gsap.to('.ony__link', {
-  scrollTrigger: {
-    trigger: '.ony__link',
-    markers: true,
-    start: '-100% center',
-    end: '+1000',
-    scrub: 1
-  },
-  y: -100 + '%',
-  ease: 'none'
-});
-
+if (kvWidth > 768) {
+  gsap.to('.ony__link', {
+    scrollTrigger: {
+      trigger: '.ony__link',
+      markers: true,
+      start: '-100% center',
+      end: '+1000',
+      scrub: 1
+    },
+    y: -100 + '%',
+    ease: 'none'
+  });
+}
 gsap.to('.ony__link-sub-title > div', {
   scrollTrigger: {
     trigger: '.ony__link',
-    start: '-10% center'
+    start: '-50% center'
   },
   stagger: 0.3,
   y: 0,
@@ -148,7 +161,6 @@ gsap.to('.ony__shop-prev', {
     trigger: '.ony__shop',
     markers: true,
     start: '-40% center',
-    end: '+2000',
     scrub: 1
   },
   y: -80 + '%',
@@ -160,7 +172,6 @@ gsap.to('.ony__shop-main', {
     trigger: '.ony__shop',
     markers: true,
     start: '-40% center',
-    end: '+2000',
     scrub: 1
   },
   y: -30 + '%',
@@ -172,7 +183,6 @@ gsap.to('.ony__shop-next > span', {
     trigger: '.ony__shop',
     markers: true,
     start: '-40% center',
-    end: '+2000',
     scrub: 1
   },
   y: -140 + '%',
@@ -182,17 +192,18 @@ gsap.to('.ony__shop-next > span', {
 
 //  ony__news
 // parallax-effext
-gsap.to('.ony__news', {
-  scrollTrigger: {
-    trigger: '.ony__shop',
-    markers: true,
-    start: '-20% center',
-    scrub: 1
-  },
-  y: -40 + '%',
-  ease: 'none'
-});
-
+if (kvWidth > 768) {
+  gsap.to('.ony__news', {
+    scrollTrigger: {
+      trigger: '.ony__shop',
+      markers: true,
+      start: '-20% center',
+      scrub: 1
+    },
+    y: -40 + '%',
+    ease: 'none'
+  });
+}
 // ony__shop-next
 gsap.to('.ony__collection-slider--up > .ony__collection-slider-box', {
   scrollTrigger: {
@@ -212,7 +223,7 @@ gsap.to('.ony__collection-slider--down > .ony__collection-slider-box', {
     start: '-30% center',
     scrub: 1
   },
-  y: -32 + '%',
+  y: 10 + '%',
   duration: 0.1
 });
 // ony__shop-next
