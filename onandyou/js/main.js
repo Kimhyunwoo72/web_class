@@ -223,7 +223,7 @@ gsap.to('.ony__collection-slider--down > .ony__collection-slider-box', {
     start: '-30% center',
     scrub: 1
   },
-  y: 10 + '%',
+  y: 30 + '%',
   duration: 0.1
 });
 // ony__shop-next
