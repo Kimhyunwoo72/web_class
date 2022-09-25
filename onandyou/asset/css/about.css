@@ -176,7 +176,7 @@
 
 @media (max-width: 768px) {
   .ony-about {
-    padding: 40vw 20vw 0;
+    padding: 40vw 10vw 0;
   }
   .ony-about__introduce {
     flex-direction: column;
@@ -186,5 +186,38 @@
     width: 100%;
     height: 100vw;
     overflow: hidden;
+  }
+  .ony-about__introduce-text {
+    width: 100%;
+  }
+  .ony-about__introduce-text {
+    width: 100%;
+    margin-top: 10vw;
+  }
+  .ony-about__introduce-title {
+    padding: 7vw 0;
+  }
+  .ony-about__introduce-name > h2 {
+    font-size: 6vw;
+  }
+  .ony-about__introduce-sub-title > p {
+    margin-top: 3vw;
+    font-size: 4vw;
+  }
+  .ony-about__introduce-desc {
+    margin-top: 10vw;
+    font-size: 3vw;
+  }
+  .ony-about__history-title > h2 {
+    font-size: 8vw;
+  }
+  .ony-about__history-name > span {
+    font-size: 3vw;
+  }
+  .ony-about__history-box {
+    padding: 4vw 0 4vw 10vw;
+  }
+  .ony-about__history-desc {
+    font-size: 3vw;
   }
 }
