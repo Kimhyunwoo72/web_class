@@ -641,6 +641,9 @@
     word-wrap: break-word;
     word-break: keep-all;
   }
+  .swiper {
+    margin: 10vw auto;
+  }
 
   .swiper-pagination-fraction {
     left: auto !important;
