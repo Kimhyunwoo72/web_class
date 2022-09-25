@@ -173,3 +173,18 @@
   font-size: 0.8vw;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .ony-about {
+    padding: 40vw 20vw 0;
+  }
+  .ony-about__introduce {
+    flex-direction: column;
+  }
+  .ony-about__introduce-profile {
+    position: relative;
+    width: 100%;
+    height: 100vw;
+    overflow: hidden;
+  }
+}
