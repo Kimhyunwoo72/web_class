@@ -62,3 +62,34 @@
   color: #fff;
   border: 1px solid transparent;
 }
+@media (max-width: 768px) {
+  .ony-post {
+    padding: 15vw 10vw 60vw;
+    transform: translateY(15%) !important;
+  }
+  .ony-post__box {
+    min-height: 52vh;
+  }
+  .ony-post__title {
+    font-size: 5vw;
+  }
+  .ony-post__sub-title {
+    margin-top: 3vw;
+    font-size: 3vw;
+  }
+  .ony-post__text {
+    padding: 7vw 0;
+  }
+  .ony-post__img {
+    width: 100%;
+  }
+  .ony-post__desc {
+    width: 100%;
+    font-size: 3vw;
+  }
+  .ony-post__more {
+    margin-top: 5vw;
+    padding: 2vw 5vw;
+    font-size: 3vw;
+  }
+}
