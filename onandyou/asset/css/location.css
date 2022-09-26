@@ -82,3 +82,40 @@
   font-size: 0.8vw;
   line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+  .ony-location {
+    padding: 10vw 10vw 60vw;
+    transform: translateY(15%) !important;
+  }
+  .ony-location-title > h2 {
+    font-size: 6vw;
+  }
+  .ony-location-map {
+    height: auto;
+    margin-top: 10vw;
+  }
+  .ony-location-list {
+    flex-direction: column;
+    margin-top: 10vw;
+  }
+  .ony-location-item {
+    width: 100%;
+    margin-bottom: 5vw;
+  }
+  .ony-location-sub-title {
+    padding: 3vw;
+    font-size: 5vw;
+    font-weight: 400;
+    text-align: center;
+  }
+  .ony-location-address {
+    margin-top: 5vw;
+  }
+  .ony-location-desc {
+    font-size: 3vw;
+  }
+  .ony-location-address-time {
+    font-size: 3vw;
+  }
+}
