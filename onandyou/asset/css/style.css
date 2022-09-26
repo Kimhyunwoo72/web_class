@@ -514,6 +514,7 @@
   width: 100%;
   height: 30vw;
   margin-bottom: 2vw;
+  object-fit: cover;
 }
 
 /* ony__collection */

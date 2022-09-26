@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "LABDigital";
+  font-family: 'LABDigital';
   font-weight: normal;
   font-style: normal;
-  src: url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot");
-  src: url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff2")
-      format("woff2"),
-    url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff")
-      format("woff"),
-    url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.ttf")
-      format("truetype");
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.ttf')
+      format('truetype');
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "LABDigital";
+  font-family: 'LABDigital';
 }
 
 body {
@@ -69,16 +69,13 @@ a {
   height: 600px;
   top: 100px;
   position: fixed;
-  left: 3000px;
+  /* left: 3000px; */
+  right: 0;
   transition: all 1s;
+  transform: translateX(100%);
 }
 .music_html p,
 .typing_html p {
-  /* width: 50px;
-  color: #fff;
-  padding: 10px;
-  background-color: #000;
-  float: right; */
   white-space: nowrap;
   display: none;
   justify-content: center !important;
@@ -94,9 +91,10 @@ a {
 }
 .typing_html {
   position: absolute;
-  left: 3000px;
+  /* left: 3000px; */
   top: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  transform: translate(100%, -50%);
   border-radius: 5px;
   pointer-events: none;
   transition: all 1s ease;
@@ -104,7 +102,7 @@ a {
 
 .music_html.active {
   z-index: 10;
-  left: 80%;
+  /* left: 80%; */
   top: 20%;
   transition: all 1s;
   pointer-events: auto;
@@ -188,9 +186,10 @@ a {
 
 .memoryBox {
   position: absolute;
-  left: 2000px;
+  /* left: 2000px; */
   top: 0;
   bottom: 0px;
+  left: auto;
   right: 0;
   margin: auto;
   width: 700px;
@@ -200,14 +199,15 @@ a {
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.17);
   transition: all 1s;
+  transform: translateX(100%);
 }
 .memoryBox.active {
-  left: 0;
   transition: all 1s;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .tetris {
   position: absolute;
-  left: 2000px;
   top: 0;
   bottom: 0px;
   right: 0;
@@ -219,10 +219,12 @@ a {
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.17);
   transition: all 1s;
+  transform: translateX(100%);
 }
 .tetris.active {
-  left: 0;
   transition: all 1s;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .tetris_iframe {
   height: 95%;
