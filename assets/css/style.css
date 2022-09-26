@@ -443,7 +443,7 @@
 }
 #contents_tit p {
   padding: 35px 0;
-  font-family: "Gaegu", cursive;
+  font-family: 'Gaegu', cursive;
   font-size: 40px;
 }
 #contents_tit p a {
@@ -499,7 +499,7 @@
   color: #fff;
 }
 .nav_container li:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 1px;
@@ -593,13 +593,17 @@
 }
 
 .image-wrap img {
-  /* width: 55%; */
-  /* padding-top: 30px; */
   width: 100%;
   height: 146px;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
+/* @media (max-width: 768px) {
+  .image-wrap img {
+    height: 200px;
+  }
+} */
 
 .image-wrap .hover-wrap {
   position: absolute;

@@ -100,3 +100,28 @@
   padding: 0.5vw;
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .ony-shop__box {
+    flex-direction: column;
+  }
+  .ony-shop__box-title {
+    width: 100%;
+    font-size: 5vw;
+  }
+  .ony-shop__box-info {
+    width: 100%;
+    margin-top: 3vw;
+    font-size: 3vw;
+  }
+  .ony-shop__box-info-img {
+    height: 50vw;
+  }
+  .ony-shop__bundle-title > h3 {
+    font-size: 5vw;
+  }
+  .ony-shop__bundle-desc > p {
+    margin-top: 3vw;
+    font-size: 3vw;
+  }
+}
