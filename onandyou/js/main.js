@@ -28,7 +28,6 @@ if (kvWidth > 768) {
   gsap.to('.ony__kv-wrap', {
     scrollTrigger: {
       trigger: '.ony__kv',
-      markers: true,
       start: '30% center',
       end: 200 + '%',
       scrub: 1,
@@ -50,7 +49,6 @@ if (kvWidth > 768) {
   gsap.to('.ony__about', {
     scrollTrigger: {
       trigger: '.ony__about',
-      markers: true,
       start: 'top center',
       end: '+2000',
       scrub: 1
@@ -78,7 +76,6 @@ if (kvWidth > 768) {
   gsap.to('.ony__slider', {
     scrollTrigger: {
       trigger: '.ony__about',
-      markers: true,
       start: 'bottom center',
       end: '+2000',
       scrub: 1
@@ -95,7 +92,6 @@ if (kvWidth > 768) {
   gsap.to('.ony__collection', {
     scrollTrigger: {
       trigger: '.ony__slider',
-      markers: true,
       start: 'bottom center',
       end: '+2000',
       scrub: 1
@@ -112,7 +108,6 @@ if (kvWidth > 768) {
   gsap.to('.ony__link', {
     scrollTrigger: {
       trigger: '.ony__link',
-      markers: true,
       start: '-100% center',
       end: '+1000',
       scrub: 1
@@ -159,7 +154,6 @@ gsap.to('.ony__link-arrow', {
 gsap.to('.ony__shop-prev', {
   scrollTrigger: {
     trigger: '.ony__shop',
-    markers: true,
     start: '-40% center',
     scrub: 1
   },
@@ -170,7 +164,6 @@ gsap.to('.ony__shop-prev', {
 gsap.to('.ony__shop-main', {
   scrollTrigger: {
     trigger: '.ony__shop',
-    markers: true,
     start: '-40% center',
     scrub: 1
   },
@@ -181,7 +174,6 @@ gsap.to('.ony__shop-main', {
 gsap.to('.ony__shop-next > span', {
   scrollTrigger: {
     trigger: '.ony__shop',
-    markers: true,
     start: '-40% center',
     scrub: 1
   },
@@ -196,7 +188,6 @@ if (kvWidth > 768) {
   gsap.to('.ony__news', {
     scrollTrigger: {
       trigger: '.ony__shop',
-      markers: true,
       start: '-20% center',
       scrub: 1
     },
@@ -208,7 +199,6 @@ if (kvWidth > 768) {
 gsap.to('.ony__collection-slider--up > .ony__collection-slider-box', {
   scrollTrigger: {
     trigger: '.ony__collection',
-    markers: true,
     start: '-30% center',
     scrub: 1
   },
@@ -219,7 +209,6 @@ gsap.to('.ony__collection-slider--up > .ony__collection-slider-box', {
 gsap.to('.ony__collection-slider--down > .ony__collection-slider-box', {
   scrollTrigger: {
     trigger: '.ony__collection',
-    markers: true,
     start: '-30% center',
     scrub: 1
   },

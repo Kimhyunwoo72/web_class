@@ -3,6 +3,7 @@
   text-transform: uppercase;
   font-weight: 400;
 }
+
 .ony {
   position: relative;
 }
@@ -54,6 +55,7 @@
 .ony__header-list {
   display: flex;
 }
+
 .ony__header-item.active .ony__header-link::after,
 .ony__header-item:hover .ony__header-link::after {
   width: 80%;
@@ -81,25 +83,104 @@
   transition: width 0.5s;
   content: '';
 }
+
 .ony__header-item.active .ony__header-link,
 .ony__header-link:hover {
   color: #000;
 }
 
-.ony__header-menu-btn {
-  padding: 1vw;
-  margin-right: 1.5vw;
+/* menu */
+.ony__header-menu {
+  padding: 20px;
 }
 
-.ony__header-menu-btn::after {
-  display: inline-block;
-  width: 1vw;
-  height: 1vw;
-  padding: 0.5vw;
-  background-image: url(../img/menu.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+#toggle {
+  display: block;
+  width: 28px;
+  height: 30px;
+}
+
+#toggle span:after,
+#toggle span:before {
   content: '';
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+
+#toggle span:after {
+  top: 9px;
+}
+
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 4px;
+  background-color: #888;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ony__header-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: rgba(221, 201, 188, 0.4);
+  backdrop-filter: blur(10px);
+  transform: translateX(100%);
+  transition: all 0.6s;
+}
+
+.ony__header-menu-list.off {
+  transform: translateX(0);
+}
+
+.ony__header-menu-item {
+  margin-bottom: 2vw;
+}
+
+.ony__header-menu-link {
+  font-size: 1.6vw;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+
+.ony__header-menu-link:hover {
+  color: #000;
 }
 
 .ony__kv {
@@ -294,9 +375,11 @@
 .ony__link-click:hover .ony__link-view > span {
   transform: translateY(-2vw);
 }
+
 .ony__link-click:hover .ony__link-arrow::after {
   width: 8vw;
 }
+
 .ony__link-view {
   height: 2vw;
   font-size: 0.9vw;
@@ -415,20 +498,24 @@
   font-size: 2vw;
   line-height: 1.5;
 }
+
 .ony__collection-slider--down > .ony__collection-slider-box {
   transform: translateY(-50%);
 }
+
 .ony__collection-slider {
   width: 35%;
   height: 100%;
   padding: 0 1vw;
   overflow: hidden;
 }
+
 .ony__collection-slider-img {
   width: 100%;
   height: 30vw;
   margin-bottom: 2vw;
 }
+
 /* ony__collection */
 
 /* ony__news */
@@ -449,9 +536,11 @@
 .ony__news-link:hover {
   color: rgb(143, 143, 143);
 }
+
 .ony__news-box {
   width: 30%;
 }
+
 .ony__news-text {
   margin-right: 3vw;
   white-space: nowrap;
@@ -563,12 +652,15 @@
   opacity: 0.5;
   content: '';
 }
+
 .footer__info-item:hover {
   opacity: 0.5;
 }
+
 .footer__info-item:hover .footer__info-link::after {
   width: 100%;
 }
+
 /* footer */
 
 /* mo */
@@ -576,11 +668,13 @@
   .ony__wrap {
     padding: 20vw 10vw;
   }
+
   .main-title {
     font-size: 8vw;
     text-transform: uppercase;
     font-weight: 400;
   }
+
   .ony__header-nav {
     display: none;
   }
@@ -594,11 +688,53 @@
     height: 5vw;
     padding: 0.5vw;
   }
+  #toggle {
+    display: block;
+    width: 20px;
+    height: 15px;
+  }
+
+  #toggle span:after,
+  #toggle span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -6px;
+  }
+
+  #toggle span:after {
+    top: 6px;
+  }
+
+  #toggle span,
+  #toggle span:after,
+  #toggle span:before {
+    height: 3px;
+  }
+  #toggle.on span:before {
+    transform: rotate(45deg) translate(0px, 3px);
+  }
+
+  #toggle.on span:after {
+    transform: rotate(-45deg) translate(6px, -9px);
+  }
+  .ony__header-menu-list {
+    width: 70%;
+  }
+
+  .ony__header-menu-item {
+    margin-bottom: 10vw;
+  }
+
+  .ony__header-menu-link {
+    font-size: 6vw;
+  }
 
   .ony__kv {
     height: 150vw;
     margin: 10vw auto 0;
   }
+
   .ony__kv-text {
     display: flex;
     flex-direction: column;
@@ -607,27 +743,33 @@
     width: 100%;
     height: 100%;
   }
+
   .ony__kv-title {
     font-size: 15vw;
   }
+
   .ony__kv-desc {
     margin-top: 5vw;
     font-size: 4vw;
   }
+
   .ony__about {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .ony__about-title {
     width: 100%;
     text-align: center;
     font-size: 8vw;
   }
+
   .ony__about-sub-title {
     margin-top: 13vw;
     font-size: 6vw;
   }
+
   .ony__about-text {
     width: 100%;
   }
@@ -641,6 +783,7 @@
     word-wrap: break-word;
     word-break: keep-all;
   }
+
   .swiper {
     margin: 10vw auto;
   }
@@ -651,29 +794,36 @@
     font-size: 3vw;
     color: #161a14;
   }
+
   .swiper-pagination-fraction {
     width: 10% !important;
   }
+
   .swiper-slide {
     width: 100% !important;
   }
+
   .swiper-slide img {
     height: 80vw;
   }
+
   .ony__slider-sub-title {
     margin-top: 3vw;
     font-size: 4vw;
   }
+
   .ony__slider-desc {
     margin-top: 2vw;
     font-size: 3vw;
   }
+
   .ony__collection {
     position: relative;
     height: 80vw;
     margin: 20vw 0;
     padding: 0 10vw;
   }
+
   .ony__collection-sub-title {
     position: absolute;
     top: 30%;
@@ -693,6 +843,7 @@
     flex-direction: column;
     margin-top: 15vw;
   }
+
   .ony__link-title {
     width: 100%;
     margin-right: 0;
@@ -727,6 +878,7 @@
   .ony__news-item {
     margin-top: 10vw;
   }
+
   .ony__news-box {
     width: 100%;
   }
@@ -734,12 +886,13 @@
   .ony__news-date {
     display: inline;
     width: 100%;
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
+
   .ony__news-sub-title {
     display: inline;
     width: 100%;
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 
   .ony__news-desc {
@@ -748,17 +901,21 @@
     margin-top: 4vw;
     margin-right: 0;
   }
+
   .footer {
     flex-direction: column;
   }
+
   .footer__title {
     font-size: 8vw;
     margin-right: 0;
   }
+
   .footer__link {
     padding-bottom: 10vw;
     margin-top: 10vw;
   }
+
   .footer__info-list {
     margin-top: 10vw;
   }
@@ -766,11 +923,14 @@
   .footer__menu-link {
     font-size: 3vw;
   }
+
   .footer__address-link {
     font-size: 3vw;
   }
+
   .footer__info-link {
     font-size: 3vw;
   }
 }
+
 /* mo */
