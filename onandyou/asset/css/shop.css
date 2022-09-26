@@ -103,8 +103,8 @@
 
 @media (max-width: 768px) {
   .ony-shop {
-    transform: translateY(15%) !important;
-    padding: 10vw;
+    transform: translateY(10%) !important;
+    padding: 10vw 10vw 60vw;
   }
   .ony-shop__text-sub-title > span {
     font-size: 4vw;
