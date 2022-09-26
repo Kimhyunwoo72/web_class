@@ -118,8 +118,10 @@
   }
   .ony-news__title {
     font-size: 4vw;
+    margin-top: 5vw;
   }
   .ony-news__store-name {
     font-size: 3vw;
+    margin-top: 2vw;
   }
 }
