@@ -87,6 +87,9 @@
     width: 100%;
     font-size: 3vw;
   }
+  .ony-post__desc > em {
+    font-size: 3vw;
+  }
   .ony-post__more {
     margin-top: 5vw;
     padding: 2vw 5vw;
