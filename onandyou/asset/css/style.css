@@ -372,12 +372,14 @@
   overflow: hidden;
 }
 
-.ony__link-click:hover .ony__link-view > span {
-  transform: translateY(-2vw);
-}
+@media (min-width: 768px) {
+  .ony__link-click:hover .ony__link-view > span {
+    transform: translateY(-2vw);
+  }
 
-.ony__link-click:hover .ony__link-arrow::after {
-  width: 8vw;
+  .ony__link-click:hover .ony__link-arrow::after {
+    width: 8vw;
+  }
 }
 
 .ony__link-view {
