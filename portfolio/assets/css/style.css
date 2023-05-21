@@ -656,13 +656,13 @@ nav.sub-menu-open .nav-links .hover-el {
 .about_cont ul li:nth-child(3) {
   width: 20%;
   height: 100%;
-  padding-top: 9%;
+  padding-top: 6vw;
   overflow: hidden;
   /* border-left: 1px solid var(--border_color); */
 }
 
 .about_cont ul li:nth-child(4) {
-  padding-top: 15%;
+  padding-top: 13vw;
   width: 20%;
   height: 100%;
   overflow: hidden;
