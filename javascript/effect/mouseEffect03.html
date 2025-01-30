@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마우스 이펙트</title>
 
-   <!-- 파비콘 -->
-   <link rel="shortcut icon" href="../../assets/face/javascript.png">
-   <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
-   <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
+    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
 
     <link rel="stylesheet" href="css/NexonLv1Gothic.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -97,7 +97,7 @@
                 <li><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
                 <li><a href="mouseEffect07.html">7</a></li>
-                <li><a href="mouseEffect08.html">8</a></li>
+
             </ul>
         </div>
 
@@ -234,7 +234,7 @@
             hljs.highlightAll();
             modal()
             tabMenu()
-            
+
             // const circle1 = document.querySelector(".cursor").clientWidth //190 : border 값이 빠진상태
             // const circle2 = document.querySelector(".cursor").offsetWidth //200: border 값이 들어간 상태
             const circle = document.querySelector(".cursor").getBoundingClientRect(); //요소의 정보값(bottom,height,left, right, top, width, x, y)
@@ -244,8 +244,8 @@
             // const info = document.querySelectorAll(".number ul li")
             // const title = document.querySelectorAll(".title")
 
-            function follow (e){
-                gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
+            function follow(e) {
+                gsap.to(".cursor", { duration: .3, left: e.pageX - circle.width / 2, top: e.pageY - circle.height / 2 });
 
                 //출력용
                 document.querySelector(".pageX").innerText = e.pageX

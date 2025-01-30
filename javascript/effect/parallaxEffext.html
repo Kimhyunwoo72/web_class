@@ -59,6 +59,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .pages {
             font-family: 'NexonLv1Gothic';
             position: absolute;
@@ -66,10 +67,12 @@
             transform: translateX(-50%);
             bottom: 10px;
         }
+
         .pages li {
             display: inline;
             list-style: none;
         }
+
         .pages li a {
             display: inline-block;
             text-align: center;
@@ -86,12 +89,12 @@
             transition: all 0.4s;
             opacity: 0.8;
         }
+
         .pages li a:hover {
             box-shadow: 0 -100px 0 #6167c2 inset;
             color: #fff;
             opacity: 1;
         }
-        
     </style>
 </head>
 
@@ -109,8 +112,8 @@
             <li><a href="parallaxEffext05.html">5</a></li>
             <li><a href="parallaxEffext06.html">6</a></li>
             <li><a href="parallaxEffext07.html">7</a></li>
-            <li><a href="parallaxEffext08.html">s8</a></li>
-            <li><a href="parallaxEffext09.html">s9</a></li>
+            <li><a href="parallaxEffext08.html">8</a></li>
+            <li><a href="parallaxEffext09.html">9</a></li>
         </ul>
     </div>
 
@@ -198,7 +201,7 @@
             renderer.render(scene, camera)
         }
         animate();
-        
+
         //화면 사이즈 설정
         function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;

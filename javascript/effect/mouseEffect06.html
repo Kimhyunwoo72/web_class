@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마우스 이펙트</title>
 
-   <!-- 파비콘 -->
-   <link rel="shortcut icon" href="../../assets/face/javascript.png">
-   <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
-   <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/face/javascript.png">
+    <link rel="icon" href="../../assets/face/javascript.png" sizes="128x128">
 
     <link rel="stylesheet" href="css/NexonLv1Gothic.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -20,6 +20,7 @@
         * {
             /* font-family: "NexonLv1Gothic"; */
         }
+
         body::before {
             /* background: rgba(70, 61, 56, 0.8); */
             background: #222;
@@ -36,6 +37,7 @@
             overflow: hidden;
             cursor: none;
         }
+
         .mouse__img {
             position: absolute;
             left: 50%;
@@ -46,6 +48,7 @@
             height: 60vh;
             overflow: hidden;
         }
+
         .mouse__text {
             position: absolute;
             left: 50%;
@@ -55,30 +58,36 @@
             font-size: 2.5vw;
             line-height: 1.5;
         }
+
         .mouse__text .line {
             width: 100%;
             display: flex;
         }
-        .mouse__text .line .left{
+
+        .mouse__text .line .left {
             width: 50vw;
-            color:orange;
+            color: orange;
             transform: skew(0deg, -15deg);
             overflow: hidden;
         }
+
         .mouse__text .line .left .spanWrap {
             width: 100vw;
             text-align: center;
         }
-        .mouse__text .line .right{
+
+        .mouse__text .line .right {
             width: 50vw;
             transform: skew(0deg, 15deg);
             overflow: hidden;
         }
+
         .mouse__text .line .right .spanWrap {
             text-align: center;
             width: 100vw;
             transform: translateX(-50vw);
         }
+
         .cursor {
             position: relative;
             left: 0;
@@ -87,14 +96,14 @@
             height: 20px;
             z-index: 9999;
             border-radius: 50%;
-            background-color: rgba(255,255,255,0.8);
+            background-color: rgba(255, 255, 255, 0.8);
             user-select: none;
             pointer-events: none;
         }
+
         figure {
             opacity: 0.6;
         }
-        
     </style>
 </head>
 
@@ -193,7 +202,7 @@
                 <li><a href="mouseEffect05.html">5</a></li>
                 <li class="active"><a href="mouseEffect06.html">6</a></li>
                 <li><a href="mouseEffect07.html">7</a></li>
-                <li><a href="mouseEffect08.html">8</a></li>
+
             </ul>
         </div>
 
@@ -394,12 +403,12 @@
             tabMenu()
 
             function mousemove(e) {
-                let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.1
-                let positionFast = (e.pageX - (window.innerWidth/2)) * 0.2
+                let positionSlow = (e.pageX - (window.innerWidth / 2)) * 0.1
+                let positionFast = (e.pageX - (window.innerWidth / 2)) * 0.2
 
-                gsap.to(".spanSlow", {duration: 0.4, x: positionSlow})
-                gsap.to(".spanFast", {duration: 0.4, x: -positionFast})
-                gsap.to(".cursor", {duration: 0.3, left: e.pageX, top: e.pageY})
+                gsap.to(".spanSlow", { duration: 0.4, x: positionSlow })
+                gsap.to(".spanFast", { duration: 0.4, x: -positionFast })
+                gsap.to(".cursor", { duration: 0.3, left: e.pageX, top: e.pageY })
             }
             document.addEventListener("mousemove", mousemove)
 
